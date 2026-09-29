@@ -1,0 +1,1506 @@
+[
+  {
+    "id": "1001",
+    "cardId": "102",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "1",
+    "aiLevel": 1,
+    "difficulty": 1,
+    "rewardId": "8014100",
+    "recommendedCardIds": [
+      "264002"
+    ]
+  },
+  {
+    "id": "1002",
+    "cardId": "264002",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 2,
+    "difficulty": 2,
+    "rewardId": "8014102",
+    "recommendedCardIds": [
+      "264001"
+    ]
+  },
+  {
+    "id": "1003",
+    "cardId": "264003",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 3,
+    "difficulty": 3,
+    "rewardId": "8014103",
+    "recommendedCardIds": [
+      "264002"
+    ]
+  },
+  {
+    "id": "9000",
+    "cardId": "102",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "3",
+    "aiLevel": 100,
+    "difficulty": 1,
+    "rewardId": "8014000",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "9001",
+    "cardId": "264025",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 101,
+    "difficulty": 5,
+    "rewardId": "8014001",
+    "recommendedCardIds": [
+      "264014"
+    ]
+  },
+  {
+    "id": "9002",
+    "cardId": "264016",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 102,
+    "difficulty": 5,
+    "rewardId": "8014002",
+    "recommendedCardIds": [
+      "264025"
+    ]
+  },
+  {
+    "id": "9003",
+    "cardId": "264015",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 103,
+    "difficulty": 5,
+    "rewardId": "8014003",
+    "recommendedCardIds": [
+      "264016",
+      "264014"
+    ]
+  },
+  {
+    "id": "9004",
+    "cardId": "264024",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 104,
+    "difficulty": 5,
+    "rewardId": "8014004",
+    "recommendedCardIds": [
+      "264013",
+      "264015"
+    ]
+  },
+  {
+    "id": "9005",
+    "cardId": "264019",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 105,
+    "difficulty": 5,
+    "rewardId": "8014005",
+    "recommendedCardIds": [
+      "264013",
+      "264016"
+    ]
+  },
+  {
+    "id": "9006",
+    "cardId": "103",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 106,
+    "difficulty": 6,
+    "rewardId": "8014006",
+    "recommendedCardIds": [
+      "264019",
+      "264024"
+    ]
+  },
+  {
+    "id": "9007",
+    "cardId": "264012",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 107,
+    "difficulty": 7,
+    "rewardId": "8014007",
+    "recommendedCardIds": [
+      "264019",
+      "264024"
+    ]
+  },
+  {
+    "id": "9008",
+    "cardId": "264017",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 108,
+    "difficulty": 7,
+    "rewardId": "8014008",
+    "recommendedCardIds": [
+      "264025",
+      "264016"
+    ]
+  },
+  {
+    "id": "9009",
+    "cardId": "264020",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 109,
+    "difficulty": 7,
+    "rewardId": "8014009",
+    "recommendedCardIds": [
+      "264017",
+      "264012"
+    ]
+  },
+  {
+    "id": "9010",
+    "cardId": "264022",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 110,
+    "difficulty": 8,
+    "rewardId": "8014010",
+    "recommendedCardIds": [
+      "264012",
+      "264020"
+    ]
+  },
+  {
+    "id": "9011",
+    "cardId": "264023",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 111,
+    "difficulty": 8,
+    "rewardId": "8014011",
+    "recommendedCardIds": [
+      "264014",
+      "264022"
+    ]
+  },
+  {
+    "id": "2001",
+    "cardId": "264021",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 207,
+    "difficulty": 7,
+    "rewardId": "8014107",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2002",
+    "cardId": "264022",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 209,
+    "difficulty": 9,
+    "rewardId": "8014109",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2003",
+    "cardId": "264018",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 208,
+    "difficulty": 8,
+    "rewardId": "8014108",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2004",
+    "cardId": "264013",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 208,
+    "difficulty": 8,
+    "rewardId": "8014108",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2005",
+    "cardId": "264012",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 209,
+    "difficulty": 9,
+    "rewardId": "8014109",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2006",
+    "cardId": "264025",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 209,
+    "difficulty": 9,
+    "rewardId": "8014109",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2007",
+    "cardId": "264023",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 209,
+    "difficulty": 9,
+    "rewardId": "8014109",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2008",
+    "cardId": "264005",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 201,
+    "difficulty": 1,
+    "rewardId": "8014101",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2009",
+    "cardId": "264010",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 205,
+    "difficulty": 5,
+    "rewardId": "8014105",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2010",
+    "cardId": "264013",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 208,
+    "difficulty": 8,
+    "rewardId": "8014108",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2011",
+    "cardId": "264000",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 201,
+    "difficulty": 1,
+    "rewardId": "8014101",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2012",
+    "cardId": "264001",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 202,
+    "difficulty": 2,
+    "rewardId": "8014102",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2013",
+    "cardId": "264003",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 201,
+    "difficulty": 1,
+    "rewardId": "8014101",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2014",
+    "cardId": "264011",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 206,
+    "difficulty": 6,
+    "rewardId": "8014106",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2015",
+    "cardId": "264009",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 209,
+    "difficulty": 9,
+    "rewardId": "8014109",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2016",
+    "cardId": "264010",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 205,
+    "difficulty": 5,
+    "rewardId": "8014105",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2017",
+    "cardId": "264007",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 204,
+    "difficulty": 4,
+    "rewardId": "8014104",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2018",
+    "cardId": "264006",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 204,
+    "difficulty": 4,
+    "rewardId": "8014104",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2019",
+    "cardId": "264008",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 206,
+    "difficulty": 6,
+    "rewardId": "8014106",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2020",
+    "cardId": "264007",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 205,
+    "difficulty": 5,
+    "rewardId": "8014105",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2021",
+    "cardId": "264015",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 209,
+    "difficulty": 9,
+    "rewardId": "8014109",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2022",
+    "cardId": "264004",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 201,
+    "difficulty": 1,
+    "rewardId": "8014101",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2023",
+    "cardId": "264014",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 209,
+    "difficulty": 9,
+    "rewardId": "8014109",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2024",
+    "cardId": "264021",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 208,
+    "difficulty": 8,
+    "rewardId": "8014108",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2025",
+    "cardId": "264007",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 204,
+    "difficulty": 4,
+    "rewardId": "8014104",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2026",
+    "cardId": "264004",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 202,
+    "difficulty": 2,
+    "rewardId": "8014102",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2027",
+    "cardId": "264009",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 205,
+    "difficulty": 5,
+    "rewardId": "8014105",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2028",
+    "cardId": "264022",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 209,
+    "difficulty": 9,
+    "rewardId": "8014109",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2029",
+    "cardId": "264010",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 205,
+    "difficulty": 5,
+    "rewardId": "8014105",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2030",
+    "cardId": "264016",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 209,
+    "difficulty": 9,
+    "rewardId": "8014109",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2031",
+    "cardId": "264004",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 203,
+    "difficulty": 3,
+    "rewardId": "8014103",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2032",
+    "cardId": "264003",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 202,
+    "difficulty": 2,
+    "rewardId": "8014102",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2033",
+    "cardId": "264009",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 206,
+    "difficulty": 6,
+    "rewardId": "8014106",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2034",
+    "cardId": "264007",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 206,
+    "difficulty": 6,
+    "rewardId": "8014106",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2035",
+    "cardId": "264001",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 203,
+    "difficulty": 3,
+    "rewardId": "8014103",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2036",
+    "cardId": "264002",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 202,
+    "difficulty": 2,
+    "rewardId": "8014102",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2037",
+    "cardId": "264021",
+    "foilLevel": 3,
+    "diceIds": [
+      264101,
+      264201,
+      264301,
+      264403
+    ],
+    "presetId": "",
+    "aiLevel": 209,
+    "difficulty": 9,
+    "rewardId": "8014109",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2038",
+    "cardId": "264004",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 201,
+    "difficulty": 1,
+    "rewardId": "8014101",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2039",
+    "cardId": "264006",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 205,
+    "difficulty": 5,
+    "rewardId": "8014105",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2040",
+    "cardId": "264001",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 203,
+    "difficulty": 3,
+    "rewardId": "8014103",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2041",
+    "cardId": "264008",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 206,
+    "difficulty": 6,
+    "rewardId": "8014106",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2042",
+    "cardId": "264003",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 202,
+    "difficulty": 2,
+    "rewardId": "8014102",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2043",
+    "cardId": "264003",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 202,
+    "difficulty": 2,
+    "rewardId": "8014102",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2044",
+    "cardId": "264004",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 203,
+    "difficulty": 3,
+    "rewardId": "8014103",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2045",
+    "cardId": "264005",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 203,
+    "difficulty": 3,
+    "rewardId": "8014103",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2046",
+    "cardId": "264006",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 205,
+    "difficulty": 5,
+    "rewardId": "8014105",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2047",
+    "cardId": "264009",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 206,
+    "difficulty": 6,
+    "rewardId": "8014106",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2048",
+    "cardId": "264005",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 206,
+    "difficulty": 6,
+    "rewardId": "8014106",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2049",
+    "cardId": "264002",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 202,
+    "difficulty": 2,
+    "rewardId": "8014102",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2050",
+    "cardId": "264010",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 205,
+    "difficulty": 5,
+    "rewardId": "8014105",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2051",
+    "cardId": "264006",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 206,
+    "difficulty": 6,
+    "rewardId": "8014106",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2052",
+    "cardId": "264006",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 206,
+    "difficulty": 6,
+    "rewardId": "8014106",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2053",
+    "cardId": "264018",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 209,
+    "difficulty": 9,
+    "rewardId": "8014109",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2054",
+    "cardId": "264008",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 204,
+    "difficulty": 4,
+    "rewardId": "8014104",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2055",
+    "cardId": "264011",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 207,
+    "difficulty": 7,
+    "rewardId": "8014107",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2056",
+    "cardId": "264004",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 203,
+    "difficulty": 3,
+    "rewardId": "8014103",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2057",
+    "cardId": "264006",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 205,
+    "difficulty": 5,
+    "rewardId": "8014105",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2058",
+    "cardId": "264006",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 205,
+    "difficulty": 5,
+    "rewardId": "8014105",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2059",
+    "cardId": "264012",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 209,
+    "difficulty": 9,
+    "rewardId": "8014109",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2060",
+    "cardId": "264010",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 206,
+    "difficulty": 6,
+    "rewardId": "8014106",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2061",
+    "cardId": "264001",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 202,
+    "difficulty": 2,
+    "rewardId": "8014102",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2062",
+    "cardId": "264008",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 204,
+    "difficulty": 4,
+    "rewardId": "8014104",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2063",
+    "cardId": "264009",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 205,
+    "difficulty": 5,
+    "rewardId": "8014105",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2064",
+    "cardId": "264002",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 203,
+    "difficulty": 3,
+    "rewardId": "8014103",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2065",
+    "cardId": "264007",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 206,
+    "difficulty": 6,
+    "rewardId": "8014106",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2066",
+    "cardId": "264010",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 204,
+    "difficulty": 4,
+    "rewardId": "8014104",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2067",
+    "cardId": "264021",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 209,
+    "difficulty": 9,
+    "rewardId": "8014109",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2068",
+    "cardId": "264013",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 207,
+    "difficulty": 9,
+    "rewardId": "8014109",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2069",
+    "cardId": "264018",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 208,
+    "difficulty": 8,
+    "rewardId": "8014108",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2070",
+    "cardId": "264008",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 205,
+    "difficulty": 5,
+    "rewardId": "8014105",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2071",
+    "cardId": "264004",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 202,
+    "difficulty": 2,
+    "rewardId": "8014102",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2072",
+    "cardId": "264009",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 204,
+    "difficulty": 4,
+    "rewardId": "8014104",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2073",
+    "cardId": "264007",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 204,
+    "difficulty": 4,
+    "rewardId": "8014104",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2074",
+    "cardId": "264013",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 209,
+    "difficulty": 9,
+    "rewardId": "8014109",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2075",
+    "cardId": "264018",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 209,
+    "difficulty": 9,
+    "rewardId": "8014109",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2076",
+    "cardId": "264009",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 205,
+    "difficulty": 5,
+    "rewardId": "8014105",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2077",
+    "cardId": "264008",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 204,
+    "difficulty": 4,
+    "rewardId": "8014104",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2078",
+    "cardId": "264006",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 204,
+    "difficulty": 4,
+    "rewardId": "8014104",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2079",
+    "cardId": "264006",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 205,
+    "difficulty": 5,
+    "rewardId": "8014105",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2080",
+    "cardId": "264003",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 203,
+    "difficulty": 3,
+    "rewardId": "8014103",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2081",
+    "cardId": "264001",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 201,
+    "difficulty": 1,
+    "rewardId": "8014101",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2082",
+    "cardId": "264010",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 205,
+    "difficulty": 5,
+    "rewardId": "8014105",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2083",
+    "cardId": "264009",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 204,
+    "difficulty": 4,
+    "rewardId": "8014104",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2084",
+    "cardId": "264008",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 206,
+    "difficulty": 6,
+    "rewardId": "8014106",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2085",
+    "cardId": "264007",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 206,
+    "difficulty": 6,
+    "rewardId": "8014106",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2086",
+    "cardId": "264004",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 203,
+    "difficulty": 3,
+    "rewardId": "8014103",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2087",
+    "cardId": "264007",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 205,
+    "difficulty": 5,
+    "rewardId": "8014105",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2088",
+    "cardId": "264002",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 202,
+    "difficulty": 2,
+    "rewardId": "8014102",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2101",
+    "cardId": "264007",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 205,
+    "difficulty": 5,
+    "rewardId": "8014105",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2102",
+    "cardId": "264024",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 207,
+    "difficulty": 9,
+    "rewardId": "8014109",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2103",
+    "cardId": "264006",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 205,
+    "difficulty": 5,
+    "rewardId": "8014105",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2104",
+    "cardId": "264007",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 205,
+    "difficulty": 5,
+    "rewardId": "8014105",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "2105",
+    "cardId": "264004",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 203,
+    "difficulty": 3,
+    "rewardId": "8014103",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "3001",
+    "cardId": "264006",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 204,
+    "difficulty": 4,
+    "rewardId": "8014104",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "3002",
+    "cardId": "264008",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 205,
+    "difficulty": 5,
+    "rewardId": "8014105",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "3003",
+    "cardId": "264010",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 206,
+    "difficulty": 6,
+    "rewardId": "8014106",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "3004",
+    "cardId": "264009",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 204,
+    "difficulty": 4,
+    "rewardId": "8014104",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "3005",
+    "cardId": "264023",
+    "foilLevel": 3,
+    "diceIds": [
+      264101,
+      264201,
+      264301,
+      264421
+    ],
+    "presetId": "",
+    "aiLevel": 209,
+    "difficulty": 9,
+    "rewardId": "8014109",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "3006",
+    "cardId": "264024",
+    "foilLevel": 3,
+    "diceIds": [
+      264101,
+      264201,
+      264301,
+      264412
+    ],
+    "presetId": "",
+    "aiLevel": 209,
+    "difficulty": 9,
+    "rewardId": "8014109",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "3007",
+    "cardId": "264020",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 209,
+    "difficulty": 9,
+    "rewardId": "8014109",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "3008",
+    "cardId": "264005",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 208,
+    "difficulty": 8,
+    "rewardId": "8014108",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "3009",
+    "cardId": "264007",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 202,
+    "difficulty": 2,
+    "rewardId": "8014102",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "3010",
+    "cardId": "264010",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 205,
+    "difficulty": 5,
+    "rewardId": "8014105",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "4001",
+    "cardId": "264030",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 207,
+    "difficulty": 7,
+    "rewardId": "8014107",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "4002",
+    "cardId": "264013",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 208,
+    "difficulty": 8,
+    "rewardId": "8014108",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "4003",
+    "cardId": "264026",
+    "foilLevel": 3,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 209,
+    "difficulty": 9,
+    "rewardId": "8014109",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "4004",
+    "cardId": "264007",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 204,
+    "difficulty": 4,
+    "rewardId": "8014104",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "4005",
+    "cardId": "264035",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 205,
+    "difficulty": 5,
+    "rewardId": "8014105",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "4006",
+    "cardId": "264008",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 203,
+    "difficulty": 3,
+    "rewardId": "8014103",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "4007",
+    "cardId": "264011",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 204,
+    "difficulty": 4,
+    "rewardId": "8014104",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "4008",
+    "cardId": "264010",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 204,
+    "difficulty": 4,
+    "rewardId": "8014104",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "4009",
+    "cardId": "264004",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 202,
+    "difficulty": 2,
+    "rewardId": "8014102",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "4010",
+    "cardId": "264000",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 201,
+    "difficulty": 1,
+    "rewardId": "8014101",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "4011",
+    "cardId": "264029",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 206,
+    "difficulty": 6,
+    "rewardId": "8014106",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "4012",
+    "cardId": "264031",
+    "foilLevel": 2,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 205,
+    "difficulty": 5,
+    "rewardId": "8014105",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "4013",
+    "cardId": "264009",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "",
+    "aiLevel": 203,
+    "difficulty": 3,
+    "rewardId": "8014103",
+    "recommendedCardIds": []
+  },
+  {
+    "id": "9200",
+    "cardId": "105",
+    "foilLevel": 1,
+    "diceIds": [],
+    "presetId": "4",
+    "aiLevel": 100,
+    "difficulty": 1,
+    "rewardId": "8018000",
+    "recommendedCardIds": []
+  }
+]

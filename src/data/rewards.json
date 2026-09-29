@@ -1,0 +1,535 @@
+{
+  "12054200": {
+    "coins": 0,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [
+      "264035"
+    ],
+    "diceIds": []
+  },
+  "15000503": {
+    "coins": 0,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [
+      "264018"
+    ],
+    "diceIds": []
+  },
+  "2001691": {
+    "coins": 0,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [
+      "264000"
+    ],
+    "diceIds": []
+  },
+  "2001695": {
+    "coins": 0,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [
+      "264011"
+    ],
+    "diceIds": []
+  },
+  "316001": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "316002": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "316003": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "316004": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "316005": {
+    "coins": 0,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": [],
+    "prismaticEdit": true
+  },
+  "316006": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "316007": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "316008": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "316009": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "316010": {
+    "coins": 0,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [
+      "264021"
+    ],
+    "diceIds": []
+  },
+  "316011": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "316012": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "316013": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "316014": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "316015": {
+    "coins": 0,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "316016": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "316017": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "316018": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "316019": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "316020": {
+    "coins": 0,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "316021": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "316022": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "316023": {
+    "coins": 0,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "316024": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "316025": {
+    "coins": 0,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 0,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8014000": {
+    "coins": 0,
+    "victoryCoins": 1,
+    "paintCoins": 0,
+    "dust": 100,
+    "xp": 100,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8014001": {
+    "coins": 0,
+    "victoryCoins": 1,
+    "paintCoins": 0,
+    "dust": 100,
+    "xp": 100,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8014002": {
+    "coins": 0,
+    "victoryCoins": 2,
+    "paintCoins": 0,
+    "dust": 100,
+    "xp": 100,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8014003": {
+    "coins": 0,
+    "victoryCoins": 2,
+    "paintCoins": 0,
+    "dust": 100,
+    "xp": 100,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8014004": {
+    "coins": 0,
+    "victoryCoins": 2,
+    "paintCoins": 0,
+    "dust": 100,
+    "xp": 100,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8014005": {
+    "coins": 0,
+    "victoryCoins": 2,
+    "paintCoins": 0,
+    "dust": 100,
+    "xp": 100,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8014006": {
+    "coins": 0,
+    "victoryCoins": 2,
+    "paintCoins": 0,
+    "dust": 200,
+    "xp": 200,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8014007": {
+    "coins": 0,
+    "victoryCoins": 2,
+    "paintCoins": 0,
+    "dust": 200,
+    "xp": 200,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8014008": {
+    "coins": 0,
+    "victoryCoins": 3,
+    "paintCoins": 0,
+    "dust": 300,
+    "xp": 300,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8014009": {
+    "coins": 0,
+    "victoryCoins": 3,
+    "paintCoins": 0,
+    "dust": 300,
+    "xp": 300,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8014010": {
+    "coins": 0,
+    "victoryCoins": 4,
+    "paintCoins": 0,
+    "dust": 300,
+    "xp": 300,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8014011": {
+    "coins": 0,
+    "victoryCoins": 4,
+    "paintCoins": 0,
+    "dust": 300,
+    "xp": 300,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8014100": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 100,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8014101": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 20,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8014102": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 40,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8014103": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 60,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8014104": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 80,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8014105": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 100,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8014106": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 120,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8014107": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 140,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8014108": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 160,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8014109": {
+    "coins": 1,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 180,
+    "xp": 0,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8018000": {
+    "coins": 0,
+    "victoryCoins": 0,
+    "paintCoins": 0,
+    "dust": 100,
+    "xp": 100,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8018001": {
+    "coins": 0,
+    "victoryCoins": 0,
+    "paintCoins": 2,
+    "dust": 100,
+    "xp": 100,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8018002": {
+    "coins": 0,
+    "victoryCoins": 0,
+    "paintCoins": 2,
+    "dust": 200,
+    "xp": 100,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8018003": {
+    "coins": 0,
+    "victoryCoins": 0,
+    "paintCoins": 2,
+    "dust": 300,
+    "xp": 100,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8018004": {
+    "coins": 0,
+    "victoryCoins": 0,
+    "paintCoins": 2,
+    "dust": 400,
+    "xp": 100,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8018005": {
+    "coins": 0,
+    "victoryCoins": 0,
+    "paintCoins": 2,
+    "dust": 500,
+    "xp": 100,
+    "cardIds": [],
+    "diceIds": []
+  },
+  "8018006": {
+    "coins": 0,
+    "victoryCoins": 0,
+    "paintCoins": 5,
+    "dust": 600,
+    "xp": 100,
+    "cardIds": [],
+    "diceIds": []
+  }
+}

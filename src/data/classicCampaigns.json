@@ -1,0 +1,574 @@
+[
+  {
+    "id": "1",
+    "name": "史瓦罗",
+    "title": "左护法辅佐战",
+    "progress": 1,
+    "displayProgress": [
+      1,
+      6
+    ],
+    "intro": "胜率分析：持平。祝你好运。",
+    "lossText": "胜负已分——精彩的决策。",
+    "outro": "请全力以赴，克拉拉会很开心。",
+    "stageIds": [
+      "9001"
+    ],
+    "cardIds": [
+      "264025"
+    ],
+    "missionId": "804010018",
+    "ruleGroups": [
+      {
+        "round": 2,
+        "groupId": "90012",
+        "weatherIds": [
+          "11"
+        ]
+      },
+      {
+        "round": 4,
+        "groupId": "90014",
+        "weatherIds": [
+          "4"
+        ]
+      },
+      {
+        "round": 6,
+        "groupId": "90016",
+        "weatherIds": [
+          "3"
+        ]
+      },
+      {
+        "round": 8,
+        "groupId": "90018",
+        "weatherIds": [
+          "19"
+        ]
+      }
+    ],
+    "imagePath": "SpriteOutput/Quest/DiceCombat/MainEntranceAvatarImg/DiceCombatMainEntranceBtnPVEAvatar01.png",
+    "image": "assets/classicCampaigns/1.png"
+  },
+  {
+    "id": "2",
+    "name": "梆梆•克拉拉",
+    "title": "左护法战",
+    "progress": 1,
+    "displayProgress": [
+      2,
+      6
+    ],
+    "intro": "{F#大姐姐}{M#大哥哥}，来打败克拉拉吧！",
+    "lossText": "哇，输掉啦。但克拉拉还是很开心。",
+    "outro": "{F#大姐姐}{M#大哥哥}， 要加油啊！",
+    "stageIds": [
+      "9002"
+    ],
+    "cardIds": [
+      "264016"
+    ],
+    "missionId": "804010004",
+    "ruleGroups": [
+      {
+        "round": 2,
+        "groupId": "90022",
+        "weatherIds": [
+          "24"
+        ]
+      },
+      {
+        "round": 4,
+        "groupId": "90024",
+        "weatherIds": [
+          "12"
+        ]
+      },
+      {
+        "round": 6,
+        "groupId": "90026",
+        "weatherIds": [
+          "16"
+        ]
+      },
+      {
+        "round": 8,
+        "groupId": "90028",
+        "weatherIds": [
+          "17"
+        ]
+      }
+    ],
+    "imagePath": "SpriteOutput/Quest/DiceCombat/MainEntranceAvatarImg/DiceCombatMainEntranceBtnPVEAvatar02.png",
+    "image": "assets/classicCampaigns/2.png"
+  },
+  {
+    "id": "3",
+    "name": "音律琴魔•希露瓦",
+    "title": "右护法战",
+    "progress": 2,
+    "displayProgress": [
+      3,
+      6
+    ],
+    "intro": "来吧，上台躁起来吧！",
+    "lossText": "猜到是这个结果了，倒还算摇滚。",
+    "outro": "别急，我们稍后再见！",
+    "stageIds": [
+      "9003"
+    ],
+    "cardIds": [
+      "264015"
+    ],
+    "missionId": "804010006",
+    "ruleGroups": [
+      {
+        "round": 2,
+        "groupId": "90032",
+        "weatherIds": [
+          "2"
+        ]
+      },
+      {
+        "round": 4,
+        "groupId": "90034",
+        "weatherIds": [
+          "3"
+        ]
+      },
+      {
+        "round": 6,
+        "groupId": "90036",
+        "weatherIds": [
+          "9"
+        ]
+      },
+      {
+        "round": 8,
+        "groupId": "90038",
+        "weatherIds": [
+          "19"
+        ]
+      }
+    ],
+    "imagePath": "SpriteOutput/Quest/DiceCombat/MainEntranceAvatarImg/DiceCombatMainEntranceBtnPVEAvatar04.png",
+    "image": "assets/classicCampaigns/3.png"
+  },
+  {
+    "id": "4",
+    "name": "朗道一家…以及佩拉",
+    "title": "右护法战•再开",
+    "progress": 2,
+    "displayProgress": [
+      4,
+      6
+    ],
+    "intro": "不要小瞧「朗道一家」的家族爱呀！",
+    "lossText": "可恶，都怪杰帕德！",
+    "outro": "溜了溜了，买同人本去了。",
+    "stageIds": [
+      "9004"
+    ],
+    "cardIds": [
+      "264024"
+    ],
+    "missionId": "804010008",
+    "ruleGroups": [
+      {
+        "round": 2,
+        "groupId": "90042",
+        "weatherIds": [
+          "5"
+        ]
+      },
+      {
+        "round": 4,
+        "groupId": "90044",
+        "weatherIds": [
+          "7"
+        ]
+      },
+      {
+        "round": 6,
+        "groupId": "90046",
+        "weatherIds": [
+          "1"
+        ]
+      },
+      {
+        "round": 8,
+        "groupId": "90048",
+        "weatherIds": [
+          "14"
+        ]
+      }
+    ],
+    "imagePath": "SpriteOutput/Quest/DiceCombat/MainEntranceAvatarImg/DiceCombatMainEntranceBtnPVEAvatar03.png",
+    "image": "assets/classicCampaigns/4.png"
+  },
+  {
+    "id": "5",
+    "name": "千面•尤利安",
+    "title": "二当家战",
+    "progress": 2,
+    "displayProgress": [
+      5,
+      6
+    ],
+    "intro": "来吧，荣誉队员！",
+    "lossText": "失败了，呜呜…",
+    "outro": "漆黑的虎克大人…您一定要…啊我死了。",
+    "stageIds": [
+      "9005"
+    ],
+    "cardIds": [
+      "264019"
+    ],
+    "missionId": "804010010",
+    "ruleGroups": [
+      {
+        "round": 2,
+        "groupId": "90052",
+        "weatherIds": [
+          "6"
+        ]
+      },
+      {
+        "round": 4,
+        "groupId": "90054",
+        "weatherIds": [
+          "1"
+        ]
+      },
+      {
+        "round": 6,
+        "groupId": "90056",
+        "weatherIds": [
+          "20"
+        ]
+      },
+      {
+        "round": 8,
+        "groupId": "90058",
+        "weatherIds": [
+          "17"
+        ]
+      }
+    ],
+    "imagePath": "SpriteOutput/Quest/DiceCombat/MainEntranceAvatarImg/DiceCombatMainEntranceBtnPVEAvatar05.png",
+    "image": "assets/classicCampaigns/5.png"
+  },
+  {
+    "id": "6",
+    "name": "漆黑的虎克大人",
+    "title": "首领战",
+    "progress": 3,
+    "displayProgress": [
+      6,
+      6
+    ],
+    "intro": "希儿姐姐说，强者在打架之前会保持沉默，所以虎克也不说话！",
+    "lossText": "",
+    "outro": "",
+    "stageIds": [
+      "9006"
+    ],
+    "cardIds": [
+      "103"
+    ],
+    "missionId": "804010013",
+    "ruleGroups": [
+      {
+        "round": 2,
+        "groupId": "90062",
+        "weatherIds": [
+          "18"
+        ]
+      },
+      {
+        "round": 4,
+        "groupId": "90064",
+        "weatherIds": [
+          "16"
+        ]
+      },
+      {
+        "round": 6,
+        "groupId": "90066",
+        "weatherIds": [
+          "27"
+        ]
+      },
+      {
+        "round": 8,
+        "groupId": "90068",
+        "weatherIds": [
+          "19"
+        ]
+      }
+    ],
+    "imagePath": "SpriteOutput/Quest/DiceCombat/MainEntranceAvatarImg/DiceCombatMainEntranceBtnPVEAvatar06.png",
+    "image": "assets/classicCampaigns/6.png"
+  },
+  {
+    "id": "7",
+    "name": "魔古拉，律贼之首，虎克",
+    "title": "真•首领战",
+    "progress": 4,
+    "displayProgress": [
+      6,
+      6
+    ],
+    "intro": "该让你见识见识虎克的真本事啦！",
+    "lossText": "荣誉队员，你才是真正的高手！",
+    "outro": "魔古拉帮的未来…就托付给你了！",
+    "stageIds": [
+      "9007"
+    ],
+    "cardIds": [
+      "264012"
+    ],
+    "missionId": "804010015",
+    "ruleGroups": [
+      {
+        "round": 2,
+        "groupId": "90072",
+        "weatherIds": [
+          "18"
+        ]
+      },
+      {
+        "round": 4,
+        "groupId": "90074",
+        "weatherIds": [
+          "16"
+        ]
+      },
+      {
+        "round": 6,
+        "groupId": "90076",
+        "weatherIds": [
+          "27"
+        ]
+      },
+      {
+        "round": 8,
+        "groupId": "90078",
+        "weatherIds": [
+          "19"
+        ]
+      }
+    ],
+    "imagePath": "SpriteOutput/Quest/DiceCombat/MainEntranceAvatarImg/DiceCombatMainEntranceBtnPVEAvatar06.png",
+    "image": "assets/classicCampaigns/7.png"
+  },
+  {
+    "id": "8",
+    "name": "二相乐园第一偶像•火花",
+    "title": "四天王战",
+    "progress": 5,
+    "displayProgress": [
+      1,
+      4
+    ],
+    "intro": "",
+    "lossText": "竟然赢我！这就号召花粉挑战你…开玩笑的，嘿嘿。",
+    "outro": "",
+    "stageIds": [
+      "9008"
+    ],
+    "cardIds": [
+      "264017"
+    ],
+    "missionId": "804010103",
+    "ruleGroups": [
+      {
+        "round": 2,
+        "groupId": "90082",
+        "weatherIds": [
+          "23"
+        ]
+      },
+      {
+        "round": 4,
+        "groupId": "90084",
+        "weatherIds": [
+          "15"
+        ]
+      },
+      {
+        "round": 6,
+        "groupId": "90086",
+        "weatherIds": [
+          "8"
+        ]
+      },
+      {
+        "round": 8,
+        "groupId": "90088",
+        "weatherIds": [
+          "14"
+        ]
+      }
+    ],
+    "imagePath": "SpriteOutput/Quest/DiceCombat/MainEntranceAvatarImg/DiceCombatMainEntranceBtnPVEAvatar07.png",
+    "image": "assets/classicCampaigns/8.png"
+  },
+  {
+    "id": "9",
+    "name": "缭乱忍侠•AKA•乱破",
+    "title": "四天王战",
+    "progress": 5,
+    "displayProgress": [
+      2,
+      4
+    ],
+    "intro": "",
+    "lossText": "不愧为球棒•忍侠！真是酣畅的忍•成败！",
+    "outro": "",
+    "stageIds": [
+      "9009"
+    ],
+    "cardIds": [
+      "264020"
+    ],
+    "missionId": "804010107",
+    "ruleGroups": [
+      {
+        "round": 2,
+        "groupId": "90092",
+        "weatherIds": [
+          "21"
+        ]
+      },
+      {
+        "round": 4,
+        "groupId": "90094",
+        "weatherIds": [
+          "18"
+        ]
+      },
+      {
+        "round": 6,
+        "groupId": "90096",
+        "weatherIds": [
+          "20"
+        ]
+      },
+      {
+        "round": 8,
+        "groupId": "90098",
+        "weatherIds": [
+          "19"
+        ]
+      }
+    ],
+    "imagePath": "SpriteOutput/Quest/DiceCombat/MainEntranceAvatarImg/DiceCombatMainEntranceBtnPVEAvatar08.png",
+    "image": "assets/classicCampaigns/9.png"
+  },
+  {
+    "id": "10",
+    "name": "骰魂•一千七百年的执念",
+    "title": "四天王战",
+    "progress": 5,
+    "displayProgress": [
+      3,
+      4
+    ],
+    "intro": "",
+    "lossText": "悠悠苍天，何薄于我……",
+    "outro": "",
+    "stageIds": [
+      "9010"
+    ],
+    "cardIds": [
+      "264022"
+    ],
+    "missionId": "804010111",
+    "ruleGroups": [
+      {
+        "round": 2,
+        "groupId": "90102",
+        "weatherIds": [
+          "29"
+        ]
+      },
+      {
+        "round": 4,
+        "groupId": "90104",
+        "weatherIds": [
+          "31"
+        ]
+      },
+      {
+        "round": 6,
+        "groupId": "90106",
+        "weatherIds": [
+          "16"
+        ]
+      },
+      {
+        "round": 8,
+        "groupId": "90108",
+        "weatherIds": [
+          "17"
+        ]
+      }
+    ],
+    "imagePath": "SpriteOutput/Quest/DiceCombat/MainEntranceAvatarImg/DiceCombatMainEntranceBtnPVEAvatar09.png",
+    "image": "assets/classicCampaigns/10.png"
+  },
+  {
+    "id": "11",
+    "name": "幻海幽蝶•希儿",
+    "title": "最终战",
+    "progress": 5,
+    "displayProgress": [
+      4,
+      4
+    ],
+    "intro": "",
+    "lossText": "呼，输了输了，打得不错嘛！",
+    "outro": "",
+    "stageIds": [
+      "9011"
+    ],
+    "cardIds": [
+      "264023"
+    ],
+    "missionId": "804010115",
+    "ruleGroups": [
+      {
+        "round": 2,
+        "groupId": "90112",
+        "weatherIds": [
+          "4"
+        ]
+      },
+      {
+        "round": 4,
+        "groupId": "90114",
+        "weatherIds": [
+          "24"
+        ]
+      },
+      {
+        "round": 6,
+        "groupId": "90116",
+        "weatherIds": [
+          "28"
+        ]
+      },
+      {
+        "round": 8,
+        "groupId": "90118",
+        "weatherIds": [
+          "17"
+        ]
+      }
+    ],
+    "imagePath": "SpriteOutput/Quest/DiceCombat/MainEntranceAvatarImg/DiceCombatMainEntranceBtnPVEAvatar10.png",
+    "image": "assets/classicCampaigns/11.png"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "file": "bgm_duel_A.mp3",
+    "bytes": 4300411,
+    "sha256": "aeb4695a56ff867c1f46d199fd181a1c0bcd352a5adf68352229638b0960aea8"
+  },
+  {
+    "file": "sfx_attack_A.mp3",
+    "bytes": 229297,
+    "sha256": "25a0dabc6eac3e1f7e3cc4db6d826967b1cbeed2973bf184f4ba75b58c3cc832"
+  },
+  {
+    "file": "sfx_confirm_A.mp3",
+    "bytes": 81084,
+    "sha256": "97a5151e21381f2b80e6d6dcd0b7c227b369c4a1e95123375c0e8371689836de"
+  },
+  {
+    "file": "sfx_dice_roll_A.mp3",
+    "bytes": 218631,
+    "sha256": "ab090b8194ad72fb87f86bff9ef9fb6dcd491e4f00c6291b0d5ec82329cd2535"
+  },
+  {
+    "file": "sfx_poison_trigger_A.mp3",
+    "bytes": 246402,
+    "sha256": "3455dd200bcb139aecb7616ee3e6b65827a2660a28cd7c6bea39d7ef07b8ead1"
+  }
+]

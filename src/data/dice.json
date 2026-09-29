@@ -1,0 +1,3401 @@
+[
+  {
+    "id": "264101",
+    "name": "蓝色四面骰",
+    "description": "",
+    "sides": 4,
+    "color": "Blue",
+    "faces": [
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 2,
+        "contentId": "2",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum2.png"
+      },
+      {
+        "value": 3,
+        "contentId": "3",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 4,
+        "contentId": "4",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      }
+    ],
+    "params": [],
+    "condition": "Both",
+    "conditionPath": "",
+    "collectible": true,
+    "version": "4.0"
+  },
+  {
+    "id": "264201",
+    "name": "紫色六面骰",
+    "description": "",
+    "sides": 6,
+    "color": "Purple",
+    "faces": [
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 2,
+        "contentId": "2",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum2.png"
+      },
+      {
+        "value": 3,
+        "contentId": "3",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 4,
+        "contentId": "4",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 5,
+        "contentId": "5",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      },
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      }
+    ],
+    "params": [],
+    "condition": "Both",
+    "conditionPath": "",
+    "collectible": true,
+    "version": "4.0"
+  },
+  {
+    "id": "264301",
+    "name": "D8",
+    "description": "",
+    "sides": 8,
+    "color": "Oriange",
+    "faces": [
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 2,
+        "contentId": "2",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum2.png"
+      },
+      {
+        "value": 3,
+        "contentId": "3",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 4,
+        "contentId": "4",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 5,
+        "contentId": "5",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      },
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 7,
+        "contentId": "7",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum7.png"
+      },
+      {
+        "value": 8,
+        "contentId": "8",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum8.png"
+      }
+    ],
+    "params": [],
+    "condition": "Both",
+    "conditionPath": "",
+    "collectible": true,
+    "version": "4.0"
+  },
+  {
+    "id": "264401",
+    "name": "「十二面」",
+    "description": "随时可用",
+    "sides": 12,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 2,
+        "contentId": "2",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum2.png"
+      },
+      {
+        "value": 3,
+        "contentId": "3",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 4,
+        "contentId": "4",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 5,
+        "contentId": "5",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      },
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 7,
+        "contentId": "7",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum7.png"
+      },
+      {
+        "value": 8,
+        "contentId": "8",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum8.png"
+      },
+      {
+        "value": 9,
+        "contentId": "9",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum9.png"
+      },
+      {
+        "value": 10,
+        "contentId": "10",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum10.png"
+      },
+      {
+        "value": 11,
+        "contentId": "11",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum11.png"
+      },
+      {
+        "value": 12,
+        "contentId": "12",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum12.png"
+      }
+    ],
+    "params": [],
+    "condition": "Both",
+    "conditionPath": "",
+    "collectible": false,
+    "version": "4.0"
+  },
+  {
+    "id": "264402",
+    "name": "「真•进化」",
+    "description": "随时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 3,
+        "contentId": "3",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 3,
+        "contentId": "3",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 4,
+        "contentId": "4",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "4",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 2,
+        "contentId": "702",
+        "description": "选定后提供2点数，随后让攻击值/防御值翻倍",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264407.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum2.png"
+      }
+    ],
+    "params": [],
+    "condition": "Both",
+    "conditionPath": "",
+    "collectible": true,
+    "version": "4.0",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264402.png",
+    "image": "assets/dice/264402.png"
+  },
+  {
+    "id": "264403",
+    "name": "「真•6•6」",
+    "description": "随时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      }
+    ],
+    "params": [],
+    "condition": "Both",
+    "conditionPath": "",
+    "collectible": true,
+    "version": "4.0",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264403.png",
+    "image": "assets/dice/264403.png"
+  },
+  {
+    "id": "264404",
+    "name": "「真•命运」",
+    "description": "随时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 1,
+        "contentId": "401",
+        "description": "选定后提供1点数，命定",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264404.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 3,
+        "contentId": "403",
+        "description": "选定后提供3点数，命定",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264404.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 3,
+        "contentId": "403",
+        "description": "选定后提供3点数，命定",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264404.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 12,
+        "contentId": "412",
+        "description": "选定后提供12点数，命定",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264404.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum12.png"
+      },
+      {
+        "value": 12,
+        "contentId": "412",
+        "description": "选定后提供12点数，命定",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264404.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum12.png"
+      },
+      {
+        "value": 16,
+        "contentId": "416",
+        "description": "选定后提供16点数，命定",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264404.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum16.png"
+      }
+    ],
+    "params": [],
+    "condition": "Both",
+    "conditionPath": "",
+    "collectible": true,
+    "version": "4.0",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264404.png",
+    "image": "assets/dice/264404.png"
+  },
+  {
+    "id": "264405",
+    "name": "「真•复仇」",
+    "description": "累计受到25点伤害后，可以在攻击时使用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 8,
+        "contentId": "8",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum8.png"
+      },
+      {
+        "value": 8,
+        "contentId": "8",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum8.png"
+      },
+      {
+        "value": 12,
+        "contentId": "12",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum12.png"
+      },
+      {
+        "value": 12,
+        "contentId": "12",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum12.png"
+      }
+    ],
+    "params": [
+      25
+    ],
+    "condition": "Attack",
+    "conditionPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkillCondition_264405.json",
+    "collectible": true,
+    "version": "4.0",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264428.png",
+    "image": "assets/dice/264405.png"
+  },
+  {
+    "id": "264406",
+    "name": "「真•医嘱」",
+    "description": "随时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 1,
+        "contentId": "601",
+        "description": "选定后提供1点数，治愈1点生命值",
+        "params": [
+          1
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264406.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 2,
+        "contentId": "602",
+        "description": "选定后提供2点数，治愈2点生命值",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264406.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum2.png"
+      },
+      {
+        "value": 3,
+        "contentId": "603",
+        "description": "选定后提供3点数，治愈3点生命值",
+        "params": [
+          3
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264406.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 4,
+        "contentId": "604",
+        "description": "选定后提供4点数，治愈4点生命值",
+        "params": [
+          4
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264406.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 6,
+        "contentId": "605",
+        "description": "选定后提供6点数，治愈6点生命值",
+        "params": [
+          6
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264406.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "606",
+        "description": "选定后提供6点数，治愈6点生命值",
+        "params": [
+          6
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264406.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      }
+    ],
+    "params": [],
+    "condition": "Both",
+    "conditionPath": "",
+    "collectible": true,
+    "version": "4.0",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264406.png",
+    "image": "assets/dice/264406.png"
+  },
+  {
+    "id": "264407",
+    "name": "「真•遗语」",
+    "description": "生命值≤8点时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 4,
+        "contentId": "4",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 5,
+        "contentId": "5",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      },
+      {
+        "value": 5,
+        "contentId": "5",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      },
+      {
+        "value": 1,
+        "contentId": "701",
+        "description": "选定后提供1点数，随后让攻击值/防御值翻倍",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264407.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 2,
+        "contentId": "702",
+        "description": "选定后提供2点数，随后让攻击值/防御值翻倍",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264407.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum2.png"
+      },
+      {
+        "value": 4,
+        "contentId": "703",
+        "description": "选定后提供4点数，随后让攻击值/防御值翻倍",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264407.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      }
+    ],
+    "params": [
+      8
+    ],
+    "condition": "Both",
+    "conditionPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkillCondition_264407.json",
+    "collectible": true,
+    "version": "4.0",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264407.png",
+    "image": "assets/dice/264407.png"
+  },
+  {
+    "id": "264408",
+    "name": "「真•复读」",
+    "description": "累计选择2次骰面4后，可以在攻击时使用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 4,
+        "contentId": "4",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "4",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "801",
+        "description": "选定后提供4点数，本回合获得连击",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264408.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "802",
+        "description": "选定后提供4点数，本回合获得连击",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264408.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      }
+    ],
+    "params": [
+      2,
+      4
+    ],
+    "condition": "Attack",
+    "conditionPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkillCondition_264408.json",
+    "collectible": true,
+    "version": "4.0",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264408.png",
+    "image": "assets/dice/264408.png"
+  },
+  {
+    "id": "264409",
+    "name": "「真•仙人球」",
+    "description": "只能在防御时使用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 4,
+        "contentId": "901",
+        "description": "选定后提供4点数，本回合获得反击",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264409.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 5,
+        "contentId": "902",
+        "description": "选定后提供5点数，本回合获得反击",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264409.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      },
+      {
+        "value": 6,
+        "contentId": "903",
+        "description": "选定后提供6点数，本回合获得反击",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264409.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 7,
+        "contentId": "904",
+        "description": "选定后提供7点数，本回合获得反击",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264409.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum7.png"
+      },
+      {
+        "value": 8,
+        "contentId": "905",
+        "description": "选定后提供8点数，本回合获得反击",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264409.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum8.png"
+      },
+      {
+        "value": 9,
+        "contentId": "906",
+        "description": "选定后提供9点数，本回合获得反击",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264409.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum9.png"
+      }
+    ],
+    "params": [],
+    "condition": "Defense",
+    "conditionPath": "",
+    "collectible": true,
+    "version": "4.0",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264409.png",
+    "image": "assets/dice/264409.png"
+  },
+  {
+    "id": "264410",
+    "name": "「真•奇迹」",
+    "description": "累计选择9次骰面1后，可以在攻击时使用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 99,
+        "contentId": "99",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum99.png"
+      },
+      {
+        "value": 99,
+        "contentId": "99",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum99.png"
+      },
+      {
+        "value": 99,
+        "contentId": "99",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum99.png"
+      },
+      {
+        "value": 99,
+        "contentId": "99",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum99.png"
+      },
+      {
+        "value": 99,
+        "contentId": "99",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum99.png"
+      },
+      {
+        "value": 99,
+        "contentId": "99",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum99.png"
+      }
+    ],
+    "params": [
+      9,
+      1
+    ],
+    "condition": "Attack",
+    "conditionPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkillCondition_264410.json",
+    "collectible": true,
+    "version": "4.0",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264410.png",
+    "image": "assets/dice/264410.png"
+  },
+  {
+    "id": "264411",
+    "name": "「真•贷款」",
+    "description": "随时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 2,
+        "contentId": "1102",
+        "description": "选定后提供2点数，获得2层超载",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264411.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum2.png"
+      },
+      {
+        "value": 2,
+        "contentId": "1102",
+        "description": "选定后提供2点数，获得2层超载",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264411.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum2.png"
+      },
+      {
+        "value": 3,
+        "contentId": "1103",
+        "description": "选定后提供3点数，获得3层超载",
+        "params": [
+          3
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264411.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 3,
+        "contentId": "1103",
+        "description": "选定后提供3点数，获得3层超载",
+        "params": [
+          3
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264411.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 4,
+        "contentId": "1104",
+        "description": "选定后提供4点数，获得4层超载",
+        "params": [
+          4
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264411.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "1104",
+        "description": "选定后提供4点数，获得4层超载",
+        "params": [
+          4
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264411.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      }
+    ],
+    "params": [],
+    "condition": "Both",
+    "conditionPath": "",
+    "collectible": true,
+    "version": "4.0",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264411.png",
+    "image": "assets/dice/264411.png"
+  },
+  {
+    "id": "264412",
+    "name": "「真•星盾」",
+    "description": "只能在防御时使用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 7,
+        "contentId": "7",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum7.png"
+      },
+      {
+        "value": 7,
+        "contentId": "7",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum7.png"
+      },
+      {
+        "value": 7,
+        "contentId": "7",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum7.png"
+      },
+      {
+        "value": 1,
+        "contentId": "1201",
+        "description": "选定后提供1点数，本回合获得力场",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264412.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 1,
+        "contentId": "1202",
+        "description": "选定后提供1点数，本回合获得力场",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264412.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 1,
+        "contentId": "1203",
+        "description": "选定后提供1点数，本回合获得力场",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264412.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      }
+    ],
+    "params": [],
+    "condition": "Defense",
+    "conditionPath": "",
+    "collectible": true,
+    "version": "4.0",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264412.png",
+    "image": "assets/dice/264412.png"
+  },
+  {
+    "id": "264413",
+    "name": "「真•誓言」",
+    "description": "只能在防御时使用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 8,
+        "contentId": "8",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum8.png"
+      },
+      {
+        "value": 8,
+        "contentId": "8",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum8.png"
+      },
+      {
+        "value": 4,
+        "contentId": "1301",
+        "description": "选定后提供4点数，本回合获得不屈",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264413.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "1302",
+        "description": "选定后提供4点数，本回合获得不屈",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264413.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 6,
+        "contentId": "1303",
+        "description": "选定后提供6点数，本回合获得不屈",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264413.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "1304",
+        "description": "选定后提供6点数，本回合获得不屈",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264413.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      }
+    ],
+    "params": [],
+    "condition": "Defense",
+    "conditionPath": "",
+    "collectible": true,
+    "version": "4.0",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264413.png",
+    "image": "assets/dice/264413.png"
+  },
+  {
+    "id": "264416",
+    "name": "「真•质数」",
+    "description": "随时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 5,
+        "contentId": "5",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      },
+      {
+        "value": 5,
+        "contentId": "5",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      },
+      {
+        "value": 5,
+        "contentId": "5",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      },
+      {
+        "value": 7,
+        "contentId": "7",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum7.png"
+      },
+      {
+        "value": 7,
+        "contentId": "7",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum7.png"
+      },
+      {
+        "value": 7,
+        "contentId": "7",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum7.png"
+      }
+    ],
+    "params": [],
+    "condition": "Both",
+    "conditionPath": "",
+    "collectible": true,
+    "version": "4.0",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264416.png",
+    "image": "assets/dice/264416.png"
+  },
+  {
+    "id": "264417",
+    "name": "「大红按钮」",
+    "description": "回合数≥5时，可以在攻击时使用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 6,
+        "contentId": "1701",
+        "description": "选定后提供6点数，立刻触发背水",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264417.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "1702",
+        "description": "选定后提供6点数，立刻触发背水",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264417.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "1703",
+        "description": "选定后提供6点数，立刻触发背水",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264417.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 8,
+        "contentId": "1704",
+        "description": "选定后提供8点数，立刻触发背水",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264417.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum8.png"
+      },
+      {
+        "value": 8,
+        "contentId": "1705",
+        "description": "选定后提供8点数，立刻触发背水",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264417.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum8.png"
+      },
+      {
+        "value": 8,
+        "contentId": "1706",
+        "description": "选定后提供8点数，立刻触发背水",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264417.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum8.png"
+      }
+    ],
+    "params": [
+      5
+    ],
+    "condition": "Attack",
+    "conditionPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkillCondition_264417.json",
+    "collectible": true,
+    "version": "4.0",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264417.png",
+    "image": "assets/dice/264417.png"
+  },
+  {
+    "id": "264418",
+    "name": "「真•奇术师」",
+    "description": "随时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 4,
+        "contentId": "4",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "4",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "4",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "1801",
+        "description": "选定后提供4点数，本回合获得骇入",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264418.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 6,
+        "contentId": "1802",
+        "description": "选定后提供6点数，本回合获得骇入",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264418.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "1803",
+        "description": "选定后提供6点数，本回合获得骇入",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264418.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      }
+    ],
+    "params": [],
+    "condition": "Both",
+    "conditionPath": "",
+    "collectible": true,
+    "version": "4.0",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264418.png",
+    "image": "assets/dice/264418.png"
+  },
+  {
+    "id": "264419",
+    "name": "「真•心跳」",
+    "description": "随时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 9,
+        "contentId": "1901",
+        "description": "选定后提供9点数，获得1次曜彩骰使用次数",
+        "params": [
+          1
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264419.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum9.png"
+      },
+      {
+        "value": 9,
+        "contentId": "1902",
+        "description": "选定后提供9点数，获得1次曜彩骰使用次数",
+        "params": [
+          1
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264419.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum9.png"
+      }
+    ],
+    "params": [],
+    "condition": "Both",
+    "conditionPath": "",
+    "collectible": true,
+    "version": "4.0",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264419.png",
+    "image": "assets/dice/264419.png"
+  },
+  {
+    "id": "264420",
+    "name": "「真•战狂」",
+    "description": "随时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 4,
+        "contentId": "4",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "4",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 8,
+        "contentId": "2001",
+        "description": "选定后提供8点数，获得2层荆棘",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264420.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum8.png"
+      },
+      {
+        "value": 8,
+        "contentId": "2002",
+        "description": "选定后提供8点数，获得2层荆棘",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264420.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum8.png"
+      },
+      {
+        "value": 12,
+        "contentId": "2003",
+        "description": "选定后提供12点数，获得3层荆棘",
+        "params": [
+          3
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264420.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum12.png"
+      },
+      {
+        "value": 12,
+        "contentId": "2004",
+        "description": "选定后提供12点数，获得3层荆棘",
+        "params": [
+          3
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264420.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum12.png"
+      }
+    ],
+    "params": [],
+    "condition": "Both",
+    "conditionPath": "",
+    "collectible": true,
+    "version": "4.0",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264420.png",
+    "image": "assets/dice/264420.png"
+  },
+  {
+    "id": "264421",
+    "name": "「真•赌徒」",
+    "description": "仅能在前4回合内使用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 8,
+        "contentId": "8",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum8.png"
+      },
+      {
+        "value": 10,
+        "contentId": "10",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum10.png"
+      },
+      {
+        "value": 12,
+        "contentId": "12",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum12.png"
+      }
+    ],
+    "params": [
+      4
+    ],
+    "condition": "Both",
+    "conditionPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkillCondition_264421.json",
+    "collectible": true,
+    "version": "4.0",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264421.png",
+    "image": "assets/dice/264421.png"
+  },
+  {
+    "id": "264422",
+    "name": "「真•魔弹」",
+    "description": "随时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 3,
+        "contentId": "3",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 5,
+        "contentId": "5",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      },
+      {
+        "value": 7,
+        "contentId": "7",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum7.png"
+      },
+      {
+        "value": 3,
+        "contentId": "2201",
+        "description": "选定后提供3点数，立刻造成3点瞬伤",
+        "params": [
+          3
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264422.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 5,
+        "contentId": "2202",
+        "description": "选定后提供5点数，立刻造成3点瞬伤",
+        "params": [
+          3
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264422.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      },
+      {
+        "value": 7,
+        "contentId": "2203",
+        "description": "选定后提供7点数，立刻造成3点瞬伤",
+        "params": [
+          3
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264422.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum7.png"
+      }
+    ],
+    "params": [],
+    "condition": "Both",
+    "conditionPath": "",
+    "collectible": true,
+    "version": "4.0",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264422.png",
+    "image": "assets/dice/264422.png"
+  },
+  {
+    "id": "264502",
+    "name": "「进化」",
+    "description": "随时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 2,
+        "contentId": "2",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum2.png"
+      },
+      {
+        "value": 3,
+        "contentId": "3",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 4,
+        "contentId": "4",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 2,
+        "contentId": "702",
+        "description": "选定后提供2点数，随后让攻击值/防御值翻倍",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264407.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum2.png"
+      }
+    ],
+    "params": [],
+    "condition": "Both",
+    "conditionPath": "",
+    "collectible": false,
+    "version": "4.0"
+  },
+  {
+    "id": "264504",
+    "name": "「命运」",
+    "description": "随时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 1,
+        "contentId": "401",
+        "description": "选定后提供1点数，命定",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264404.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 3,
+        "contentId": "403",
+        "description": "选定后提供3点数，命定",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264404.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 3,
+        "contentId": "403",
+        "description": "选定后提供3点数，命定",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264404.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 6,
+        "contentId": "406",
+        "description": "选定后提供6点数，命定",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264404.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "406",
+        "description": "选定后提供6点数，命定",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264404.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 12,
+        "contentId": "412",
+        "description": "选定后提供12点数，命定",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264404.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum12.png"
+      }
+    ],
+    "params": [],
+    "condition": "Both",
+    "conditionPath": "",
+    "collectible": false,
+    "version": "4.0"
+  },
+  {
+    "id": "264505",
+    "name": "「复仇」",
+    "description": "累计受到25点伤害后，可以在攻击时使用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 8,
+        "contentId": "8",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum8.png"
+      },
+      {
+        "value": 8,
+        "contentId": "8",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum8.png"
+      },
+      {
+        "value": 12,
+        "contentId": "12",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum12.png"
+      }
+    ],
+    "params": [
+      25
+    ],
+    "condition": "Attack",
+    "conditionPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkillCondition_264405.json",
+    "collectible": false,
+    "version": "4.0"
+  },
+  {
+    "id": "264506",
+    "name": "「医嘱」",
+    "description": "生命值≤10点时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 1,
+        "contentId": "601",
+        "description": "选定后提供1点数，治愈1点生命值",
+        "params": [
+          1
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264406.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 2,
+        "contentId": "602",
+        "description": "选定后提供2点数，治愈2点生命值",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264406.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum2.png"
+      },
+      {
+        "value": 3,
+        "contentId": "603",
+        "description": "选定后提供3点数，治愈3点生命值",
+        "params": [
+          3
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264406.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 4,
+        "contentId": "604",
+        "description": "选定后提供4点数，治愈4点生命值",
+        "params": [
+          4
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264406.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 6,
+        "contentId": "605",
+        "description": "选定后提供6点数，治愈6点生命值",
+        "params": [
+          6
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264406.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "606",
+        "description": "选定后提供6点数，治愈6点生命值",
+        "params": [
+          6
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264406.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      }
+    ],
+    "params": [
+      10
+    ],
+    "condition": "Both",
+    "conditionPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkillCondition_264406.json",
+    "collectible": false,
+    "version": "4.0"
+  },
+  {
+    "id": "264507",
+    "name": "「遗语」",
+    "description": "生命值≤4点时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 4,
+        "contentId": "4",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 5,
+        "contentId": "5",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      },
+      {
+        "value": 5,
+        "contentId": "5",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      },
+      {
+        "value": 1,
+        "contentId": "701",
+        "description": "选定后提供1点数，随后让攻击值/防御值翻倍",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264407.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 2,
+        "contentId": "702",
+        "description": "选定后提供2点数，随后让攻击值/防御值翻倍",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264407.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum2.png"
+      },
+      {
+        "value": 4,
+        "contentId": "703",
+        "description": "选定后提供4点数，随后让攻击值/防御值翻倍",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264407.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      }
+    ],
+    "params": [
+      4
+    ],
+    "condition": "Both",
+    "conditionPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkillCondition_264407.json",
+    "collectible": false,
+    "version": "4.0"
+  },
+  {
+    "id": "264508",
+    "name": "「复读」",
+    "description": "累计选择2次骰面4后，可以在攻击时使用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 4,
+        "contentId": "801",
+        "description": "选定后提供4点数，本回合获得连击",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264408.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "802",
+        "description": "选定后提供4点数，本回合获得连击",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264408.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      }
+    ],
+    "params": [
+      2,
+      4
+    ],
+    "condition": "Attack",
+    "conditionPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkillCondition_264408.json",
+    "collectible": false,
+    "version": "4.0"
+  },
+  {
+    "id": "264509",
+    "name": "「仙人球」",
+    "description": "只能在防御时使用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 4,
+        "contentId": "901",
+        "description": "选定后提供4点数，本回合获得反击",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264409.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "901",
+        "description": "选定后提供4点数，本回合获得反击",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264409.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 5,
+        "contentId": "902",
+        "description": "选定后提供5点数，本回合获得反击",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264409.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      },
+      {
+        "value": 5,
+        "contentId": "902",
+        "description": "选定后提供5点数，本回合获得反击",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264409.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      },
+      {
+        "value": 6,
+        "contentId": "903",
+        "description": "选定后提供6点数，本回合获得反击",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264409.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "903",
+        "description": "选定后提供6点数，本回合获得反击",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264409.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      }
+    ],
+    "params": [],
+    "condition": "Defense",
+    "conditionPath": "",
+    "collectible": false,
+    "version": "4.0"
+  },
+  {
+    "id": "264510",
+    "name": "「奇迹」",
+    "description": "累计选择9次骰面1后，可以在攻击时使用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 9,
+        "contentId": "9",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum9.png"
+      },
+      {
+        "value": 9,
+        "contentId": "9",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum9.png"
+      },
+      {
+        "value": 9,
+        "contentId": "9",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum9.png"
+      },
+      {
+        "value": 9,
+        "contentId": "9",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum9.png"
+      },
+      {
+        "value": 99,
+        "contentId": "99",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum99.png"
+      },
+      {
+        "value": 99,
+        "contentId": "99",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum99.png"
+      }
+    ],
+    "params": [
+      9,
+      1
+    ],
+    "condition": "Attack",
+    "conditionPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkillCondition_264410.json",
+    "collectible": false,
+    "version": "4.0"
+  },
+  {
+    "id": "264511",
+    "name": "「贷款」",
+    "description": "随时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 1,
+        "contentId": "1101",
+        "description": "选定后提供1点数，获得1层超载",
+        "params": [
+          1
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264411.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 2,
+        "contentId": "1102",
+        "description": "选定后提供2点数，获得2层超载",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264411.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum2.png"
+      },
+      {
+        "value": 2,
+        "contentId": "1102",
+        "description": "选定后提供2点数，获得2层超载",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264411.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum2.png"
+      },
+      {
+        "value": 3,
+        "contentId": "1103",
+        "description": "选定后提供3点数，获得3层超载",
+        "params": [
+          3
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264411.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 3,
+        "contentId": "1103",
+        "description": "选定后提供3点数，获得3层超载",
+        "params": [
+          3
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264411.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 4,
+        "contentId": "1104",
+        "description": "选定后提供4点数，获得4层超载",
+        "params": [
+          4
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264411.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      }
+    ],
+    "params": [],
+    "condition": "Both",
+    "conditionPath": "",
+    "collectible": false,
+    "version": "4.0"
+  },
+  {
+    "id": "264512",
+    "name": "「星盾」",
+    "description": "只能在防御时使用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 5,
+        "contentId": "5",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      },
+      {
+        "value": 5,
+        "contentId": "5",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      },
+      {
+        "value": 5,
+        "contentId": "5",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      },
+      {
+        "value": 1,
+        "contentId": "1201",
+        "description": "选定后提供1点数，本回合获得力场",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264412.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 1,
+        "contentId": "1202",
+        "description": "选定后提供1点数，本回合获得力场",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264412.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 1,
+        "contentId": "1203",
+        "description": "选定后提供1点数，本回合获得力场",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264412.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      }
+    ],
+    "params": [],
+    "condition": "Defense",
+    "conditionPath": "",
+    "collectible": false,
+    "version": "4.0"
+  },
+  {
+    "id": "264513",
+    "name": "「誓言」",
+    "description": "只能在防御时使用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 4,
+        "contentId": "1301",
+        "description": "选定后提供4点数，本回合获得不屈",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264413.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "1302",
+        "description": "选定后提供4点数，本回合获得不屈",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264413.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 6,
+        "contentId": "1303",
+        "description": "选定后提供6点数，本回合获得不屈",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264413.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      }
+    ],
+    "params": [],
+    "condition": "Defense",
+    "conditionPath": "",
+    "collectible": false,
+    "version": "4.0"
+  },
+  {
+    "id": "264516",
+    "name": "「质数」",
+    "description": "随时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 3,
+        "contentId": "3",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 3,
+        "contentId": "3",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 5,
+        "contentId": "5",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      },
+      {
+        "value": 5,
+        "contentId": "5",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      },
+      {
+        "value": 7,
+        "contentId": "7",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum7.png"
+      },
+      {
+        "value": 7,
+        "contentId": "7",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum7.png"
+      }
+    ],
+    "params": [],
+    "condition": "Both",
+    "conditionPath": "",
+    "collectible": false,
+    "version": "4.0"
+  },
+  {
+    "id": "264517",
+    "name": "「爆弹」",
+    "description": "回合数≥7时，可以在攻击时使用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 6,
+        "contentId": "1701",
+        "description": "选定后提供6点数，立刻触发背水",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264417.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "1702",
+        "description": "选定后提供6点数，立刻触发背水",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264417.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "1703",
+        "description": "选定后提供6点数，立刻触发背水",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264417.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 8,
+        "contentId": "1704",
+        "description": "选定后提供8点数，立刻触发背水",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264417.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum8.png"
+      },
+      {
+        "value": 8,
+        "contentId": "1705",
+        "description": "选定后提供8点数，立刻触发背水",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264417.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum8.png"
+      },
+      {
+        "value": 8,
+        "contentId": "1706",
+        "description": "选定后提供8点数，立刻触发背水",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264417.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum8.png"
+      }
+    ],
+    "params": [
+      7
+    ],
+    "condition": "Attack",
+    "conditionPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkillCondition_264417.json",
+    "collectible": false,
+    "version": "4.0"
+  },
+  {
+    "id": "264518",
+    "name": "「奇术师」",
+    "description": "随时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 2,
+        "contentId": "2",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum2.png"
+      },
+      {
+        "value": 3,
+        "contentId": "3",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 4,
+        "contentId": "4",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "1801",
+        "description": "选定后提供4点数，本回合获得骇入",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264418.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 6,
+        "contentId": "1802",
+        "description": "选定后提供6点数，本回合获得骇入",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264418.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "1803",
+        "description": "选定后提供6点数，本回合获得骇入",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264418.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      }
+    ],
+    "params": [],
+    "condition": "Both",
+    "conditionPath": "",
+    "collectible": false,
+    "version": "4.0"
+  },
+  {
+    "id": "264520",
+    "name": "「战狂」",
+    "description": "随时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 3,
+        "contentId": "3",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 3,
+        "contentId": "3",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 3,
+        "contentId": "3",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 8,
+        "contentId": "2001",
+        "description": "选定后提供8点数，获得2层荆棘",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264420.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum8.png"
+      },
+      {
+        "value": 8,
+        "contentId": "2002",
+        "description": "选定后提供8点数，获得2层荆棘",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264420.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum8.png"
+      },
+      {
+        "value": 12,
+        "contentId": "2003",
+        "description": "选定后提供12点数，获得3层荆棘",
+        "params": [
+          3
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264420.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum12.png"
+      }
+    ],
+    "params": [],
+    "condition": "Both",
+    "conditionPath": "",
+    "collectible": false,
+    "version": "4.0"
+  },
+  {
+    "id": "264521",
+    "name": "「赌徒」",
+    "description": "仅能在前4回合内使用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 4,
+        "contentId": "4",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 8,
+        "contentId": "8",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum8.png"
+      },
+      {
+        "value": 10,
+        "contentId": "10",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum10.png"
+      }
+    ],
+    "params": [
+      4
+    ],
+    "condition": "Both",
+    "conditionPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkillCondition_264421.json",
+    "collectible": false,
+    "version": "4.0"
+  },
+  {
+    "id": "264522",
+    "name": "「魔弹」",
+    "description": "随时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 3,
+        "contentId": "3",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 5,
+        "contentId": "5",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      },
+      {
+        "value": 7,
+        "contentId": "7",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum7.png"
+      },
+      {
+        "value": 3,
+        "contentId": "2201",
+        "description": "选定后提供3点数，立刻造成3点瞬伤",
+        "params": [
+          3
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264422.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 5,
+        "contentId": "2202",
+        "description": "选定后提供5点数，立刻造成3点瞬伤",
+        "params": [
+          3
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264422.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      }
+    ],
+    "params": [],
+    "condition": "Both",
+    "conditionPath": "",
+    "collectible": false,
+    "version": "4.0"
+  },
+  {
+    "id": "264423",
+    "name": "「真•毒液」",
+    "description": "对手处于中毒状态时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 4,
+        "contentId": "4",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "4",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "2303",
+        "description": "选定后提供4点数，使对手陷入4层中毒",
+        "params": [
+          4
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442302.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "2304",
+        "description": "选定后提供4点数，使对手陷入4层中毒",
+        "params": [
+          4
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442302.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "2301",
+        "description": "选定后提供4点数，对手获得猛毒",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442301.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "2302",
+        "description": "选定后提供4点数，对手获得猛毒",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442301.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      }
+    ],
+    "params": [
+      1
+    ],
+    "condition": "Both",
+    "conditionPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkillCondition_264423.json",
+    "collectible": true,
+    "version": "4.2",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264423.png",
+    "image": "assets/dice/264423.png"
+  },
+  {
+    "id": "264424",
+    "name": "「真•蓄力」",
+    "description": "回合数≥3时，可以在防御时使用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 3,
+        "contentId": "2401",
+        "description": "选定后提供3点数，获得3层仅下个回合可用的力量",
+        "params": [
+          3
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442401.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 3,
+        "contentId": "2402",
+        "description": "选定后提供3点数，获得3层仅下个回合可用的力量",
+        "params": [
+          3
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442401.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 4,
+        "contentId": "2403",
+        "description": "选定后提供4点数，获得4层仅下个回合可用的力量",
+        "params": [
+          4
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442401.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "2404",
+        "description": "选定后提供4点数，获得4层仅下个回合可用的力量",
+        "params": [
+          4
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442401.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "2405",
+        "description": "选定后提供4点数，获得4层仅下个回合可用的力量",
+        "params": [
+          4
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442401.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 5,
+        "contentId": "2406",
+        "description": "选定后提供5点数，获得5层仅下个回合可用的力量",
+        "params": [
+          5
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442401.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      }
+    ],
+    "params": [
+      3
+    ],
+    "condition": "Defense",
+    "conditionPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkillCondition_264424.json",
+    "collectible": true,
+    "version": "4.2",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264426.png",
+    "image": "assets/dice/264424.png"
+  },
+  {
+    "id": "264425",
+    "name": "「真•幸运」",
+    "description": "累计选择6次骰面6后可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "2502",
+        "description": "选定后提供6点数，获得1次曜彩骰使用次数",
+        "params": [
+          1
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442501.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "2503",
+        "description": "选定后提供6点数，获得1次曜彩骰使用次数",
+        "params": [
+          1
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442501.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "2504",
+        "description": "选定后提供6点数，获得1次曜彩骰使用次数",
+        "params": [
+          1
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442501.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "2505",
+        "description": "选定后提供6点数，获得1次曜彩骰使用次数",
+        "params": [
+          1
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442501.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 12,
+        "contentId": "2506",
+        "description": "选定后提供12点数，获得强运",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442502.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum12.png"
+      }
+    ],
+    "params": [
+      6,
+      6
+    ],
+    "condition": "Both",
+    "conditionPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkillCondition_264425.json",
+    "collectible": true,
+    "version": "4.2",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264425.png",
+    "image": "assets/dice/264425.png"
+  },
+  {
+    "id": "264426",
+    "name": "「真•猛攻」",
+    "description": "只能在攻击时使用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 2,
+        "contentId": "2",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum2.png"
+      },
+      {
+        "value": 3,
+        "contentId": "3",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 4,
+        "contentId": "4",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "2601",
+        "description": "选定后提供4点数，获得2层力量",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442601.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "2602",
+        "description": "选定后提供4点数，本回合获得连击",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442602.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "2603",
+        "description": "选择后提供4点数，本回合攻击时虹吸自己造成伤害数额50%的生命值",
+        "params": [
+          50
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442603.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      }
+    ],
+    "params": [],
+    "condition": "Attack",
+    "conditionPath": "",
+    "collectible": true,
+    "version": "4.2",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264424.png",
+    "image": "assets/dice/264426.png"
+  },
+  {
+    "id": "264427",
+    "name": "「真•固守」",
+    "description": "只能在防守时使用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 1,
+        "contentId": "2701",
+        "description": "选定后提供1点数，本回合获得力场",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442701.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 4,
+        "contentId": "2702",
+        "description": "选定后提供4点数，获得4层韧性",
+        "params": [
+          4
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442702.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 5,
+        "contentId": "2703",
+        "description": "选定后提供5点数，本回合防御时反伤自己30%防御值的伤害",
+        "params": [
+          30
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442703.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      },
+      {
+        "value": 4,
+        "contentId": "2704",
+        "description": "选定后提供4点数，本回合获得不屈",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442704.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 5,
+        "contentId": "2705",
+        "description": "选定后提供5点数，本回合获得反击",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442705.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum5.png"
+      }
+    ],
+    "params": [],
+    "condition": "Defense",
+    "conditionPath": "",
+    "collectible": true,
+    "version": "4.2",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264427.png",
+    "image": "assets/dice/264427.png"
+  },
+  {
+    "id": "264428",
+    "name": "「真•忍耐」",
+    "description": "回合数≥5时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 8,
+        "contentId": "8",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum8.png"
+      },
+      {
+        "value": 8,
+        "contentId": "8",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum8.png"
+      },
+      {
+        "value": 10,
+        "contentId": "10",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum10.png"
+      },
+      {
+        "value": 10,
+        "contentId": "10",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum10.png"
+      },
+      {
+        "value": 12,
+        "contentId": "12",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum12.png"
+      }
+    ],
+    "params": [
+      5
+    ],
+    "condition": "Both",
+    "conditionPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkillCondition_264428.json",
+    "collectible": true,
+    "version": "4.2",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264428.png",
+    "image": "assets/dice/264428.png"
+  },
+  {
+    "id": "264519",
+    "name": "「心跳」",
+    "description": "随时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 1,
+        "contentId": "1",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum1.png"
+      },
+      {
+        "value": 6,
+        "contentId": "2801",
+        "description": "选定后提供6点数，获得1次曜彩骰使用次数",
+        "params": [
+          1
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264419.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "2801",
+        "description": "选定后提供6点数，获得1次曜彩骰使用次数",
+        "params": [
+          1
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_264419.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      }
+    ],
+    "params": [],
+    "condition": "Both",
+    "conditionPath": "",
+    "collectible": false,
+    "version": "4.0"
+  },
+  {
+    "id": "264523",
+    "name": "「蓄力」",
+    "description": "回合数≥3时，可以在防御时使用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 2,
+        "contentId": "2901",
+        "description": "选定后提供2点数，获得2层仅下个回合可用的力量",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442401.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum2.png"
+      },
+      {
+        "value": 3,
+        "contentId": "2902",
+        "description": "选定后提供3点数，获得3层仅下个回合可用的力量",
+        "params": [
+          3
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442401.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 3,
+        "contentId": "2903",
+        "description": "选定后提供3点数，获得3层仅下个回合可用的力量",
+        "params": [
+          3
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442401.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum3.png"
+      },
+      {
+        "value": 4,
+        "contentId": "2904",
+        "description": "选定后提供4点数，获得4层仅下个回合可用的力量",
+        "params": [
+          4
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442401.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "2905",
+        "description": "选定后提供4点数，获得4层仅下个回合可用的力量",
+        "params": [
+          4
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442401.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "2906",
+        "description": "选定后提供4点数，获得4层仅下个回合可用的力量",
+        "params": [
+          4
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442401.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      }
+    ],
+    "params": [
+      3
+    ],
+    "condition": "Defense",
+    "conditionPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkillCondition_264424.json",
+    "collectible": false,
+    "version": "4.2"
+  },
+  {
+    "id": "264524",
+    "name": "「毒液」",
+    "description": "对手处于中毒状态时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 2,
+        "contentId": "2",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum2.png"
+      },
+      {
+        "value": 4,
+        "contentId": "4",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "4",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 2,
+        "contentId": "3002",
+        "description": "选定后提供2点数，使对手陷入2层中毒",
+        "params": [
+          2
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442302.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum2.png"
+      },
+      {
+        "value": 4,
+        "contentId": "3003",
+        "description": "选定后提供4点数，使对手陷入4层中毒",
+        "params": [
+          4
+        ],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442302.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      },
+      {
+        "value": 4,
+        "contentId": "3001",
+        "description": "选定后提供4点数，对手获得猛毒",
+        "params": [],
+        "skillPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkill_26442301.json",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum4.png"
+      }
+    ],
+    "params": [
+      1
+    ],
+    "condition": "Both",
+    "conditionPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkillCondition_264423.json",
+    "collectible": false,
+    "version": "4.2"
+  },
+  {
+    "id": "264503",
+    "name": "「6•6」",
+    "description": "回合数≥4时可用",
+    "sides": 6,
+    "color": "Colorful",
+    "faces": [
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      },
+      {
+        "value": 6,
+        "contentId": "6",
+        "description": "",
+        "params": [],
+        "skillPath": "",
+        "imagePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceNum6.png"
+      }
+    ],
+    "params": [
+      4
+    ],
+    "condition": "Both",
+    "conditionPath": "Config/Gameplays/LittleGame/DiceCombat/ColorfulDiceSkillCondition_264428.json",
+    "collectible": false,
+    "version": "4.0"
+  }
+]

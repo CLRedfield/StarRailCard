@@ -1,0 +1,50 @@
+# Dependencies and build output
+node_modules/
+dist/
+dist-ssr/
+.vite/
+.cache/
+*.tsbuildinfo
+
+# Test reports, previews and logs
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+artifacts/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local configuration and secrets (keep shareable examples)
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.local
+
+# Python tooling used by the data and asset scripts
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Generated release packages and machine-specific packaging reports
+/release/*.zip
+/release/package-manifest.json
+/release/toy-preflight.json
+
+# Editor and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~

@@ -1,0 +1,15 @@
+[
+  {
+    "id": "custom-seele",
+    "itemId": "custom-seele",
+    "type": "card",
+    "name": "希儿",
+    "currency": "coins",
+    "cost": 6,
+    "unlockLevel": 0,
+    "missionIds": [],
+    "unlockChallenges": [],
+    "shopId": "1",
+    "conditions": []
+  }
+]

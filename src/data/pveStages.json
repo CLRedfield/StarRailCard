@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1001",
+    "name": "银狼",
+    "cardId": "264022",
+    "foilLevel": 3,
+    "presetId": "5",
+    "rewardId": "8018001",
+    "avatarPath": "SpriteOutput/AvatarRoundIcon/Avatar/1006.png",
+    "dialoguePath": "Config/Gameplays/LittleGame/DiceCombat/DialogPerformance_1001.json"
+  },
+  {
+    "id": "1002",
+    "name": "银狼",
+    "cardId": "264021",
+    "foilLevel": 3,
+    "presetId": "6",
+    "rewardId": "8018002",
+    "avatarPath": "SpriteOutput/AvatarRoundIcon/Avatar/1006.png",
+    "dialoguePath": "Config/Gameplays/LittleGame/DiceCombat/DialogPerformance_1002.json"
+  },
+  {
+    "id": "1003",
+    "name": "银狼",
+    "cardId": "264024",
+    "foilLevel": 3,
+    "presetId": "",
+    "rewardId": "8018003",
+    "avatarPath": "SpriteOutput/AvatarRoundIcon/Avatar/1006.png",
+    "dialoguePath": "Config/Gameplays/LittleGame/DiceCombat/DialogPerformance_1003.json"
+  },
+  {
+    "id": "1004",
+    "name": "银狼",
+    "cardId": "264017",
+    "foilLevel": 3,
+    "presetId": "",
+    "rewardId": "8018004",
+    "avatarPath": "SpriteOutput/AvatarRoundIcon/Avatar/1006.png",
+    "dialoguePath": "Config/Gameplays/LittleGame/DiceCombat/DialogPerformance_1004.json"
+  },
+  {
+    "id": "1005",
+    "name": "银狼",
+    "cardId": "264018",
+    "foilLevel": 3,
+    "presetId": "",
+    "rewardId": "8018005",
+    "avatarPath": "SpriteOutput/AvatarRoundIcon/Avatar/1006.png",
+    "dialoguePath": "Config/Gameplays/LittleGame/DiceCombat/DialogPerformance_1005.json"
+  },
+  {
+    "id": "1006",
+    "name": "刃",
+    "cardId": "264031",
+    "foilLevel": 3,
+    "presetId": "",
+    "rewardId": "8018006",
+    "avatarPath": "SpriteOutput/AvatarRoundIcon/Avatar/1205.png",
+    "dialoguePath": "Config/Gameplays/LittleGame/DiceCombat/DialogPerformance_1006.json"
+  }
+]

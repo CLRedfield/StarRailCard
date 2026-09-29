@@ -1,0 +1,170 @@
+[
+  {
+    "id": "1",
+    "name": "中毒",
+    "description": "在回合结算后，将会受到对应层数的伤害，随后使层数-1",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon01.png"
+  },
+  {
+    "id": "2",
+    "name": "连击",
+    "description": "额外进行1次基于当前攻击值的攻击",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon02.png"
+  },
+  {
+    "id": "3",
+    "name": "瞬伤",
+    "description": "无需进入伤害结算环节，立刻造成的伤害",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon03.png"
+  },
+  {
+    "id": "4",
+    "name": "骇入",
+    "description": "结算前，将对手已选择骰子中点数最大的一颗转变为2点（不会作用于曜彩骰）",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon04.png"
+  },
+  {
+    "id": "5",
+    "name": "力量",
+    "description": "在攻击时，提供对应层数的攻击值加成",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon05.png"
+  },
+  {
+    "id": "6",
+    "name": "反伤",
+    "description": "在受到攻击时，立刻造成自己防御值一定比例的瞬伤",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon06.png"
+  },
+  {
+    "id": "7",
+    "name": "干扰",
+    "description": "重投次数被减少",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon07.png"
+  },
+  {
+    "id": "8",
+    "name": "洞穿",
+    "description": "攻击时，无视对方的防御值与力场效果",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon08.png"
+  },
+  {
+    "id": "9",
+    "name": "战术",
+    "description": "重投次数增加",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon09.png"
+  },
+  {
+    "id": "10",
+    "name": "韧性",
+    "description": "在防御时，提供对应层数的防御值加成",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon10.png"
+  },
+  {
+    "id": "11",
+    "name": "反击",
+    "description": "在受到攻击时，如果防御值更大，对攻击方造成差值伤害",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon11.png"
+  },
+  {
+    "id": "12",
+    "name": "不屈",
+    "description": "生效期间，始终保留1点生命值",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon12.png"
+  },
+  {
+    "id": "13",
+    "name": "力场",
+    "description": "生效期间，不会受到常规攻击伤害",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon13.png"
+  },
+  {
+    "id": "14",
+    "name": "升级",
+    "description": "将符合条件的骰子进行稀有度和最大面数提升，最高变为十二面",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon14.png"
+  },
+  {
+    "id": "15",
+    "name": "超载",
+    "description": "攻击时附加与层数相同的攻击值，但防御时对自己造成层数50%的伤害",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon15.png"
+  },
+  {
+    "id": "16",
+    "name": "虹吸",
+    "description": "攻击时，恢复造成伤害一定比例的生命值",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon16.png"
+  },
+  {
+    "id": "17",
+    "name": "背水",
+    "description": "将自身生命值降低为1，获得降低值的点数加成",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon17.png"
+  },
+  {
+    "id": "18",
+    "name": "治愈",
+    "description": "回复指定点数的生命值",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon18.png"
+  },
+  {
+    "id": "19",
+    "name": "防御等级",
+    "description": "防御时必须选择的骰子数量",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon19.png"
+  },
+  {
+    "id": "20",
+    "name": "攻击等级",
+    "description": "攻击时必须选择的骰子数量",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon20.png"
+  },
+  {
+    "id": "21",
+    "name": "荆棘",
+    "description": "在回合结算前，将会受到对应层数的伤害，结算后清除荆棘",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon21.png"
+  },
+  {
+    "id": "22",
+    "name": "跃升",
+    "description": "结算前，随机将已选择骰子中点数最小的一颗，转变为该骰子的最大值（不会作用于曜彩骰）",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon22.png"
+  },
+  {
+    "id": "23",
+    "name": "命定",
+    "description": "持有这一效果的骰子在投出后必须被选择使用",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon23.png"
+  },
+  {
+    "id": "24",
+    "name": "觉醒",
+    "description": "选定后，将所有点数翻倍",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon24.png"
+  },
+  {
+    "id": "25",
+    "name": "猛毒",
+    "description": "因为中毒而受到的伤害变为2倍（无法叠加）",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon25.png"
+  },
+  {
+    "id": "26",
+    "name": "迭击",
+    "description": "额外进行2次基于当前攻击值的攻击",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon02.png"
+  },
+  {
+    "id": "27",
+    "name": "强运",
+    "description": "自己的所有骰子必定掷出最大值",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/BuffIcon/IconDiceCombatV2_BuffIcon03.png"
+  },
+  {
+    "id": "28",
+    "name": "进化",
+    "description": "每层使攻击与防御时必须选择的骰子数量增加1，最多叠加3层",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/BuffIcon/IconDiceCombatV2_BuffIcon01.png"
+  }
+]

@@ -1,0 +1,33 @@
+.defeat-effects,.defeat-effects *{pointer-events:none!important;user-select:none}
+.defeat-effects{position:absolute;inset:0;z-index:10;overflow:hidden;isolation:isolate}
+.defeat-focus{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,#ffe58908 20%,#29254832 100%);animation:defeat-focus 1.7s ease both}
+.defeat-fighter{position:absolute;inset:0}
+.defeat-card{position:absolute;left:var(--defeat-x);top:var(--defeat-y);width:var(--defeat-w);height:var(--defeat-h);transform:translate(-50%,-50%);border-radius:5px;overflow:hidden;background:#ffdc7a;box-shadow:0 0 0 2px #fff2bf;animation:defeat-card-vanish 620ms cubic-bezier(.2,.65,.2,1) both}
+.defeat-card>img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;transform:scale(1.25)}
+.defeat-card>i{position:absolute;inset:0;background:#fff3c0;mix-blend-mode:screen;animation:defeat-card-light 400ms both}
+.defeat-burst,.defeat-cubes{position:absolute;left:var(--defeat-x);top:var(--defeat-y);width:0;height:0;isolation:isolate}
+.defeat-impact-flash{position:absolute;left:-95px;top:-95px;width:190px;height:190px;border-radius:50%;background:radial-gradient(circle,#fffbd3 0,#fff3a8 12%,#ffd052b3 24%,#ffb73900 65%);animation:defeat-flash 650ms 170ms both}
+.defeat-impact-ring{position:absolute;left:-38px;top:-38px;width:76px;height:76px;border-radius:50%;border:3px solid #ffe591;box-shadow:0 0 11px #ffce47,inset 0 0 11px #fff1ba;animation:defeat-ring 620ms 190ms both}
+.defeat-ray{position:absolute;left:0;top:-3px;height:6px;width:var(--ray-length);transform-origin:0 50%;background:linear-gradient(90deg,#fff9ce,#ffe169 56%,#fff1a300);clip-path:polygon(0 50%,85% 0,100% 50%,85% 100%);animation:defeat-ray 980ms calc(230ms + var(--ray-delay)) cubic-bezier(.1,.6,.2,1) both}
+.defeat-ray.white{height:3px;background:linear-gradient(90deg,#ffffe4,#fff 45%,#fff0)}
+.defeat-cube{position:absolute;left:0;top:0;width:var(--cube-size);height:calc(var(--cube-size)*1.17);overflow:visible;filter:drop-shadow(0 0 3px #ffdaaaa8);animation:defeat-cube 1280ms calc(230ms + var(--cube-delay)) cubic-bezier(.1,.57,.22,1) both}
+.defeat-cube path{stroke:#ffd5d6;stroke-width:.85;stroke-linejoin:round}
+.defeat-cube .cube-top{fill:#ffb2b2c7}.defeat-cube .cube-left{fill:#ed657abd}.defeat-cube .cube-right{fill:#ff8d9fc9}
+.defeat-spark{position:absolute;left:0;top:0;width:9px;height:9px;background:#fff0a5;clip-path:polygon(50% 0,62% 36%,100% 50%,62% 64%,50% 100%,37% 64%,0 50%,37% 36%);filter:drop-shadow(0 0 4px #fff0aa);animation:defeat-spark 1120ms calc(260ms + var(--spark-delay)) ease-out both}
+.defeat-ko{position:absolute;left:clamp(100px,var(--defeat-x),calc(100% - 100px));top:var(--defeat-label-y);width:clamp(150px,28%,260px);transform:translate(-50%,-50%) rotate(-10deg);filter:drop-shadow(0 0 13px #ffbc5899);animation:defeat-ko 1.36s 230ms cubic-bezier(.18,.75,.2,1) both;z-index:3;text-align:center}
+.defeat-ko>svg{display:block;width:100%;overflow:visible;shape-rendering:crispEdges}
+.ko-depth{fill:#e1546f}.ko-shadow{fill:#82324b}.ko-face{fill:#fff07c;stroke:#fff7a8;stroke-width:.8}
+.defeat-ko>small{display:block;font-size:10px;font-weight:800;letter-spacing:2px;white-space:nowrap;color:#ffedb3;text-shadow:0 1px 3px #573548,0 0 6px #3c3351;transform:rotate(10deg)}
+@keyframes defeat-focus{0%{opacity:0}15%,75%{opacity:1}100%{opacity:0}}
+@keyframes defeat-card-vanish{0%{opacity:1;filter:brightness(1);transform:translate(-50%,-50%) scale(1)}22%{filter:brightness(1.5);transform:translate(-50%,-50%) scale(1.1) rotate(-3deg)}48%{opacity:1;filter:brightness(2.5);transform:translate(-50%,-50%) scale(.99) rotate(2deg)}62%{opacity:.55;clip-path:polygon(0 0,100% 0,100% 32%,78% 32%,78% 51%,100% 51%,100% 100%,45% 100%,45% 74%,18% 74%,18% 100%,0 100%)}100%{opacity:0;filter:brightness(3);transform:translate(-50%,-50%) scale(.55);clip-path:polygon(28% 20%,78% 20%,78% 48%,63% 48%,63% 70%,78% 70%,78% 80%,45% 80%,45% 52%,28% 52%)}}
+@keyframes defeat-card-light{0%{opacity:0}55%{opacity:.25}100%{opacity:1}}
+@keyframes defeat-flash{0%{opacity:0;transform:scale(.15)}22%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.65)}}
+@keyframes defeat-ring{0%{opacity:0;transform:scale(.2,.15)}20%{opacity:1}100%{opacity:0;transform:scale(3.2,1.9)}}
+@keyframes defeat-ray{0%{opacity:0;transform:rotate(var(--ray-angle)) translateX(10px) scaleX(.12)}18%{opacity:1}72%{opacity:.75}100%{opacity:0;transform:rotate(var(--ray-angle)) translateX(70px) scaleX(1.15)}}
+@keyframes defeat-cube{0%{opacity:0;transform:translate(-50%,-50%) scale(.3) rotate(0)}10%{opacity:1}70%{opacity:.9}100%{opacity:0;transform:translate(calc(-50% + var(--cube-x)),calc(-50% + var(--cube-y))) scale(.8) rotate(var(--cube-rotate))}}
+@keyframes defeat-spark{0%{opacity:0;transform:translate(0,0) scale(0)}20%{opacity:1}65%{opacity:1}100%{opacity:0;transform:translate(var(--spark-x),var(--spark-y)) scale(.2) rotate(130deg)}}
+@keyframes defeat-ko{0%{opacity:0;transform:translate(-50%,-50%) rotate(-10deg) scale(1.8)}15%{opacity:1;transform:translate(-50%,-50%) rotate(-10deg) scale(.93)}25%{transform:translate(-50%,-50%) rotate(-10deg) scale(1.03)}37%,77%{opacity:1;transform:translate(-50%,-50%) rotate(-10deg) scale(1)}100%{opacity:0;transform:translate(-50%,-54%) rotate(-10deg) scale(1.08)}}
+.defeat-effects.reduced .defeat-focus,.defeat-effects.reduced .defeat-card,.defeat-effects.reduced .defeat-burst,.defeat-effects.reduced .defeat-cubes{display:none}
+.defeat-effects.reduced .defeat-ko{animation:none;opacity:1;filter:none}
+@media(max-height:580px) and (orientation:landscape){.defeat-ko{width:clamp(120px,24%,175px)}.defeat-ko>small{font-size:8px}}
+@media(prefers-reduced-motion:reduce){.defeat-focus,.defeat-card,.defeat-burst,.defeat-cubes{display:none}.defeat-ko{animation:none;opacity:1;filter:none}}

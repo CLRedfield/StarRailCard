@@ -1,0 +1,324 @@
+[
+  {
+    "version": "4.2",
+    "path": "TextMap/TextMapCHS.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "19a3a7e42d6367a088166da3e3cf116915d07649633a9b4ca6e3b3734ee20560",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/TextMap%2FTextMapCHS.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceAvatarConfig.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "96259cafdf2da2c5ed60a043fe32c6eeccc32b38e9d8c4d83aa6d60644c73988",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceAvatarConfig.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceAvatarLevel.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "f870792941a5418a42d8244e0dd11cc97603f77f181dffb23ae401ca06727a82",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceAvatarLevel.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceConfig.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "5a3befb44a2de226e02a5a908e2a8a70150a5d32835e8050695e6ff7cac26eea",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceConfig.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceContentConfig.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "10612073f321cec238c69a32b9a831147e186dfe41d813325abae12c5bfb8118",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceContentConfig.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceSkill.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "f316542108b7019a13e0c3bf3603b524bfadb3b01a78d80e94aed06b200d59e6",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceSkill.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceEffect.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "36b20b334b7c8760acda2204fba602cdbcfee7b13715336997a4f5885da89d62",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceEffect.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceGlossary.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "2ebbc517eb90840814ba19fde3572ad5e6d58314291e5d1b8c6ae19bf95fd763",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceGlossary.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceCampaignConfig.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "3406797638bc5efd10bcffa254621cb760b240eca89222f0585e521595129d82",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceCampaignConfig.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceStageConfig.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "0becc553e531f18d4180280797c1469697195cf39157156006da9bfe3b34291f",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceStageConfig.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceSpecialRule.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "415126cbee600717e20041f54c87ac89ab0f8fbda3fd42c5f4037e1bb5d64c1c",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceSpecialRule.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceRuleGroup.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "5505911de3d6b5ec17b86b5435d0d0e60f4d65a9534b3b70efdf015cc026ad5c",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceRuleGroup.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDicePresetConfig.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "7e9b00ce7f73f6935e278bfa7207c3be73a8504ccd2f938e591eda71e8418c5c",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDicePresetConfig.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceRankConfig.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "e0ea40e86a5fda7801006d9e2d8a4b00ae79e854c3fd2de739fa372cfc2dc014",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceRankConfig.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceShopConfig.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "d8d3b5871769999aacdd5ee0c155b96d15d3ff319c602bfddc413805ba53abe3",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceShopConfig.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceShopGoodsConfig.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "3379582a3e5169c95aefaf44b72e9dd5e747768b041a3eacb1abb0b962173a67",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceShopGoodsConfig.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceUnlockTips.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "4d4724dd3cf430d71086c5a3d01e652586413016e35e02210fd62ff13ded1f01",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceUnlockTips.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceGoodsUnlockTips.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "65edc97b132bd30a7b6fa992f7a78507d463d0ebb3552a42ae2bd7ab116e2fc6",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceGoodsUnlockTips.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceConstValueCommo.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "1d34a3f1dcb5c21c7783fe36a37c4420c1055aba07ccbb800f5a33e1b152718d",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceConstValueCommo.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceLuckControl.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "e894255f68caaf53d98fabc459c220900c07f3cd86c535c6aaf09935f9c003f2",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceLuckControl.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceModifier.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "be1128337d597c73564e9ee8f0ea4bd84fb2e70e8717f8ca8f55e1988b06db9c",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceModifier.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceV2Stage.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "487465348667b59468756a78d845e88227d037b376ccf174a3b8ca9f92679841",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceV2Stage.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceV2PVEStage.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "bd469b40df598a8cfc1c3fe2af86e6538cac4fdd36195ec72beae209c6547228",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceV2PVEStage.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceV2TacticsCard.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "aaf04b610f297c56b8a60224c1de9f7fd4260f7757aeb9be701bb3cd34b819da",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceV2TacticsCard.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceV2TacticsPoint.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "5318cf8f239452796e64f5eac17a998ce35e4bddfbb82f35b3e47d3c157e1d8a",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceV2TacticsPoint.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceV2Opponent.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "795ceaff1a342f9ca55f199ee56ff0b33c0f0d3633603670306953b5a9300800",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceV2Opponent.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceV2Robot.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "2c23e0d8e9d12175bbabc4a96330a8fb906e3a69898ea895ffdf55b574de7691",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceV2Robot.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceV2Brand.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "7e83b06a53da5c424660f451bf6f5eccf4ef899fbd959de9330c04b260175b38",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceV2Brand.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ActivityDiceV2BossAdvice.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "1e60bb9a1bacaf0155498c6d92a749027093550d5e5c15171618ac6754a0fc8f",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceV2BossAdvice.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/OfferingLevelConfig.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "4a25f7fd5b0145fad9277d903b3da09770c6d1dd6240a23d7fa63f7a184b126b",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FOfferingLevelConfig.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/OfferingTypeConfig.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "ad30bd0cf20dddee1f271c1ba0edc215fd5ab423278ede59131203abf3c67fbe",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FOfferingTypeConfig.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/RewardData.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "043a759942b2ef0ec3eb721c8142fb24cb582c87d0acdda32bd0b9052a5b8f50",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FRewardData.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/ItemConfig.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "d00b813de824a608610bac9fdb58983b47a711ad56d381a381497420ab57be25",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FItemConfig.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "ExcelOutput/MainMission.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "c8e3122fe0583b50b2be97786dd7a3b0e438dfdc49a74155473f7778ce5529de",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FMainMission.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.0",
+    "path": "ExcelOutput/ActivityDiceAvatarConfig.json",
+    "commit": "ef1a136031756a146f51891f135c337e4ea87487",
+    "sha256": "acf2aedadc44dbddc8124b8bffe8073184378c57d72d8a483065b84de684f194",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceAvatarConfig.json/raw?ref=ef1a136031756a146f51891f135c337e4ea87487"
+  },
+  {
+    "version": "4.0",
+    "path": "ExcelOutput/ActivityDiceConfig.json",
+    "commit": "ef1a136031756a146f51891f135c337e4ea87487",
+    "sha256": "b10676b540d919c60e43a189cf8ae68fe6f9c464b6aabe6a0b155124d6ba6b9c",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceConfig.json/raw?ref=ef1a136031756a146f51891f135c337e4ea87487"
+  },
+  {
+    "version": "4.0",
+    "path": "ExcelOutput/ActivityDiceSkill.json",
+    "commit": "ef1a136031756a146f51891f135c337e4ea87487",
+    "sha256": "9e6c570da5a883e5ae1c5e05c34d44b2f0ae338b00f9c50684371da1415b4a15",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceSkill.json/raw?ref=ef1a136031756a146f51891f135c337e4ea87487"
+  },
+  {
+    "version": "4.0",
+    "path": "ExcelOutput/ActivityDiceStageConfig.json",
+    "commit": "ef1a136031756a146f51891f135c337e4ea87487",
+    "sha256": "54461eb81ddb6e349a8b3d5b00167e44781d966f9625174dcc6c227e126954b4",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceStageConfig.json/raw?ref=ef1a136031756a146f51891f135c337e4ea87487"
+  },
+  {
+    "version": "4.0",
+    "path": "ExcelOutput/ActivityDiceCampaignConfig.json",
+    "commit": "ef1a136031756a146f51891f135c337e4ea87487",
+    "sha256": "d567e97d85b7923bd4df275c422c82a59277aab282123392f35d3672a8b9df43",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceCampaignConfig.json/raw?ref=ef1a136031756a146f51891f135c337e4ea87487"
+  },
+  {
+    "version": "4.0",
+    "path": "ExcelOutput/ActivityDiceRuleGroup.json",
+    "commit": "ef1a136031756a146f51891f135c337e4ea87487",
+    "sha256": "5505911de3d6b5ec17b86b5435d0d0e60f4d65a9534b3b70efdf015cc026ad5c",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceRuleGroup.json/raw?ref=ef1a136031756a146f51891f135c337e4ea87487"
+  },
+  {
+    "version": "4.0",
+    "path": "ExcelOutput/ActivityDiceSpecialRule.json",
+    "commit": "ef1a136031756a146f51891f135c337e4ea87487",
+    "sha256": "415126cbee600717e20041f54c87ac89ab0f8fbda3fd42c5f4037e1bb5d64c1c",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceSpecialRule.json/raw?ref=ef1a136031756a146f51891f135c337e4ea87487"
+  },
+  {
+    "version": "4.0",
+    "path": "ExcelOutput/ActivityDiceRankConfig.json",
+    "commit": "ef1a136031756a146f51891f135c337e4ea87487",
+    "sha256": "30773cfd2d432ff440a86626adf252a6c56752aa06d6cbf5f3d2fbc9bcb9be8b",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceRankConfig.json/raw?ref=ef1a136031756a146f51891f135c337e4ea87487"
+  },
+  {
+    "version": "4.0",
+    "path": "ExcelOutput/ActivityDiceShopGoodsConfig.json",
+    "commit": "ef1a136031756a146f51891f135c337e4ea87487",
+    "sha256": "8ac3747bf4608662dbd0123b82f3bc8c2d2b1c3d26a09e687b44ff9358cc317a",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/ExcelOutput%2FActivityDiceShopGoodsConfig.json/raw?ref=ef1a136031756a146f51891f135c337e4ea87487"
+  },
+  {
+    "version": "4.2",
+    "path": "Config/Level/Mission/8040100/MissionInfo_8040100.partial.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "d0586bef27b2f98595f9cbb1f139b084e76f165fe769bd5decb1688a0b2c5829",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/Config%2FLevel%2FMission%2F8040100%2FMissionInfo_8040100.partial.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "Config/Level/Mission/8040101/MissionInfo_8040101.partial.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "2e756188f42992f6938795562e173943001d102ecf92537e0fce68da572a086b",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/Config%2FLevel%2FMission%2F8040101%2FMissionInfo_8040101.partial.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  },
+  {
+    "version": "4.2",
+    "path": "Config/Level/Mission/8042200/MissionInfo_8042200.partial.json",
+    "commit": "8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1",
+    "sha256": "120a2fcda0d2c442ef3dccba72945c825e846fd810b0986c3ecbaa99f2e2f59d",
+    "url": "https://gitlab.com/api/v4/projects/Dimbreath%2Fturnbasedgamedata/repository/files/Config%2FLevel%2FMission%2F8042200%2FMissionInfo_8042200.partial.json/raw?ref=8a83702254b0f44188b6e2ca2f889e5a2ba4a8a1"
+  }
+]

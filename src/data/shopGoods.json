@@ -1,0 +1,1187 @@
+[
+  {
+    "id": "1101",
+    "itemId": "264001",
+    "type": "card",
+    "name": "奇美拉",
+    "currency": "coins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [],
+    "unlockChallenges": [],
+    "shopId": "1",
+    "conditions": []
+  },
+  {
+    "id": "1102",
+    "itemId": "264002",
+    "type": "card",
+    "name": "大地兽",
+    "currency": "coins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [],
+    "unlockChallenges": [],
+    "shopId": "1",
+    "conditions": []
+  },
+  {
+    "id": "1103",
+    "itemId": "264003",
+    "type": "card",
+    "name": "阮•梅造物",
+    "currency": "coins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [],
+    "unlockChallenges": [],
+    "shopId": "1",
+    "conditions": []
+  },
+  {
+    "id": "1104",
+    "itemId": "264004",
+    "type": "card",
+    "name": "开拓妖精",
+    "currency": "coins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [],
+    "unlockChallenges": [],
+    "shopId": "1",
+    "conditions": []
+  },
+  {
+    "id": "1105",
+    "itemId": "264005",
+    "type": "card",
+    "name": "自动机兵•甲虫",
+    "currency": "coins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [],
+    "unlockChallenges": [],
+    "shopId": "1",
+    "conditions": []
+  },
+  {
+    "id": "1106",
+    "itemId": "264006",
+    "type": "card",
+    "name": "基层员工•安保",
+    "currency": "coins",
+    "cost": 2,
+    "unlockLevel": 0,
+    "missionIds": [],
+    "unlockChallenges": [],
+    "shopId": "1",
+    "conditions": []
+  },
+  {
+    "id": "1107",
+    "itemId": "264007",
+    "type": "card",
+    "name": "垃圾桶",
+    "currency": "coins",
+    "cost": 2,
+    "unlockLevel": 0,
+    "missionIds": [],
+    "unlockChallenges": [],
+    "shopId": "1",
+    "conditions": []
+  },
+  {
+    "id": "1108",
+    "itemId": "264008",
+    "type": "card",
+    "name": "狸猫记者",
+    "currency": "coins",
+    "cost": 2,
+    "unlockLevel": 0,
+    "missionIds": [],
+    "unlockChallenges": [],
+    "shopId": "1",
+    "conditions": []
+  },
+  {
+    "id": "1109",
+    "itemId": "264009",
+    "type": "card",
+    "name": "蕉研组的财富蕉师",
+    "currency": "coins",
+    "cost": 2,
+    "unlockLevel": 0,
+    "missionIds": [],
+    "unlockChallenges": [],
+    "shopId": "1",
+    "conditions": []
+  },
+  {
+    "id": "1110",
+    "itemId": "264010",
+    "type": "card",
+    "name": "资深员工•组长",
+    "currency": "coins",
+    "cost": 2,
+    "unlockLevel": 0,
+    "missionIds": [],
+    "unlockChallenges": [],
+    "shopId": "1",
+    "conditions": []
+  },
+  {
+    "id": "1111",
+    "itemId": "264013",
+    "type": "card",
+    "name": "黄泉",
+    "currency": "coins",
+    "cost": 3,
+    "unlockLevel": 0,
+    "missionIds": [],
+    "unlockChallenges": [],
+    "shopId": "1",
+    "conditions": []
+  },
+  {
+    "id": "1201",
+    "itemId": "264403",
+    "type": "dice",
+    "name": "「真•6•6」",
+    "currency": "coins",
+    "cost": 5,
+    "unlockLevel": 5,
+    "missionIds": [],
+    "unlockChallenges": [],
+    "shopId": "1",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      }
+    ]
+  },
+  {
+    "id": "1202",
+    "itemId": "264404",
+    "type": "dice",
+    "name": "「真•命运」",
+    "currency": "coins",
+    "cost": 5,
+    "unlockLevel": 5,
+    "missionIds": [],
+    "unlockChallenges": [],
+    "shopId": "1",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      }
+    ]
+  },
+  {
+    "id": "1203",
+    "itemId": "264416",
+    "type": "dice",
+    "name": "「真•质数」",
+    "currency": "coins",
+    "cost": 5,
+    "unlockLevel": 5,
+    "missionIds": [],
+    "unlockChallenges": [],
+    "shopId": "1",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      }
+    ]
+  },
+  {
+    "id": "1204",
+    "itemId": "264421",
+    "type": "dice",
+    "name": "「真•赌徒」",
+    "currency": "coins",
+    "cost": 5,
+    "unlockLevel": 5,
+    "missionIds": [],
+    "unlockChallenges": [],
+    "shopId": "1",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      }
+    ]
+  },
+  {
+    "id": "2101",
+    "itemId": "264012",
+    "type": "card",
+    "name": "遐蝶",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [
+      "804010015"
+    ],
+    "unlockChallenges": [
+      "classic-7"
+    ],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010015"
+      }
+    ]
+  },
+  {
+    "id": "2102",
+    "itemId": "264014",
+    "type": "card",
+    "name": "流萤",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [
+      "804010002"
+    ],
+    "unlockChallenges": [],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010002"
+      }
+    ]
+  },
+  {
+    "id": "2103",
+    "itemId": "264015",
+    "type": "card",
+    "name": "知更鸟",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [
+      "804010006"
+    ],
+    "unlockChallenges": [
+      "classic-3"
+    ],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010006"
+      }
+    ]
+  },
+  {
+    "id": "2104",
+    "itemId": "264016",
+    "type": "card",
+    "name": "大黑塔",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [
+      "804010004"
+    ],
+    "unlockChallenges": [
+      "classic-2"
+    ],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010004"
+      }
+    ]
+  },
+  {
+    "id": "2105",
+    "itemId": "264017",
+    "type": "card",
+    "name": "卡芙卡",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [
+      "804010103"
+    ],
+    "unlockChallenges": [
+      "classic-8"
+    ],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010103"
+      }
+    ]
+  },
+  {
+    "id": "2106",
+    "itemId": "264019",
+    "type": "card",
+    "name": "三月七",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [
+      "804010010"
+    ],
+    "unlockChallenges": [
+      "classic-5"
+    ],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010010"
+      }
+    ]
+  },
+  {
+    "id": "2107",
+    "itemId": "264020",
+    "type": "card",
+    "name": "丹恒•腾荒",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [
+      "804010107"
+    ],
+    "unlockChallenges": [
+      "classic-9"
+    ],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010107"
+      }
+    ]
+  },
+  {
+    "id": "2109",
+    "itemId": "264022",
+    "type": "card",
+    "name": "爻光",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [
+      "804010111"
+    ],
+    "unlockChallenges": [
+      "classic-10"
+    ],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010111"
+      }
+    ]
+  },
+  {
+    "id": "2110",
+    "itemId": "264023",
+    "type": "card",
+    "name": "昔涟",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [
+      "804010115"
+    ],
+    "unlockChallenges": [
+      "classic-11"
+    ],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010115"
+      }
+    ]
+  },
+  {
+    "id": "2111",
+    "itemId": "264024",
+    "type": "card",
+    "name": "白厄",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [
+      "804010008"
+    ],
+    "unlockChallenges": [
+      "classic-4"
+    ],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010008"
+      }
+    ]
+  },
+  {
+    "id": "2112",
+    "itemId": "264025",
+    "type": "card",
+    "name": "风堇",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [
+      "804010018"
+    ],
+    "unlockChallenges": [
+      "classic-1"
+    ],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010018"
+      }
+    ]
+  },
+  {
+    "id": "2113",
+    "itemId": "264026",
+    "type": "card",
+    "name": "银狼LV.999",
+    "currency": "paintCoins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [
+      "804220020"
+    ],
+    "unlockChallenges": [
+      "coop-1005"
+    ],
+    "shopId": "3",
+    "conditions": [
+      {
+        "Type": "FinishSubMission",
+        "Param": "804220020"
+      }
+    ]
+  },
+  {
+    "id": "2114",
+    "itemId": "264027",
+    "type": "card",
+    "name": "绯英",
+    "currency": "paintCoins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [
+      "804220020"
+    ],
+    "unlockChallenges": [
+      "coop-1005"
+    ],
+    "shopId": "3",
+    "conditions": [
+      {
+        "Type": "FinishSubMission",
+        "Param": "804220020"
+      }
+    ]
+  },
+  {
+    "id": "2115",
+    "itemId": "264028",
+    "type": "card",
+    "name": "开拓者",
+    "currency": "paintCoins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [
+      "804220017"
+    ],
+    "unlockChallenges": [
+      "coop-1004"
+    ],
+    "shopId": "3",
+    "conditions": [
+      {
+        "Type": "FinishSubMission",
+        "Param": "804220017"
+      }
+    ]
+  },
+  {
+    "id": "2116",
+    "itemId": "264029",
+    "type": "card",
+    "name": "不死途",
+    "currency": "paintCoins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [
+      "804220008"
+    ],
+    "unlockChallenges": [
+      "coop-1001"
+    ],
+    "shopId": "3",
+    "conditions": [
+      {
+        "Type": "FinishSubMission",
+        "Param": "804220008"
+      }
+    ]
+  },
+  {
+    "id": "2117",
+    "itemId": "264030",
+    "type": "card",
+    "name": "星期日",
+    "currency": "paintCoins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [
+      "804220014"
+    ],
+    "unlockChallenges": [
+      "coop-1003"
+    ],
+    "shopId": "3",
+    "conditions": [
+      {
+        "Type": "FinishSubMission",
+        "Param": "804220014"
+      }
+    ]
+  },
+  {
+    "id": "2118",
+    "itemId": "264031",
+    "type": "card",
+    "name": "刃",
+    "currency": "paintCoins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [
+      "804220020"
+    ],
+    "unlockChallenges": [
+      "coop-1005"
+    ],
+    "shopId": "3",
+    "conditions": [
+      {
+        "Type": "FinishSubMission",
+        "Param": "804220020"
+      }
+    ]
+  },
+  {
+    "id": "2119",
+    "itemId": "264032",
+    "type": "card",
+    "name": "海瑟音",
+    "currency": "paintCoins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [
+      "804220011"
+    ],
+    "unlockChallenges": [
+      "coop-1002"
+    ],
+    "shopId": "3",
+    "conditions": [
+      {
+        "Type": "FinishSubMission",
+        "Param": "804220011"
+      }
+    ]
+  },
+  {
+    "id": "2120",
+    "itemId": "264033",
+    "type": "card",
+    "name": "缇宝",
+    "currency": "paintCoins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [
+      "804220020"
+    ],
+    "unlockChallenges": [
+      "coop-1005"
+    ],
+    "shopId": "3",
+    "conditions": [
+      {
+        "Type": "FinishSubMission",
+        "Param": "804220020"
+      }
+    ]
+  },
+  {
+    "id": "2121",
+    "itemId": "264034",
+    "type": "card",
+    "name": "阮•梅",
+    "currency": "paintCoins",
+    "cost": 1,
+    "unlockLevel": 0,
+    "missionIds": [
+      "804220005"
+    ],
+    "unlockChallenges": [],
+    "shopId": "3",
+    "conditions": [
+      {
+        "Type": "FinishSubMission",
+        "Param": "804220005"
+      }
+    ]
+  },
+  {
+    "id": "2201",
+    "itemId": "264402",
+    "type": "dice",
+    "name": "「真•进化」",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 5,
+    "missionIds": [
+      "804010115"
+    ],
+    "unlockChallenges": [
+      "classic-11"
+    ],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      },
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010115"
+      }
+    ]
+  },
+  {
+    "id": "2202",
+    "itemId": "264405",
+    "type": "dice",
+    "name": "「真•复仇」",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 5,
+    "missionIds": [
+      "804010006"
+    ],
+    "unlockChallenges": [
+      "classic-3"
+    ],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      },
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010006"
+      }
+    ]
+  },
+  {
+    "id": "2203",
+    "itemId": "264406",
+    "type": "dice",
+    "name": "「真•医嘱」",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 5,
+    "missionIds": [
+      "804010015"
+    ],
+    "unlockChallenges": [
+      "classic-7"
+    ],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      },
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010015"
+      }
+    ]
+  },
+  {
+    "id": "2204",
+    "itemId": "264407",
+    "type": "dice",
+    "name": "「真•遗语」",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 5,
+    "missionIds": [
+      "804010002"
+    ],
+    "unlockChallenges": [],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      },
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010002"
+      }
+    ]
+  },
+  {
+    "id": "2205",
+    "itemId": "264408",
+    "type": "dice",
+    "name": "「真•复读」",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 5,
+    "missionIds": [
+      "804010002"
+    ],
+    "unlockChallenges": [],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      },
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010002"
+      }
+    ]
+  },
+  {
+    "id": "2206",
+    "itemId": "264409",
+    "type": "dice",
+    "name": "「真•仙人球」",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 5,
+    "missionIds": [
+      "804010107"
+    ],
+    "unlockChallenges": [
+      "classic-9"
+    ],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      },
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010107"
+      }
+    ]
+  },
+  {
+    "id": "2207",
+    "itemId": "264410",
+    "type": "dice",
+    "name": "「真•奇迹」",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 5,
+    "missionIds": [
+      "804010002"
+    ],
+    "unlockChallenges": [],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      },
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010002"
+      }
+    ]
+  },
+  {
+    "id": "2208",
+    "itemId": "264411",
+    "type": "dice",
+    "name": "「真•贷款」",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 5,
+    "missionIds": [
+      "804010002"
+    ],
+    "unlockChallenges": [],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      },
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010002"
+      }
+    ]
+  },
+  {
+    "id": "2209",
+    "itemId": "264412",
+    "type": "dice",
+    "name": "「真•星盾」",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 5,
+    "missionIds": [
+      "804010008"
+    ],
+    "unlockChallenges": [
+      "classic-4"
+    ],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      },
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010008"
+      }
+    ]
+  },
+  {
+    "id": "2210",
+    "itemId": "264413",
+    "type": "dice",
+    "name": "「真•誓言」",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 5,
+    "missionIds": [
+      "804010018"
+    ],
+    "unlockChallenges": [
+      "classic-1"
+    ],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      },
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010018"
+      }
+    ]
+  },
+  {
+    "id": "2211",
+    "itemId": "264417",
+    "type": "dice",
+    "name": "「大红按钮」",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 5,
+    "missionIds": [
+      "804010103"
+    ],
+    "unlockChallenges": [
+      "classic-8"
+    ],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      },
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010103"
+      }
+    ]
+  },
+  {
+    "id": "2212",
+    "itemId": "264418",
+    "type": "dice",
+    "name": "「真•奇术师」",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 5,
+    "missionIds": [
+      "804010002"
+    ],
+    "unlockChallenges": [],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      },
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010002"
+      }
+    ]
+  },
+  {
+    "id": "2213",
+    "itemId": "264419",
+    "type": "dice",
+    "name": "「真•心跳」",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 5,
+    "missionIds": [
+      "804010111"
+    ],
+    "unlockChallenges": [
+      "classic-10"
+    ],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      },
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010111"
+      }
+    ]
+  },
+  {
+    "id": "2214",
+    "itemId": "264420",
+    "type": "dice",
+    "name": "「真•战狂」",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 5,
+    "missionIds": [
+      "804010004"
+    ],
+    "unlockChallenges": [
+      "classic-2"
+    ],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      },
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010004"
+      }
+    ]
+  },
+  {
+    "id": "2215",
+    "itemId": "264422",
+    "type": "dice",
+    "name": "「真•魔弹」",
+    "currency": "victoryCoins",
+    "cost": 1,
+    "unlockLevel": 5,
+    "missionIds": [
+      "804010010"
+    ],
+    "unlockChallenges": [
+      "classic-5"
+    ],
+    "shopId": "2",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      },
+      {
+        "Type": "FinishSubMission",
+        "Param": "804010010"
+      }
+    ]
+  },
+  {
+    "id": "2216",
+    "itemId": "264423",
+    "type": "dice",
+    "name": "「真•毒液」",
+    "currency": "paintCoins",
+    "cost": 1,
+    "unlockLevel": 5,
+    "missionIds": [
+      "804220011"
+    ],
+    "unlockChallenges": [
+      "coop-1002"
+    ],
+    "shopId": "3",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      },
+      {
+        "Type": "FinishSubMission",
+        "Param": "804220011"
+      }
+    ]
+  },
+  {
+    "id": "2217",
+    "itemId": "264424",
+    "type": "dice",
+    "name": "「真•蓄力」",
+    "currency": "paintCoins",
+    "cost": 1,
+    "unlockLevel": 5,
+    "missionIds": [
+      "804220020"
+    ],
+    "unlockChallenges": [
+      "coop-1005"
+    ],
+    "shopId": "3",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      },
+      {
+        "Type": "FinishSubMission",
+        "Param": "804220020"
+      }
+    ]
+  },
+  {
+    "id": "2218",
+    "itemId": "264425",
+    "type": "dice",
+    "name": "「真•幸运」",
+    "currency": "paintCoins",
+    "cost": 1,
+    "unlockLevel": 5,
+    "missionIds": [
+      "804220017"
+    ],
+    "unlockChallenges": [
+      "coop-1004"
+    ],
+    "shopId": "3",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      },
+      {
+        "Type": "FinishSubMission",
+        "Param": "804220017"
+      }
+    ]
+  },
+  {
+    "id": "2219",
+    "itemId": "264426",
+    "type": "dice",
+    "name": "「真•猛攻」",
+    "currency": "paintCoins",
+    "cost": 1,
+    "unlockLevel": 5,
+    "missionIds": [
+      "804220008"
+    ],
+    "unlockChallenges": [
+      "coop-1001"
+    ],
+    "shopId": "3",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      },
+      {
+        "Type": "FinishSubMission",
+        "Param": "804220008"
+      }
+    ]
+  },
+  {
+    "id": "2220",
+    "itemId": "264427",
+    "type": "dice",
+    "name": "「真•固守」",
+    "currency": "paintCoins",
+    "cost": 1,
+    "unlockLevel": 5,
+    "missionIds": [
+      "804220005"
+    ],
+    "unlockChallenges": [],
+    "shopId": "3",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      },
+      {
+        "Type": "FinishSubMission",
+        "Param": "804220005"
+      }
+    ]
+  },
+  {
+    "id": "2221",
+    "itemId": "264428",
+    "type": "dice",
+    "name": "「真•忍耐」",
+    "currency": "paintCoins",
+    "cost": 1,
+    "unlockLevel": 5,
+    "missionIds": [
+      "804220014"
+    ],
+    "unlockChallenges": [
+      "coop-1003"
+    ],
+    "shopId": "3",
+    "conditions": [
+      {
+        "Type": "OfferingLevel",
+        "Param": "12-5"
+      },
+      {
+        "Type": "FinishSubMission",
+        "Param": "804220014"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1580 @@
+[
+  {
+    "id": "264001",
+    "name": "奇美拉",
+    "hp": 22,
+    "attack": 3,
+    "defense": 2,
+    "dice": [
+      4,
+      4,
+      6,
+      6
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264201",
+      "264201"
+    ],
+    "skill": "264001",
+    "skillId": "264001",
+    "description": "攻击时：若选定的骰子含有相同点数，攻击值+3；若相同点数为4，则改为攻击值+7。",
+    "descriptionTemplate": "攻击时：若选定的骰子含有相同点数，攻击值+#1；若相同点数为#2，则改为攻击值+#3。",
+    "params": [
+      3,
+      4,
+      7
+    ],
+    "aiParams": [
+      3,
+      7
+    ],
+    "rarity": 1,
+    "prismaticId": null,
+    "prismaticUses": 0,
+    "prismaticStockCount": 0,
+    "image": "assets/cards/264001.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264001.png",
+    "headImagePath": "SpriteOutput/Quest/DiceCombat/AvatarCardSmall/DiceCombatAvatarCardSmall_264001.png",
+    "collectible": true,
+    "recommendedDiceIds": [],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264001.json"
+  },
+  {
+    "id": "264002",
+    "name": "大地兽",
+    "hp": 26,
+    "attack": 3,
+    "defense": 2,
+    "dice": [
+      4,
+      4,
+      6,
+      6
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264201",
+      "264201"
+    ],
+    "skill": "264002",
+    "skillId": "264002",
+    "description": "攻击时：若选定的骰子全为偶数，则使对方陷入2层中毒 ，可以叠加。",
+    "descriptionTemplate": "攻击时：若选定的骰子全为偶数，则使对方陷入#1层中毒 ，可以叠加。",
+    "params": [
+      2
+    ],
+    "aiParams": [
+      2.5
+    ],
+    "rarity": 1,
+    "prismaticId": null,
+    "prismaticUses": 0,
+    "prismaticStockCount": 0,
+    "image": "assets/cards/264002.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264002.png",
+    "headImagePath": "SpriteOutput/Quest/DiceCombat/AvatarCardSmall/DiceCombatAvatarCardSmall_264002.png",
+    "collectible": true,
+    "recommendedDiceIds": [],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264002.json"
+  },
+  {
+    "id": "264003",
+    "name": "阮•梅造物",
+    "hp": 25,
+    "attack": 4,
+    "defense": 2,
+    "dice": [
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264101",
+      "264101",
+      "264101"
+    ],
+    "skill": "264003",
+    "skillId": "264003",
+    "description": "攻击时：若选定的骰子含有3个相同点数，攻击值+7；每多1个同样点数，攻击值再+7。",
+    "descriptionTemplate": "攻击时：若选定的骰子含有3个相同点数，攻击值+#1；每多1个同样点数，攻击值再+#2。",
+    "params": [
+      7,
+      7
+    ],
+    "aiParams": [
+      7,
+      14
+    ],
+    "rarity": 1,
+    "prismaticId": null,
+    "prismaticUses": 0,
+    "prismaticStockCount": 0,
+    "image": "assets/cards/264003.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264003.png",
+    "headImagePath": "SpriteOutput/Quest/DiceCombat/AvatarCardSmall/DiceCombatAvatarCardSmall_264003.png",
+    "collectible": true,
+    "recommendedDiceIds": [],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264003.json"
+  },
+  {
+    "id": "264004",
+    "name": "开拓妖精",
+    "hp": 15,
+    "attack": 3,
+    "defense": 3,
+    "dice": [
+      4,
+      4,
+      4,
+      6
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264101",
+      "264201"
+    ],
+    "skill": "264004",
+    "skillId": "264004",
+    "description": "防御时：获得1次重投机会。此外，若选定的骰子包含相同点数，立刻造成4点瞬伤。",
+    "descriptionTemplate": "防御时：获得#2次重投机会。此外，若选定的骰子包含相同点数，立刻造成#1点瞬伤。",
+    "params": [
+      4,
+      1
+    ],
+    "aiParams": [
+      4
+    ],
+    "rarity": 1,
+    "prismaticId": null,
+    "prismaticUses": 0,
+    "prismaticStockCount": 0,
+    "image": "assets/cards/264004.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264004.png",
+    "headImagePath": "SpriteOutput/Quest/DiceCombat/AvatarCardSmall/DiceCombatAvatarCardSmall_264004.png",
+    "collectible": true,
+    "recommendedDiceIds": [],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264004.json"
+  },
+  {
+    "id": "264005",
+    "name": "自动机兵•甲虫",
+    "hp": 10,
+    "attack": 3,
+    "defense": 3,
+    "dice": [
+      4,
+      4,
+      4,
+      6
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264101",
+      "264201"
+    ],
+    "skill": "264005",
+    "skillId": "264005",
+    "description": "防御时：获得1次重投机会。此外，若选定的骰子含有3个连续点数，本回合获得力场，和8层仅下回合可用的力量。",
+    "descriptionTemplate": "防御时：获得#2次重投机会。此外，若选定的骰子含有3个连续点数，本回合获得力场，和#1层仅下回合可用的力量。",
+    "params": [
+      8,
+      1
+    ],
+    "aiParams": [
+      10
+    ],
+    "rarity": 1,
+    "prismaticId": null,
+    "prismaticUses": 0,
+    "prismaticStockCount": 0,
+    "image": "assets/cards/264005.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264005.png",
+    "headImagePath": "SpriteOutput/Quest/DiceCombat/AvatarCardSmall/DiceCombatAvatarCardSmall_264005.png",
+    "collectible": true,
+    "recommendedDiceIds": [],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264005.json"
+  },
+  {
+    "id": "264006",
+    "name": "基层员工•安保",
+    "hp": 26,
+    "attack": 3,
+    "defense": 2,
+    "dice": [
+      4,
+      4,
+      6,
+      6,
+      8
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264201",
+      "264201",
+      "264301"
+    ],
+    "skill": "264006",
+    "skillId": "264006",
+    "description": "对局开始时：获得5层力量，但骰子无法投掷出最大值。",
+    "descriptionTemplate": "对局开始时：获得#1层力量，但骰子无法投掷出最大值。",
+    "params": [
+      5
+    ],
+    "aiParams": [],
+    "rarity": 2,
+    "prismaticId": null,
+    "prismaticUses": 0,
+    "prismaticStockCount": 0,
+    "image": "assets/cards/264006.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264006.png",
+    "headImagePath": "SpriteOutput/Quest/DiceCombat/AvatarCardSmall/DiceCombatAvatarCardSmall_264006.png",
+    "collectible": true,
+    "recommendedDiceIds": [],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264006.json"
+  },
+  {
+    "id": "264007",
+    "name": "垃圾桶",
+    "hp": 25,
+    "attack": 3,
+    "defense": 2,
+    "dice": [
+      4,
+      4,
+      4,
+      6,
+      6
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264101",
+      "264201",
+      "264201"
+    ],
+    "skill": "264007",
+    "skillId": "264007",
+    "description": "攻击后：获得2层力量，若选定的骰子全为偶数，则改为获得4层力量。",
+    "descriptionTemplate": "攻击后：获得#1层力量，若选定的骰子全为偶数，则改为获得#2层力量。",
+    "params": [
+      2,
+      4
+    ],
+    "aiParams": [
+      4
+    ],
+    "rarity": 2,
+    "prismaticId": null,
+    "prismaticUses": 0,
+    "prismaticStockCount": 0,
+    "image": "assets/cards/264007.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264007.png",
+    "headImagePath": "SpriteOutput/Quest/DiceCombat/AvatarCardSmall/DiceCombatAvatarCardSmall_264007.png",
+    "collectible": true,
+    "recommendedDiceIds": [],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264007.json"
+  },
+  {
+    "id": "264008",
+    "name": "狸猫记者",
+    "hp": 28,
+    "attack": 4,
+    "defense": 3,
+    "dice": [
+      4,
+      4,
+      4,
+      4,
+      6
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264101",
+      "264101",
+      "264201"
+    ],
+    "skill": "264008",
+    "skillId": "264008",
+    "description": "防御时：如果受到伤害，立刻造成2点瞬伤；在此基础上，若本次防御选定的骰子全为奇数，则改为造成4点瞬伤。",
+    "descriptionTemplate": "防御时：如果受到伤害，立刻造成#1点瞬伤；在此基础上，若本次防御选定的骰子全为奇数，则改为造成#2点瞬伤。",
+    "params": [
+      2,
+      4
+    ],
+    "aiParams": [
+      4
+    ],
+    "rarity": 2,
+    "prismaticId": null,
+    "prismaticUses": 0,
+    "prismaticStockCount": 0,
+    "image": "assets/cards/264008.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264008.png",
+    "headImagePath": "SpriteOutput/Quest/DiceCombat/AvatarCardSmall/DiceCombatAvatarCardSmall_264008.png",
+    "collectible": true,
+    "recommendedDiceIds": [],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264008.json"
+  },
+  {
+    "id": "264009",
+    "name": "蕉研组的财富蕉师",
+    "hp": 24,
+    "attack": 4,
+    "defense": 3,
+    "dice": [
+      4,
+      4,
+      4,
+      6,
+      6
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264101",
+      "264201",
+      "264201"
+    ],
+    "skill": "264009",
+    "skillId": "264009",
+    "description": "防御时：获得1次重投机会；如果结算后没有受到伤害，治愈自身5点生命值。\n仅一次：若回合结束时生命值≤5，防御等级+1。",
+    "descriptionTemplate": "防御时：获得#2次重投机会；如果结算后没有受到伤害，治愈自身#1点生命值。\n仅一次：若回合结束时生命值≤#3，防御等级+#4。",
+    "params": [
+      5,
+      1,
+      5,
+      1
+    ],
+    "aiParams": [],
+    "rarity": 2,
+    "prismaticId": null,
+    "prismaticUses": 0,
+    "prismaticStockCount": 0,
+    "image": "assets/cards/264009.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264009.png",
+    "headImagePath": "SpriteOutput/Quest/DiceCombat/AvatarCardSmall/DiceCombatAvatarCardSmall_264009.png",
+    "collectible": true,
+    "recommendedDiceIds": [],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264009.json"
+  },
+  {
+    "id": "264010",
+    "name": "资深员工•组长",
+    "hp": 22,
+    "attack": 3,
+    "defense": 2,
+    "dice": [
+      4,
+      4,
+      4,
+      6,
+      8
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264101",
+      "264201",
+      "264301"
+    ],
+    "skill": "264010",
+    "skillId": "264010",
+    "description": "攻击时：选定的骰子每有一个不同的点数，攻击值+1。防御时：选定的骰子每有一个不同的点数，防御值+1。",
+    "descriptionTemplate": "攻击时：选定的骰子每有一个不同的点数，攻击值+#1。防御时：选定的骰子每有一个不同的点数，防御值+#2。",
+    "params": [
+      1,
+      1
+    ],
+    "aiParams": [
+      1,
+      1
+    ],
+    "rarity": 2,
+    "prismaticId": null,
+    "prismaticUses": 0,
+    "prismaticStockCount": 0,
+    "image": "assets/cards/264010.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264010.png",
+    "headImagePath": "SpriteOutput/Quest/DiceCombat/AvatarCardSmall/DiceCombatAvatarCardSmall_264010.png",
+    "collectible": true,
+    "recommendedDiceIds": [],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264010.json"
+  },
+  {
+    "id": "264011",
+    "name": "斯科特",
+    "hp": 22,
+    "attack": 3,
+    "defense": 2,
+    "dice": [
+      4,
+      4,
+      6,
+      8,
+      8
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264201",
+      "264301",
+      "264301"
+    ],
+    "skill": "264011",
+    "skillId": "264011",
+    "description": "攻击时：若选定的骰子含有3个连续点数，则为对方附加1层干扰，如果对方已拥有2层干扰，还将额外受到5点瞬伤。",
+    "descriptionTemplate": "攻击时：若选定的骰子含有3个连续点数，则为对方附加#1层干扰，如果对方已拥有#2层干扰，还将额外受到#3点瞬伤。",
+    "params": [
+      1,
+      2,
+      5
+    ],
+    "aiParams": [
+      20
+    ],
+    "rarity": 2,
+    "prismaticId": null,
+    "prismaticUses": 0,
+    "prismaticStockCount": 0,
+    "image": "assets/cards/264011.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264011.png",
+    "headImagePath": "SpriteOutput/Quest/DiceCombat/AvatarCardSmall/DiceCombatAvatarCardSmall_264011.png",
+    "collectible": true,
+    "recommendedDiceIds": [],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264011.json"
+  },
+  {
+    "id": "264012",
+    "name": "遐蝶",
+    "hp": 27,
+    "attack": 3,
+    "defense": 2,
+    "dice": [
+      4,
+      4,
+      6,
+      8,
+      8
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264201",
+      "264301",
+      "264301"
+    ],
+    "skill": "264012",
+    "skillId": "264012",
+    "description": "防御时：如果受到的伤害值≥8，则使攻击等级与防御等级+1；如果受到伤害，且伤害值≤5，则立刻造成3点的瞬伤。",
+    "descriptionTemplate": "防御时：如果受到的伤害值≥#1，则使攻击等级与防御等级+#2；如果受到伤害，且伤害值≤#3，则立刻造成#4点的瞬伤。",
+    "params": [
+      8,
+      1,
+      5,
+      3
+    ],
+    "aiParams": [
+      3,
+      12
+    ],
+    "rarity": 3,
+    "prismaticId": "264506",
+    "prismaticUses": 2,
+    "prismaticStockCount": 1,
+    "image": "assets/cards/264012.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1407.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/1407.png",
+    "collectible": true,
+    "recommendedDiceIds": [
+      "264406"
+    ],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264012.json"
+  },
+  {
+    "id": "264013",
+    "name": "黄泉",
+    "hp": 33,
+    "attack": 2,
+    "defense": 3,
+    "dice": [
+      4,
+      4,
+      4,
+      6,
+      8
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264101",
+      "264201",
+      "264301"
+    ],
+    "skill": "264013",
+    "skillId": "264013",
+    "description": "攻击时：若选定的骰子点数全为4，则本次攻击获得洞穿；每成功触发一次洞穿，攻击等级+1。",
+    "descriptionTemplate": "攻击时：若选定的骰子点数全为#1，则本次攻击获得洞穿；每成功触发一次洞穿，攻击等级+#2。",
+    "params": [
+      4,
+      1
+    ],
+    "aiParams": [
+      12
+    ],
+    "rarity": 3,
+    "prismaticId": "264508",
+    "prismaticUses": 2,
+    "prismaticStockCount": 1,
+    "image": "assets/cards/264013.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1308.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/1308.png",
+    "collectible": true,
+    "recommendedDiceIds": [
+      "264408"
+    ],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264013.json"
+  },
+  {
+    "id": "264014",
+    "name": "流萤",
+    "hp": 28,
+    "attack": 4,
+    "defense": 3,
+    "dice": [
+      4,
+      4,
+      6,
+      6,
+      6
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264201",
+      "264201",
+      "264201"
+    ],
+    "skill": "264014",
+    "skillId": "264014",
+    "description": "攻击时：若选定的骰子包含2组2个相同点数，则本次攻击获得连击 。如果自身满生命值，攻击值+5。",
+    "descriptionTemplate": "攻击时：若选定的骰子包含#1组2个相同点数，则本次攻击获得连击 。如果自身满生命值，攻击值+#2。",
+    "params": [
+      2,
+      5
+    ],
+    "aiParams": [
+      8
+    ],
+    "rarity": 3,
+    "prismaticId": "264518",
+    "prismaticUses": 2,
+    "prismaticStockCount": 1,
+    "image": "assets/cards/264014.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1310.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/1310.png",
+    "collectible": true,
+    "recommendedDiceIds": [
+      "264418"
+    ],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264014.json"
+  },
+  {
+    "id": "264015",
+    "name": "知更鸟",
+    "hp": 30,
+    "attack": 4,
+    "defense": 3,
+    "dice": [
+      4,
+      4,
+      4,
+      6,
+      6
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264101",
+      "264201",
+      "264201"
+    ],
+    "skill": "264015",
+    "skillId": "264015",
+    "description": "攻击时：若选定的骰子全为偶数，则使选定的骰子获得升级 。",
+    "descriptionTemplate": "攻击时：若选定的骰子全为偶数，则使选定的骰子获得升级 。",
+    "params": [
+      264101,
+      264201,
+      264301,
+      264401
+    ],
+    "aiParams": [
+      8
+    ],
+    "rarity": 3,
+    "prismaticId": null,
+    "prismaticUses": 0,
+    "prismaticStockCount": 0,
+    "image": "assets/cards/264015.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1309.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/1309.png",
+    "collectible": true,
+    "recommendedDiceIds": [],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264015.json"
+  },
+  {
+    "id": "264016",
+    "name": "大黑塔",
+    "hp": 42,
+    "attack": 3,
+    "defense": 2,
+    "dice": [
+      6,
+      6,
+      6,
+      8,
+      8
+    ],
+    "baseDiceIds": [
+      "264201",
+      "264201",
+      "264201",
+      "264301",
+      "264301"
+    ],
+    "skill": "264016",
+    "skillId": "264016",
+    "description": "回合结束时：获得1次曜彩骰使用次数。若已触发4次以上曜彩骰的特殊效果，则此后每回合获得跃升。",
+    "descriptionTemplate": "回合结束时：获得#1次曜彩骰使用次数。若已触发#2次以上曜彩骰的特殊效果，则此后每回合获得跃升。",
+    "params": [
+      1,
+      4
+    ],
+    "aiParams": [],
+    "rarity": 3,
+    "prismaticId": "264520",
+    "prismaticUses": 2,
+    "prismaticStockCount": 1,
+    "image": "assets/cards/264016.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1401.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/1401.png",
+    "collectible": true,
+    "recommendedDiceIds": [
+      "264420"
+    ],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264016.json"
+  },
+  {
+    "id": "264017",
+    "name": "卡芙卡",
+    "hp": 30,
+    "attack": 4,
+    "defense": 3,
+    "dice": [
+      4,
+      4,
+      4,
+      6,
+      6
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264101",
+      "264201",
+      "264201"
+    ],
+    "skill": "264017",
+    "skillId": "264017",
+    "description": "攻击时：选定的骰子每有一个不同的点数，便使对方陷入1层中毒 。防御失败时，移除对方1层中毒 。",
+    "descriptionTemplate": "攻击时：选定的骰子每有一个不同的点数，便使对方陷入#2层中毒 。防御失败时，移除对方#3层中毒 。",
+    "params": [
+      1,
+      1,
+      1
+    ],
+    "aiParams": [
+      2.5
+    ],
+    "rarity": 3,
+    "prismaticId": "264516",
+    "prismaticUses": 2,
+    "prismaticStockCount": 1,
+    "image": "assets/cards/264017.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1005.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/1005.png",
+    "collectible": true,
+    "recommendedDiceIds": [
+      "264416"
+    ],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264017.json"
+  },
+  {
+    "id": "264018",
+    "name": "砂金",
+    "hp": 33,
+    "attack": 4,
+    "defense": 2,
+    "dice": [
+      4,
+      6,
+      6,
+      6,
+      8
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264201",
+      "264201",
+      "264201",
+      "264301"
+    ],
+    "skill": "264018",
+    "skillId": "264018",
+    "description": "攻击时：选定的骰子里每有1个奇数，则获得1层韧性。韧性累计至7层时，立即造成7点瞬伤，并移除7层韧性。",
+    "descriptionTemplate": "攻击时：选定的骰子里每有#1个奇数，则获得#2层韧性。韧性累计至#3层时，立即造成#4点瞬伤，并移除#3层韧性。",
+    "params": [
+      1,
+      1,
+      7,
+      7
+    ],
+    "aiParams": [
+      1
+    ],
+    "rarity": 3,
+    "prismaticId": "264516",
+    "prismaticUses": 2,
+    "prismaticStockCount": 1,
+    "image": "assets/cards/264018.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1304.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/1304.png",
+    "collectible": true,
+    "recommendedDiceIds": [
+      "264416"
+    ],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264018.json"
+  },
+  {
+    "id": "264019",
+    "name": "三月七",
+    "hp": 25,
+    "attack": 4,
+    "defense": 3,
+    "dice": [
+      4,
+      4,
+      4,
+      6,
+      6
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264101",
+      "264201",
+      "264201"
+    ],
+    "skill": "264019",
+    "skillId": "264019",
+    "description": "攻击或防御时：选定的骰子每出现1组2个相同点数，立刻造成3点瞬伤。",
+    "descriptionTemplate": "攻击或防御时：选定的骰子每出现#1组2个相同点数，立刻造成#2点瞬伤。",
+    "params": [
+      1,
+      3
+    ],
+    "aiParams": [
+      4,
+      4
+    ],
+    "rarity": 3,
+    "prismaticId": "264522",
+    "prismaticUses": 2,
+    "prismaticStockCount": 1,
+    "image": "assets/cards/264019.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1001.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/1001.png",
+    "collectible": true,
+    "recommendedDiceIds": [
+      "264422"
+    ],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264019.json"
+  },
+  {
+    "id": "264020",
+    "name": "丹恒•腾荒",
+    "hp": 25,
+    "attack": 3,
+    "defense": 2,
+    "dice": [
+      6,
+      6,
+      6,
+      8,
+      8
+    ],
+    "baseDiceIds": [
+      "264201",
+      "264201",
+      "264201",
+      "264301",
+      "264301"
+    ],
+    "skill": "264020",
+    "skillId": "264020",
+    "description": "攻击时：若攻击值≥18，下次防御时防御等级+3，并获得反击，防御结束将还原至初始防御等级。",
+    "descriptionTemplate": "攻击时：若攻击值≥#1，下次防御时防御等级+#2，并获得反击，防御结束将还原至初始防御等级。",
+    "params": [
+      18,
+      3
+    ],
+    "aiParams": [
+      3
+    ],
+    "rarity": 3,
+    "prismaticId": "264518",
+    "prismaticUses": 2,
+    "prismaticStockCount": 1,
+    "image": "assets/cards/264020.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1414.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/1414.png",
+    "collectible": true,
+    "recommendedDiceIds": [
+      "264418"
+    ],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264020.json"
+  },
+  {
+    "id": "264021",
+    "name": "火花",
+    "hp": 22,
+    "attack": 4,
+    "defense": 3,
+    "dice": [
+      4,
+      4,
+      6,
+      6,
+      8
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264201",
+      "264201",
+      "264301"
+    ],
+    "skill": "264021",
+    "skillId": "264021",
+    "description": "攻击或防御时：若选定的骰子包含相同点数，则获得骇入 。",
+    "descriptionTemplate": "攻击或防御时：若选定的骰子包含相同点数，则获得骇入 。",
+    "params": [
+      1,
+      2
+    ],
+    "aiParams": [
+      3,
+      3
+    ],
+    "rarity": 3,
+    "prismaticId": "264518",
+    "prismaticUses": 2,
+    "prismaticStockCount": 1,
+    "image": "assets/cards/264021.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1501.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/1501.png",
+    "collectible": true,
+    "recommendedDiceIds": [
+      "264418"
+    ],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264021.json"
+  },
+  {
+    "id": "264022",
+    "name": "爻光",
+    "hp": 35,
+    "attack": 3,
+    "defense": 2,
+    "dice": [
+      6,
+      6,
+      6,
+      8,
+      8
+    ],
+    "baseDiceIds": [
+      "264201",
+      "264201",
+      "264201",
+      "264301",
+      "264301"
+    ],
+    "skill": "264022",
+    "skillId": "264022",
+    "description": "攻击时：获得4次重投机会；在单回合内超过2次重投后，每次重投会获得2层荆棘。此外，若攻击值≥18，则移除所有荆棘，并获得1次曜彩骰使用次数。",
+    "descriptionTemplate": "攻击时：获得#1次重投机会；在单回合内超过#2次重投后，每次重投会获得#5层荆棘。此外，若攻击值≥#3，则移除所有荆棘，并获得#4次曜彩骰使用次数。",
+    "params": [
+      4,
+      2,
+      18,
+      1,
+      2
+    ],
+    "aiParams": [
+      -3,
+      6
+    ],
+    "rarity": 3,
+    "prismaticId": "264504",
+    "prismaticUses": 2,
+    "prismaticStockCount": 1,
+    "image": "assets/cards/264022.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1502.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/1502.png",
+    "collectible": true,
+    "recommendedDiceIds": [
+      "264404"
+    ],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264022.json"
+  },
+  {
+    "id": "264023",
+    "name": "昔涟",
+    "hp": 30,
+    "attack": 3,
+    "defense": 2,
+    "dice": [
+      4,
+      6,
+      6,
+      6,
+      8
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264201",
+      "264201",
+      "264201",
+      "264301"
+    ],
+    "skill": "264023",
+    "skillId": "264023",
+    "description": "将每回合自身的攻击值与防御值进行累加，总计超过24后，攻击等级变为5，此后每回合获得跃升。",
+    "descriptionTemplate": "将每回合自身的攻击值与防御值进行累加，总计超过#1后，攻击等级变为#2，此后每回合获得跃升。",
+    "params": [
+      24,
+      5
+    ],
+    "aiParams": [],
+    "rarity": 3,
+    "prismaticId": "264521",
+    "prismaticUses": 2,
+    "prismaticStockCount": 1,
+    "image": "assets/cards/264023.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1415.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/1415.png",
+    "collectible": true,
+    "recommendedDiceIds": [
+      "264421"
+    ],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264023.json"
+  },
+  {
+    "id": "264024",
+    "name": "白厄",
+    "hp": 20,
+    "attack": 4,
+    "defense": 2,
+    "dice": [
+      6,
+      6,
+      6,
+      8,
+      8
+    ],
+    "baseDiceIds": [
+      "264201",
+      "264201",
+      "264201",
+      "264301",
+      "264301"
+    ],
+    "skill": "264024",
+    "skillId": "264024",
+    "description": "攻击时：虹吸自己造成伤害数额50%的生命值。防御时：若选定的骰子点数全部相同，则获得不屈 ，最多触发1次。",
+    "descriptionTemplate": "攻击时：虹吸自己造成伤害数额#1%的生命值。防御时：若选定的骰子点数全部相同，则获得不屈 ，最多触发#2次。",
+    "params": [
+      50,
+      1
+    ],
+    "aiParams": [
+      20
+    ],
+    "rarity": 3,
+    "prismaticId": "264512",
+    "prismaticUses": 2,
+    "prismaticStockCount": 1,
+    "image": "assets/cards/264024.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1408.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/1408.png",
+    "collectible": true,
+    "recommendedDiceIds": [
+      "264412"
+    ],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264024.json"
+  },
+  {
+    "id": "264025",
+    "name": "风堇",
+    "hp": 28,
+    "attack": 2,
+    "defense": 2,
+    "dice": [
+      6,
+      6,
+      6,
+      6,
+      8
+    ],
+    "baseDiceIds": [
+      "264201",
+      "264201",
+      "264201",
+      "264201",
+      "264301"
+    ],
+    "skill": "264025",
+    "skillId": "264025",
+    "description": "攻击后：将力量层数设置为本次攻击值的50%；若选定的骰子点数全为6，则设置为100%并治愈6点生命值。",
+    "descriptionTemplate": "攻击后：将力量层数设置为本次攻击值的#1%；若选定的骰子点数全为#2，则设置为100%并治愈#3点生命值。",
+    "params": [
+      50,
+      6,
+      6
+    ],
+    "aiParams": [
+      15
+    ],
+    "rarity": 3,
+    "prismaticId": "264513",
+    "prismaticUses": 2,
+    "prismaticStockCount": 1,
+    "image": "assets/cards/264025.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1409.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/1409.png",
+    "collectible": true,
+    "recommendedDiceIds": [
+      "264413"
+    ],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264025.json"
+  },
+  {
+    "id": "264000",
+    "name": "火花花",
+    "hp": 25,
+    "attack": 3,
+    "defense": 2,
+    "dice": [
+      4,
+      4,
+      6,
+      6,
+      8
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264201",
+      "264201",
+      "264301"
+    ],
+    "skill": "264000",
+    "skillId": "264000",
+    "description": "攻击时：若自己的生命值未满，则获得骇入 。",
+    "descriptionTemplate": "攻击时：若自己的生命值未满，则获得骇入 。",
+    "params": [
+      2
+    ],
+    "aiParams": [],
+    "rarity": 1,
+    "prismaticId": null,
+    "prismaticUses": 0,
+    "prismaticStockCount": 0,
+    "image": "assets/cards/264000.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264000.png",
+    "headImagePath": "SpriteOutput/Quest/DiceCombat/AvatarCardSmall/DiceCombatAvatarCardSmall_264000.png",
+    "collectible": true,
+    "recommendedDiceIds": [],
+    "version": "4.0",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264000.json"
+  },
+  {
+    "id": "264026",
+    "name": "银狼LV.999",
+    "hp": 36,
+    "attack": 3,
+    "defense": 2,
+    "dice": [
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "baseDiceIds": [
+      "264201",
+      "264201",
+      "264201",
+      "264201",
+      "264201"
+    ],
+    "skill": "264026",
+    "skillId": "264026",
+    "description": "攻击或防御时：选定的骰子中若包含点数1，则获得跃升；若包含点数6，则获得骇入。跃升和骇入最多只能获得各一次。",
+    "descriptionTemplate": "攻击或防御时：选定的骰子中若包含点数#1，则获得跃升；若包含点数#2，则获得骇入。跃升和骇入最多只能获得各一次。",
+    "params": [
+      1,
+      6,
+      2
+    ],
+    "aiParams": [
+      2.5,
+      3.5
+    ],
+    "rarity": 3,
+    "prismaticId": "264519",
+    "prismaticUses": 2,
+    "prismaticStockCount": 2,
+    "image": "assets/cards/264026.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1506.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/1506.png",
+    "collectible": true,
+    "recommendedDiceIds": [
+      "264403"
+    ],
+    "version": "4.2",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264026.json"
+  },
+  {
+    "id": "264027",
+    "name": "绯英",
+    "hp": 30,
+    "attack": 0,
+    "defense": 3,
+    "dice": [
+      4,
+      4,
+      6,
+      6,
+      8
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264201",
+      "264201",
+      "264301"
+    ],
+    "skill": "264027",
+    "skillId": "264027",
+    "description": "攻击时：可以选定任意数量的骰子（至少1个），本次攻击若选定3个以下骰子则获得连击，若只选定1个骰子则再获得洞穿。",
+    "descriptionTemplate": "攻击时：可以选定任意数量的骰子（至少1个），本次攻击若选定3个以下骰子则获得连击，若只选定1个骰子则再获得洞穿。",
+    "params": [],
+    "aiParams": [
+      16,
+      10
+    ],
+    "rarity": 3,
+    "prismaticId": "264523",
+    "prismaticUses": 2,
+    "prismaticStockCount": 2,
+    "image": "assets/cards/264027.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1505.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/1505.png",
+    "collectible": true,
+    "recommendedDiceIds": [
+      "264424"
+    ],
+    "version": "4.2",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264027.json"
+  },
+  {
+    "id": "264028",
+    "name": "开拓者",
+    "hp": 36,
+    "attack": 3,
+    "defense": 2,
+    "dice": [
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "baseDiceIds": [
+      "264201",
+      "264201",
+      "264201",
+      "264201",
+      "264201"
+    ],
+    "skill": "264028",
+    "skillId": "264028",
+    "description": "攻击时：选定的骰子中每有1个点数为6，则攻击值+2。\n重掷时：若将曜彩骰以外的骰子掷出点数6，则恢复1次重掷次数。\n请支持狸狸通信！",
+    "descriptionTemplate": "攻击时：选定的骰子中每有1个点数为6，则攻击值+#1。\n重掷时：若将曜彩骰以外的骰子掷出点数6，则恢复1次重掷次数。\n请支持狸狸通信！",
+    "params": [
+      2
+    ],
+    "aiParams": [
+      2
+    ],
+    "rarity": 3,
+    "prismaticId": "264519",
+    "prismaticUses": 2,
+    "prismaticStockCount": 2,
+    "image": "assets/cards/264028.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_8009.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/8009.png",
+    "collectible": true,
+    "recommendedDiceIds": [
+      "264425"
+    ],
+    "version": "4.2",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264028.json"
+  },
+  {
+    "id": "264029",
+    "name": "不死途",
+    "hp": 23,
+    "attack": 3,
+    "defense": 3,
+    "dice": [
+      4,
+      4,
+      6,
+      6,
+      8
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264201",
+      "264201",
+      "264301"
+    ],
+    "skill": "264029",
+    "skillId": "264029",
+    "description": "攻击未造成伤害时：立刻造成自己70%攻击值的瞬伤。\n受到攻击伤害时：反伤自己30%防御值的伤害。",
+    "descriptionTemplate": "攻击未造成伤害时：立刻造成自己#1%攻击值的瞬伤。\n受到攻击伤害时：反伤自己#2%防御值的伤害。",
+    "params": [
+      70,
+      30
+    ],
+    "aiParams": [],
+    "rarity": 3,
+    "prismaticId": "264506",
+    "prismaticUses": 2,
+    "prismaticStockCount": 2,
+    "image": "assets/cards/264029.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1504.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/1504.png",
+    "collectible": true,
+    "recommendedDiceIds": [
+      "264406"
+    ],
+    "version": "4.2",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264029.json"
+  },
+  {
+    "id": "264030",
+    "name": "星期日",
+    "hp": 27,
+    "attack": 4,
+    "defense": 3,
+    "dice": [
+      4,
+      4,
+      6,
+      6,
+      6
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264201",
+      "264201",
+      "264201"
+    ],
+    "skill": "264030",
+    "skillId": "264030",
+    "description": "受到攻击伤害时：双方获得5层荆棘。\n攻击时：若选定的骰子各不相同，则将自己的荆棘转移给对手。",
+    "descriptionTemplate": "受到攻击伤害时：双方获得#1层荆棘。\n攻击时：若选定的骰子各不相同，则将自己的荆棘转移给对手。",
+    "params": [
+      5
+    ],
+    "aiParams": [
+      10
+    ],
+    "rarity": 3,
+    "prismaticId": "264509",
+    "prismaticUses": 2,
+    "prismaticStockCount": 2,
+    "image": "assets/cards/264030.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1313.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/1313.png",
+    "collectible": true,
+    "recommendedDiceIds": [
+      "264409"
+    ],
+    "version": "4.2",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264030.json"
+  },
+  {
+    "id": "264031",
+    "name": "刃",
+    "hp": 49,
+    "attack": 4,
+    "defense": 2,
+    "dice": [
+      6,
+      6,
+      6,
+      8,
+      8
+    ],
+    "baseDiceIds": [
+      "264201",
+      "264201",
+      "264201",
+      "264301",
+      "264301"
+    ],
+    "skill": "264031",
+    "skillId": "264031",
+    "description": "攻击与防御时均拥有6次重投次数，但每次重投需要消耗2点生命值。",
+    "descriptionTemplate": "攻击与防御时均拥有#1次重投次数，但每次重投需要消耗#2点生命值。",
+    "params": [
+      6,
+      2
+    ],
+    "aiParams": [
+      -2
+    ],
+    "rarity": 3,
+    "prismaticId": "264507",
+    "prismaticUses": 2,
+    "prismaticStockCount": 2,
+    "image": "assets/cards/264031.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1205.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/1205.png",
+    "collectible": true,
+    "recommendedDiceIds": [
+      "264407"
+    ],
+    "version": "4.2",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264031.json"
+  },
+  {
+    "id": "264032",
+    "name": "海瑟音",
+    "hp": 28,
+    "attack": 3,
+    "defense": 3,
+    "dice": [
+      4,
+      4,
+      4,
+      4,
+      6
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264101",
+      "264101",
+      "264201"
+    ],
+    "skill": "264032",
+    "skillId": "264032",
+    "description": "攻击时：选定的骰子每有1个点数为偶数，则使对手陷入1层中毒。若全为偶数，则再使对手的中毒立刻结算1次。",
+    "descriptionTemplate": "攻击时：选定的骰子每有1个点数为偶数，则使对手陷入1层中毒。若全为偶数，则再使对手的中毒立刻结算1次。",
+    "params": [],
+    "aiParams": [
+      2.5,
+      7
+    ],
+    "rarity": 3,
+    "prismaticId": "264524",
+    "prismaticUses": 2,
+    "prismaticStockCount": 2,
+    "image": "assets/cards/264032.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1410.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/1410.png",
+    "collectible": true,
+    "recommendedDiceIds": [
+      "264423"
+    ],
+    "version": "4.2",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264032.json"
+  },
+  {
+    "id": "264033",
+    "name": "缇宝",
+    "hp": 33,
+    "attack": 3,
+    "defense": 3,
+    "dice": [
+      6,
+      6,
+      6,
+      8
+    ],
+    "baseDiceIds": [
+      "264201",
+      "264201",
+      "264201",
+      "264301"
+    ],
+    "skill": "264033",
+    "skillId": "264033",
+    "description": "每当使用曜彩骰时，会额外投掷1个相同的曜彩骰。",
+    "descriptionTemplate": "每当使用曜彩骰时，会额外投掷1个相同的曜彩骰。",
+    "params": [],
+    "aiParams": [],
+    "rarity": 3,
+    "prismaticId": "264522",
+    "prismaticUses": 2,
+    "prismaticStockCount": 4,
+    "image": "assets/cards/264033.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1403.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/1403.png",
+    "collectible": true,
+    "recommendedDiceIds": [
+      "264426"
+    ],
+    "version": "4.2",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264033.json"
+  },
+  {
+    "id": "264034",
+    "name": "阮•梅",
+    "hp": 50,
+    "attack": 2,
+    "defense": 2,
+    "dice": [
+      6,
+      6,
+      6,
+      6,
+      8
+    ],
+    "baseDiceIds": [
+      "264201",
+      "264201",
+      "264201",
+      "264201",
+      "264301"
+    ],
+    "skill": "264034",
+    "skillId": "264034",
+    "description": "攻击或防御时：若选定的骰子全为连续点数，获得1层进化，否则移除1层进化。",
+    "descriptionTemplate": "攻击或防御时：若选定的骰子全为连续点数，获得1层进化，否则移除1层进化。",
+    "params": [],
+    "aiParams": [
+      4.5
+    ],
+    "rarity": 3,
+    "prismaticId": "264512",
+    "prismaticUses": 2,
+    "prismaticStockCount": 2,
+    "image": "assets/cards/264034.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1303.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/1303.png",
+    "collectible": true,
+    "recommendedDiceIds": [
+      "264412"
+    ],
+    "version": "4.2",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264034.json"
+  },
+  {
+    "id": "264035",
+    "name": "姬子",
+    "hp": 33,
+    "attack": 3,
+    "defense": 3,
+    "dice": [
+      4,
+      4,
+      6,
+      6,
+      8
+    ],
+    "baseDiceIds": [
+      "264101",
+      "264101",
+      "264201",
+      "264201",
+      "264301"
+    ],
+    "skill": "264035",
+    "skillId": "264035",
+    "description": "攻击时：若选定的骰子全为连续点数或相同点数，攻击值+12。",
+    "descriptionTemplate": "攻击时：若选定的骰子全为连续点数或相同点数，攻击值+#1。",
+    "params": [
+      12
+    ],
+    "aiParams": [
+      9
+    ],
+    "rarity": 3,
+    "prismaticId": "264508",
+    "prismaticUses": 2,
+    "prismaticStockCount": 2,
+    "image": "assets/cards/264035.png",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1003.png",
+    "headImagePath": "SpriteOutput/AvatarIcon/Avatar/1003.png",
+    "collectible": true,
+    "recommendedDiceIds": [
+      "264408"
+    ],
+    "version": "4.2",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/DiceCombatSkill_264035.json"
+  }
+]

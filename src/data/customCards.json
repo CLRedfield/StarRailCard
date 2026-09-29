@@ -1,0 +1,28 @@
+[
+  {
+    "id": "custom-seele",
+    "name": "希儿",
+    "hp": 28,
+    "attack": 3,
+    "defense": 3,
+    "dice": [4, 6, 6, 8, 8],
+    "baseDiceIds": ["264101", "264201", "264201", "264301", "264301"],
+    "skill": "seele-resurgence",
+    "skillId": "seele-resurgence",
+    "description": "再现：每个进攻回合，攻击首次造成实际伤害后，立刻对目标造成等同于自己所有未使用骰子点数之和的瞬伤，每回合限1次。若本回合攻击未造成实际伤害，则升级选中的普通骰子，最高十二面，持续至对局结束。未使用曜彩骰只计点数，不触发骰面效果；共斗只计算交换后仍在共享区且最初由自己投出的骰子。",
+    "descriptionTemplate": "再现：每个进攻回合，攻击首次造成实际伤害后，立刻对目标造成等同于自己所有未使用骰子点数之和的瞬伤，每回合限1次。若本回合攻击未造成实际伤害，则升级选中的普通骰子，最高十二面，持续至对局结束。未使用曜彩骰只计点数，不触发骰面效果；共斗只计算交换后仍在共享区且最初由自己投出的骰子。",
+    "params": [],
+    "aiParams": [],
+    "rarity": 3,
+    "prismaticId": "264401",
+    "prismaticUses": 2,
+    "prismaticStockCount": 2,
+    "image": "assets/cards/custom-seele.png",
+    "imagePath": "image/character_preview/1102.png",
+    "headImagePath": "",
+    "collectible": true,
+    "recommendedDiceIds": ["264402"],
+    "version": "custom",
+    "skillPath": ""
+  }
+]

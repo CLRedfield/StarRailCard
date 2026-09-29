@@ -1,0 +1,29 @@
+[
+  {
+    "id": "gift-scott",
+    "name": "斯科特",
+    "title": "赠卡挑战",
+    "intro": "来一场堂堂正正的决斗，把斯科特收入你的角色收藏。",
+    "opponentId": "264011",
+    "unlockChallengeId": "classic-2",
+    "rewardId": "2001695"
+  },
+  {
+    "id": "gift-aventurine",
+    "name": "银河战力党传说",
+    "title": "赠卡挑战",
+    "intro": "与砂金一决高下。这一回，把好运握在自己手中。",
+    "opponentId": "264018",
+    "unlockChallengeId": "classic-11",
+    "rewardId": "15000503"
+  },
+  {
+    "id": "gift-himeko",
+    "name": "孤狼之血",
+    "title": "赠卡挑战",
+    "intro": "与姬子完成一场特别的切磋，收下这份旅途的纪念。",
+    "opponentId": "264035",
+    "unlockChallengeId": "coop-1006",
+    "rewardId": "12054200"
+  }
+]

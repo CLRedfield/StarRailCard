@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1",
+    "trigger": "TurnStart",
+    "params": [],
+    "amount": 2,
+    "description": "回合开始 +2"
+  },
+  {
+    "id": "2",
+    "trigger": "AttackDamageGreaterEqual",
+    "params": [
+      5
+    ],
+    "amount": 1,
+    "description": "造成伤害·小 +1"
+  },
+  {
+    "id": "3",
+    "trigger": "AttackDamageGreaterEqual",
+    "params": [
+      10
+    ],
+    "amount": 2,
+    "description": "造成伤害·中 +2"
+  },
+  {
+    "id": "4",
+    "trigger": "AttackDamageGreaterEqual",
+    "params": [
+      15
+    ],
+    "amount": 3,
+    "description": "造成伤害·大 +3"
+  },
+  {
+    "id": "5",
+    "trigger": "DefendDamageLessEqual",
+    "params": [
+      0
+    ],
+    "amount": 3,
+    "description": "完美防御 +3"
+  },
+  {
+    "id": "6",
+    "trigger": "Counter",
+    "params": [],
+    "amount": 2,
+    "description": "发动反击 +2"
+  },
+  {
+    "id": "7",
+    "trigger": "Revive",
+    "params": [],
+    "amount": 3,
+    "description": "复活补偿 +3"
+  },
+  {
+    "id": "8",
+    "trigger": "AddModiffier",
+    "params": [
+      30003,
+      26400202,
+      26401702,
+      40010,
+      30011
+    ],
+    "amount": 1,
+    "description": "施加减益 +1"
+  }
+]

@@ -1,0 +1,258 @@
+/* Portrait is a vertical table, with full-width touch dice and a thumb-level action row.
+   Desktop / landscape retain the original mechanical table composition. */
+@media (max-width: 700px) and (orientation: portrait) {
+  html .battle-page {
+    height: 100dvh;
+    padding: env(safe-area-inset-top, 0px) 12px env(safe-area-inset-bottom, 0px);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    overflow: hidden;
+  }
+  html .battle-page .battle-topbar { height: 46px; flex: 0 0 46px; gap: 10px; }
+  html .battle-page .battle-topbar > span { font-size: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  html .battle-page .back-button { min-height: 40px; font-size: 12px; gap: 3px; flex-shrink: 0; }
+  html .battle-page .battle-topbar > div { gap: 2px; }
+  html .battle-page .battle-topbar .icon-button { width: 36px; height: 40px; }
+  html .battle-page .arena-layout {
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    max-height: none;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 28px minmax(0, 1fr) 88px;
+    gap: 8px;
+  }
+  html .battle-page .round-rail { grid-row: 1; flex-direction: row; justify-content: flex-start; gap: 12px; padding-left: 3px; }
+  html .battle-page .round-rail .rail-label,
+  html .battle-page .round-rail .vertical-line { display: none; }
+  html .battle-page .round-medallion { width: auto; min-height: 0; height: 25px; flex-direction: row; gap: 7px; border: 0; border-radius: 0; padding: 0; background: none; box-shadow: none; }
+  html .battle-page .round-medallion > span { display: none; }
+  html .battle-page .round-medallion small { margin: 0; font-size: 11px; }
+  html .battle-page .round-medallion b { font-size: 20px; line-height: 1; }
+  html .battle-page .boss-phase { font-size: 10px; }
+  html .battle-page .arena-frame { grid-row: 2; min-height: 0; border-width: 4px; border-radius: 18px; box-shadow: 0 0 0 1px #a5a0c2, 0 0 0 4px #373765, 0 8px 18px #18142b35; }
+  html[data-theme="light"] .battle-page .arena-frame { box-shadow: 0 0 0 1px #b5a4d0, 0 0 0 4px #d3c6e7, 0 8px 18px #88739e30; }
+  html .battle-page .arena-inner { min-height: 0; }
+  html .battle-page .arena-inner::before { inset: 6px; border-radius: 10px; }
+  html .battle-page .enemy-zone { padding: 10px 10px 0; height: 40%; min-height: 128px; }
+  html .battle-page .player-hud { min-height: 65px; padding: 6px 8px; gap: 8px; border-radius: 6px; }
+  html .battle-page .hud-portrait { width: 39px; height: 51px; }
+  html .battle-page .hud-name { margin-bottom: 4px; gap: 5px; }
+  html .battle-page .hud-name strong { font-size: 12px; }
+  html .battle-page .hud-name small { display: none; }
+  html .battle-page .hp-track { height: 16px; }
+  html .battle-page .hp-track > span { font-size: 11px; }
+  html .battle-page .hp-track small { font-size: 9px; }
+  html .battle-page .hud-levels { gap: 6px; margin-top: 4px; max-height: 31px; overflow: auto; scrollbar-width: none; }
+  html .battle-page .hud-levels > span { font-size: 10px; gap: 3px; }
+  html .battle-page .hud-levels .status-badge { font-size: 9px; }
+  html .battle-page .hud-power { min-width: 30px; gap: 3px; }
+  html .battle-page .hud-power b { font-size: 25px; }
+  html .battle-page .hud-power svg { width: 15px; height: 15px; }
+  html .battle-page .enemy-zone > .player-dice-position { height: calc(100% - 65px); min-height: 57px; }
+  html .battle-page .phase-line { height: 39px; padding: 0 12px; gap: 10px; }
+  html .battle-page .phase-announcement { min-width: 150px; padding: 7px 13px; gap: 10px; }
+  html .battle-page .phase-announcement > span { font-size: 8px; letter-spacing: .5px; }
+  html .battle-page .phase-announcement b { font-size: 12px; letter-spacing: 1px; }
+  html .battle-page .friendly-zone { padding: 0 10px 10px; }
+  html .battle-page .power-display { min-height: 35px; gap: 8px; }
+  html .battle-page .power-display > strong { font-size: 31px; }
+  html .battle-page .power-display > svg { width: 19px; height: 19px; }
+  html .battle-page .power-display > span { font-size: 10px; max-width: 175px; }
+  html .battle-page .friendly-half > .player-dice-position { min-height: 80px; }
+  html .battle-page .player-dice-position.committed { transform: none; }
+  html .battle-page .dice-tray.sculpted-dice { --die-slot: 58px; min-height: 0; }
+  html .battle-page .dice-tray.sculpted-dice.compact { --die-slot: 48px; }
+  html .battle-page .dice-tray.sculpted-dice .die-value { font-size: 12px; min-width: 23px; height: 17px; padding: 0 6px; }
+  html .battle-page .dice-tray.sculpted-dice .die-effect { font-size: 11px; }
+  html .battle-page .dice-tray.sculpted-dice .die-fallback-solid { font-size: 25px; }
+  /* A six-column row leaves 48–65px touch targets on supported phones. */
+  html .battle-page .dice-tray.sculpted-dice:has(.die-control:nth-child(7)) > .dice-controls { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); grid-auto-rows: minmax(0, 1fr); width: 100%; }
+  html .battle-page .dice-tray.sculpted-dice:has(.die-control:nth-child(7)) > .dice-canvas { width: calc(100% + var(--die-slot)*.7); }
+  html .battle-page .player-dice-position:has(.die-control:nth-child(7)) { min-height: 128px; }
+  html .battle-page .enemy-zone .player-dice-position:has(.die-control:nth-child(7)) { min-height: 96px; }
+  html .battle-page .enemy-zone:has(.die-control:nth-child(7)) { min-height: 171px; }
+  html .battle-page .action-rail { grid-row: 3; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; gap: 6px; padding: 5px 0 0; position: static; }
+  html .battle-page .action-rail > .rail-spacer { display: none; }
+  html .battle-page .weather-button { position: absolute; right: 13px; top: calc(47px + env(safe-area-inset-top, 0px)); min-width: 0; max-width: 50%; height: 25px; padding: 2px 8px; border-radius: 20px; flex-direction: row; gap: 5px; font-size: 10px; }
+  html .battle-page .weather-button > img,
+  html .battle-page .weather-button > svg:first-child { width: 20px; height: 20px; }
+  html .battle-page .weather-button > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  html .battle-page .weather-popover { top: calc(80px + env(safe-area-inset-top, 0px)); right: 12px; width: min(290px, calc(100% - 24px)); padding: 17px; z-index: 15; }
+  html .battle-page .weather-popover p { font-size: 12px; }
+  html .battle-page .action-rail > button:not(.weather-button) { min-height: 76px; padding: 5px 3px; gap: 3px; border: 1px solid #b3a9d53b; border-radius: 10px; background: #e1dfff08; }
+  html[data-theme="light"] .battle-page .action-rail > button:not(.weather-button) { border-color: #b7a9cf60; background: #fff9; }
+  html .battle-page .round-action-icon { width: 34px; height: 34px; border-width: 2px; }
+  html .battle-page .round-action-icon > svg { width: 23px; height: 23px; }
+  html .battle-page .round-action-icon.prism img { width: 31px; height: 31px; }
+  html .battle-page .action-count { min-width: 19px; height: 19px; font-size: 10px; left: -11px; top: -4px; }
+  html .battle-page .action-rail strong { font-size: 12px; line-height: 1.3; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  html .battle-page .action-rail small { font-size: 9px; white-space: nowrap; }
+  html .battle-page .battle-bottom { flex: 0 0 37px; height: 37px; padding: 3px 0 5px; gap: 0; justify-content: center; text-align: center; }
+  html .battle-page .battle-instruction { font-size: 10px; line-height: 1.5; flex-shrink: 1; }
+  html .battle-page .last-event { display: none; }
+
+  /* Co-op gives the local player's dice the whole table width; the partner remains
+     visible as a separate summary row, with their selected dice alongside their HP. */
+  html .battle-page.coop .enemy-zone { height: 112px; min-height: 112px; padding: 7px 10px 0; }
+  html .battle-page.coop .enemy-zone .player-hud { min-height: 58px; padding-block: 4px; }
+  html .battle-page.coop .enemy-zone .hud-portrait { width: 35px; height: 46px; }
+  html .battle-page.coop .enemy-zone > .player-dice-position { height: 47px; min-height: 47px; }
+  html .battle-page.coop .enemy-zone > .player-dice-position:not(:has(.die-control)) { display: none; }
+  html .battle-page.coop .enemy-zone:not(:has(.die-control)) { height: 70px; min-height: 70px; }
+  html .battle-page.coop .phase-line { height: 33px; }
+  html .battle-page.coop .phase-announcement { padding: 5px 12px; }
+  html .battle-page.coop .friendly-zone.duo { padding: 0 10px 27px; flex-direction: column; gap: 7px; }
+  html .battle-page.coop .friendly-zone.duo > .friendly-half { width: 100%; max-width: 100%; padding: 0; }
+  html .battle-page.coop .friendly-zone.duo > .friendly-half + div { padding: 0; border-left: 0; border-top: 1px dashed #9ea7c155; }
+  html .battle-page.coop .friendly-half:not(.partner) > .power-display { min-height: 29px; }
+  html .battle-page.coop .friendly-half:not(.partner) > .player-dice-position { min-height: 72px; }
+  html .battle-page.coop .friendly-half:not(.partner) > .player-dice-position:has(.die-control:nth-child(7)) { min-height: 122px; }
+  html .battle-page.coop .friendly-half:not(.partner) > .player-hud { min-height: 59px; padding: 4px 7px; }
+  html .battle-page.coop .friendly-half:not(.partner) .hud-portrait { width: 35px; height: 47px; }
+  html .battle-page.coop .friendly-half.partner { flex: 0 0 57px; display: grid; grid-template-columns: minmax(0, 1fr) 105px; align-items: center; gap: 7px; }
+  html .battle-page.coop .partner > .power-display { display: none; }
+  html .battle-page.coop .partner > .player-hud { grid-column: 1; grid-row: 1; min-height: 46px; height: auto; padding: 3px 5px; margin: 0; background: #48608d; }
+  html .battle-page.coop .partner .hud-portrait { width: 28px; height: 38px; }
+  html .battle-page.coop .partner .hud-name { margin-bottom: 4px; }
+  html .battle-page.coop .partner .hud-name strong { font-size: 10px; }
+  html .battle-page.coop .partner .hud-levels { display: none; }
+  html .battle-page.coop .partner .hud-power { min-width: 20px; }
+  html .battle-page.coop .partner .hud-power b { font-size: 18px; }
+  html .battle-page.coop .partner .hud-power > svg { width: 11px; height: 11px; }
+  html .battle-page.coop .partner .hp-track { height: 14px; }
+  html .battle-page.coop .partner .hp-track > span { font-size: 10px; }
+  html .battle-page.coop .partner > .player-dice-position { grid-column: 2; grid-row: 1; width: 100%; height: 49px; min-height: 0; }
+  html .battle-page.coop .partner .dice-tray.sculpted-dice { --die-slot: 30px; }
+  html .battle-page.coop .partner .die-value { height: 13px; min-width: 16px; padding: 0 3px; font-size: 9px; }
+  html .battle-page.coop .partner .die-effect { font-size: 8px; }
+  html .battle-page.coop .shared-lives { bottom: 6px; gap: 6px; white-space: nowrap; }
+  html .battle-page.coop .shared-lives > svg { width: 16px; height: 16px; }
+  html .battle-page.coop .shared-lives b { font-size: 13px; }
+  html .battle-page.coop .shared-lives span { font-size: 10px; }
+  html .battle-page.coop .swap-zone { height: 92px; padding: 4px 10px; }
+  html .battle-page.coop .swap-label { justify-content: space-between; font-size: 10px; gap: 6px; }
+  html .battle-page.coop .swap-label small { font-size: 9px; max-width: 70%; line-height: 1.4; text-align: right; }
+  html .battle-page.coop .swap-zone .dice-tray { height: 65px; }
+  html .battle-page.coop .swap-zone .dice-tray.sculpted-dice { --die-slot: 46px; }
+  html .battle-page.coop .swap-zone:has(.die-control:nth-child(7)) { height: 135px; }
+  html .battle-page.coop .swap-zone:has(.die-control:nth-child(7)) .dice-tray { height: 109px; }
+  html .battle-page.coop .tactic-wallet { position: absolute; left: 13px; top: calc(47px + env(safe-area-inset-top, 0px)); margin-left: 126px; height: 25px; font-size: 14px; gap: 3px; }
+  html .battle-page.coop .tactic-wallet small { display: none; }
+  html .battle-page.coop .weather-button { max-width: 40%; }
+  html .battle-page.coop.has-tactics .battle-bottom { flex-basis: 76px; height: 76px; align-items: flex-start; padding-top: 4px; }
+  html .battle-page.coop .tactic-hand { position: absolute; left: 12px; right: 12px; bottom: calc(5px + env(safe-area-inset-bottom, 0px)); transform: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; }
+  html .battle-page.coop .hand-card { min-width: 0; max-width: none; border-radius: 5px; }
+  html .battle-page.coop .hand-card > button:first-child { width: 100%; padding: 7px 20px 7px 7px; min-height: 41px; }
+  html .battle-page.coop .hand-card > button:first-child > svg { display: none; }
+  html .battle-page.coop .hand-card strong { font-size: 10px; margin: 0; line-height: 1.4; display: block; }
+  html .battle-page.coop .hand-card p { display: none; }
+  html .battle-page.coop .hand-card:focus-within p { position: absolute; bottom: calc(100% + 7px); left: 0; width: min(220px, 60vw); display: block; background: #292b4f; color: #eeeaf7; padding: 10px; font-size: 11px; border-radius: 5px; box-shadow: 0 3px 18px #19142d44; }
+  html .battle-page.coop .hand-card:last-child:focus-within p { left: auto; right: 0; }
+  html .battle-page.coop .discard-tactic { width: 24px; height: 24px; right: -3px; top: -5px; }
+
+  html .battle-page .resolution-comparison { inset: 18% 4% 19%; width: 92%; grid-template-rows: 1fr 38px 1fr; }
+  html .battle-page .resolution-number > strong { font-size: 65px; }
+  html .battle-page .resolution-role { font-size: 11px; letter-spacing: 1px; }
+  html .battle-page .resolution-player > span { font-size: 11px; }
+  html .battle-page .resolution-player > small { font-size: 9px; }
+  html .battle-page .resolution-values { gap: 22px; }
+  html .battle-page .resolution-number > svg { width: 21px; height: 21px; right: -26px; }
+  html .battle-page .striking-card { width: 112px; height: 157px; }
+  html .battle-page .skill-die-target { width: 49px; height: 49px; }
+  html .battle-page .skill-die-change { top: -18px; gap: 4px; }
+  html .battle-page .skill-die-change > strong { font-size: 22px; }
+  html .battle-page .skill-caption { padding: 12px 25px; top: 43%; min-width: 190px; }
+  html .battle-page .skill-caption > small,
+  html .battle-page .skill-caption > span { font-size: 10px; }
+  html .battle-page .skill-caption > strong { font-size: 25px; }
+  html .battle-page .defeat-ko { width: clamp(170px, 58%, 240px); }
+  html .battle-page .defeat-ko > small { font-size: 11px; }
+  html .battle-page .battle-intro-lineup { grid-template-columns: minmax(0, 1fr) 34px minmax(0, 1fr); min-height: 205px; height: 64%; }
+  html .battle-page .battle-intro-versus > span { font-size: 35px; letter-spacing: -4px; }
+  html .battle-page .battle-intro-versus small { font-size: 8px; }
+  html .battle-page .battle-intro-name strong { font-size: 17px; letter-spacing: 1px; }
+  html .battle-page .battle-intro-team.duo strong { font-size: 12px; }
+  html .battle-page .battle-intro-name small { font-size: 9px; }
+  html .battle-page .battle-intro-caption { font-size: 13px; letter-spacing: 2px; }
+  html .battle-page .battle-intro-rule { font-size: 8px; letter-spacing: 3px; }
+  html .battle-page .battle-event-cue strong { font-size: 14px; }
+  html .battle-page .battle-event-cue small { font-size: 9px; }
+  html .battle-page .battle-event-cue.stage { padding: 18px 13px 18px 60px; }
+  html .battle-page .battle-event-cue.stage strong { font-size: 26px; }
+  html .battle-page .result-overlay,
+  html .battle-page .connection-overlay { inset: 46px 0 0; padding: 22px; }
+  html .battle-page .result-eyebrow { font-size: 9px; letter-spacing: 3px; }
+  html .battle-page .result-emblem { font-size: 78px; }
+  html .battle-page .result-overlay h1 { font-size: 35px; letter-spacing: 7px; }
+  html .battle-page .result-overlay > p { max-width: 100%; font-size: 13px; }
+  html .battle-page .result-stats { gap: 26px; margin: 27px 0 32px; }
+  html .battle-page .result-stats span { font-size: 12px; }
+  html .battle-page .result-stats b { font-size: 25px; }
+  html .battle-page .result-overlay > .primary { min-height: 48px; width: 85%; }
+  html .battle-page .tactic-offers { grid-template-columns: 1fr; gap: 13px; }
+  html .battle-page .tactic-offer { min-height: 0; display: grid; grid-template-columns: 60px minmax(0, 1fr); gap: 6px 13px; padding: 13px; align-items: start; }
+  html .battle-page .tactic-art { grid-row: 1 / 4; margin: 0; width: 60px; height: 80px; border-radius: 5px; }
+  html .battle-page .tactic-art img { width: 55px; height: 65px; }
+  html .battle-page .tactic-offer h3 { font-size: 14px; }
+  html .battle-page .tactic-offer p { font-size: 12px; line-height: 1.6; margin: 0; }
+  html .battle-page .tactic-type { padding: 3px 0; border: 0; font-size: 10px; text-align: left; }
+  html .battle-page .tactic-offer .secondary { grid-column: 1 / -1; min-height: 40px; font-size: 12px; margin-top: 5px; }
+  html .battle-page .shop-explanation { font-size: 11px; gap: 12px; align-items: center; margin-bottom: 18px; }
+  html .battle-page .modal-actions { gap: 8px; }
+  html .battle-page .modal-actions > button { padding: 11px 13px; font-size: 12px; min-height: 44px; }
+  html .battle-page .battle-log p { font-size: 12px; }
+}
+
+@media (max-width: 700px) and (max-height: 740px) and (orientation: portrait) {
+  html .battle-page { padding-inline: 9px; }
+  html .battle-page .battle-topbar { height: 42px; flex-basis: 42px; }
+  html .battle-page .arena-layout { grid-template-rows: 26px minmax(0, 1fr) 80px; gap: 6px; }
+  html .battle-page .weather-button,
+  html .battle-page.coop .tactic-wallet { top: calc(42px + env(safe-area-inset-top, 0px)); }
+  html .battle-page .battle-bottom { height: 32px; flex-basis: 32px; }
+  html .battle-page .enemy-zone { padding: 7px 8px 0; min-height: 122px; height: 38%; }
+  html .battle-page .player-hud { min-height: 59px; padding: 4px 7px; }
+  html .battle-page .hud-portrait { height: 47px; width: 35px; }
+  html .battle-page .friendly-zone { padding: 0 8px 7px; }
+  html .battle-page .phase-line { height: 34px; }
+  html .battle-page .phase-announcement { padding: 5px 10px; }
+  html .battle-page .power-display { min-height: 30px; }
+  html .battle-page .friendly-half > .player-dice-position { min-height: 65px; }
+  html .battle-page .player-dice-position:has(.die-control:nth-child(7)) { min-height: 110px; }
+  html .battle-page .action-rail { padding-top: 2px; }
+  html .battle-page .action-rail > button:not(.weather-button) { min-height: 75px; }
+  html .battle-page .action-rail small { font-size: 9px; }
+  html .battle-page.coop .enemy-zone { height: 100px; min-height: 100px; padding-top: 4px; }
+  html .battle-page.coop .enemy-zone:not(:has(.die-control)) { height: 62px; min-height: 62px; }
+  html .battle-page.coop .enemy-zone .player-hud { min-height: 55px; }
+  html .battle-page.coop .enemy-zone > .player-dice-position { height: 40px; min-height: 40px; }
+  html .battle-page.coop .phase-line { height: 29px; }
+  html .battle-page.coop .friendly-zone.duo { padding: 0 8px 22px; gap: 3px; }
+  html .battle-page.coop .friendly-half:not(.partner) > .power-display { min-height: 25px; }
+  html .battle-page.coop .friendly-half:not(.partner) > .player-dice-position { min-height: 59px; }
+  html .battle-page.coop .friendly-half:not(.partner) > .player-dice-position:has(.die-control:nth-child(7)) { min-height: 110px; }
+  html .battle-page.coop .friendly-half:not(.partner) > .player-hud { min-height: 55px; }
+  html .battle-page.coop .friendly-half.partner { flex-basis: 48px; }
+  html .battle-page.coop .shared-lives { bottom: 3px; }
+  html .battle-page.coop .swap-zone { height: 78px; padding-block: 3px; }
+  html .battle-page.coop .swap-zone .dice-tray { height: 54px; }
+  html .battle-page.coop .swap-zone:has(.die-control:nth-child(7)) { height: 113px; }
+  html .battle-page.coop .swap-zone:has(.die-control:nth-child(7)) .dice-tray { height: 90px; }
+  html .battle-page.coop.has-tactics .battle-bottom { height: 68px; flex-basis: 68px; }
+  html .battle-page.coop.phase-swap .enemy-zone { display: grid; grid-template-columns: minmax(0, 1fr) 92px; gap: 5px; align-items: center; height: 65px; min-height: 65px; padding: 4px 8px 0; }
+  html .battle-page.coop.phase-swap .enemy-zone .player-hud { width: 100%; min-width: 0; gap: 5px; }
+  html .battle-page.coop.phase-swap .enemy-zone .hud-name strong { font-size: 10px; }
+  html .battle-page.coop.phase-swap .enemy-zone .hud-levels { display: none; }
+  html .battle-page.coop.phase-swap .enemy-zone .hud-power { min-width: 20px; }
+  html .battle-page.coop.phase-swap .enemy-zone .hud-power b { font-size: 19px; }
+  html .battle-page.coop.phase-swap .enemy-zone > .player-dice-position { min-height: 0; height: 48px; }
+  html .battle-page.coop.phase-swap .enemy-zone .dice-tray.sculpted-dice { --die-slot: 30px; }
+  html .battle-page.coop.phase-swap .enemy-zone .die-value { font-size: 10px; min-width: 17px; height: 14px; padding-inline: 3px; }
+  html .battle-page.coop.phase-swap .friendly-half:not(.partner) > .power-display { display: none; }
+  html .battle-page.coop.phase-swap .friendly-half:not(.partner) > .player-dice-position { min-height: 60px; }
+  html .battle-page .resolution-number > strong { font-size: 56px; }
+  html .battle-page .striking-card { width: 98px; height: 137px; }
+}

@@ -1,0 +1,2178 @@
+[
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1506.png",
+    "path": "assets/cards/264026.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1506.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "9d4ef5b88a0aa2b273f9a6bf851ff817fc85a56f482240fe48ecb1e61d6d75ba",
+    "bytes": 601313
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1310.png",
+    "path": "assets/cards/264014.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1310.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "76faebf61fcb7fb78631bcf503e31768a65c58b41ba9a86b8ebecdcf13b9af5a",
+    "bytes": 562251
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1308.png",
+    "path": "assets/cards/264013.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1308.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "e2e919765c285e7358eb43f5199be2364bc2f5595a4e5b5e9e23d12f2d2a55e2",
+    "bytes": 663863
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264001.png",
+    "path": "assets/cards/264001.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_264001.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d638a8b357071475e40849845c72cd893f1ddb7032a0b46d364b41ff1d5adebf",
+    "bytes": 124672
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264002.png",
+    "path": "assets/cards/264002.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_264002.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "601d3dffe5bcbba34c5244b66815d048e9a4cffba870154bec79850efa950d54",
+    "bytes": 211744
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264003.png",
+    "path": "assets/cards/264003.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_264003.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "087fcefeeaeb0b930e88aa7604d304a63e3c5bd78b7430229d66a7364faaaf4f",
+    "bytes": 110916
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264004.png",
+    "path": "assets/cards/264004.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_264004.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "fe9525d4cefc3743edb3958f6f8a215f2898e6546d3978eb800912697a19a153",
+    "bytes": 255365
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264005.png",
+    "path": "assets/cards/264005.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_264005.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "904260c2c2f203a9cea053aceedb658dfe043aaa31de1f84391010c8a5397adb",
+    "bytes": 201496
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264006.png",
+    "path": "assets/cards/264006.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_264006.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "2b50ea257cf71f79309a31602e984d246b7e465c353e4ee914bc3e7fb907b1ac",
+    "bytes": 354263
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264007.png",
+    "path": "assets/cards/264007.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_264007.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "789936dbd228f8f1a7a111f5cb61fb53afa2eb2044e8c5ab8e1e533d2b12dc83",
+    "bytes": 255629
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264008.png",
+    "path": "assets/cards/264008.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_264008.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "ccfdf9029e7c9bb461a1b0c594e758fd9538b485d40c46695bdeac10a77992c3",
+    "bytes": 184808
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264009.png",
+    "path": "assets/cards/264009.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_264009.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "4629da92cd59cbab0c1a017f06bc471a2725380df2ffbc63e70c2ac48c200355",
+    "bytes": 334743
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264010.png",
+    "path": "assets/cards/264010.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_264010.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "4dfb4fdc1e8f1f2304f5d703415f4a4253fc07824faefae7eba2eb19dbfa58d9",
+    "bytes": 477067
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264011.png",
+    "path": "assets/cards/264011.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_264011.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "b8e87d6e71b8a90184dbdd3de14ebc1776d17ac4533f5b69665392384fb7b515",
+    "bytes": 265787
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1407.png",
+    "path": "assets/cards/264012.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1407.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "eccd7667add468decf0cafe8f0b6a07253b20201735a8eafdc44c722565a85dc",
+    "bytes": 530797
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1309.png",
+    "path": "assets/cards/264015.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1309.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "056cbaed591d433959db17c70aec4d9e6b9d33dcd08d3fea2cba863648387c92",
+    "bytes": 522136
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1401.png",
+    "path": "assets/cards/264016.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1401.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "9601dd3ab02c64a3c8fb6c40bb96ee9cbdb62ec380f38594d2c9c29cc3a609f3",
+    "bytes": 730486
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1005.png",
+    "path": "assets/cards/264017.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1005.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "71d6838da0dac04fd8eda01f3ec4dd5f46aece85e6bc8828bf42de7afd912495",
+    "bytes": 422939
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1304.png",
+    "path": "assets/cards/264018.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1304.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "1a4a5ff1a057a8932532b00b98be549b0c4536fd047415cbd989a1e5f3de3384",
+    "bytes": 564498
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1001.png",
+    "path": "assets/cards/264019.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1001.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "b175e5c94a6b8c259505540d8e2e3b530c465193c1ccba331c7357ce5f42d993",
+    "bytes": 633244
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1414.png",
+    "path": "assets/cards/264020.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1414.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "0f318de1d2aeeb7f765a15ed05af5692195073f583b09d1837708873f94b0ca0",
+    "bytes": 500024
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1501.png",
+    "path": "assets/cards/264021.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1501.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "0f30b4d9312cc51e21ad1cef953c500792be9533fe0d778bba6f31695894065a",
+    "bytes": 469025
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1502.png",
+    "path": "assets/cards/264022.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1502.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "b4eda203819c6f20815aa99eb9638048df5c581852ebbedbbed6b3e642c2d307",
+    "bytes": 572756
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1415.png",
+    "path": "assets/cards/264023.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1415.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "bd223d72187a75c56a8e12152e31f90335abe6c4d39797b738ac93b7637e729a",
+    "bytes": 663796
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1408.png",
+    "path": "assets/cards/264024.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1408.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "b3348e5a3da3d3201a2a5a25f559242f3eab7116b291eb3f2ad94cee1705f480",
+    "bytes": 607138
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1409.png",
+    "path": "assets/cards/264025.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1409.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "401889d51ce0173fc0a76e9c63e74f73328eb09be744e78641f12a2177d3f157",
+    "bytes": 642448
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_264000.png",
+    "path": "assets/cards/264000.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_264000.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "00c6a9f505718bdd4433b6ff16845580caca7da21741f64a1b39b9ae87cf2f02",
+    "bytes": 379192
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1505.png",
+    "path": "assets/cards/264027.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1505.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "c74346a9d097a622e9714f2533575c5906989668662770228e341c2436bee2db",
+    "bytes": 478872
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_8009.png",
+    "path": "assets/cards/264028.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_8009.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "e9fc7d069665d9d658e16e9145e14a3e11d2abfeb122e9793e204a2b480dcef6",
+    "bytes": 461847
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1504.png",
+    "path": "assets/cards/264029.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1504.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "1ee98648cc0aff15cd7109d9470cd9c3f348cb326a5c6d77bba7440da914f065",
+    "bytes": 522878
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1313.png",
+    "path": "assets/cards/264030.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1313.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d6105b88f4491ceab9413d86302560d79ce6bde88208525927ccc23884b9a2cc",
+    "bytes": 620487
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1205.png",
+    "path": "assets/cards/264031.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1205.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "236ca0f2d1e8b752159c9011a89e008bd36a444f834a60da1a1f1a713797471d",
+    "bytes": 474006
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1410.png",
+    "path": "assets/cards/264032.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1410.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "da1be0d7dcbb837f8d146b6234656d2ad590f30573d11b6429dedeaa1238045c",
+    "bytes": 642092
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1403.png",
+    "path": "assets/cards/264033.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1403.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "656844acdab394920c716c6d7b06c9e5c29b0188dd68341cb68a384de192d8f0",
+    "bytes": 538444
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1303.png",
+    "path": "assets/cards/264034.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1303.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "cab92100a297affd6bf015a7c447f1d7b0fd61e6cb320cc0820cd55245418db6",
+    "bytes": 471426
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1003.png",
+    "path": "assets/cards/264035.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1003.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "f251c2e12f6467ca8c562678013a43844991d9165a4e6ba0c65a53f01350bf7d",
+    "bytes": 648281
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1308.png",
+    "path": "assets/cards/101.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1308.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "e2e919765c285e7358eb43f5199be2364bc2f5595a4e5b5e9e23d12f2d2a55e2",
+    "bytes": 663863
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1304.png",
+    "path": "assets/cards/102.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1304.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "1a4a5ff1a057a8932532b00b98be549b0c4536fd047415cbd989a1e5f3de3384",
+    "bytes": 564498
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1407.png",
+    "path": "assets/cards/103.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1407.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "eccd7667add468decf0cafe8f0b6a07253b20201735a8eafdc44c722565a85dc",
+    "bytes": 530797
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1408.png",
+    "path": "assets/cards/20101.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1408.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "b3348e5a3da3d3201a2a5a25f559242f3eab7116b291eb3f2ad94cee1705f480",
+    "bytes": 607138
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1408.png",
+    "path": "assets/cards/20102.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1408.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "b3348e5a3da3d3201a2a5a25f559242f3eab7116b291eb3f2ad94cee1705f480",
+    "bytes": 607138
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1408.png",
+    "path": "assets/cards/20103.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1408.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "b3348e5a3da3d3201a2a5a25f559242f3eab7116b291eb3f2ad94cee1705f480",
+    "bytes": 607138
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1408.png",
+    "path": "assets/cards/20104.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1408.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "b3348e5a3da3d3201a2a5a25f559242f3eab7116b291eb3f2ad94cee1705f480",
+    "bytes": 607138
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1505.png",
+    "path": "assets/cards/20201.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1505.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "c74346a9d097a622e9714f2533575c5906989668662770228e341c2436bee2db",
+    "bytes": 478872
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1505.png",
+    "path": "assets/cards/20202.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1505.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "c74346a9d097a622e9714f2533575c5906989668662770228e341c2436bee2db",
+    "bytes": 478872
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1505.png",
+    "path": "assets/cards/20203.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1505.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "c74346a9d097a622e9714f2533575c5906989668662770228e341c2436bee2db",
+    "bytes": 478872
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1505.png",
+    "path": "assets/cards/20204.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1505.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "c74346a9d097a622e9714f2533575c5906989668662770228e341c2436bee2db",
+    "bytes": 478872
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1313.png",
+    "path": "assets/cards/20301.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1313.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d6105b88f4491ceab9413d86302560d79ce6bde88208525927ccc23884b9a2cc",
+    "bytes": 620487
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1313.png",
+    "path": "assets/cards/20302.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1313.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d6105b88f4491ceab9413d86302560d79ce6bde88208525927ccc23884b9a2cc",
+    "bytes": 620487
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1313.png",
+    "path": "assets/cards/20303.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1313.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d6105b88f4491ceab9413d86302560d79ce6bde88208525927ccc23884b9a2cc",
+    "bytes": 620487
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1313.png",
+    "path": "assets/cards/20304.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1313.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d6105b88f4491ceab9413d86302560d79ce6bde88208525927ccc23884b9a2cc",
+    "bytes": 620487
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1501.png",
+    "path": "assets/cards/20401.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1501.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "0f30b4d9312cc51e21ad1cef953c500792be9533fe0d778bba6f31695894065a",
+    "bytes": 469025
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1501.png",
+    "path": "assets/cards/20402.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1501.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "0f30b4d9312cc51e21ad1cef953c500792be9533fe0d778bba6f31695894065a",
+    "bytes": 469025
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1501.png",
+    "path": "assets/cards/20403.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1501.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "0f30b4d9312cc51e21ad1cef953c500792be9533fe0d778bba6f31695894065a",
+    "bytes": 469025
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1501.png",
+    "path": "assets/cards/20404.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1501.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "0f30b4d9312cc51e21ad1cef953c500792be9533fe0d778bba6f31695894065a",
+    "bytes": 469025
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1304.png",
+    "path": "assets/cards/20501.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1304.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "1a4a5ff1a057a8932532b00b98be549b0c4536fd047415cbd989a1e5f3de3384",
+    "bytes": 564498
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1304.png",
+    "path": "assets/cards/20502.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1304.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "1a4a5ff1a057a8932532b00b98be549b0c4536fd047415cbd989a1e5f3de3384",
+    "bytes": 564498
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1304.png",
+    "path": "assets/cards/20503.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1304.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "1a4a5ff1a057a8932532b00b98be549b0c4536fd047415cbd989a1e5f3de3384",
+    "bytes": 564498
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1304.png",
+    "path": "assets/cards/20504.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1304.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "1a4a5ff1a057a8932532b00b98be549b0c4536fd047415cbd989a1e5f3de3384",
+    "bytes": 564498
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1506.png",
+    "path": "assets/cards/20601.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1506.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "9d4ef5b88a0aa2b273f9a6bf851ff817fc85a56f482240fe48ecb1e61d6d75ba",
+    "bytes": 601313
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1506.png",
+    "path": "assets/cards/20602.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1506.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "9d4ef5b88a0aa2b273f9a6bf851ff817fc85a56f482240fe48ecb1e61d6d75ba",
+    "bytes": 601313
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1308.png",
+    "path": "assets/cards/104.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1308.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "e2e919765c285e7358eb43f5199be2364bc2f5595a4e5b5e9e23d12f2d2a55e2",
+    "bytes": 663863
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1304.png",
+    "path": "assets/cards/105.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1304.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "1a4a5ff1a057a8932532b00b98be549b0c4536fd047415cbd989a1e5f3de3384",
+    "bytes": 564498
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_8009.png",
+    "path": "assets/cards/106.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_8009.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "e9fc7d069665d9d658e16e9145e14a3e11d2abfeb122e9793e204a2b480dcef6",
+    "bytes": 461847
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1407_Bg.png",
+    "path": "assets/card-backgrounds/264012.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1407_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d30931772502e6ffd5e8481ac2f06e7cb31deab83aa2615a1aa0fda4349afc3b",
+    "bytes": 502461
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1308_Bg.png",
+    "path": "assets/card-backgrounds/264013.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1308_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "1b661fc056a47a8bc266ed03d4175bc1564fd83d36c623305610b1149fe6da48",
+    "bytes": 438617
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1310_Bg.png",
+    "path": "assets/card-backgrounds/264014.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1310_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "ebb143f90384722c7ae232f4f75f09a696f42b3396b85e3812666621b2468ea5",
+    "bytes": 455556
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1309_Bg.png",
+    "path": "assets/card-backgrounds/264015.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1309_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "dd77bb3b85eef95947ed275bcd8410ec4509f793e153e607b63a82a784f0748a",
+    "bytes": 365329
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1401_Bg.png",
+    "path": "assets/card-backgrounds/264016.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1401_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "3de91202724a554cd96adc1a4fac147611977cbf100477aea03e15e9441e4afc",
+    "bytes": 247027
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1005_Bg.png",
+    "path": "assets/card-backgrounds/264017.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1005_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "7a9d47b890333778e76e42ff7e62a88c420eb8e18b724663f8d26172feda0d06",
+    "bytes": 488308
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1304_Bg.png",
+    "path": "assets/card-backgrounds/264018.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1304_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "b3ea8c86c3d11ca2e85148125e0184a95fdc0f4dc5883c0fe0cdc5fd6005f0ac",
+    "bytes": 390690
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1001_Bg.png",
+    "path": "assets/card-backgrounds/264019.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1001_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "1d53876ee34207bfa1215a917a02f84bd79dcce8e415f69c801d247ef2def98c",
+    "bytes": 261367
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1414_Bg.png",
+    "path": "assets/card-backgrounds/264020.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1414_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d1fed9efb5cf16ba0df6cd145b82dcdb83dbf141f554e1d1ab38da20c9e7d7be",
+    "bytes": 454962
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1501_Bg.png",
+    "path": "assets/card-backgrounds/264021.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1501_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "8ba9a847ba5351a9de0236ab509a4225e0970ee2530e70e30defd6392d3a2b86",
+    "bytes": 544707
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1502_Bg.png",
+    "path": "assets/card-backgrounds/264022.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1502_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d764100135d02d2894803f72d361b0c8cd2878100039501b37512234ebd726d3",
+    "bytes": 516027
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1415_Bg.png",
+    "path": "assets/card-backgrounds/264023.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1415_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "32ce06ed314a71fe0d467a145232460c570dd3a1d125b671d76cc98fcfe72b33",
+    "bytes": 275744
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1408_Bg.png",
+    "path": "assets/card-backgrounds/264024.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1408_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "bfc3fbe8ed076d6718d41a63669f38ff49a3cd13e1964ce38d90540955837429",
+    "bytes": 586396
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1409_Bg.png",
+    "path": "assets/card-backgrounds/264025.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1409_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "658fcb3c18ee991521abe02437f16b121f39262166c03cd3269e1adc3bca03de",
+    "bytes": 482193
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1506_Bg.png",
+    "path": "assets/card-backgrounds/264026.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1506_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "871a48fd8d91c2b4c741c238ddea41c2d8318528a74cfb634300a2c845a67974",
+    "bytes": 470181
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1505_Bg.png",
+    "path": "assets/card-backgrounds/264027.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1505_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "0d72556ce441507ad007dc57cc1a3e9be5bfc4fa093fae71b69db351fbb00d71",
+    "bytes": 615118
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_8009_Bg.png",
+    "path": "assets/card-backgrounds/264028.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_8009_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "0c80055880900617bcd7bbf43bfb697869d3bed0202bddca46181259f0cd211f",
+    "bytes": 220735
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1504_Bg.png",
+    "path": "assets/card-backgrounds/264029.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1504_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "60a98c7f706b871b57de024e57c024e707b0a679300e6145fddb609123e30a72",
+    "bytes": 636449
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1313_Bg.png",
+    "path": "assets/card-backgrounds/264030.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1313_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "a68fbfa5d7ea94d7a7562f879e28645935ace202373cf1124a8e526bc85a8fd7",
+    "bytes": 431299
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1205_Bg.png",
+    "path": "assets/card-backgrounds/264031.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1205_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "ba1be3dc4b8d61f6b8d552b824258b3a0d51aa0445ae8ec3dc250e437bcd3aa1",
+    "bytes": 372341
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1410_Bg.png",
+    "path": "assets/card-backgrounds/264032.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1410_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "1065743eeae40ee202c5b83c01e5653e92a1340c49d34ba2e686a66352ef96b8",
+    "bytes": 549467
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1403_Bg.png",
+    "path": "assets/card-backgrounds/264033.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1403_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d89d64d95e953b51042e01c7816eafcb8e227fe26789912c73aa7ecb57229ee8",
+    "bytes": 603594
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1303_Bg.png",
+    "path": "assets/card-backgrounds/264034.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1303_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "2c5e0c776e44b030bbf788d599b5a404c8270493ce3ba7a5ff8b1b34f5430a35",
+    "bytes": 393453
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1003_Bg.png",
+    "path": "assets/card-backgrounds/264035.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1003_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "c97ec9bf605b37943df68246e94d21ca9836901933a2bfdadcbf485db97d3b94",
+    "bytes": 353977
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1308_Bg.png",
+    "path": "assets/card-backgrounds/101.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1308_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "1b661fc056a47a8bc266ed03d4175bc1564fd83d36c623305610b1149fe6da48",
+    "bytes": 438617
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1304_Bg.png",
+    "path": "assets/card-backgrounds/102.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1304_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "b3ea8c86c3d11ca2e85148125e0184a95fdc0f4dc5883c0fe0cdc5fd6005f0ac",
+    "bytes": 390690
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1407_Bg.png",
+    "path": "assets/card-backgrounds/103.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1407_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d30931772502e6ffd5e8481ac2f06e7cb31deab83aa2615a1aa0fda4349afc3b",
+    "bytes": 502461
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1408_Bg.png",
+    "path": "assets/card-backgrounds/20101.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1408_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "bfc3fbe8ed076d6718d41a63669f38ff49a3cd13e1964ce38d90540955837429",
+    "bytes": 586396
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1408_Bg.png",
+    "path": "assets/card-backgrounds/20102.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1408_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "bfc3fbe8ed076d6718d41a63669f38ff49a3cd13e1964ce38d90540955837429",
+    "bytes": 586396
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1408_Bg.png",
+    "path": "assets/card-backgrounds/20103.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1408_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "bfc3fbe8ed076d6718d41a63669f38ff49a3cd13e1964ce38d90540955837429",
+    "bytes": 586396
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1408_Bg.png",
+    "path": "assets/card-backgrounds/20104.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1408_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "bfc3fbe8ed076d6718d41a63669f38ff49a3cd13e1964ce38d90540955837429",
+    "bytes": 586396
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1505_Bg.png",
+    "path": "assets/card-backgrounds/20201.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1505_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "0d72556ce441507ad007dc57cc1a3e9be5bfc4fa093fae71b69db351fbb00d71",
+    "bytes": 615118
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1505_Bg.png",
+    "path": "assets/card-backgrounds/20202.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1505_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "0d72556ce441507ad007dc57cc1a3e9be5bfc4fa093fae71b69db351fbb00d71",
+    "bytes": 615118
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1505_Bg.png",
+    "path": "assets/card-backgrounds/20203.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1505_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "0d72556ce441507ad007dc57cc1a3e9be5bfc4fa093fae71b69db351fbb00d71",
+    "bytes": 615118
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1505_Bg.png",
+    "path": "assets/card-backgrounds/20204.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1505_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "0d72556ce441507ad007dc57cc1a3e9be5bfc4fa093fae71b69db351fbb00d71",
+    "bytes": 615118
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1313_Bg.png",
+    "path": "assets/card-backgrounds/20301.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1313_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "a68fbfa5d7ea94d7a7562f879e28645935ace202373cf1124a8e526bc85a8fd7",
+    "bytes": 431299
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1313_Bg.png",
+    "path": "assets/card-backgrounds/20302.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1313_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "a68fbfa5d7ea94d7a7562f879e28645935ace202373cf1124a8e526bc85a8fd7",
+    "bytes": 431299
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1313_Bg.png",
+    "path": "assets/card-backgrounds/20303.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1313_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "a68fbfa5d7ea94d7a7562f879e28645935ace202373cf1124a8e526bc85a8fd7",
+    "bytes": 431299
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1313_Bg.png",
+    "path": "assets/card-backgrounds/20304.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1313_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "a68fbfa5d7ea94d7a7562f879e28645935ace202373cf1124a8e526bc85a8fd7",
+    "bytes": 431299
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1501_Bg.png",
+    "path": "assets/card-backgrounds/20401.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1501_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "8ba9a847ba5351a9de0236ab509a4225e0970ee2530e70e30defd6392d3a2b86",
+    "bytes": 544707
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1501_Bg.png",
+    "path": "assets/card-backgrounds/20402.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1501_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "8ba9a847ba5351a9de0236ab509a4225e0970ee2530e70e30defd6392d3a2b86",
+    "bytes": 544707
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1501_Bg.png",
+    "path": "assets/card-backgrounds/20403.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1501_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "8ba9a847ba5351a9de0236ab509a4225e0970ee2530e70e30defd6392d3a2b86",
+    "bytes": 544707
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1501_Bg.png",
+    "path": "assets/card-backgrounds/20404.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1501_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "8ba9a847ba5351a9de0236ab509a4225e0970ee2530e70e30defd6392d3a2b86",
+    "bytes": 544707
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1304_Bg.png",
+    "path": "assets/card-backgrounds/20501.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1304_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "b3ea8c86c3d11ca2e85148125e0184a95fdc0f4dc5883c0fe0cdc5fd6005f0ac",
+    "bytes": 390690
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1304_Bg.png",
+    "path": "assets/card-backgrounds/20502.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1304_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "b3ea8c86c3d11ca2e85148125e0184a95fdc0f4dc5883c0fe0cdc5fd6005f0ac",
+    "bytes": 390690
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1304_Bg.png",
+    "path": "assets/card-backgrounds/20503.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1304_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "b3ea8c86c3d11ca2e85148125e0184a95fdc0f4dc5883c0fe0cdc5fd6005f0ac",
+    "bytes": 390690
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1304_Bg.png",
+    "path": "assets/card-backgrounds/20504.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1304_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "b3ea8c86c3d11ca2e85148125e0184a95fdc0f4dc5883c0fe0cdc5fd6005f0ac",
+    "bytes": 390690
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1506_Bg.png",
+    "path": "assets/card-backgrounds/20601.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1506_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "871a48fd8d91c2b4c741c238ddea41c2d8318528a74cfb634300a2c845a67974",
+    "bytes": 470181
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1506_Bg.png",
+    "path": "assets/card-backgrounds/20602.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1506_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "871a48fd8d91c2b4c741c238ddea41c2d8318528a74cfb634300a2c845a67974",
+    "bytes": 470181
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1308_Bg.png",
+    "path": "assets/card-backgrounds/104.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1308_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "1b661fc056a47a8bc266ed03d4175bc1564fd83d36c623305610b1149fe6da48",
+    "bytes": 438617
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_1304_Bg.png",
+    "path": "assets/card-backgrounds/105.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_1304_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "b3ea8c86c3d11ca2e85148125e0184a95fdc0f4dc5883c0fe0cdc5fd6005f0ac",
+    "bytes": 390690
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/DiceCombatAvatarCardFigure_8009_Bg.png",
+    "path": "assets/card-backgrounds/106.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/DiceCombatAvatarCardFigure_8009_Bg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "0c80055880900617bcd7bbf43bfb697869d3bed0202bddca46181259f0cd211f",
+    "bytes": 220735
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/Frame/DiceCombatCardItemBig_Normal_Dice2.png",
+    "path": "assets/ui/DiceCombatCardItemBig_Normal_Dice2.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/frame/DiceCombatCardItemBig_Normal_Dice2.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "3a1f5f635c0eca7b777665165d532bdbffa23e06b028dbcd887ff24d9fc9cf51",
+    "bytes": 19934
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/Frame/DiceCombatCardItemBig_Normal_Dice3.png",
+    "path": "assets/ui/DiceCombatCardItemBig_Normal_Dice3.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/frame/DiceCombatCardItemBig_Normal_Dice3.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d68728c6947838280211aff261dbfb04e5a8d75081bb7e2d6921c7184c190332",
+    "bytes": 20084
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/Frame/DiceCombatCardItemBig_Normal_Dice4.png",
+    "path": "assets/ui/DiceCombatCardItemBig_Normal_Dice4.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/frame/DiceCombatCardItemBig_Normal_Dice4.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "fa0309df2bae52bc562c8432423563071f72ae8f4bb865d3ce14bbc84e2a12f6",
+    "bytes": 20131
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/Frame/DiceCombatCardItemBig_Gold_Dice2.png",
+    "path": "assets/ui/DiceCombatCardItemBig_Gold_Dice2.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/frame/DiceCombatCardItemBig_Gold_Dice2.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "bd0a44491d7e0aaa581d43886c0d83472e86f3113a2786cdd2f3097248f896fa",
+    "bytes": 207333
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/Frame/DiceCombatCardItemBig_Gold_Dice3.png",
+    "path": "assets/ui/DiceCombatCardItemBig_Gold_Dice3.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/frame/DiceCombatCardItemBig_Gold_Dice3.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "6b1428bfdd0a01a5f920fbb5918c6c4b0230401bd1391b9769443f2ad36b4983",
+    "bytes": 211341
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/Frame/DiceCombatCardItemBig_Gold_Dice4.png",
+    "path": "assets/ui/DiceCombatCardItemBig_Gold_Dice4.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/frame/DiceCombatCardItemBig_Gold_Dice4.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "eee7dfb72a7a3840892d79a4b5bd73b390b28a93e43becb76c3afa07364fdd98",
+    "bytes": 215318
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/Frame/DiceCombatCardItemBig_Color_Dice2.png",
+    "path": "assets/ui/DiceCombatCardItemBig_Color_Dice2.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/frame/DiceCombatCardItemBig_Color_Dice2.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d5dce0f31374028ab7f81e9c5b17a2825faa7cdb3034f156c7784129319b7c88",
+    "bytes": 128883
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/Frame/DiceCombatCardItemBig_Color_Dice3.png",
+    "path": "assets/ui/DiceCombatCardItemBig_Color_Dice3.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/frame/DiceCombatCardItemBig_Color_Dice3.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "e98b8fe2c2920b778d8dbef89c39000ef972f04cc88535ee20284f8a261ad646",
+    "bytes": 131484
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/AvatarCard/Frame/DiceCombatCardItemBig_Color_Dice4.png",
+    "path": "assets/ui/DiceCombatCardItemBig_Color_Dice4.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/avatarcard/frame/DiceCombatCardItemBig_Color_Dice4.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "67e0149f66b1e95175cfb52aa3b95825b22a95403041b909d17c6f0c5deb9ae9",
+    "bytes": 134643
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_1.png",
+    "path": "assets/weather/1.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_1.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "3094ab6b939ac354795826531353cb76d487a3ec4981ea24b9a2e48be439ab47",
+    "bytes": 398
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_2.png",
+    "path": "assets/weather/2.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_2.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "2747f70c8d70498fd6f49a9623ffadf83e1776d2d19bad7e874c6908a12f2aee",
+    "bytes": 375
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_3.png",
+    "path": "assets/weather/3.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_3.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "07e662a596fd307c6c5cb0a6d5718dccfd93fa82055fa986ffedbfa3c4609bba",
+    "bytes": 439
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_4.png",
+    "path": "assets/weather/4.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_4.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "210095b8a1eec6ad2e123bf5e4f629ae99e212354aeb4a5b6b488b69a68a9783",
+    "bytes": 395
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_5.png",
+    "path": "assets/weather/5.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_5.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "95b7dd4724711a63b55ebbe749cba76af2e30791c3e967d3e7402de534d2409f",
+    "bytes": 385
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_6.png",
+    "path": "assets/weather/6.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_6.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "e2aff4678ba94a66df44891bb37d678e21d7efaca32bd64a3ae7b48e1d313b87",
+    "bytes": 415
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_7.png",
+    "path": "assets/weather/7.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_7.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d5171b8821f0b4a11de83903fd8adb275ef7cef063cba5997e32ec845556f901",
+    "bytes": 382
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_8.png",
+    "path": "assets/weather/8.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_8.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "2cd893eb2324f4d041b80f05edb76a49bf0766c7e43749769eea3e63b0d82d63",
+    "bytes": 380
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_9.png",
+    "path": "assets/weather/9.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_9.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "2511d615265b95e4005ad6d8b9e50f502db5e89b4064e8560e4dc7bfdf628719",
+    "bytes": 403
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_10.png",
+    "path": "assets/weather/10.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_10.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "194af4e61c7f0a66f0f6504975fe2752d7d247f7342a32c43a7de11959eca9c8",
+    "bytes": 424
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_11.png",
+    "path": "assets/weather/11.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_11.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "e3ff0d28b9cb0c4de60fa4b96976bb434a2b6f99c05cf5587b6fc958c7316d5a",
+    "bytes": 382
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_12.png",
+    "path": "assets/weather/12.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_12.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "4c73aec5f2360a70056a26bba627ea8e84b7d14323b989d48efb64deebd0b72d",
+    "bytes": 380
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_13.png",
+    "path": "assets/weather/13.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_13.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "577935e90ae7108e6b99752677d50b20e1e5bdeb41ce05c8829f85f1e7657c81",
+    "bytes": 396
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_14.png",
+    "path": "assets/weather/14.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_14.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "b1030e9fbf21d98b26f817219352b900c6de9fb35fbf28110f3f47ceaab7c7fc",
+    "bytes": 378
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_15.png",
+    "path": "assets/weather/15.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_15.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "955c6352e0fdca60e01cfc38c0051b680ac7a9705458b827eb36203824b978ad",
+    "bytes": 378
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_16.png",
+    "path": "assets/weather/16.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_16.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "846191bd712697f56f5d1a7f8492a6f4a8ce0f140e9bc1a2084177a2131fa2f1",
+    "bytes": 361
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_17.png",
+    "path": "assets/weather/17.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_17.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "feccb14ca97218653c096332fa83f3463e53de6cb42c1a0fde643d05c9bd8e85",
+    "bytes": 423
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_18.png",
+    "path": "assets/weather/18.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_18.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "362842416da14c9ccb5e7101ddd43531ba288617517f9c9daf5f74e2f2639bc2",
+    "bytes": 390
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_19.png",
+    "path": "assets/weather/19.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_19.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "2cee89fd9529514b4f8b726d2dcb07f4278dbe2e5c3644c10bd0ea35102e7293",
+    "bytes": 408
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_20.png",
+    "path": "assets/weather/20.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_20.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "15c9e0562f7ff1422fac9a3f141cd03752397b7002f272c492281b23bd1cfe08",
+    "bytes": 409
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_21.png",
+    "path": "assets/weather/21.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_21.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "3b5387385b908d1f71a183b30dc40a23a1be6a8aef5bf3f23f090cfafe0be598",
+    "bytes": 416
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_22.png",
+    "path": "assets/weather/999.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_22.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "79e74638dcd6feda98839db8a34c7b2c15b7979ae5e5c33577a2d0629483adc9",
+    "bytes": 390
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_23.png",
+    "path": "assets/weather/22.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_23.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "3c52970febe4efa8167d850ff6aee14c7fbd014d70b70f29c1b263356f8403e1",
+    "bytes": 381
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_24.png",
+    "path": "assets/weather/23.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_24.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "1ee17fa8d8529eccdcdd92cc2d0a5faadd3757f9d1b8b3d15ac62f2bc781e428",
+    "bytes": 398
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_25.png",
+    "path": "assets/weather/24.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_25.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "34a5b5f8e4a6eb76ee48c502ac79028ccc2493d89b5d7355ee11b8cb3726080b",
+    "bytes": 422
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_26.png",
+    "path": "assets/weather/25.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_26.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "37a65e5083c9f655a938bc103b790b9d59ebb9d9d781a97f101b1d5188727e1d",
+    "bytes": 418
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_27.png",
+    "path": "assets/weather/26.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_27.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "1a1a887d8f4dbc931f3f249bdc6ea387c2d43f7d2ff2dadcb3dcd1e2d9521f11",
+    "bytes": 424
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_28.png",
+    "path": "assets/weather/27.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_28.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "e2d7a1a9ea029ff2b2ff7eee95b46a51d68b9928b183cd073ee596a2e9812d39",
+    "bytes": 420
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_29.png",
+    "path": "assets/weather/28.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_29.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "b39a5610aa0e51169945a91d513937f188d413b2ad709b4615238acd526bc3bd",
+    "bytes": 414
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_30.png",
+    "path": "assets/weather/29.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_30.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "6ca0b194078b335d12fcca253243116b1ac5152a2f928fcac03a714ae0fbbe7d",
+    "bytes": 383
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_31.png",
+    "path": "assets/weather/31.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/weather/DiceCombatWeatherIcon_31.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "6b257bdb1f87223f4794e388d1790c8c56b2ccf42a416b066f42822bb1178f39",
+    "bytes": 396
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank1_Buff01.png",
+    "path": "assets/tactics/42001.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank1_Buff01.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "7ad5355ebdf3d629cb8c4ebf3f7d65c3b3c3a0dca35610f2e1ae676d6b3084a7",
+    "bytes": 18377
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank1_Buff02.png",
+    "path": "assets/tactics/42002.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank1_Buff02.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "5f48608194105cea9398ba9a744beeb53c48e61e62caa1eb0d838c367479064c",
+    "bytes": 18157
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank1_Buff03.png",
+    "path": "assets/tactics/42003.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank1_Buff03.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "cbe735395a64082518bd0ae2432c5724463252c47ed4f2c61b4983cf337c1848",
+    "bytes": 18749
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank1_Buff02.png",
+    "path": "assets/tactics/42004.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank1_Buff02.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "5f48608194105cea9398ba9a744beeb53c48e61e62caa1eb0d838c367479064c",
+    "bytes": 18157
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank1_Buff04.png",
+    "path": "assets/tactics/42005.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank1_Buff04.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "04dd61fed726e540762a843e5c2439060f0afe2e0137623218483506125764ab",
+    "bytes": 18345
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank1_Buff05.png",
+    "path": "assets/tactics/42006.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank1_Buff05.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "9c7f12e81509d2d6c8ac8ae8506c4f3af4b15f534b91fc1dee28ca825dad3397",
+    "bytes": 18947
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank1_Buff06.png",
+    "path": "assets/tactics/42007.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank1_Buff06.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "8a485f80e99ddc2c2ff319a74bc6b0f83355c705e802ce55a6b22412be4f5c5a",
+    "bytes": 19017
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank1_Buff07.png",
+    "path": "assets/tactics/42008.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank1_Buff07.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "e17b20cc200e59674eb39322c106760bd643ee24aaf4a7d4e867a7a9134c041b",
+    "bytes": 18756
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank1_Buff08.png",
+    "path": "assets/tactics/42009.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank1_Buff08.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "b7b2396cc2d6ea82df11e846e03848493f36c61a253f760a6b13b2426a2f1cc3",
+    "bytes": 19002
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank2_Buff01.png",
+    "path": "assets/tactics/42010.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank2_Buff01.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "1fd764b6d0fff432152d9eee713baf32f25b118e0db864fa45cb0469b3f12f5f",
+    "bytes": 24260
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank2_Buff02.png",
+    "path": "assets/tactics/42011.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank2_Buff02.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "6a1b6381d1faaf560fbcd7dbdf87b93e8bedd30fb171f4224c612e7aff9fe04c",
+    "bytes": 24529
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank2_Buff01.png",
+    "path": "assets/tactics/42012.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank2_Buff01.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "1fd764b6d0fff432152d9eee713baf32f25b118e0db864fa45cb0469b3f12f5f",
+    "bytes": 24260
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank2_Buff03.png",
+    "path": "assets/tactics/42013.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank2_Buff03.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "4739a2e2987712651498bd7bfc11f7e3d23328e7ef51306a1c55ead826a0ac1c",
+    "bytes": 24815
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank2_Buff05.png",
+    "path": "assets/tactics/42014.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank2_Buff05.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "59e6b6023c9d2428f8329af82f8c11055a798cf523622b778835eba06ee7258f",
+    "bytes": 24812
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank2_Buff04.png",
+    "path": "assets/tactics/42015.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank2_Buff04.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d2c303cc525487b271f12d94e53f11107742e44be5fb5f2a4fed4f4c545f5cce",
+    "bytes": 24585
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank2_Buff07.png",
+    "path": "assets/tactics/42016.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank2_Buff07.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "0cec11e792ecc802a93f248606b2bb02a3ed56d56a1a4068037aa4889e19443a",
+    "bytes": 24947
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank2_Buff06.png",
+    "path": "assets/tactics/42018.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank2_Buff06.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "fad65b459e5bb079673f13fec4b7c9e4852e45ebe3072e78dae4f774ae7b0bd8",
+    "bytes": 25062
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank3_Buff01.png",
+    "path": "assets/tactics/42019.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank3_Buff01.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "63dc7421fde682a60ace33d2cfa8e8be67ec08024b15168440ca699282d29462",
+    "bytes": 29919
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank3_Buff02.png",
+    "path": "assets/tactics/42020.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank3_Buff02.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d98cb6ef367e7558cbf74f4d42f01b89e9fea1176b3a7a3ca55d6fc129841f6b",
+    "bytes": 31052
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank3_Buff04.png",
+    "path": "assets/tactics/42021.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank3_Buff04.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "6c2b98bbeaa299feff7630de3a5125beb56f9b3b4f6464f6fe264d0d5e8f8dfd",
+    "bytes": 30889
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank3_Buff05.png",
+    "path": "assets/tactics/42022.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank3_Buff05.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "68de95ddd6c0006b4104dff62518f49a212f782996ebe89618139f88efc217ba",
+    "bytes": 31171
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank3_Buff06.png",
+    "path": "assets/tactics/42023.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank3_Buff06.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d43fc0b9619bd7feeea7835c6326f28817544249cafba5002fb69945283f5360",
+    "bytes": 31629
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank3_Buff07.png",
+    "path": "assets/tactics/42024.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank3_Buff07.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "2b2e37ce88402362e853e652dc62e89d72762a679ed6ac1804802c87a571e78c",
+    "bytes": 30786
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank3_Buff03.png",
+    "path": "assets/tactics/42025.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/tacticsicon/DiceCombatV2TacticsIconRank3_Buff03.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "ae6a4b69ca4165ac47ad0b57e0a74d35987685eded696521318295d9aa35127c",
+    "bytes": 30999
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon01.png",
+    "path": "assets/glossary/1.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon01.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d67dbdf24fbea99cd3f2313612e789712209c1ee1896fc0fb119200f864645c6",
+    "bytes": 3489
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon02.png",
+    "path": "assets/glossary/2.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon02.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "5662a04733d54abf3b59138d3e894dd442006cf81396752bacef3e50ebf8014b",
+    "bytes": 3494
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon03.png",
+    "path": "assets/glossary/3.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon03.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d6edf206cbc3f907096a5171cb57d821528d9a76df84d7929345535ee6862218",
+    "bytes": 3787
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon04.png",
+    "path": "assets/glossary/4.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon04.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "778dbf4f9873abc12384cb8df474694a745273b8f707d34ad428383d34b1e78f",
+    "bytes": 4212
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon05.png",
+    "path": "assets/glossary/5.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon05.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d6269783a7a07878449162e394ab2030dd410244a27fcbeb3ed2ae03915e30a8",
+    "bytes": 2539
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon06.png",
+    "path": "assets/glossary/6.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon06.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "6c01ec4a2cbe134737e9ff9449cb066e74a24624fec937408c38596d0e0436f9",
+    "bytes": 3812
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon07.png",
+    "path": "assets/glossary/7.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon07.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "3dbbab65c634a7ca79fad35f753f6da4fb45d818aebbc764b0778b3b6258bd3e",
+    "bytes": 2168
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon08.png",
+    "path": "assets/glossary/8.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon08.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "5509e91f859a7ec06aca3722fc5cdc7bdf62367f72e09f5bb2ea1b34c8a8f5fc",
+    "bytes": 2428
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon09.png",
+    "path": "assets/glossary/9.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon09.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "34d0d7057dbffe11b74534d0cce3f958931db3bd11323c83bb6934451c31dea5",
+    "bytes": 2302
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon10.png",
+    "path": "assets/glossary/10.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon10.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "caf831aaee5df4de24cfcf4d4d3481ba8c601936acba5460caa0f89738b6d905",
+    "bytes": 958
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon11.png",
+    "path": "assets/glossary/11.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon11.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d93c9460895ed7a6e3636a600ca3d1842351ad0053d7f4cd16fa281f947c06fd",
+    "bytes": 3468
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon12.png",
+    "path": "assets/glossary/12.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon12.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "bd8579f794fc2b2d250659bd293e3cc2a362e46c5e1b1aee3261da3d29514faa",
+    "bytes": 2727
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon13.png",
+    "path": "assets/glossary/13.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon13.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "9c41cf533752cc3e99c4cbd53fd7b812ff706a858dce1973d348732fec784e29",
+    "bytes": 4469
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon14.png",
+    "path": "assets/glossary/14.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon14.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "b6e3ba56caa5fe99e8cab803b8fa2375471444c2adc593e71043af361831a293",
+    "bytes": 3902
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon15.png",
+    "path": "assets/glossary/15.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon15.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "5b70a2b74b0651b1ae00a9834ba9007713c290694b92a59418ed94d859aa9330",
+    "bytes": 3865
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon16.png",
+    "path": "assets/glossary/16.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon16.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "7407c3ec3eef0e099c67d53a9448e9f9099f7d65d823c2efce428ef0a811fa11",
+    "bytes": 3100
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon17.png",
+    "path": "assets/glossary/17.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon17.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "a3c805a6b4ac7c5476e4adf803dc1df96049ff66b5b31fb94f26ccb16985fe6a",
+    "bytes": 5134
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon18.png",
+    "path": "assets/glossary/18.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon18.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d186e422d1f9a82a365449c0b2c8de553404ee7a25cf7a7196fd2cc98491ef1a",
+    "bytes": 2324
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon19.png",
+    "path": "assets/glossary/19.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon19.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d97e9bd95c11089b057c419094f7eee1e193cac0ab16ddf564ef47fa8fbdd147",
+    "bytes": 1803
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon20.png",
+    "path": "assets/glossary/20.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon20.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "f7c3d3137f151a4d383b41f7bb616299e093258d87efee18f69033568707c1eb",
+    "bytes": 1921
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon21.png",
+    "path": "assets/glossary/21.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon21.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "5f8073117c64f8a2f9d6e113c00b5365ef73f5d45a70eb5bdebcfda0bc1342c9",
+    "bytes": 3288
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon22.png",
+    "path": "assets/glossary/22.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon22.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "b78ee9c5903ed95deec3fcd89e007abea13cdd0fa8de76046505b90744893b36",
+    "bytes": 3959
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon23.png",
+    "path": "assets/glossary/23.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon23.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "1473d2cdab26f50a096ecfb89387d99aedeac1f31a1ff83bff380a60dbec4053",
+    "bytes": 3810
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon24.png",
+    "path": "assets/glossary/24.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon24.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "27878caeb964a685ec37c095a62cdec24e6564586397f6effb0599a02ef3ac20",
+    "bytes": 3204
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon25.png",
+    "path": "assets/glossary/25.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon25.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "95effcf01b8aa9d47d717c33077bf7b2c503cd908939896c3912695d77a0bc99",
+    "bytes": 3190
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/BuffIcon/IconDiceCombat_BuffIcon02.png",
+    "path": "assets/glossary/26.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/bufficon/IconDiceCombat_BuffIcon02.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "5662a04733d54abf3b59138d3e894dd442006cf81396752bacef3e50ebf8014b",
+    "bytes": 3494
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/BuffIcon/IconDiceCombatV2_BuffIcon03.png",
+    "path": "assets/glossary/27.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/bufficon/IconDiceCombatV2_BuffIcon03.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "2c60bbbcb40c154593dcef4304ab9bbc6b58cea76bde5cbc6ce2dda7496df0f2",
+    "bytes": 4969
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/V2/BuffIcon/IconDiceCombatV2_BuffIcon01.png",
+    "path": "assets/glossary/28.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/v2/bufficon/IconDiceCombatV2_BuffIcon01.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "dc113ba5810f4bcfb841c7ed357043f86e81079ad9447ea6dbf67f5602d90157",
+    "bytes": 4700
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/MainEntranceAvatarImg/DiceCombatMainEntranceBtnPVEAvatar01.png",
+    "path": "assets/classicCampaigns/1.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/mainentranceavatarimg/DiceCombatMainEntranceBtnPVEAvatar01.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "1820d28b0f8fa58d3c4b017ea3fb064239988c1237419723853c66e45509d1a0",
+    "bytes": 205501
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/MainEntranceAvatarImg/DiceCombatMainEntranceBtnPVEAvatar02.png",
+    "path": "assets/classicCampaigns/2.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/mainentranceavatarimg/DiceCombatMainEntranceBtnPVEAvatar02.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "1ff6d809ebcc89583532a605a6144a73510e05d98ea06248efc9ecc5755065ca",
+    "bytes": 205921
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/MainEntranceAvatarImg/DiceCombatMainEntranceBtnPVEAvatar04.png",
+    "path": "assets/classicCampaigns/3.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/mainentranceavatarimg/DiceCombatMainEntranceBtnPVEAvatar04.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "8af28a72e4a510f1497bead8feede62d0d704c1dd6cd50f14b28cfc94857d8a9",
+    "bytes": 225342
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/MainEntranceAvatarImg/DiceCombatMainEntranceBtnPVEAvatar03.png",
+    "path": "assets/classicCampaigns/4.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/mainentranceavatarimg/DiceCombatMainEntranceBtnPVEAvatar03.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "c7ec59cfaf6aa555a4d954a91435401ee86e0ceca402a792e776afb3236b116f",
+    "bytes": 185028
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/MainEntranceAvatarImg/DiceCombatMainEntranceBtnPVEAvatar05.png",
+    "path": "assets/classicCampaigns/5.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/mainentranceavatarimg/DiceCombatMainEntranceBtnPVEAvatar05.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "ec60efda37fa127f7cf613bd2f525cab048f24a424e0713b9e3862be9e5d24a0",
+    "bytes": 85760
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/MainEntranceAvatarImg/DiceCombatMainEntranceBtnPVEAvatar06.png",
+    "path": "assets/classicCampaigns/6.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/mainentranceavatarimg/DiceCombatMainEntranceBtnPVEAvatar06.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "15a8f4293282bb04a1506a083c3b294758751adc45f9d4237f014342b0cf76fd",
+    "bytes": 195687
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/MainEntranceAvatarImg/DiceCombatMainEntranceBtnPVEAvatar06.png",
+    "path": "assets/classicCampaigns/7.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/mainentranceavatarimg/DiceCombatMainEntranceBtnPVEAvatar06.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "15a8f4293282bb04a1506a083c3b294758751adc45f9d4237f014342b0cf76fd",
+    "bytes": 195687
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/MainEntranceAvatarImg/DiceCombatMainEntranceBtnPVEAvatar07.png",
+    "path": "assets/classicCampaigns/8.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/mainentranceavatarimg/DiceCombatMainEntranceBtnPVEAvatar07.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "16c94e76945ec7c2be9a34da85c2ff7f32eaa3b86fb7327704a278e4af321972",
+    "bytes": 231539
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/MainEntranceAvatarImg/DiceCombatMainEntranceBtnPVEAvatar08.png",
+    "path": "assets/classicCampaigns/9.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/mainentranceavatarimg/DiceCombatMainEntranceBtnPVEAvatar08.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "17f9da02768d242ca9f51a4cf15e8bd6158d10095db40a979294d9f08fd91734",
+    "bytes": 296030
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/MainEntranceAvatarImg/DiceCombatMainEntranceBtnPVEAvatar09.png",
+    "path": "assets/classicCampaigns/10.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/mainentranceavatarimg/DiceCombatMainEntranceBtnPVEAvatar09.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "3f6a1f09c2a85ce4f8da0d13ebda963a64aa1ecda9f8a718418ee1da19690996",
+    "bytes": 239307
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/MainEntranceAvatarImg/DiceCombatMainEntranceBtnPVEAvatar10.png",
+    "path": "assets/classicCampaigns/11.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/mainentranceavatarimg/DiceCombatMainEntranceBtnPVEAvatar10.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "2eaf0ba12c4f7a3efa9eb49a947e5832e0ff9f10df70742380642908b80cc7c2",
+    "bytes": 283001
+  },
+  {
+    "sourcePath": "UI/UI3D/DiceCombat/V2/_dependencies/Texture/BattleReadyLogo/UI3D_DiceCombatV2_BattleReady_Logo_02.png",
+    "path": "assets/coopStages/1001.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/ui/ui3d/dicecombat/v2/_dependencies/texture/battlereadylogo/UI3D_DiceCombatV2_BattleReady_Logo_02.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "9770eae10c8ca1fe574fefd6660019b4c47d4ab05efe6f322de2690e59fec94d",
+    "bytes": 225909
+  },
+  {
+    "sourcePath": "UI/UI3D/DiceCombat/V2/_dependencies/Texture/BattleReadyLogo/UI3D_DiceCombatV2_BattleReady_Logo_05.png",
+    "path": "assets/coopStages/1002.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/ui/ui3d/dicecombat/v2/_dependencies/texture/battlereadylogo/UI3D_DiceCombatV2_BattleReady_Logo_05.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "e9b4f5da0a44113f8eb63b2d9151ca0975a03183cb31c7c3a5bf598470be1904",
+    "bytes": 227783
+  },
+  {
+    "sourcePath": "UI/UI3D/DiceCombat/V2/_dependencies/Texture/BattleReadyLogo/UI3D_DiceCombatV2_BattleReady_Logo_01.png",
+    "path": "assets/coopStages/1003.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/ui/ui3d/dicecombat/v2/_dependencies/texture/battlereadylogo/UI3D_DiceCombatV2_BattleReady_Logo_01.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "8b118dabc12649c710a44acb9f68d53846a3eef0b2dd071bfc4dab8eab49f105",
+    "bytes": 193636
+  },
+  {
+    "sourcePath": "UI/UI3D/DiceCombat/V2/_dependencies/Texture/BattleReadyLogo/UI3D_DiceCombatV2_BattleReady_Logo_03.png",
+    "path": "assets/coopStages/1004.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/ui/ui3d/dicecombat/v2/_dependencies/texture/battlereadylogo/UI3D_DiceCombatV2_BattleReady_Logo_03.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "fe058c13ec86d1f7e7a9a7e45b6716bb32ee87d44a2232c308886b03d36ec37b",
+    "bytes": 267969
+  },
+  {
+    "sourcePath": "UI/UI3D/DiceCombat/V2/_dependencies/Texture/BattleReadyLogo/UI3D_DiceCombatV2_BattleReady_Logo_04.png",
+    "path": "assets/coopStages/1005.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/ui/ui3d/dicecombat/v2/_dependencies/texture/battlereadylogo/UI3D_DiceCombatV2_BattleReady_Logo_04.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "3a7544bf0e0ed90d755eb612c5462caad15010ab0c864e0c7a3ea49baafc8b03",
+    "bytes": 334227
+  },
+  {
+    "sourcePath": "UI/UI3D/DiceCombat/V2/_dependencies/Texture/BattleReadyLogo/UI3D_DiceCombatV2_BattleReady_Logo_06.png",
+    "path": "assets/coopStages/1006.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/ui/ui3d/dicecombat/v2/_dependencies/texture/battlereadylogo/UI3D_DiceCombatV2_BattleReady_Logo_06.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "a23026beb31966d33403e7f0c2eb2a6e36ac8f7eb1004691e2aa57c70cc2d28b",
+    "bytes": 140833
+  },
+  {
+    "sourcePath": "UI/UI3D/DiceCombat/V2/_dependencies/Texture/BattleReadyLogo/UI3D_DiceCombatV2_BattleReady_Logo_02.png",
+    "path": "assets/coopStages/2001.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/ui/ui3d/dicecombat/v2/_dependencies/texture/battlereadylogo/UI3D_DiceCombatV2_BattleReady_Logo_02.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "9770eae10c8ca1fe574fefd6660019b4c47d4ab05efe6f322de2690e59fec94d",
+    "bytes": 225909
+  },
+  {
+    "sourcePath": "UI/UI3D/DiceCombat/V2/_dependencies/Texture/BattleReadyLogo/UI3D_DiceCombatV2_BattleReady_Logo_05.png",
+    "path": "assets/coopStages/2002.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/ui/ui3d/dicecombat/v2/_dependencies/texture/battlereadylogo/UI3D_DiceCombatV2_BattleReady_Logo_05.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "e9b4f5da0a44113f8eb63b2d9151ca0975a03183cb31c7c3a5bf598470be1904",
+    "bytes": 227783
+  },
+  {
+    "sourcePath": "UI/UI3D/DiceCombat/V2/_dependencies/Texture/BattleReadyLogo/UI3D_DiceCombatV2_BattleReady_Logo_01.png",
+    "path": "assets/coopStages/2003.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/ui/ui3d/dicecombat/v2/_dependencies/texture/battlereadylogo/UI3D_DiceCombatV2_BattleReady_Logo_01.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "8b118dabc12649c710a44acb9f68d53846a3eef0b2dd071bfc4dab8eab49f105",
+    "bytes": 193636
+  },
+  {
+    "sourcePath": "UI/UI3D/DiceCombat/V2/_dependencies/Texture/BattleReadyLogo/UI3D_DiceCombatV2_BattleReady_Logo_03.png",
+    "path": "assets/coopStages/2004.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/ui/ui3d/dicecombat/v2/_dependencies/texture/battlereadylogo/UI3D_DiceCombatV2_BattleReady_Logo_03.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "fe058c13ec86d1f7e7a9a7e45b6716bb32ee87d44a2232c308886b03d36ec37b",
+    "bytes": 267969
+  },
+  {
+    "sourcePath": "UI/UI3D/DiceCombat/V2/_dependencies/Texture/BattleReadyLogo/UI3D_DiceCombatV2_BattleReady_Logo_04.png",
+    "path": "assets/coopStages/2005.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/ui/ui3d/dicecombat/v2/_dependencies/texture/battlereadylogo/UI3D_DiceCombatV2_BattleReady_Logo_04.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "3a7544bf0e0ed90d755eb612c5462caad15010ab0c864e0c7a3ea49baafc8b03",
+    "bytes": 334227
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264402.png",
+    "path": "assets/dice/264402.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264402.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "73033dc6bedd1a4430c4bd1aa5aa13960f7c07cbebdaa4d91be71249087fd77b",
+    "bytes": 77852
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264403.png",
+    "path": "assets/dice/264403.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264403.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d8cd21d70bf52769af6c4eb9293868124f51acb4d80dc4632cb190c47ee2a550",
+    "bytes": 83863
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264404.png",
+    "path": "assets/dice/264404.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264404.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "6a0b4561d4e9661d4b1723d1a47be73dd8c1c17ecd87de73509c7d67e55e9c26",
+    "bytes": 78897
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264428.png",
+    "path": "assets/dice/264405.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264428.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d7362c911ea2cbdf24106cc5a543d505839302a6c29c904a9dece2782ea12005",
+    "bytes": 76649
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264406.png",
+    "path": "assets/dice/264406.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264406.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "70e0101dfa5ea758a0732a7e3a38402559fc25dd9af72da864526862b3a0c8d7",
+    "bytes": 79303
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264407.png",
+    "path": "assets/dice/264407.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264407.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "73033dc6bedd1a4430c4bd1aa5aa13960f7c07cbebdaa4d91be71249087fd77b",
+    "bytes": 77852
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264408.png",
+    "path": "assets/dice/264408.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264408.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "525d58142c26be8389de8e4b7dbe668d27aaf57a69b127e4d5d7afbd5c039462",
+    "bytes": 82133
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264409.png",
+    "path": "assets/dice/264409.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264409.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "03c8a3a3434afd08a1cf319724a14b9f2e8df4f2f0a35916abeb99b485ed1045",
+    "bytes": 79253
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264410.png",
+    "path": "assets/dice/264410.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264410.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "eaf9525dca20d6fabe6746906bb807ba9de5c2f2be335738543475364d9a2bbb",
+    "bytes": 79910
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264411.png",
+    "path": "assets/dice/264411.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264411.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "8440db261d83a3102c1bd1983b458468219aab70cc9163141d866100ecfdb033",
+    "bytes": 79813
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264412.png",
+    "path": "assets/dice/264412.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264412.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "0debcad6b20edc6ab70e979c690e6e5902ca9be6c6656eb1834733dbe3435c3f",
+    "bytes": 79832
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264413.png",
+    "path": "assets/dice/264413.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264413.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "f2186c5d3d51710ded0b8598f7aa3dccc58fc26562821f83298209e1a6fd9a08",
+    "bytes": 79965
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264416.png",
+    "path": "assets/dice/264416.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264416.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "b135c30cb43a82f9ab7590b946849805bf4706ebb1c9a5314dae67a333409ae2",
+    "bytes": 81912
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264417.png",
+    "path": "assets/dice/264417.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264417.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "00f8be263847dfa4d27b8b7a78dad19189c861807a42bcd1126e9eb848cb3336",
+    "bytes": 82258
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264418.png",
+    "path": "assets/dice/264418.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264418.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "15ec828d19c3db3b86c941dcd13d2f348bac867331cff403a383efbbc7b8bbe2",
+    "bytes": 79674
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264419.png",
+    "path": "assets/dice/264419.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264419.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "2b890096f96eebf3e5cbbb1c5eb437b0b68a87532844a7cf060afdf4e7e1c88c",
+    "bytes": 78664
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264420.png",
+    "path": "assets/dice/264420.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264420.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "1e260f9d9d95977b782ed9e1178eaecb112c48696c1e7f1f252474d08a876f70",
+    "bytes": 80721
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264421.png",
+    "path": "assets/dice/264421.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264421.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "e7846fa74e7900897f22b7e1196a1e378491ad184ecfb2337fb19baa14a7dceb",
+    "bytes": 80885
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264422.png",
+    "path": "assets/dice/264422.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264422.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "ca54ce2a9b06feccdfbdd1896918855fbd1f1b39907e25f26d1022b7a0f1be0c",
+    "bytes": 82417
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264423.png",
+    "path": "assets/dice/264423.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264423.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "f6a7dfb9c421e07eff6ccbaba5f954db56643412c8e7117efdc1bc8edfd0b54e",
+    "bytes": 76352
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264426.png",
+    "path": "assets/dice/264424.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264426.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "a57dc32893de9c0697b321753998b9ca96dcae24b280965a5ab19f3f6d24e9cd",
+    "bytes": 76456
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264425.png",
+    "path": "assets/dice/264425.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264425.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "4c64155fb84681d20e35e214951c56e259c9806726c984f08f81af65e23d489a",
+    "bytes": 76283
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264424.png",
+    "path": "assets/dice/264426.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264424.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "4f2e53719bfcd688089a90b360b754ced9deeff15a84e19864995c9dec86c9a5",
+    "bytes": 77597
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264427.png",
+    "path": "assets/dice/264427.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264427.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "986065803b7056bf761aabeacad367ba8a22eee840fbb5767033142eef661a2b",
+    "bytes": 78004
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/IconDice/ItemFigures/264428.png",
+    "path": "assets/dice/264428.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/icondice/itemfigures/264428.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d7362c911ea2cbdf24106cc5a543d505839302a6c29c904a9dece2782ea12005",
+    "bytes": 76649
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/DiceCombatBattle_IconAttack.png",
+    "path": "assets/ui/DiceCombatBattle_IconAttack.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/DiceCombatBattle_IconAttack.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "2d1ce81848ae3af0e819f7f98badde6930dd127f20a6d2686eb806bc963989d5",
+    "bytes": 2169
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/DiceCombatBattle_IconDefence.png",
+    "path": "assets/ui/DiceCombatBattle_IconDefence.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/DiceCombatBattle_IconDefence.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "2077c52919d0f523755a4d92ce338874b71561611a436572d8eb315a34f4a4c2",
+    "bytes": 3547
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/DiceCombatCardDiceItemLevel1.png",
+    "path": "assets/ui/DiceCombatCardDiceItemLevel1.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/DiceCombatCardDiceItemLevel1.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "3ec9edfb01297c992b5a53e1d182e8c19dff832bdcf8d04a204227df9d78ff4a",
+    "bytes": 100
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/DiceCombatCardDiceItemLevel2.png",
+    "path": "assets/ui/DiceCombatCardDiceItemLevel2.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/DiceCombatCardDiceItemLevel2.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "6b8462b6cbb4289b4013b280297ec87f5c03f57a955218f264311f6bc88554bc",
+    "bytes": 100
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/DiceCombatCardDiceItemLevel3.png",
+    "path": "assets/ui/DiceCombatCardDiceItemLevel3.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/DiceCombatCardDiceItemLevel3.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d69180a889964e2cf5e105694bed74c669d127ba5b4bd7e8e3d78efd62ec2ba2",
+    "bytes": 100
+  },
+  {
+    "sourcePath": "SpriteOutput/Quest/DiceCombat/DiceCombatCardDiceItemLevel4.png",
+    "path": "assets/ui/DiceCombatCardDiceItemLevel4.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/quest/dicecombat/DiceCombatCardDiceItemLevel4.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "17a0fbe6fd1e555aeddca566be20a5b87cf47ee5183e1494fbb31b7ce8d30e75",
+    "bytes": 137
+  },
+  {
+    "sourcePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceCombatCardItemBig_Normal_BackBg.png",
+    "path": "assets/ui/DiceCombatCardItemBig_Normal_BackBg.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/ui/ui3d/dicecombat/_dependencies/texture/DiceCombatCardItemBig_Normal_BackBg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "8b2748928b0577542a842578e6be2a4a6de70b6183c6db528242124cf4558abb",
+    "bytes": 24115
+  },
+  {
+    "sourcePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceCombatCardItemBig_Gold_BackBg.png",
+    "path": "assets/ui/DiceCombatCardItemBig_Gold_BackBg.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/ui/ui3d/dicecombat/_dependencies/texture/DiceCombatCardItemBig_Gold_BackBg.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "2ad21fc57f4cb1d1acafd8d9ca10c32fb653f1dce0e05bc36e0015670cf10b5f",
+    "bytes": 26403
+  },
+  {
+    "sourcePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceCombatCardItemBigCardBack.png",
+    "path": "assets/ui/DiceCombatCardItemBigCardBack.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/ui/ui3d/dicecombat/_dependencies/texture/DiceCombatCardItemBigCardBack.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "145b13e5d96c8df6ccece6c43fc36f7e33ce9d4213e1244aaf52e643ca8fb836",
+    "bytes": 72427
+  },
+  {
+    "sourcePath": "UI/UI3D/DiceCombat/_dependencies/Texture/DiceCombatCardItemBigBack_Color.png",
+    "path": "assets/ui/DiceCombatCardItemBigBack_Color.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/ui/ui3d/dicecombat/_dependencies/texture/DiceCombatCardItemBigBack_Color.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "0f1df4f96088f642733b55f9d9c91b3c586fadd4cca7dfedb767db9a68a6891e",
+    "bytes": 497862
+  },
+  {
+    "sourcePath": "SpriteOutput/ItemIcon/150093.png",
+    "path": "assets/currency/150093.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/itemicon/150093.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "d101b00ceb01c254daabcec675a4ecb30573ab3fb9aece711887fc2eff9d7fbf",
+    "bytes": 20284
+  },
+  {
+    "sourcePath": "SpriteOutput/ItemIcon/264996.png",
+    "path": "assets/currency/264996.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/itemicon/264996.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "50f1765b21901990f293bf54dcd6d766be95ee1842c6a763e6dc54c54c3a0c49",
+    "bytes": 23331
+  },
+  {
+    "sourcePath": "SpriteOutput/ItemIcon/264997.png",
+    "path": "assets/currency/264997.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/itemicon/264997.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "03310df056407a33a7444bce849addd9035d831f8f7c825038a2e3281188cd99",
+    "bytes": 22549
+  },
+  {
+    "sourcePath": "SpriteOutput/ItemIcon/264998.png",
+    "path": "assets/currency/264998.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/itemicon/264998.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "90e10b21b4ea0de9ca8b0a4941e4f2873952772182cd31319b354b4303aff66c",
+    "bytes": 24809
+  },
+  {
+    "sourcePath": "SpriteOutput/ItemIcon/264999.png",
+    "path": "assets/currency/264999.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/itemicon/264999.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "bf90853e6732f8a3eacccabc020bd9cad790c63028538029271d3f2b2cd8434c",
+    "bytes": 20735
+  },
+  {
+    "sourcePath": "SpriteOutput/ItemIcon/269001.png",
+    "path": "assets/currency/269001.png",
+    "url": "https://raw.githubusercontent.com/umaichanuwu/StarRailTextures/2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce/assets/asbres/spriteoutput/itemicon/269001.png",
+    "commit": "2a4b9a7eb7ac9db7f48d627fa5cdfd3822c902ce",
+    "sha256": "3dc93b4572fb57a69c9d97637911c95066cde27c5c63134718d9e4c76e8d4c88",
+    "bytes": 19005
+  },
+  {
+    "sourcePath": "image/character_preview/1102.png",
+    "path": "assets/cards/custom-seele.png",
+    "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/05aad816b2546f21ee18f0ddc52e9b1fc4d56173/image/character_preview/1102.png",
+    "commit": "05aad816b2546f21ee18f0ddc52e9b1fc4d56173",
+    "sha256": "f3a80d3ecba1b10025c1e5d79ffac8ccc3d2f15450412f21689195fa25099912",
+    "bytes": 222151
+  }
+]

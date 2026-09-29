@@ -1,0 +1,29 @@
+# 星穹骰局 · 发布美术
+
+制作方式：Codex `imagegen` 技能，内置 `image_gen` 工具。2026-09-28。未使用外部图像 API 或 CLI；作品为新生成的骰子、卡牌与科幻场景，不含官方角色立绘或平台标志。
+
+名称：**星穹骰局**。副标题：**同人卡牌对战**。
+
+## 文件
+
+- `xingqiong-dice-cover-4x3.png`：平台列表主封面，1448 × 1086，4:3 横构图。
+- `xingqiong-dice-icon.png`：独立方形图标，1254 × 1254，无文字。
+- `xingqiong-dice-poster-portrait.png`：附赠竖版宣传图，1024 × 1536。
+
+4:3 主封面是重新生成的独立横构图，并非竖图裁切。
+
+生成原图保留于 `C:/Users/31116/.codex/generated_images/01a0e675-3e9b-73b0-8faa-4915fc7d027d/`：竖图 `exec-04fba731-f550-45bd-9a5a-9cc889d75479.png`；图标 `exec-778fd301-133e-4028-b4f8-00f24347d1a0.png`；4:3 封面 `exec-628e2397-e474-40c8-adf8-958790a6b923.png`。
+
+## 最终提示词：4:3 封面
+
+参考图片：`xingqiong-dice-poster-portrait.png`，仅作风格参考。
+
+> Use case: ads-marketing. Create a NEW companion cover image using the provided portrait poster as a STYLE REFERENCE only. Important required output: LANDSCAPE horizontal 4:3 aspect ratio, target 1200 × 900 pixels. This is the main game listing cover for the mobile dice-and-card fan game “星穹骰局”. Recompose the artwork for 4:3, do NOT place the portrait inside a wide canvas and do NOT merely crop it. Preserve the original lovely bright cream-white and pale lavender style, luminous blue-violet crystal eight-sided die with an 8, elegant gold bevels, ivory/lavender star-motif collectible cards, faint science-fiction arcade architecture, high-end stylized 3D finish. NEW COMPOSITION: keep the title “星穹骰局” large and very readable in the upper third across the cover; beneath it the small centered subtitle “同人卡牌对战”. Beneath the words arrange one large gleaming blue-violet eight-sided die with clear engraved 8 at center, two gold-rimmed cards fanned behind, one smaller violet cube die at lower right. The dice/cards fill the lower two thirds; use a tighter horizontal balanced arrangement with fewer tiny accents and less scenic height. Typography deep indigo with delicate gold trim, rendered exactly in Chinese as in the reference. Soft high-key light, airy premium background, rich crystal facets, refined metallic edges. All title, subtitle, dice, and cards inside a generous 8 percent safe margin, title should not touch the frame; ensure attractive central crop tolerance. No extra text, no English, no watermark, no company logo, no Bilibili logo, no phone mockup. Output ONE finished 4:3 horizontal cover, full bleed.
+
+## 最终提示词：图标
+
+> Use case: logo-brand / stylized-concept. Asset type: finished square mobile game app icon for “星穹骰局”, target 1024 × 1024 pixels, 1:1 square. Primary request: one extraordinarily polished bold and readable crystalline gaming-die icon, with a gentle optimistic science-fiction tabletop atmosphere. Main subject: a single large faceted blue and violet translucent eight-sided dice jewel, tipped diagonally, a warm-white elegant engraved four-point star on its large forward facet, each crystal edge delicately edged with gold. Two simple ivory-and-lavender collectible cards with thin gold edges peek out from behind the die, just enough to suggest a card battle game. Composition: crystal is centered and occupies about 65 percent of the canvas, cards are secondary; keep all important silhouette within central 78 percent for rounded icon mask safe area. Background: luminous pale lavender fading into creamy white, subtle soft halo, no complex scenery, no environment, no rings, no tiny secondary objects. Style: premium stylized 3D render, gemstone facets with a hint of starry blue interior and cyan reflected edges, soft high key studio illumination, satisfying tactile shape, razor-crisp silhouette. Visual hierarchy: the big blue-violet die reads instantly at 64px. One restrained four-point star glint at its top-right edge. Full square opaque canvas, not a rounded rectangle pasted on blank background. NO text or letters, no words, no numeral, no watermark, no official or platform logos, no playing card suits, no casino aesthetic, no phone mockup, no multiframe sheet. Keep it bright, clear, simple, and refined.
+
+## 最终提示词：竖版宣传图
+
+> Use case: ads-marketing. Asset type: finished portrait cover artwork for a mobile Chinese fan dice-and-card battle game, target 1024 × 1536 pixels, 2:3 portrait. Primary request: a beautifully polished, bright science-fiction arcade tabletop game cover with the Chinese title “星穹骰局” large and perfectly legible. Subject: a luminous faceted blue-violet crystalline eight-sided die as a compelling central hero object, readable engraved pale numeral 8 on one facet; two elegant cream and pale-lavender collectible cards with gold bevelled edges floating behind it, their fronts showing abstract four-point stars rather than characters. A smaller violet six-sided die and tiny cyan crystal accents complete the playful diagonal composition. Scene: airy warm ivory and very pale lavender backdrop, delicate circular arcade mechanisms and distant geometric star sparkles, restrained pale lilac reflections, plenty of breathing room, high-key illumination. Style: premium stylized 3D game key art, exquisite beveled surfaces, smooth glassy crystal and brushed gold, sophisticated mobile game store artwork, soft ambient shadows, crisp clean silhouettes. Composition: title across upper quarter, central dice and card arrangement across middle, all important elements comfortably within 8 percent canvas margins; bottom remains airy. Color palette: cream white, pale lavender, saturated periwinkle blue, cyan highlights, subtle warm gold. Text exactly and only: title “星穹骰局” in large bold meticulously drawn contemporary Chinese display lettering with deep indigo strokes and a subtle gold edge; secondary small but readable line “同人卡牌对战”. No additional words, no English, no official or platform logos, no HSR logo, no watermark, no UI screenshot, no collage, no dark background, no casino chips, no cash, no playing-card suits. Deliver one completed portrait cover image, not a mockup shown on a phone.

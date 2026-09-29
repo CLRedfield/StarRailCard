@@ -1,0 +1,428 @@
+[
+  {
+    "id": "1",
+    "name": "霜",
+    "description": "若攻击方选择的骰子中包含相同点数，则下回合其防御等级 +1",
+    "descriptionTemplate": "若攻击方选择的骰子中包含相同点数，则下回合其防御等级 +#1",
+    "params": [
+      1
+    ],
+    "effect": "10001",
+    "tag": "Defence",
+    "showType": "Snowy",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_1.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10001.json"
+  },
+  {
+    "id": "2",
+    "name": "飓风",
+    "description": "双方攻击时均获得连击",
+    "descriptionTemplate": "双方攻击时均获得连击",
+    "params": [],
+    "effect": "10002",
+    "tag": "",
+    "showType": "",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_2.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10002.json"
+  },
+  {
+    "id": "3",
+    "name": "暴雪",
+    "description": "防御方选定骰子时，若防御值≤8点，则其在本回合获得力场",
+    "descriptionTemplate": "防御方选定骰子时，若防御值≤#1点，则其在本回合获得力场",
+    "params": [
+      8
+    ],
+    "effect": "10003",
+    "tag": "Defence",
+    "showType": "Snowy",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_3.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10003.json"
+  },
+  {
+    "id": "4",
+    "name": "青蛙雨",
+    "description": "双方所有骰子均不会掷出最小值",
+    "descriptionTemplate": "双方所有骰子均不会掷出最小值",
+    "params": [],
+    "effect": "10004",
+    "tag": "Assist",
+    "showType": "Rainy",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_4.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10004.json"
+  },
+  {
+    "id": "5",
+    "name": "鱼雨",
+    "description": "双方在攻击/防御时，都会额外获得1次重投机会",
+    "descriptionTemplate": "双方在攻击/防御时，都会额外获得#1次重投机会",
+    "params": [
+      1
+    ],
+    "effect": "10005",
+    "tag": "Assist",
+    "showType": "Rainy",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_5.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10005.json"
+  },
+  {
+    "id": "6",
+    "name": "日食",
+    "description": "双方攻击时，若选择的骰子中包含不同点数，则攻击值 +4",
+    "descriptionTemplate": "双方攻击时，若选择的骰子中包含不同点数，则攻击值 +#1",
+    "params": [
+      4
+    ],
+    "effect": "10006",
+    "tag": "",
+    "showType": "",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_6.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10006.json"
+  },
+  {
+    "id": "7",
+    "name": "暴雨",
+    "description": "双方额外攻击等级+1，防御等级+1",
+    "descriptionTemplate": "双方额外攻击等级+#1，防御等级+#2",
+    "params": [
+      1,
+      1
+    ],
+    "effect": "10007",
+    "tag": "Comeback",
+    "showType": "Thundery",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_7.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10007.json"
+  },
+  {
+    "id": "8",
+    "name": "小雨",
+    "description": "选定骰子时，若包含6，则消除身上的中毒状态",
+    "descriptionTemplate": "选定骰子时，若包含6，则消除身上的中毒状态",
+    "params": [],
+    "effect": "10008",
+    "tag": "Assist",
+    "showType": "Rainy",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_8.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10008.json"
+  },
+  {
+    "id": "9",
+    "name": "中雪",
+    "description": "双方攻击或防御时，若选择的骰子包含3个相同点数，则治愈10点生命值",
+    "descriptionTemplate": "双方攻击或防御时，若选择的骰子包含3个相同点数，则治愈#1点生命值",
+    "params": [
+      10
+    ],
+    "effect": "10009",
+    "tag": "Defence",
+    "showType": "Snowy",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_9.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10009.json"
+  },
+  {
+    "id": "10",
+    "name": "大雪",
+    "description": "选定骰子时，若包含7，则攻击值/防御值+4",
+    "descriptionTemplate": "选定骰子时，若包含7，则攻击值/防御值+#1",
+    "params": [
+      4
+    ],
+    "effect": "10010",
+    "tag": "Defence",
+    "showType": "Snowy",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_10.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10010.json"
+  },
+  {
+    "id": "11",
+    "name": "沙尘",
+    "description": "攻击方选定骰子时，若点数全为奇数，则获得3层力量",
+    "descriptionTemplate": "攻击方选定骰子时，若点数全为奇数，则获得#1层力量",
+    "params": [
+      3
+    ],
+    "effect": "10011",
+    "tag": "",
+    "showType": "",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_11.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10011.json"
+  },
+  {
+    "id": "12",
+    "name": "时空暴",
+    "description": "攻击方选定骰子时，若点数全为6，双方生命值将互换",
+    "descriptionTemplate": "攻击方选定骰子时，若点数全为#1，双方生命值将互换",
+    "params": [
+      6
+    ],
+    "effect": "10012",
+    "tag": "Comeback",
+    "showType": "Thundery",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_12.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10012.json"
+  },
+  {
+    "id": "13",
+    "name": "雨夹雪",
+    "description": "生命值不为满的玩家，获得反击，且防御等级+2",
+    "descriptionTemplate": "生命值不为满的玩家，获得反击，且防御等级+#1",
+    "params": [
+      2
+    ],
+    "effect": "10013",
+    "tag": "Assist",
+    "showType": "Rainy",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_13.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10013.json"
+  },
+  {
+    "id": "14",
+    "name": "毒雾",
+    "description": "双方均被附加2层中毒",
+    "descriptionTemplate": "双方均被附加#1层中毒",
+    "params": [
+      2
+    ],
+    "effect": "10014",
+    "tag": "Comeback",
+    "showType": "Thundery",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_14.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10014.json"
+  },
+  {
+    "id": "15",
+    "name": "毒云",
+    "description": "双方获得猛毒",
+    "descriptionTemplate": "双方获得猛毒",
+    "params": [],
+    "effect": "10015",
+    "tag": "",
+    "showType": "",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_15.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10015.json"
+  },
+  {
+    "id": "16",
+    "name": "云海",
+    "description": "变换至此天气时，双方获得1次曜彩骰使用次数",
+    "descriptionTemplate": "变换至此天气时，双方获得#1次曜彩骰使用次数",
+    "params": [
+      1
+    ],
+    "effect": "10016",
+    "tag": "Assist",
+    "showType": "Rainy",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_16.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10016.json"
+  },
+  {
+    "id": "17",
+    "name": "晴",
+    "description": "双方获得5层力量，持续到本次天气结束",
+    "descriptionTemplate": "双方获得#1层力量，持续到本次天气结束",
+    "params": [
+      5
+    ],
+    "effect": "10017",
+    "tag": "",
+    "showType": "",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_17.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10017.json"
+  },
+  {
+    "id": "18",
+    "name": "彩虹",
+    "description": "攻击方选定骰子时，若攻击值≤10，获得洞穿",
+    "descriptionTemplate": "攻击方选定骰子时，若攻击值≤#1，获得洞穿",
+    "params": [
+      10
+    ],
+    "effect": "10018",
+    "tag": "",
+    "showType": "",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_18.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10018.json"
+  },
+  {
+    "id": "19",
+    "name": "晴雷",
+    "description": "攻击方选定骰子时，直接造成3点瞬伤",
+    "descriptionTemplate": "攻击方选定骰子时，直接造成#1点瞬伤",
+    "params": [
+      3
+    ],
+    "effect": "10019",
+    "tag": "Comeback",
+    "showType": "Thundery",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_19.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10019.json"
+  },
+  {
+    "id": "20",
+    "name": "干旱",
+    "description": "根据对方防御等级，每一级攻击方附加3点攻击值",
+    "descriptionTemplate": "根据对方防御等级，每一级攻击方附加#1点攻击值",
+    "params": [
+      3
+    ],
+    "effect": "10020",
+    "tag": "",
+    "showType": "",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_20.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10020.json"
+  },
+  {
+    "id": "21",
+    "name": "烈日",
+    "description": "双方攻击时，虹吸造成伤害50%的生命值",
+    "descriptionTemplate": "双方攻击时，虹吸造成伤害#1%的生命值",
+    "params": [
+      50
+    ],
+    "effect": "10021",
+    "tag": "",
+    "showType": "",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_21.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10021.json"
+  },
+  {
+    "id": "999",
+    "name": "决胜时刻",
+    "description": "双方获得5层力量",
+    "descriptionTemplate": "双方获得#1层力量",
+    "params": [
+      5
+    ],
+    "effect": "999",
+    "tag": "",
+    "showType": "Overload",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_22.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_999.json"
+  },
+  {
+    "id": "22",
+    "name": "月食",
+    "description": "攻击方选定骰子时，若防御方的防御等级≥4，则攻击值+8",
+    "descriptionTemplate": "攻击方选定骰子时，若防御方的防御等级≥#2，则攻击值+#1",
+    "params": [
+      8,
+      4
+    ],
+    "effect": "10022",
+    "tag": "",
+    "showType": "",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_23.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10022.json"
+  },
+  {
+    "id": "23",
+    "name": "酸雨",
+    "description": "每回合开始时：场上生命值更多的一方，会被附加1层中毒",
+    "descriptionTemplate": "每回合开始时：场上生命值更多的一方，会被附加#1层中毒",
+    "params": [
+      1
+    ],
+    "effect": "10023",
+    "tag": "Assist",
+    "showType": "Rainy",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_24.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10023.json"
+  },
+  {
+    "id": "24",
+    "name": "高温",
+    "description": "回合开始时：场上生命值更少的一方，获得2层力量，持续到本次天气结束",
+    "descriptionTemplate": "回合开始时：场上生命值更少的一方，获得#1层力量，持续到本次天气结束",
+    "params": [
+      2
+    ],
+    "effect": "10024",
+    "tag": "",
+    "showType": "",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_25.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10024.json"
+  },
+  {
+    "id": "25",
+    "name": "细雪",
+    "description": "攻击回合若未重投过，则获得3层仅下回合可用的韧性",
+    "descriptionTemplate": "攻击回合若未重投过，则获得#1层仅下回合可用的韧性",
+    "params": [
+      3
+    ],
+    "effect": "10025",
+    "tag": "Defence",
+    "showType": "Snowy",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_26.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10025.json"
+  },
+  {
+    "id": "26",
+    "name": "晴天雨",
+    "description": "防御方骰子无法掷出最大值",
+    "descriptionTemplate": "防御方骰子无法掷出最大值",
+    "params": [],
+    "effect": "10026",
+    "tag": "",
+    "showType": "",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_27.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10026.json"
+  },
+  {
+    "id": "27",
+    "name": "日月同辉",
+    "description": "攻击方选定骰子时，若当前生命值≤3，攻击值翻倍",
+    "descriptionTemplate": "攻击方选定骰子时，若当前生命值≤#2，攻击值翻倍",
+    "params": [
+      2,
+      3
+    ],
+    "effect": "10027",
+    "tag": "Comeback",
+    "showType": "Thundery",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_28.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10027.json"
+  },
+  {
+    "id": "28",
+    "name": "云隙光",
+    "description": "生命值更少的玩家，攻击时获得连击",
+    "descriptionTemplate": "生命值更少的玩家，攻击时获得连击",
+    "params": [],
+    "effect": "10028",
+    "tag": "",
+    "showType": "",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_29.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10028.json"
+  },
+  {
+    "id": "29",
+    "name": "幻日",
+    "description": "额外多2次重投机会，但重投时会被施加2层荆棘",
+    "descriptionTemplate": "额外多#1次重投机会，但重投时会被施加#2层荆棘",
+    "params": [
+      2,
+      2
+    ],
+    "effect": "10029",
+    "tag": "",
+    "showType": "",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_30.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10029.json"
+  },
+  {
+    "id": "31",
+    "name": "雷雨",
+    "description": "在此天气下，卡片每经过一次镀闪，攻击值/防御值+2",
+    "descriptionTemplate": "在此天气下，卡片每经过一次镀闪，攻击值/防御值+#1",
+    "params": [
+      2
+    ],
+    "effect": "10031",
+    "tag": "Assist",
+    "showType": "Rainy",
+    "imagePath": "SpriteOutput/Quest/DiceCombat/Weather/DiceCombatWeatherIcon_31.png",
+    "skillPath": "Config/Gameplays/LittleGame/DiceCombat/WeatherEffect_10031.json"
+  }
+]

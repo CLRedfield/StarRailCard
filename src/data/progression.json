@@ -1,0 +1,2327 @@
+{
+  "RankConfig": [
+    {
+      "DiceRankID": 1,
+      "RankMaxScore": 499,
+      "Name": "银战新人",
+      "IconPath": "SpriteOutput/Quest/DiceCombat/RankIcon/DiceCombatRankIconL1_512.png",
+      "IconSmallPath": "SpriteOutput/Quest/DiceCombat/RankIcon/DiceCombatRankIconL1_64.png",
+      "RuleGroupMapList": [
+        {
+          "MFOCBKDCFLL": 2,
+          "LMMOHCCHKKO": 11012
+        },
+        {
+          "MFOCBKDCFLL": 4,
+          "LMMOHCCHKKO": 11014
+        },
+        {
+          "MFOCBKDCFLL": 6,
+          "LMMOHCCHKKO": 11016
+        },
+        {
+          "MFOCBKDCFLL": 8,
+          "LMMOHCCHKKO": 11018
+        }
+      ]
+    },
+    {
+      "DiceRankID": 2,
+      "RankMaxScore": 1999,
+      "Name": "银战熟手",
+      "IconPath": "SpriteOutput/Quest/DiceCombat/RankIcon/DiceCombatRankIconL2_512.png",
+      "IconSmallPath": "SpriteOutput/Quest/DiceCombat/RankIcon/DiceCombatRankIconL2_64.png",
+      "RuleGroupMapList": [
+        {
+          "MFOCBKDCFLL": 2,
+          "LMMOHCCHKKO": 11022
+        },
+        {
+          "MFOCBKDCFLL": 4,
+          "LMMOHCCHKKO": 11024
+        },
+        {
+          "MFOCBKDCFLL": 6,
+          "LMMOHCCHKKO": 11026
+        },
+        {
+          "MFOCBKDCFLL": 8,
+          "LMMOHCCHKKO": 11028
+        }
+      ]
+    },
+    {
+      "DiceRankID": 3,
+      "RankMaxScore": 2999,
+      "Name": "银战高手",
+      "IconPath": "SpriteOutput/Quest/DiceCombat/RankIcon/DiceCombatRankIconL3_512.png",
+      "IconSmallPath": "SpriteOutput/Quest/DiceCombat/RankIcon/DiceCombatRankIconL3_64.png",
+      "RuleGroupMapList": [
+        {
+          "MFOCBKDCFLL": 2,
+          "LMMOHCCHKKO": 11032
+        },
+        {
+          "MFOCBKDCFLL": 4,
+          "LMMOHCCHKKO": 11034
+        },
+        {
+          "MFOCBKDCFLL": 6,
+          "LMMOHCCHKKO": 11036
+        },
+        {
+          "MFOCBKDCFLL": 8,
+          "LMMOHCCHKKO": 11038
+        }
+      ]
+    },
+    {
+      "DiceRankID": 4,
+      "RankMaxScore": 4999,
+      "Name": "银战大师",
+      "IconPath": "SpriteOutput/Quest/DiceCombat/RankIcon/DiceCombatRankIconL4_512.png",
+      "IconSmallPath": "SpriteOutput/Quest/DiceCombat/RankIcon/DiceCombatRankIconL4_64.png",
+      "RuleGroupMapList": [
+        {
+          "MFOCBKDCFLL": 2,
+          "LMMOHCCHKKO": 11042
+        },
+        {
+          "MFOCBKDCFLL": 4,
+          "LMMOHCCHKKO": 11044
+        },
+        {
+          "MFOCBKDCFLL": 6,
+          "LMMOHCCHKKO": 11046
+        },
+        {
+          "MFOCBKDCFLL": 8,
+          "LMMOHCCHKKO": 11048
+        }
+      ]
+    },
+    {
+      "DiceRankID": 5,
+      "RankMaxScore": 9999,
+      "Name": "银战领袖",
+      "IconPath": "SpriteOutput/Quest/DiceCombat/RankIcon/DiceCombatRankIconL5_512.png",
+      "IconSmallPath": "SpriteOutput/Quest/DiceCombat/RankIcon/DiceCombatRankIconL5_64.png",
+      "RuleGroupMapList": [
+        {
+          "MFOCBKDCFLL": 2,
+          "LMMOHCCHKKO": 11052
+        },
+        {
+          "MFOCBKDCFLL": 4,
+          "LMMOHCCHKKO": 11054
+        },
+        {
+          "MFOCBKDCFLL": 6,
+          "LMMOHCCHKKO": 11056
+        },
+        {
+          "MFOCBKDCFLL": 8,
+          "LMMOHCCHKKO": 11058
+        }
+      ]
+    }
+  ],
+  "ShopConfig": [
+    {
+      "DiceShopID": 1,
+      "GoodsList": [
+        1101,
+        1102,
+        1103,
+        1104,
+        1105,
+        1106,
+        1107,
+        1108,
+        1109,
+        1110,
+        1111,
+        1201,
+        1202,
+        1203,
+        1204
+      ],
+      "IMGPath": "SpriteOutput/Quest/DiceCombat/DiceCombatShopTabIcon.png",
+      "ShopSortID": 1,
+      "Name": "基础包"
+    },
+    {
+      "DiceShopID": 2,
+      "GoodsList": [
+        2101,
+        2102,
+        2103,
+        2104,
+        2105,
+        2106,
+        2107,
+        2109,
+        2110,
+        2111,
+        2112,
+        2201,
+        2202,
+        2203,
+        2204,
+        2205,
+        2206,
+        2207,
+        2208,
+        2209,
+        2210,
+        2211,
+        2212,
+        2213,
+        2214,
+        2215
+      ],
+      "IMGPath": "SpriteOutput/Quest/DiceCombat/DiceCombatShopTabIcon2.png",
+      "ShopSortID": 2,
+      "Name": "扩展包•1"
+    },
+    {
+      "DiceShopID": 3,
+      "GoodsList": [
+        2113,
+        2114,
+        2115,
+        2116,
+        2117,
+        2118,
+        2119,
+        2120,
+        2121,
+        2216,
+        2217,
+        2218,
+        2219,
+        2220,
+        2221
+      ],
+      "IMGPath": "SpriteOutput/Quest/DiceCombat/DiceCombatShopTabIcon3.png",
+      "ShopSortID": 3,
+      "Name": "扩展包•2"
+    }
+  ],
+  "ShopGoodsConfig": [
+    {
+      "DiceShopGoodsID": 1101,
+      "ItemID": 264001,
+      "ItemCost": [
+        {
+          "ItemID": 264996,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [],
+      "GoodsSortID": 10,
+      "UnlockTipsList": []
+    },
+    {
+      "DiceShopGoodsID": 1102,
+      "ItemID": 264002,
+      "ItemCost": [
+        {
+          "ItemID": 264996,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [],
+      "GoodsSortID": 10,
+      "UnlockTipsList": []
+    },
+    {
+      "DiceShopGoodsID": 1103,
+      "ItemID": 264003,
+      "ItemCost": [
+        {
+          "ItemID": 264996,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [],
+      "GoodsSortID": 10,
+      "UnlockTipsList": []
+    },
+    {
+      "DiceShopGoodsID": 1104,
+      "ItemID": 264004,
+      "ItemCost": [
+        {
+          "ItemID": 264996,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [],
+      "GoodsSortID": 10,
+      "UnlockTipsList": []
+    },
+    {
+      "DiceShopGoodsID": 1105,
+      "ItemID": 264005,
+      "ItemCost": [
+        {
+          "ItemID": 264996,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [],
+      "GoodsSortID": 10,
+      "UnlockTipsList": []
+    },
+    {
+      "DiceShopGoodsID": 1106,
+      "ItemID": 264006,
+      "ItemCost": [
+        {
+          "ItemID": 264996,
+          "ItemNum": 2
+        }
+      ],
+      "UnlockCondition": [],
+      "GoodsSortID": 10,
+      "UnlockTipsList": []
+    },
+    {
+      "DiceShopGoodsID": 1107,
+      "ItemID": 264007,
+      "ItemCost": [
+        {
+          "ItemID": 264996,
+          "ItemNum": 2
+        }
+      ],
+      "UnlockCondition": [],
+      "GoodsSortID": 10,
+      "UnlockTipsList": []
+    },
+    {
+      "DiceShopGoodsID": 1108,
+      "ItemID": 264008,
+      "ItemCost": [
+        {
+          "ItemID": 264996,
+          "ItemNum": 2
+        }
+      ],
+      "UnlockCondition": [],
+      "GoodsSortID": 10,
+      "UnlockTipsList": []
+    },
+    {
+      "DiceShopGoodsID": 1109,
+      "ItemID": 264009,
+      "ItemCost": [
+        {
+          "ItemID": 264996,
+          "ItemNum": 2
+        }
+      ],
+      "UnlockCondition": [],
+      "GoodsSortID": 10,
+      "UnlockTipsList": []
+    },
+    {
+      "DiceShopGoodsID": 1110,
+      "ItemID": 264010,
+      "ItemCost": [
+        {
+          "ItemID": 264996,
+          "ItemNum": 2
+        }
+      ],
+      "UnlockCondition": [],
+      "GoodsSortID": 10,
+      "UnlockTipsList": []
+    },
+    {
+      "DiceShopGoodsID": 1111,
+      "ItemID": 264013,
+      "ItemCost": [
+        {
+          "ItemID": 264996,
+          "ItemNum": 3
+        }
+      ],
+      "UnlockCondition": [],
+      "GoodsSortID": 11,
+      "UnlockTipsList": []
+    },
+    {
+      "DiceShopGoodsID": 1201,
+      "ItemID": 264403,
+      "ItemCost": [
+        {
+          "ItemID": 264996,
+          "ItemNum": 5
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1
+      ]
+    },
+    {
+      "DiceShopGoodsID": 1202,
+      "ItemID": 264404,
+      "ItemCost": [
+        {
+          "ItemID": 264996,
+          "ItemNum": 5
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1
+      ]
+    },
+    {
+      "DiceShopGoodsID": 1203,
+      "ItemID": 264416,
+      "ItemCost": [
+        {
+          "ItemID": 264996,
+          "ItemNum": 5
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1
+      ]
+    },
+    {
+      "DiceShopGoodsID": 1204,
+      "ItemID": 264421,
+      "ItemCost": [
+        {
+          "ItemID": 264996,
+          "ItemNum": 5
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2101,
+      "ItemID": 264012,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010015"
+        }
+      ],
+      "GoodsSortID": 10,
+      "UnlockTipsList": [
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2102,
+      "ItemID": 264014,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010002"
+        }
+      ],
+      "GoodsSortID": 10,
+      "UnlockTipsList": [
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2103,
+      "ItemID": 264015,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010006"
+        }
+      ],
+      "GoodsSortID": 10,
+      "UnlockTipsList": [
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2104,
+      "ItemID": 264016,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010004"
+        }
+      ],
+      "GoodsSortID": 10,
+      "UnlockTipsList": [
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2105,
+      "ItemID": 264017,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010103"
+        }
+      ],
+      "GoodsSortID": 10,
+      "UnlockTipsList": [
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2106,
+      "ItemID": 264019,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010010"
+        }
+      ],
+      "GoodsSortID": 10,
+      "UnlockTipsList": [
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2107,
+      "ItemID": 264020,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010107"
+        }
+      ],
+      "GoodsSortID": 10,
+      "UnlockTipsList": [
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2109,
+      "ItemID": 264022,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010111"
+        }
+      ],
+      "GoodsSortID": 10,
+      "UnlockTipsList": [
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2110,
+      "ItemID": 264023,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010115"
+        }
+      ],
+      "GoodsSortID": 10,
+      "UnlockTipsList": [
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2111,
+      "ItemID": 264024,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010008"
+        }
+      ],
+      "GoodsSortID": 10,
+      "UnlockTipsList": [
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2112,
+      "ItemID": 264025,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010018"
+        }
+      ],
+      "GoodsSortID": 10,
+      "UnlockTipsList": [
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2113,
+      "ItemID": 264026,
+      "ItemCost": [
+        {
+          "ItemID": 269001,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "FinishSubMission",
+          "Param": "804220020"
+        }
+      ],
+      "GoodsSortID": 10,
+      "UnlockTipsList": [
+        3
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2114,
+      "ItemID": 264027,
+      "ItemCost": [
+        {
+          "ItemID": 269001,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "FinishSubMission",
+          "Param": "804220020"
+        }
+      ],
+      "GoodsSortID": 10,
+      "UnlockTipsList": [
+        3
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2115,
+      "ItemID": 264028,
+      "ItemCost": [
+        {
+          "ItemID": 269001,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "FinishSubMission",
+          "Param": "804220017"
+        }
+      ],
+      "GoodsSortID": 10,
+      "UnlockTipsList": [
+        3
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2116,
+      "ItemID": 264029,
+      "ItemCost": [
+        {
+          "ItemID": 269001,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "FinishSubMission",
+          "Param": "804220008"
+        }
+      ],
+      "GoodsSortID": 10,
+      "UnlockTipsList": [
+        3
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2117,
+      "ItemID": 264030,
+      "ItemCost": [
+        {
+          "ItemID": 269001,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "FinishSubMission",
+          "Param": "804220014"
+        }
+      ],
+      "GoodsSortID": 10,
+      "UnlockTipsList": [
+        3
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2118,
+      "ItemID": 264031,
+      "ItemCost": [
+        {
+          "ItemID": 269001,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "FinishSubMission",
+          "Param": "804220020"
+        }
+      ],
+      "GoodsSortID": 10,
+      "UnlockTipsList": [
+        3
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2119,
+      "ItemID": 264032,
+      "ItemCost": [
+        {
+          "ItemID": 269001,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "FinishSubMission",
+          "Param": "804220011"
+        }
+      ],
+      "GoodsSortID": 10,
+      "UnlockTipsList": [
+        3
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2120,
+      "ItemID": 264033,
+      "ItemCost": [
+        {
+          "ItemID": 269001,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "FinishSubMission",
+          "Param": "804220020"
+        }
+      ],
+      "GoodsSortID": 10,
+      "UnlockTipsList": [
+        3
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2121,
+      "ItemID": 264034,
+      "ItemCost": [
+        {
+          "ItemID": 269001,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "FinishSubMission",
+          "Param": "804220005"
+        }
+      ],
+      "GoodsSortID": 10,
+      "UnlockTipsList": [
+        3
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2201,
+      "ItemID": 264402,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        },
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010115"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1,
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2202,
+      "ItemID": 264405,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        },
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010006"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1,
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2203,
+      "ItemID": 264406,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        },
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010015"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1,
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2204,
+      "ItemID": 264407,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        },
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010002"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1,
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2205,
+      "ItemID": 264408,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        },
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010002"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1,
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2206,
+      "ItemID": 264409,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        },
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010107"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1,
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2207,
+      "ItemID": 264410,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        },
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010002"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1,
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2208,
+      "ItemID": 264411,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        },
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010002"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1,
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2209,
+      "ItemID": 264412,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        },
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010008"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1,
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2210,
+      "ItemID": 264413,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        },
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010018"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1,
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2211,
+      "ItemID": 264417,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        },
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010103"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1,
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2212,
+      "ItemID": 264418,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        },
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010002"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1,
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2213,
+      "ItemID": 264419,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        },
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010111"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1,
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2214,
+      "ItemID": 264420,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        },
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010004"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1,
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2215,
+      "ItemID": 264422,
+      "ItemCost": [
+        {
+          "ItemID": 264997,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        },
+        {
+          "Type": "FinishSubMission",
+          "Param": "804010010"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1,
+        2
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2216,
+      "ItemID": 264423,
+      "ItemCost": [
+        {
+          "ItemID": 269001,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        },
+        {
+          "Type": "FinishSubMission",
+          "Param": "804220011"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1,
+        3
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2217,
+      "ItemID": 264424,
+      "ItemCost": [
+        {
+          "ItemID": 269001,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        },
+        {
+          "Type": "FinishSubMission",
+          "Param": "804220020"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1,
+        3
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2218,
+      "ItemID": 264425,
+      "ItemCost": [
+        {
+          "ItemID": 269001,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        },
+        {
+          "Type": "FinishSubMission",
+          "Param": "804220017"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1,
+        3
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2219,
+      "ItemID": 264426,
+      "ItemCost": [
+        {
+          "ItemID": 269001,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        },
+        {
+          "Type": "FinishSubMission",
+          "Param": "804220008"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1,
+        3
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2220,
+      "ItemID": 264427,
+      "ItemCost": [
+        {
+          "ItemID": 269001,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        },
+        {
+          "Type": "FinishSubMission",
+          "Param": "804220005"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1,
+        3
+      ]
+    },
+    {
+      "DiceShopGoodsID": 2221,
+      "ItemID": 264428,
+      "ItemCost": [
+        {
+          "ItemID": 269001,
+          "ItemNum": 1
+        }
+      ],
+      "UnlockCondition": [
+        {
+          "Type": "OfferingLevel",
+          "Param": "12-5"
+        },
+        {
+          "Type": "FinishSubMission",
+          "Param": "804220014"
+        }
+      ],
+      "GoodsSortID": 9,
+      "UnlockTipsList": [
+        1,
+        3
+      ]
+    }
+  ],
+  "UnlockTips": [
+    {
+      "UnlockType": "OfferingLevel",
+      "UnlockTips": ""
+    },
+    {
+      "UnlockType": "FinishSubMission",
+      "UnlockTips": ""
+    }
+  ],
+  "GoodsUnlockTips": [
+    {
+      "ID": 1,
+      "UnlockTips": "资历等级达到#1解锁"
+    },
+    {
+      "ID": 2,
+      "UnlockTips": "推进「上骰了！战力党！」以解锁兑换"
+    },
+    {
+      "ID": 3,
+      "UnlockTips": "推进「又上骰了！战力党！」以解锁兑换"
+    }
+  ],
+  "RuleGroup": [
+    {
+      "ID": 1001,
+      "RuleList": [
+        2
+      ]
+    },
+    {
+      "ID": 1002,
+      "RuleList": [
+        3,
+        4
+      ]
+    },
+    {
+      "ID": 9999,
+      "RuleList": [
+        5,
+        6
+      ]
+    },
+    {
+      "ID": 90012,
+      "RuleList": [
+        11
+      ]
+    },
+    {
+      "ID": 90014,
+      "RuleList": [
+        4
+      ]
+    },
+    {
+      "ID": 90016,
+      "RuleList": [
+        3
+      ]
+    },
+    {
+      "ID": 90018,
+      "RuleList": [
+        19
+      ]
+    },
+    {
+      "ID": 90022,
+      "RuleList": [
+        24
+      ]
+    },
+    {
+      "ID": 90024,
+      "RuleList": [
+        12
+      ]
+    },
+    {
+      "ID": 90026,
+      "RuleList": [
+        16
+      ]
+    },
+    {
+      "ID": 90028,
+      "RuleList": [
+        17
+      ]
+    },
+    {
+      "ID": 90032,
+      "RuleList": [
+        2
+      ]
+    },
+    {
+      "ID": 90034,
+      "RuleList": [
+        3
+      ]
+    },
+    {
+      "ID": 90036,
+      "RuleList": [
+        9
+      ]
+    },
+    {
+      "ID": 90038,
+      "RuleList": [
+        19
+      ]
+    },
+    {
+      "ID": 90042,
+      "RuleList": [
+        5
+      ]
+    },
+    {
+      "ID": 90044,
+      "RuleList": [
+        7
+      ]
+    },
+    {
+      "ID": 90046,
+      "RuleList": [
+        1
+      ]
+    },
+    {
+      "ID": 90048,
+      "RuleList": [
+        14
+      ]
+    },
+    {
+      "ID": 90052,
+      "RuleList": [
+        6
+      ]
+    },
+    {
+      "ID": 90054,
+      "RuleList": [
+        1
+      ]
+    },
+    {
+      "ID": 90056,
+      "RuleList": [
+        20
+      ]
+    },
+    {
+      "ID": 90058,
+      "RuleList": [
+        17
+      ]
+    },
+    {
+      "ID": 90062,
+      "RuleList": [
+        18
+      ]
+    },
+    {
+      "ID": 90064,
+      "RuleList": [
+        16
+      ]
+    },
+    {
+      "ID": 90066,
+      "RuleList": [
+        27
+      ]
+    },
+    {
+      "ID": 90068,
+      "RuleList": [
+        19
+      ]
+    },
+    {
+      "ID": 90072,
+      "RuleList": [
+        18
+      ]
+    },
+    {
+      "ID": 90074,
+      "RuleList": [
+        16
+      ]
+    },
+    {
+      "ID": 90076,
+      "RuleList": [
+        27
+      ]
+    },
+    {
+      "ID": 90078,
+      "RuleList": [
+        19
+      ]
+    },
+    {
+      "ID": 90082,
+      "RuleList": [
+        23
+      ]
+    },
+    {
+      "ID": 90084,
+      "RuleList": [
+        15
+      ]
+    },
+    {
+      "ID": 90086,
+      "RuleList": [
+        8
+      ]
+    },
+    {
+      "ID": 90088,
+      "RuleList": [
+        14
+      ]
+    },
+    {
+      "ID": 90092,
+      "RuleList": [
+        21
+      ]
+    },
+    {
+      "ID": 90094,
+      "RuleList": [
+        18
+      ]
+    },
+    {
+      "ID": 90096,
+      "RuleList": [
+        20
+      ]
+    },
+    {
+      "ID": 90098,
+      "RuleList": [
+        19
+      ]
+    },
+    {
+      "ID": 90102,
+      "RuleList": [
+        29
+      ]
+    },
+    {
+      "ID": 90104,
+      "RuleList": [
+        31
+      ]
+    },
+    {
+      "ID": 90106,
+      "RuleList": [
+        16
+      ]
+    },
+    {
+      "ID": 90108,
+      "RuleList": [
+        17
+      ]
+    },
+    {
+      "ID": 90112,
+      "RuleList": [
+        4
+      ]
+    },
+    {
+      "ID": 90114,
+      "RuleList": [
+        24
+      ]
+    },
+    {
+      "ID": 90116,
+      "RuleList": [
+        28
+      ]
+    },
+    {
+      "ID": 90118,
+      "RuleList": [
+        17
+      ]
+    },
+    {
+      "ID": 11012,
+      "RuleList": [
+        1,
+        4,
+        25,
+        5,
+        29,
+        2,
+        13,
+        6,
+        31
+      ]
+    },
+    {
+      "ID": 11014,
+      "RuleList": [
+        3,
+        21,
+        23,
+        24,
+        7,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "ID": 11016,
+      "RuleList": [
+        16,
+        18,
+        20,
+        27,
+        28,
+        12,
+        26
+      ]
+    },
+    {
+      "ID": 11018,
+      "RuleList": [
+        17,
+        19,
+        14
+      ]
+    },
+    {
+      "ID": 11022,
+      "RuleList": [
+        1,
+        4,
+        25,
+        5,
+        29,
+        2,
+        13,
+        6,
+        31
+      ]
+    },
+    {
+      "ID": 11024,
+      "RuleList": [
+        3,
+        21,
+        23,
+        24,
+        7,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "ID": 11026,
+      "RuleList": [
+        16,
+        18,
+        20,
+        27,
+        28,
+        12,
+        26
+      ]
+    },
+    {
+      "ID": 11028,
+      "RuleList": [
+        17,
+        19,
+        14
+      ]
+    },
+    {
+      "ID": 11032,
+      "RuleList": [
+        1,
+        4,
+        25,
+        5,
+        29,
+        2,
+        13,
+        6,
+        31
+      ]
+    },
+    {
+      "ID": 11034,
+      "RuleList": [
+        3,
+        21,
+        23,
+        24,
+        7,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "ID": 11036,
+      "RuleList": [
+        16,
+        18,
+        20,
+        27,
+        28,
+        12,
+        26
+      ]
+    },
+    {
+      "ID": 11038,
+      "RuleList": [
+        17,
+        19,
+        14
+      ]
+    },
+    {
+      "ID": 11042,
+      "RuleList": [
+        1,
+        4,
+        25,
+        5,
+        29,
+        2,
+        13,
+        6,
+        31
+      ]
+    },
+    {
+      "ID": 11044,
+      "RuleList": [
+        3,
+        21,
+        23,
+        24,
+        7,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "ID": 11046,
+      "RuleList": [
+        16,
+        18,
+        20,
+        27,
+        28,
+        12,
+        26
+      ]
+    },
+    {
+      "ID": 11048,
+      "RuleList": [
+        17,
+        19,
+        14
+      ]
+    },
+    {
+      "ID": 11052,
+      "RuleList": [
+        1,
+        4,
+        25,
+        5,
+        29,
+        2,
+        13,
+        6,
+        31
+      ]
+    },
+    {
+      "ID": 11054,
+      "RuleList": [
+        3,
+        21,
+        23,
+        24,
+        7,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "ID": 11056,
+      "RuleList": [
+        16,
+        18,
+        20,
+        27,
+        28,
+        12,
+        26
+      ]
+    },
+    {
+      "ID": 11058,
+      "RuleList": [
+        17,
+        19,
+        14
+      ]
+    },
+    {
+      "ID": 99999,
+      "RuleList": [
+        999
+      ]
+    }
+  ],
+  "PresetConfig": [
+    {
+      "NHLHFOFCLFO": 1,
+      "NGPGNGLFEFG": 101,
+      "BBNDJCILHOP": [],
+      "EBOKDGBEOFP": "Config/Gameplays/LittleGame/DiceCombat/StagePreset1.json",
+      "OLKCKEOJJEG": "Config/Level/Tutorial/Tutorial_6701.json",
+      "AHFGNAEMCKN": "花火",
+      "MINFJFHFKJA": "SpriteOutput/AvatarRoundIcon/Avatar/1306.png",
+      "LKHMAEDEMJL": [
+        804010002,
+        804220003
+      ]
+    },
+    {
+      "NHLHFOFCLFO": 2,
+      "NGPGNGLFEFG": 264005,
+      "BBNDJCILHOP": [],
+      "EBOKDGBEOFP": "Config/Gameplays/LittleGame/DiceCombat/StagePreset2.json",
+      "OLKCKEOJJEG": "Config/Level/Tutorial/Tutorial_6701.json",
+      "MINFJFHFKJA": "SpriteOutput/AvatarRoundIcon/Avatar/1306.png",
+      "LKHMAEDEMJL": []
+    },
+    {
+      "NHLHFOFCLFO": 3,
+      "NGPGNGLFEFG": 101,
+      "BBNDJCILHOP": [],
+      "EBOKDGBEOFP": "Config/Gameplays/LittleGame/DiceCombat/StagePreset1.json",
+      "OLKCKEOJJEG": "Config/Level/Tutorial/Tutorial_6715.json",
+      "AHFGNAEMCKN": "爻光",
+      "MINFJFHFKJA": "SpriteOutput/AvatarRoundIcon/Avatar/1502.png",
+      "LKHMAEDEMJL": [
+        105400303,
+        804220003
+      ]
+    },
+    {
+      "NHLHFOFCLFO": 4,
+      "NGPGNGLFEFG": 104,
+      "BBNDJCILHOP": [],
+      "EBOKDGBEOFP": "Config/Gameplays/LittleGame/DiceCombat/StagePreset4.json",
+      "OLKCKEOJJEG": "Config/Level/Tutorial/Tutorial_8807.json",
+      "AHFGNAEMCKN": "银狼",
+      "MINFJFHFKJA": "SpriteOutput/AvatarRoundIcon/Avatar/1006.png",
+      "LKHMAEDEMJL": [
+        804010002,
+        105400303
+      ]
+    },
+    {
+      "NHLHFOFCLFO": 5,
+      "NGPGNGLFEFG": 106,
+      "BBNDJCILHOP": [],
+      "EBOKDGBEOFP": "Config/Gameplays/LittleGame/DiceCombat/StagePreset5.json",
+      "OLKCKEOJJEG": "Config/Level/Tutorial/Tutorial_8809.json",
+      "MINFJFHFKJA": "",
+      "LKHMAEDEMJL": []
+    },
+    {
+      "NHLHFOFCLFO": 6,
+      "BBNDJCILHOP": [],
+      "EBOKDGBEOFP": "Config/Gameplays/LittleGame/DiceCombat/StagePreset6.json",
+      "OLKCKEOJJEG": "Config/Level/Tutorial/Tutorial_8811.json",
+      "MINFJFHFKJA": "",
+      "LKHMAEDEMJL": []
+    }
+  ],
+  "V2TacticsPoint": [
+    {
+      "HNFGPHHKCJI": 1,
+      "FHAMMKLJJNN": [],
+      "KDBCIPPKDOK": 2,
+      "ONHAPIHDBGM": "回合开始 +#1"
+    },
+    {
+      "HNFGPHHKCJI": 2,
+      "MLCHGLLBPNG": "AttackDamageGreaterEqual",
+      "FHAMMKLJJNN": [
+        5
+      ],
+      "KDBCIPPKDOK": 1,
+      "ONHAPIHDBGM": "造成伤害·小 +#1"
+    },
+    {
+      "HNFGPHHKCJI": 3,
+      "MLCHGLLBPNG": "AttackDamageGreaterEqual",
+      "FHAMMKLJJNN": [
+        10
+      ],
+      "KDBCIPPKDOK": 2,
+      "ONHAPIHDBGM": "造成伤害·中 +#1"
+    },
+    {
+      "HNFGPHHKCJI": 4,
+      "MLCHGLLBPNG": "AttackDamageGreaterEqual",
+      "FHAMMKLJJNN": [
+        15
+      ],
+      "KDBCIPPKDOK": 3,
+      "ONHAPIHDBGM": "造成伤害·大 +#1"
+    },
+    {
+      "HNFGPHHKCJI": 5,
+      "MLCHGLLBPNG": "DefendDamageLessEqual",
+      "FHAMMKLJJNN": [
+        0
+      ],
+      "KDBCIPPKDOK": 3,
+      "ONHAPIHDBGM": "完美防御 +#1"
+    },
+    {
+      "HNFGPHHKCJI": 6,
+      "MLCHGLLBPNG": "Counter",
+      "FHAMMKLJJNN": [],
+      "KDBCIPPKDOK": 2,
+      "ONHAPIHDBGM": "发动反击 +#1"
+    },
+    {
+      "HNFGPHHKCJI": 7,
+      "MLCHGLLBPNG": "Revive",
+      "FHAMMKLJJNN": [],
+      "KDBCIPPKDOK": 3,
+      "ONHAPIHDBGM": "复活补偿 +#1"
+    },
+    {
+      "HNFGPHHKCJI": 8,
+      "MLCHGLLBPNG": "AddModiffier",
+      "FHAMMKLJJNN": [
+        30003,
+        26400202,
+        26401702,
+        40010,
+        30011
+      ],
+      "KDBCIPPKDOK": 1,
+      "ONHAPIHDBGM": "施加减益 +#1"
+    }
+  ],
+  "V2Brand": [
+    {
+      "HNFGPHHKCJI": 1,
+      "AICNJNMPHGK": "《狸狸周刊》快闪店",
+      "BKJNLEHHCEC": "SpriteOutput/Quest/DiceCombat/V2/Logo/DiceCombatV2RoundLogo00.png",
+      "ELMLGHHDDBM": [
+        3,
+        8,
+        15,
+        20,
+        26,
+        36
+      ]
+    },
+    {
+      "HNFGPHHKCJI": 2,
+      "AICNJNMPHGK": "「小黄鸭零嘴」百年老铺",
+      "BKJNLEHHCEC": "SpriteOutput/Quest/DiceCombat/V2/Logo/DiceCombatV2RoundLogo02.png",
+      "ELMLGHHDDBM": [
+        10,
+        5,
+        5,
+        5,
+        4,
+        4
+      ]
+    },
+    {
+      "HNFGPHHKCJI": 3,
+      "AICNJNMPHGK": "「heart2heart」婚介所",
+      "BKJNLEHHCEC": "SpriteOutput/Quest/DiceCombat/V2/Logo/DiceCombatV2RoundLogo05.png",
+      "ELMLGHHDDBM": [
+        12,
+        12,
+        10,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "HNFGPHHKCJI": 4,
+      "AICNJNMPHGK": "「无梦咖啡•主理人店」",
+      "BKJNLEHHCEC": "SpriteOutput/Quest/DiceCombat/V2/Logo/DiceCombatV2RoundLogo01.png",
+      "ELMLGHHDDBM": [
+        18,
+        18,
+        18,
+        15,
+        14,
+        13
+      ]
+    },
+    {
+      "HNFGPHHKCJI": 5,
+      "AICNJNMPHGK": "「仙舟非遗传人」街头直播",
+      "BKJNLEHHCEC": "SpriteOutput/Quest/DiceCombat/V2/Logo/DiceCombatV2RoundLogo03.png",
+      "ELMLGHHDDBM": [
+        24,
+        24,
+        22,
+        22,
+        18,
+        16
+      ]
+    },
+    {
+      "HNFGPHHKCJI": 6,
+      "AICNJNMPHGK": "「狐图图•秘闻铺」",
+      "BKJNLEHHCEC": "SpriteOutput/Quest/DiceCombat/V2/Logo/DiceCombatV2RoundLogo04.png",
+      "ELMLGHHDDBM": [
+        33,
+        33,
+        30,
+        30,
+        30,
+        23
+      ]
+    }
+  ],
+  "V2Opponent": [
+    {
+      "HNFGPHHKCJI": 1,
+      "PGMMLNGDJAB": "SpriteOutput/Quest/DiceCombat/V2/AvatarFigure/256x256/DiceCombatV2Opponent1_256.png",
+      "HNDMBLLGCEK": "SpriteOutput/Quest/DiceCombat/V2/AvatarFigure/DiceCombatV2Opponent1.png",
+      "EIGFJMEABPF": "SpriteOutput/AvatarRoundIcon/UI_Message_Contacts_PuLu.png",
+      "KOILCLOACFJ": "SpriteOutput/Quest/DiceCombat/V2/AvatarFigure/DiceCombatV2Opponent1Mask.png",
+      "HIHGHCNMPLG": "海原市长•堀旮巴呱",
+      "DPBKBGAFDCD": "「小黄鸭零嘴」百年老铺",
+      "PIKGIAKIMEA": "不知天高地厚的{F#野丫头}{M#臭小子}，认输吧！",
+      "HALPGENHECG": "啊——呀——！小黄鸭零嘴，怎么会输啊？",
+      "CKHAIDKNKHN": "SpriteOutput/Quest/DiceCombat/V2/Logo/DiceCombatV2ComLogo2Small.png",
+      "DAFKOCDFEMO": "SpriteOutput/Quest/DiceCombat/V2/Logo/DiceCombatV2ComLogo2Color.png",
+      "NOEAIHPLCFC": "让你们看看我们百年老铺的实力！"
+    },
+    {
+      "HNFGPHHKCJI": 2,
+      "PGMMLNGDJAB": "SpriteOutput/Quest/DiceCombat/V2/AvatarFigure/256x256/DiceCombatV2Opponent2_256.png",
+      "HNDMBLLGCEK": "SpriteOutput/Quest/DiceCombat/V2/AvatarFigure/DiceCombatV2Opponent2.png",
+      "EIGFJMEABPF": "SpriteOutput/AvatarRoundIcon/UI_Message_Contacts_XiuYe.png",
+      "KOILCLOACFJ": "SpriteOutput/Quest/DiceCombat/V2/AvatarFigure/DiceCombatV2Opponent2Mask.png",
+      "HIHGHCNMPLG": "朽叶",
+      "DPBKBGAFDCD": "「heart2heart」婚介所",
+      "PIKGIAKIMEA": "两位，该注册「heart2heart」婚介APP的账号了。",
+      "HALPGENHECG": "二相乐园的结婚率没救了，我该下班了。",
+      "CKHAIDKNKHN": "SpriteOutput/Quest/DiceCombat/V2/Logo/DiceCombatV2ComLogo5Small.png",
+      "DAFKOCDFEMO": "SpriteOutput/Quest/DiceCombat/V2/Logo/DiceCombatV2ComLogo5Color.png",
+      "NOEAIHPLCFC": "请二位…不要妨碍我执行公务（忍耐（握拳"
+    },
+    {
+      "HNFGPHHKCJI": 3,
+      "PGMMLNGDJAB": "SpriteOutput/Quest/DiceCombat/V2/AvatarFigure/256x256/DiceCombatV2Opponent3_256.png",
+      "HNDMBLLGCEK": "SpriteOutput/Quest/DiceCombat/V2/AvatarFigure/DiceCombatV2Opponent3.png",
+      "EIGFJMEABPF": "SpriteOutput/AvatarRoundIcon/UI_Message_Contacts_Nihilux.png",
+      "KOILCLOACFJ": "SpriteOutput/Quest/DiceCombat/V2/AvatarFigure/DiceCombatV2Opponent3Mask.png",
+      "HIHGHCNMPLG": "虚照",
+      "DPBKBGAFDCD": "「无梦咖啡•主理人店」",
+      "PIKGIAKIMEA": "战败了不要紧，喝点主理人咖啡调理一下？",
+      "HALPGENHECG": "顾客是上帝，上帝是不可战胜的，我输了。",
+      "CKHAIDKNKHN": "SpriteOutput/Quest/DiceCombat/V2/Logo/DiceCombatV2ComLogo1Small.png",
+      "DAFKOCDFEMO": "SpriteOutput/Quest/DiceCombat/V2/Logo/DiceCombatV2ComLogo1Color.png",
+      "NOEAIHPLCFC": "骰子谐音投资，所以骰子对战，我不会输的！"
+    },
+    {
+      "HNFGPHHKCJI": 4,
+      "PGMMLNGDJAB": "SpriteOutput/Quest/DiceCombat/V2/AvatarFigure/256x256/DiceCombatV2Opponent4_256.png",
+      "HNDMBLLGCEK": "SpriteOutput/Quest/DiceCombat/V2/AvatarFigure/DiceCombatV2Opponent4.png",
+      "EIGFJMEABPF": "SpriteOutput/AvatarRoundIcon/Avatar/1210.png",
+      "KOILCLOACFJ": "SpriteOutput/Quest/DiceCombat/V2/AvatarFigure/DiceCombatV2Opponent4Mask.png",
+      "HIHGHCNMPLG": "桂乃芬",
+      "DPBKBGAFDCD": "「仙舟非遗传人」街头直播",
+      "PIKGIAKIMEA": "哇！小桂子这就赢了？你们是不是放水啦？",
+      "HALPGENHECG": "你们好厉害啊！咱捉鬼小队出人才了。",
+      "CKHAIDKNKHN": "SpriteOutput/Quest/DiceCombat/V2/Logo/DiceCombatV2ComLogo3Small.png",
+      "DAFKOCDFEMO": "SpriteOutput/Quest/DiceCombat/V2/Logo/DiceCombatV2ComLogo3Color.png",
+      "NOEAIHPLCFC": "好{F#闺蜜}{M#兄弟}，能不能轻点打我啊?"
+    },
+    {
+      "HNFGPHHKCJI": 5,
+      "PGMMLNGDJAB": "SpriteOutput/Quest/DiceCombat/V2/AvatarFigure/256x256/DiceCombatV2Opponent5_256.png",
+      "HNDMBLLGCEK": "SpriteOutput/Quest/DiceCombat/V2/AvatarFigure/DiceCombatV2Opponent5.png",
+      "EIGFJMEABPF": "SpriteOutput/AvatarRoundIcon/Avatar/1505.png",
+      "KOILCLOACFJ": "SpriteOutput/Quest/DiceCombat/V2/AvatarFigure/DiceCombatV2Opponent5Mask.png",
+      "HIHGHCNMPLG": "绯英",
+      "DPBKBGAFDCD": "「狐图图•秘闻铺」",
+      "PIKGIAKIMEA": "狐图图的销冠地位，不是轻易能撼动的哦~",
+      "HALPGENHECG": "难道，《狸狸周刊》才是传媒界的明日之星？",
+      "CKHAIDKNKHN": "SpriteOutput/Quest/DiceCombat/V2/Logo/DiceCombatV2ComLogo4Small.png",
+      "DAFKOCDFEMO": "SpriteOutput/Quest/DiceCombat/V2/Logo/DiceCombatV2ComLogo4Color.png",
+      "NOEAIHPLCFC": "嗨嗨~销冠之位，我可不会拱手让人哦~"
+    },
+    {
+      "HNFGPHHKCJI": 6,
+      "PGMMLNGDJAB": "SpriteOutput/Quest/DiceCombat/V2/AvatarFigure/256x256/DiceCombatV2Opponent6_256.png",
+      "HNDMBLLGCEK": "SpriteOutput/Quest/DiceCombat/V2/AvatarFigure/DiceCombatV2Opponent6.png",
+      "EIGFJMEABPF": "SpriteOutput/AvatarRoundIcon/Avatar/1506.png",
+      "KOILCLOACFJ": "SpriteOutput/Quest/DiceCombat/V2/AvatarFigure/DiceCombatV2Opponent6Mask.png",
+      "HIHGHCNMPLG": "银狼",
+      "DPBKBGAFDCD": "「强力银手」二手游戏网店",
+      "PIKGIAKIMEA": "轻轻松松，不够尽兴，再来？",
+      "HALPGENHECG": "哈哈，有趣，够酣畅淋漓！",
+      "CKHAIDKNKHN": "",
+      "DAFKOCDFEMO": ""
+    }
+  ],
+  "V2BossAdvice": [
+    {
+      "OJFCIGNLGDA": 20301,
+      "CHCLOIDBPPN": "星期日•阶段一",
+      "CLIPMKJEPNC": "攻击值低于星期日的防御值时将会受到反击伤害"
+    },
+    {
+      "OJFCIGNLGDA": 20302,
+      "CHCLOIDBPPN": "星期日•阶段二",
+      "CLIPMKJEPNC": "攻击时将点数较小的骰子留在交换区，可降低星期日的防御值"
+    },
+    {
+      "OJFCIGNLGDA": 20303,
+      "CHCLOIDBPPN": "星期日•阶段一",
+      "CLIPMKJEPNC": "攻击时将点数较小的骰子留在交换区，可降低星期日的防御值"
+    },
+    {
+      "OJFCIGNLGDA": 20304,
+      "CHCLOIDBPPN": "星期日•阶段二",
+      "CLIPMKJEPNC": "攻击时将点数较小的骰子留在交换区，可降低星期日的防御值"
+    },
+    {
+      "OJFCIGNLGDA": 20101,
+      "CHCLOIDBPPN": "白厄•阶段一",
+      "CLIPMKJEPNC": "每回合白厄都会叠加超载，提高攻击值"
+    },
+    {
+      "OJFCIGNLGDA": 20102,
+      "CHCLOIDBPPN": "白厄•阶段二",
+      "CLIPMKJEPNC": "请合理利用交换或战术卡，轮流承受白厄的高额单体伤害"
+    },
+    {
+      "OJFCIGNLGDA": 20103,
+      "CHCLOIDBPPN": "白厄•阶段一",
+      "CLIPMKJEPNC": "请合理利用交换或战术卡，轮流承受白厄的高额单体伤害"
+    },
+    {
+      "OJFCIGNLGDA": 20104,
+      "CHCLOIDBPPN": "白厄•阶段二",
+      "CLIPMKJEPNC": "请合理利用交换或战术卡，轮流承受白厄的高额单体伤害"
+    },
+    {
+      "OJFCIGNLGDA": 20501,
+      "CHCLOIDBPPN": "砂金•阶段一",
+      "CLIPMKJEPNC": "砂金的好运，会让他的投掷结果总不会太糟糕"
+    },
+    {
+      "OJFCIGNLGDA": 20502,
+      "CHCLOIDBPPN": "砂金•阶段二",
+      "CLIPMKJEPNC": "请合理交换骰子，将攻击值提升至20以上，以解除砂金的技能"
+    },
+    {
+      "OJFCIGNLGDA": 20503,
+      "CHCLOIDBPPN": "砂金•阶段一",
+      "CLIPMKJEPNC": "请合理交换骰子，将攻击值提升至27以上，以解除砂金的技能"
+    },
+    {
+      "OJFCIGNLGDA": 20504,
+      "CHCLOIDBPPN": "砂金•阶段二",
+      "CLIPMKJEPNC": "洞穿、瞬伤与中毒可无视砂金的高额防御，并对其造成伤害"
+    },
+    {
+      "OJFCIGNLGDA": 20401,
+      "CHCLOIDBPPN": "火花•阶段一",
+      "CLIPMKJEPNC": "洞穿、瞬伤与中毒可有效应对火花的高额防御"
+    },
+    {
+      "OJFCIGNLGDA": 20402,
+      "CHCLOIDBPPN": "火花•阶段二",
+      "CLIPMKJEPNC": "防御时避免使用和队友相同点数的骰子，以阻止火花提升攻击值"
+    },
+    {
+      "OJFCIGNLGDA": 20403,
+      "CHCLOIDBPPN": "火花•阶段一",
+      "CLIPMKJEPNC": "防御时避免使用和队友相同点数的骰子，以阻止火花提升攻击值"
+    },
+    {
+      "OJFCIGNLGDA": 20404,
+      "CHCLOIDBPPN": "火花•阶段二",
+      "CLIPMKJEPNC": "防御时避免使用和队友相同点数的骰子，以阻止火花提升攻击值"
+    },
+    {
+      "OJFCIGNLGDA": 20201,
+      "CHCLOIDBPPN": "绯英•阶段一",
+      "CLIPMKJEPNC": "绯英的连击，会对防御值较低的卡牌造成大量伤害"
+    },
+    {
+      "OJFCIGNLGDA": 20202,
+      "CHCLOIDBPPN": "绯英•阶段二",
+      "CLIPMKJEPNC": "完美防御绯英的攻击时，可使其受到伤害"
+    },
+    {
+      "OJFCIGNLGDA": 20203,
+      "CHCLOIDBPPN": "绯英•阶段一",
+      "CLIPMKJEPNC": "完美防御绯英的攻击时，可使其受到伤害"
+    },
+    {
+      "OJFCIGNLGDA": 20204,
+      "CHCLOIDBPPN": "绯英•阶段二",
+      "CLIPMKJEPNC": "完美防御绯英的攻击时，可使其受到伤害"
+    },
+    {
+      "OJFCIGNLGDA": 20601,
+      "CHCLOIDBPPN": "银狼LV.999•阶段一",
+      "CLIPMKJEPNC": "啊！眼睛…怎么木莫米胡了，怎么看不氵青…要怎么应对银狼LV.999的战术……"
+    },
+    {
+      "OJFCIGNLGDA": 20602,
+      "CHCLOIDBPPN": "银狼LV.999•阶段二",
+      "CLIPMKJEPNC": "点数4及以上的骰子不会受到银狼LV.999影响"
+    }
+  ]
+}

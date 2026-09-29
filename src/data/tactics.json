@@ -1,0 +1,347 @@
+[
+  {
+    "id": "42001",
+    "name": "攻击提升Ⅰ",
+    "description": "本回合攻击值+3",
+    "descriptionTemplate": "本回合攻击值+#1",
+    "params": [
+      3
+    ],
+    "cost": 2,
+    "kind": "attack",
+    "rank": 1,
+    "effect": "42001",
+    "amount": 3,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank1_Buff01.png"
+  },
+  {
+    "id": "42002",
+    "name": "防御提升Ⅰ",
+    "description": "本回合防御值+5",
+    "descriptionTemplate": "本回合防御值+#1",
+    "params": [
+      5
+    ],
+    "cost": 2,
+    "kind": "defend",
+    "rank": 1,
+    "effect": "42002",
+    "amount": 5,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank1_Buff02.png"
+  },
+  {
+    "id": "42003",
+    "name": "防御支援",
+    "description": "本回合队友的防御值+5",
+    "descriptionTemplate": "本回合队友的防御值+#1",
+    "params": [
+      5
+    ],
+    "cost": 2,
+    "kind": "defend",
+    "rank": 1,
+    "effect": "42003",
+    "amount": 5,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank1_Buff03.png"
+  },
+  {
+    "id": "42004",
+    "name": "防御同步",
+    "description": "本回合防御时：若队友的防御值高于自己，则将自己的防御值变为与队友相同",
+    "descriptionTemplate": "本回合防御时：若队友的防御值高于自己，则将自己的防御值变为与队友相同",
+    "params": [],
+    "cost": 5,
+    "kind": "defend",
+    "rank": 1,
+    "effect": "42004",
+    "amount": 0,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank1_Buff02.png"
+  },
+  {
+    "id": "42005",
+    "name": "自我治愈Ⅰ",
+    "description": "治愈自己8点生命值",
+    "descriptionTemplate": "治愈自己#1点生命值",
+    "params": [
+      8
+    ],
+    "cost": 3,
+    "kind": "both",
+    "rank": 1,
+    "effect": "42005",
+    "amount": 8,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank1_Buff04.png"
+  },
+  {
+    "id": "42006",
+    "name": "骰面跃升",
+    "description": "本回合获得跃升",
+    "descriptionTemplate": "本回合获得跃升",
+    "params": [],
+    "cost": 3,
+    "kind": "both",
+    "rank": 1,
+    "effect": "42006",
+    "amount": 0,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank1_Buff05.png"
+  },
+  {
+    "id": "42007",
+    "name": "强制骇入",
+    "description": "本回合获得骇入",
+    "descriptionTemplate": "本回合获得骇入",
+    "params": [
+      2
+    ],
+    "cost": 4,
+    "kind": "both",
+    "rank": 1,
+    "effect": "42007",
+    "amount": 2,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank1_Buff06.png"
+  },
+  {
+    "id": "42008",
+    "name": "剧毒注入I",
+    "description": "使对手陷入2层中毒",
+    "descriptionTemplate": "使对手陷入#1层中毒",
+    "params": [
+      2
+    ],
+    "cost": 2,
+    "kind": "both",
+    "rank": 1,
+    "effect": "42008",
+    "amount": 2,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank1_Buff07.png"
+  },
+  {
+    "id": "42009",
+    "name": "曜彩恢复",
+    "description": "本回合结束时：获得1次曜彩骰使用次数",
+    "descriptionTemplate": "本回合结束时：获得#1次曜彩骰使用次数",
+    "params": [
+      1
+    ],
+    "cost": 4,
+    "kind": "both",
+    "rank": 1,
+    "effect": "42009",
+    "amount": 1,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank1_Buff08.png"
+  },
+  {
+    "id": "42010",
+    "name": "攻击提升II",
+    "description": "本回合攻击值+5",
+    "descriptionTemplate": "本回合攻击值+#1",
+    "params": [
+      5
+    ],
+    "cost": 3,
+    "kind": "attack",
+    "rank": 2,
+    "effect": "42010",
+    "amount": 5,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank2_Buff01.png"
+  },
+  {
+    "id": "42011",
+    "name": "虹吸攻击",
+    "description": "本回合攻击时：虹吸自己造成伤害数额50%的生命值",
+    "descriptionTemplate": "本回合攻击时：虹吸自己造成伤害数额#1%的生命值",
+    "params": [
+      50
+    ],
+    "cost": 3,
+    "kind": "attack",
+    "rank": 2,
+    "effect": "42011",
+    "amount": 50,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank2_Buff02.png"
+  },
+  {
+    "id": "42012",
+    "name": "攻击同步",
+    "description": "本回合攻击时：若队友的攻击值高于自己，则将自己的攻击值变为与队友相同",
+    "descriptionTemplate": "本回合攻击时：若队友的攻击值高于自己，则将自己的攻击值变为与队友相同",
+    "params": [],
+    "cost": 6,
+    "kind": "attack",
+    "rank": 2,
+    "effect": "42012",
+    "amount": 0,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank2_Buff01.png"
+  },
+  {
+    "id": "42013",
+    "name": "攻击支援",
+    "description": "本回合队友的攻击值+5",
+    "descriptionTemplate": "本回合队友的攻击值+#1",
+    "params": [
+      5
+    ],
+    "cost": 3,
+    "kind": "attack",
+    "rank": 2,
+    "effect": "42013",
+    "amount": 5,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank2_Buff03.png"
+  },
+  {
+    "id": "42014",
+    "name": "防御提升II",
+    "description": "本回合防御值+6，并获得反击",
+    "descriptionTemplate": "本回合防御值+#1，并获得反击",
+    "params": [
+      6
+    ],
+    "cost": 4,
+    "kind": "defend",
+    "rank": 2,
+    "effect": "42014",
+    "amount": 6,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank2_Buff05.png"
+  },
+  {
+    "id": "42015",
+    "name": "自我治愈II",
+    "description": "治愈自己10点生命值",
+    "descriptionTemplate": "治愈自己#1点生命值",
+    "params": [
+      10
+    ],
+    "cost": 4,
+    "kind": "both",
+    "rank": 2,
+    "effect": "42015",
+    "amount": 10,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank2_Buff04.png"
+  },
+  {
+    "id": "42016",
+    "name": "剧毒注入II",
+    "description": "使对手陷入4层中毒",
+    "descriptionTemplate": "使对手陷入#1层中毒",
+    "params": [
+      4
+    ],
+    "cost": 4,
+    "kind": "both",
+    "rank": 2,
+    "effect": "42016",
+    "amount": 4,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank2_Buff07.png"
+  },
+  {
+    "id": "42018",
+    "name": "骰子升级",
+    "description": "本回合使选定的骰子获得升级",
+    "descriptionTemplate": "本回合使选定的骰子获得升级",
+    "params": [],
+    "cost": 6,
+    "kind": "both",
+    "rank": 2,
+    "effect": "42018",
+    "amount": 0,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank2_Buff06.png"
+  },
+  {
+    "id": "42019",
+    "name": "攻击提升III",
+    "description": "本回合攻击值+7",
+    "descriptionTemplate": "本回合攻击值+#1",
+    "params": [
+      7
+    ],
+    "cost": 4,
+    "kind": "attack",
+    "rank": 3,
+    "effect": "42019",
+    "amount": 7,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank3_Buff01.png"
+  },
+  {
+    "id": "42020",
+    "name": "穿透攻击",
+    "description": "本回合获得洞穿",
+    "descriptionTemplate": "本回合获得洞穿",
+    "params": [],
+    "cost": 6,
+    "kind": "attack",
+    "rank": 3,
+    "effect": "42020",
+    "amount": 0,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank3_Buff02.png"
+  },
+  {
+    "id": "42021",
+    "name": "连续攻击",
+    "description": "本回合获得连击",
+    "descriptionTemplate": "本回合获得连击",
+    "params": [],
+    "cost": 7,
+    "kind": "attack",
+    "rank": 3,
+    "effect": "42021",
+    "amount": 0,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank3_Buff04.png"
+  },
+  {
+    "id": "42022",
+    "name": "防御提升III",
+    "description": "本回合防御值+8，并反伤自己50%防御值的伤害",
+    "descriptionTemplate": "本回合防御值+#2，并反伤自己#1%防御值的伤害",
+    "params": [
+      50,
+      8
+    ],
+    "cost": 7,
+    "kind": "defend",
+    "rank": 3,
+    "effect": "42022",
+    "amount": 50,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank3_Buff05.png"
+  },
+  {
+    "id": "42023",
+    "name": "背水一战",
+    "description": "将自己的生命值降低为1，本回合获得降低值的点数加成",
+    "descriptionTemplate": "将自己的生命值降低为1，本回合获得降低值的点数加成",
+    "params": [],
+    "cost": 9,
+    "kind": "both",
+    "rank": 3,
+    "effect": "42023",
+    "amount": 0,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank3_Buff06.png"
+  },
+  {
+    "id": "42024",
+    "name": "剧毒注入III",
+    "description": "使对手陷入3层中毒，并永久获得猛毒",
+    "descriptionTemplate": "使对手陷入#1层中毒，并永久获得猛毒",
+    "params": [
+      3
+    ],
+    "cost": 8,
+    "kind": "both",
+    "rank": 3,
+    "effect": "42024",
+    "amount": 3,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank3_Buff07.png"
+  },
+  {
+    "id": "42025",
+    "name": "全力支援",
+    "description": "本回合自己的点数始终为0，但队友的点数始终翻倍",
+    "descriptionTemplate": "本回合自己的点数始终为0，但队友的点数始终翻倍",
+    "params": [],
+    "cost": 9,
+    "kind": "both",
+    "rank": 3,
+    "effect": "42025",
+    "amount": 0,
+    "imagePath": "SpriteOutput/Quest/DiceCombat/V2/TacticsIcon/DiceCombatV2TacticsIconRank3_Buff03.png"
+  }
+]

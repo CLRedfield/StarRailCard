@@ -1,0 +1,409 @@
+{
+  "starterCardIds": [
+    "264000"
+  ],
+  "starterRewardId": "2001691",
+  "xpItemId": "264999",
+  "maxLevel": 25,
+  "prismaticUnlockLevel": 5,
+  "levels": [
+    {
+      "level": 1,
+      "xpCost": 50,
+      "xpTotal": 50,
+      "rewardId": "316001",
+      "reward": {
+        "coins": 1,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": []
+      }
+    },
+    {
+      "level": 2,
+      "xpCost": 50,
+      "xpTotal": 100,
+      "rewardId": "316002",
+      "reward": {
+        "coins": 1,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": []
+      }
+    },
+    {
+      "level": 3,
+      "xpCost": 50,
+      "xpTotal": 150,
+      "rewardId": "316003",
+      "reward": {
+        "coins": 1,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": []
+      }
+    },
+    {
+      "level": 4,
+      "xpCost": 50,
+      "xpTotal": 200,
+      "rewardId": "316004",
+      "reward": {
+        "coins": 1,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": []
+      }
+    },
+    {
+      "level": 5,
+      "xpCost": 50,
+      "xpTotal": 250,
+      "rewardId": "316005",
+      "reward": {
+        "coins": 0,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": [],
+        "prismaticEdit": true
+      }
+    },
+    {
+      "level": 6,
+      "xpCost": 50,
+      "xpTotal": 300,
+      "rewardId": "316006",
+      "reward": {
+        "coins": 1,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": []
+      }
+    },
+    {
+      "level": 7,
+      "xpCost": 50,
+      "xpTotal": 350,
+      "rewardId": "316007",
+      "reward": {
+        "coins": 1,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": []
+      }
+    },
+    {
+      "level": 8,
+      "xpCost": 50,
+      "xpTotal": 400,
+      "rewardId": "316008",
+      "reward": {
+        "coins": 1,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": []
+      }
+    },
+    {
+      "level": 9,
+      "xpCost": 50,
+      "xpTotal": 450,
+      "rewardId": "316009",
+      "reward": {
+        "coins": 1,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": []
+      }
+    },
+    {
+      "level": 10,
+      "xpCost": 50,
+      "xpTotal": 500,
+      "rewardId": "316010",
+      "reward": {
+        "coins": 0,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [
+          "264021"
+        ],
+        "diceIds": []
+      }
+    },
+    {
+      "level": 11,
+      "xpCost": 100,
+      "xpTotal": 600,
+      "rewardId": "316011",
+      "reward": {
+        "coins": 1,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": []
+      }
+    },
+    {
+      "level": 12,
+      "xpCost": 100,
+      "xpTotal": 700,
+      "rewardId": "316012",
+      "reward": {
+        "coins": 1,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": []
+      }
+    },
+    {
+      "level": 13,
+      "xpCost": 100,
+      "xpTotal": 800,
+      "rewardId": "316013",
+      "reward": {
+        "coins": 1,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": []
+      }
+    },
+    {
+      "level": 14,
+      "xpCost": 100,
+      "xpTotal": 900,
+      "rewardId": "316014",
+      "reward": {
+        "coins": 1,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": []
+      }
+    },
+    {
+      "level": 15,
+      "xpCost": 100,
+      "xpTotal": 1000,
+      "rewardId": "316015",
+      "reward": {
+        "coins": 0,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": []
+      }
+    },
+    {
+      "level": 16,
+      "xpCost": 100,
+      "xpTotal": 1100,
+      "rewardId": "316016",
+      "reward": {
+        "coins": 1,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": []
+      }
+    },
+    {
+      "level": 17,
+      "xpCost": 100,
+      "xpTotal": 1200,
+      "rewardId": "316017",
+      "reward": {
+        "coins": 1,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": []
+      }
+    },
+    {
+      "level": 18,
+      "xpCost": 100,
+      "xpTotal": 1300,
+      "rewardId": "316018",
+      "reward": {
+        "coins": 1,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": []
+      }
+    },
+    {
+      "level": 19,
+      "xpCost": 100,
+      "xpTotal": 1400,
+      "rewardId": "316019",
+      "reward": {
+        "coins": 1,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": []
+      }
+    },
+    {
+      "level": 20,
+      "xpCost": 100,
+      "xpTotal": 1500,
+      "rewardId": "316020",
+      "reward": {
+        "coins": 0,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": []
+      }
+    },
+    {
+      "level": 21,
+      "xpCost": 100,
+      "xpTotal": 1600,
+      "rewardId": "316021",
+      "reward": {
+        "coins": 1,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": []
+      }
+    },
+    {
+      "level": 22,
+      "xpCost": 100,
+      "xpTotal": 1700,
+      "rewardId": "316022",
+      "reward": {
+        "coins": 1,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": []
+      }
+    },
+    {
+      "level": 23,
+      "xpCost": 100,
+      "xpTotal": 1800,
+      "rewardId": "316023",
+      "reward": {
+        "coins": 0,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": []
+      }
+    },
+    {
+      "level": 24,
+      "xpCost": 100,
+      "xpTotal": 1900,
+      "rewardId": "316024",
+      "reward": {
+        "coins": 1,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": []
+      }
+    },
+    {
+      "level": 25,
+      "xpCost": 100,
+      "xpTotal": 2000,
+      "rewardId": "316025",
+      "reward": {
+        "coins": 0,
+        "victoryCoins": 0,
+        "paintCoins": 0,
+        "dust": 0,
+        "xp": 0,
+        "cardIds": [],
+        "diceIds": []
+      }
+    }
+  ],
+  "foil": {
+    "cosmeticOnly": true,
+    "costs": [
+      60,
+      180
+    ],
+    "maxLevelByRarity": {
+      "1": 2,
+      "2": 2,
+      "3": 3
+    },
+    "mappingStatus": "ordered-values-inference; upstream MapValue keys omitted"
+  },
+  "currencyItemIds": {
+    "coins": "264996",
+    "victoryCoins": "264997",
+    "paintCoins": "269001",
+    "dust": "264998",
+    "xp": "264999"
+  }
+}

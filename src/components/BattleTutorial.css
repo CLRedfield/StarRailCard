@@ -1,0 +1,63 @@
+/* A small in-flow coach leaves the real cards, dice and actions available. */
+.battle-page:has(.battle-tutorial) { display: flex; flex-direction: column; }
+.battle-page:has(.battle-tutorial) .battle-topbar { flex: 0 0 48px; }
+.battle-page:has(.battle-tutorial) .arena-layout { flex: 1; min-height: 0; height: auto; width: 100%; margin-block: 9px 13px; }
+.battle-page:has(.battle-tutorial) .battle-bottom { display: none; }
+.battle-tutorial { flex: 0 0 auto; display: flex; gap: 14px; align-items: center; width: min(100%, 1180px); margin-inline: auto; padding: 9px 13px 10px; border-left: 3px solid #a39cdc; background: #292d46; color: #f2edff; border-radius: 0 8px 8px 0; z-index: 5; }
+.tutorial-copy { flex: 1; min-width: 0; }
+.tutorial-heading { display: flex; align-items: center; gap: 7px; line-height: 1.4; }
+.tutorial-number { color: #c4b7f0; font-size: 12px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.tutorial-heading strong { font-size: 13px; }
+.tutorial-heading > small { font-size: 9px; opacity: .6; }
+.tutorial-copy p { font-size: 11px; line-height: 1.55; margin: 3px 0 2px; }
+.tutorial-hint { display: block; font-size: 10px; line-height: 1.45; opacity: .75; }
+.tutorial-controls { display: flex; align-items: flex-end; justify-content: center; flex-direction: column; gap: 2px; flex-shrink: 0; }
+.tutorial-next { display: flex; align-items: center; gap: 5px; min-height: 38px; padding: 7px 11px; font-size: 11px; font-weight: 700; border-radius: 5px; background: #d4c5f7; color: #382b56; }
+.tutorial-skip { min-height: 30px; padding: 4px 6px; font-size: 10px; opacity: .65; }
+.battle-tutorial-rest { position: absolute; z-index: 4; left: 4%; bottom: 5px; display: flex; align-items: center; gap: 6px; font-size: 10px; color: #b9afd6; }
+.battle-tutorial-rest > span { display: none; }
+.battle-tutorial-rest button { display: inline-flex; align-items: center; gap: 5px; padding: 4px; min-height: 28px; }
+html[data-theme="light"] .battle-tutorial { background: #ffffffc9; border-left-color: #8a71b4; color: #483653; box-shadow: 0 3px 12px #7255930a; }
+html[data-theme="light"] .tutorial-number { color: #8b67ab; }
+html[data-theme="light"] .tutorial-next { background: #71598f; color: #fff; }
+html[data-theme="light"] .battle-tutorial-rest { color: #735d8b; }
+.battle-page:has(.battle-tutorial[data-target="dice"]) .friendly-half:not(.partner) > .player-dice-position { outline: 2px solid #9b83d0; outline-offset: -2px; border-radius: 10px; }
+.battle-page:has(.battle-tutorial[data-target="reroll"]) .reroll-action,
+.battle-page:has(.battle-tutorial[data-target="confirm"]) .confirm-action { outline: 2px solid #a58bcb; outline-offset: 3px; border-radius: 10px; }
+.battle-page:has(.battle-tutorial[data-target="values"]) .power-display { color: #7153a2; }
+.campaign-tutorial-label { color: var(--purple); font-weight: 700; margin-left: 6px; }
+.challenge-tutorial-note { margin: 0 0 16px; font-size: 12px; line-height: 1.7; color: var(--muted); }
+.challenge-tutorial-note strong { display: block; color: var(--text); }
+@media (max-width: 700px) and (orientation: portrait) {
+  html .battle-page:has(.battle-tutorial) .battle-topbar { flex-basis: 42px; height: 42px; }
+  html .battle-page:has(.battle-tutorial) .arena-layout { position: relative; margin-block: 6px 7px; gap: 6px; }
+  html .battle-page:has(.battle-tutorial) .weather-button { top: 0; right: 3px; }
+  html .battle-page:has(.battle-tutorial) .weather-popover { top: 31px; right: 3px; }
+  html .battle-tutorial { gap: 7px; padding: 7px 8px; }
+  html .tutorial-heading { gap: 5px; }
+  html .tutorial-heading strong { font-size: 12px; }
+  html .tutorial-heading > small { display: none; }
+  html .tutorial-copy p { font-size: 10px; line-height: 1.5; }
+  html .tutorial-hint { font-size: 9px; line-height: 1.4; }
+  html .tutorial-controls { width: 68px; }
+  html .tutorial-next { width: 100%; justify-content: center; padding: 6px 4px; font-size: 10px; }
+  html .tutorial-next > svg { display: none; }
+  html .tutorial-skip { font-size: 9px; min-height: 30px; }
+  html .battle-tutorial-rest { left: 13px; bottom: calc(5px + env(safe-area-inset-bottom, 0px)); font-size: 9px; }
+  html .battle-page:has(.battle-tutorial-rest) .battle-bottom { justify-content: flex-end; }
+  html .battle-page:has(.battle-tutorial-rest) .battle-instruction { max-width: calc(100% - 98px); font-size: 9px; }
+}
+@media (max-height: 680px) and (orientation: portrait) {
+  html .battle-page:has(.battle-tutorial) .enemy-zone { min-height: 110px; height: 35%; }
+  html .battle-page:has(.battle-tutorial) .arena-layout { grid-template-rows: 24px minmax(0, 1fr) 75px; }
+  html .battle-page:has(.battle-tutorial) .phase-line { height: 28px; }
+  html .battle-page:has(.battle-tutorial) .friendly-half > .player-dice-position { min-height: 56px; }
+  html .battle-page:has(.battle-tutorial) .friendly-zone { padding-bottom: 5px; }
+}
+@media (max-height: 580px) and (orientation: landscape) {
+  .battle-page:has(.battle-tutorial) .battle-topbar { flex-basis: 32px; height: 32px; }
+  .battle-tutorial { padding-block: 4px; }
+  .tutorial-copy p { display: inline; font-size: 10px; }
+  .tutorial-hint { display: inline; margin-left: 8px; font-size: 9px; }
+  .tutorial-controls { flex-direction: row; }
+}

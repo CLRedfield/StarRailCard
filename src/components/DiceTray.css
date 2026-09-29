@@ -1,0 +1,28 @@
+.dice-sweep-surface{touch-action:none;user-select:none;-webkit-touch-callout:none}
+.dice-tray.sculpted-dice{--die-slot:72px;isolation:isolate;min-width:0}
+.dice-tray.sculpted-dice.compact{--die-slot:59px}
+.dice-tray.sculpted-dice.pool{--die-slot:51px}
+.dice-tray.sculpted-dice .dice-canvas,.dice-tray.sculpted-dice .dice-controls{position:absolute;inset:0 auto 0 50%;height:100%;width:min(100%,calc(var(--dice-count)*var(--die-slot)));transform:translateX(-50%)}
+.dice-tray.sculpted-dice .dice-canvas{top:calc(var(--die-slot)*-.45);height:calc(100% + var(--die-slot)*.9);width:calc(min(100%,calc(var(--dice-count)*var(--die-slot))) + var(--die-slot)*.7);z-index:0;pointer-events:none;overflow:visible}
+.dice-tray.sculpted-dice .dice-canvas canvas{display:block;width:100%;height:100%}
+.dice-tray.sculpted-dice .dice-controls{display:flex;justify-content:center;align-items:stretch;z-index:1}
+.dice-tray.sculpted-dice .die-control{position:relative;flex:1 1 0;min-width:0;width:auto;height:100%;padding:0;border:0;border-radius:8px;display:block;overflow:visible;background:none;box-shadow:none;touch-action:none;user-select:none;-webkit-touch-callout:none;transform:none}
+.dice-tray.sculpted-dice.sweeping .die-control{cursor:grabbing}
+.dice-tray.sculpted-dice .die-control:disabled{opacity:1;cursor:default}
+.dice-tray.sculpted-dice .die-control:focus-visible{outline:2px solid #3579fa;outline-offset:-3px}
+.dice-tray.sculpted-dice .die-value{position:absolute;left:50%;top:calc(50% - var(--die-slot)*.49);transform:translate(-50%,-50%);display:grid;place-items:center;min-width:24px;height:17px;padding:0 7px;border:0;border-radius:12px;background:#69728dbb;color:#fff;box-shadow:none;text-shadow:none;font-size:12px;line-height:1;font-weight:900;transition:background .15s,transform .15s}
+.dice-tray.sculpted-dice .die-control.selected .die-value{background:#327cf0;color:#fff;box-shadow:none;transform:translate(-50%,calc(-50% - 3px))}
+.dice-tray.sculpted-dice .die-control:hover:not(:disabled) .die-value{transform:translate(-50%,calc(-50% - 2px));background:#4d70b9}
+.dice-tray.sculpted-dice .die-control.selected:hover:not(:disabled) .die-value{background:#327cf0}
+.dice-tray.sculpted-dice .die-control.rolling .die-value{opacity:0;transition:none}
+.dice-tray.sculpted-dice .die-label{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.dice-tray.sculpted-dice .die-effect{position:absolute;left:50%;right:auto;top:calc(50% + var(--die-slot)*.39);transform:translateX(-50%);color:#2c7ad1;text-shadow:0 1px #e6faff;font-size:12px;line-height:1;transition:opacity .15s}
+.dice-tray.sculpted-dice .die-control.rolling .die-effect{opacity:0}
+.dice-tray.sculpted-dice.dice-fallback .die-control:before{display:none}
+.dice-tray.sculpted-dice .die-fallback-solid{position:absolute;left:50%;top:50%;width:68%;max-height:75%;aspect-ratio:1;display:grid;place-items:center;transform:translate(-50%,-50%);border-radius:7px;background:linear-gradient(135deg,#c660fa,#a137ed 52%,#6c28b9);box-shadow:inset 2px 2px 0 #ee9eff,inset -3px -4px 0 #692baf,0 5px 7px #46547a35;border:1px solid #ce77fa;font-size:clamp(15px,2.6vw,31px);font-weight:900;color:#fff8ed;line-height:1;text-shadow:0 1px 1px #ffffff44}
+.dice-tray.sculpted-dice .d4 .die-fallback-solid{clip-path:polygon(50% 0,100% 95%,50% 100%,0 95%);background:linear-gradient(135deg,#95ecff,#20bce5 65%,#1698c7);box-shadow:inset -2px -5px 0 #1683b7;padding-top:13%}
+.dice-tray.sculpted-dice .d8 .die-fallback-solid{clip-path:polygon(50% 0,92% 25%,100% 75%,50% 100%,0 75%,8% 25%);background:linear-gradient(140deg,#fce3b7,#ebb477 50%,#c48753);box-shadow:inset -2px -5px 0 #ac6c45}
+.dice-tray.sculpted-dice .prismatic .die-fallback-solid{background:linear-gradient(145deg,#62d9ed,#7777fa 42%,#434aaa 62%,#252f83);border-color:#86d5fb}
+.dice-tray.sculpted-dice .die-control.selected .die-fallback-solid{outline:4px solid #327cf0;outline-offset:1px;filter:drop-shadow(0 0 2px #327cf0);transform:translate(-50%,calc(-50% - 3px))}
+@media(max-height:650px){.dice-tray.sculpted-dice{--die-slot:51px}.dice-tray.sculpted-dice.compact{--die-slot:43px}.dice-tray.sculpted-dice.pool{--die-slot:34px}.dice-tray.sculpted-dice .die-value{min-width:18px;height:13px;padding:0 5px;font-size:9px}.dice-tray.sculpted-dice .die-effect{font-size:8px}.dice-tray.sculpted-dice .die-fallback-solid{font-size:22px}}
+@media(prefers-reduced-motion:reduce){.dice-tray.sculpted-dice .die-value,.dice-tray.sculpted-dice .die-effect{transition:none}}

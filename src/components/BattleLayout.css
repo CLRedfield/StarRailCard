@@ -1,0 +1,33 @@
+.battle-page .player-dice-position{position:relative;min-height:0;transition:transform .28s cubic-bezier(.2,.8,.2,1),opacity .2s}
+.battle-page .enemy-zone>.player-dice-position{height:calc(100% - 80px);min-height:65px}
+.battle-page .friendly-half>.player-dice-position{flex:1;min-height:65px}
+.battle-page .player-dice-position>.dice-tray{height:100%;min-height:0}
+.battle-page .player-dice-position.committed{transform:scale(.76);transform-origin:center bottom}
+.battle-page .enemy-zone>.player-dice-position.committed{transform-origin:center top}
+.battle-page.coop .enemy-zone>.player-dice-position{height:calc(100% - 62px);min-height:40px}
+.battle-page .round-action-icon{position:relative}
+.battle-page .action-count{position:absolute;left:-8px;top:-7px;min-width:23px;height:23px;display:grid;place-items:center;border:2px solid #d9e3ff;border-radius:50%;background:#333951;color:#fff;font-size:12px;font-weight:800;box-shadow:0 2px 5px #141a3a50}
+.battle-page .reroll-action .round-action-icon{color:#426ee1;background:radial-gradient(circle at 38% 30%,#fff,#e0eaff);border-color:#f7fbff;box-shadow:0 4px 0 #6077ae,0 6px 10px #111e4240}
+.battle-page .reroll-action:not(:disabled) strong{color:#e9efff}
+.battle-page.resolving .phase-announcement{background:#f2d665;color:#393445;border-color:#fff0a6;box-shadow:0 2px 0 #957d36,0 0 20px #f8e08760}
+.battle-page.resolving .phase-announcement>span{color:#625640}
+.battle-page .friendly-zone .player-hud.dealing-hit{animation:table-card-strike-up .35s ease-in-out both}
+.battle-page .enemy-zone .player-hud.dealing-hit{animation:table-card-strike-down .35s ease-in-out both}
+.battle-page .player-hud.taking-hit{animation:table-card-impact .36s ease-out both}
+@keyframes table-card-strike-up{0%,100%{transform:translateY(0)}26%{transform:translateY(5px)}42%{transform:translateY(-13px)}65%{transform:translateY(2px)}}
+@keyframes table-card-strike-down{0%,100%{transform:translateY(0)}26%{transform:translateY(-5px)}42%{transform:translateY(13px)}65%{transform:translateY(-2px)}}
+@keyframes table-card-impact{0%,100%{transform:translateX(0);filter:brightness(1)}20%{transform:translateX(-4px);filter:brightness(1.4)}45%{transform:translateX(4px)}70%{transform:translateX(-2px)}}
+@media(max-height:580px) and (orientation:landscape){.battle-page .enemy-zone>.player-dice-position{height:calc(100% - 47px);min-height:32px}.battle-page .friendly-half>.player-dice-position{min-height:35px}.battle-page.coop .enemy-zone>.player-dice-position{height:calc(100% - 42px);min-height:22px}.battle-page .action-count{min-width:18px;height:18px;font-size:10px;left:-7px;top:-5px}}
+@media(prefers-reduced-motion:reduce){.battle-page .player-dice-position{transition:none}.battle-page.resolving .player-hud{animation:none!important}}
+html[data-motion=reduced] .battle-page .player-dice-position{transition:none}
+.battle-page .defeated-player .hud-portrait{visibility:hidden}
+.battle-page.presentation-defeat .player-dice-position{opacity:0}
+.battle-log .log-detail{display:block;margin-top:4px;line-height:1.5;font-variant-numeric:tabular-nums;opacity:.72}
+@media(max-height:580px) and (orientation:landscape){
+  .battle-page .tactic-hand{transform:none;bottom:0;gap:5px}
+  .battle-page .hand-card>button:first-child{padding:5px 23px 5px 7px;min-height:25px}
+  .battle-page .hand-card>button:first-child>svg{width:11px;height:11px}
+  .battle-page .hand-card strong{font-size:9px}
+  .battle-page .hand-card p{display:none}
+  .battle-page .hand-card:focus-within p,.battle-page .hand-card:hover p{display:block;max-width:170px}
+}
