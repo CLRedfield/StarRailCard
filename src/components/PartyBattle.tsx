@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import {
-  ArrowLeft, Check, CheckCheck, ChevronDown, CircleHelp, Crown, Flame, Gem,
+  ArrowLeft, Check, CheckCheck, ChevronDown, CircleHelp, CloudSun, Crown, Eye, Flame, Gem,
   HandHeart, Heart, Info, List, RotateCcw, Shield, Shuffle, Sparkles, Swords,
   Target, Zap,
 } from 'lucide-react';
 import { cardById, diceById } from '../data';
-import { getPartyLegalActions, getPartyPreview } from '../game/party';
-import type { OverlordMove, PartyCommand, PartyMode, PartyPlayer, PartyStance, PartyState, PartyTarget, PartyUpgrade } from '../game/partyTypes';
+import { BOSS_SCHEMES, PARTY_CURIO_BY_ID, getPartyLegalActions, getPartyPreview } from '../game/party';
+import type { BossScheme, OverlordMove, PartyCommand, PartyMode, PartyPlayer, PartyStance, PartyState, PartyTarget, PartyUpgrade } from '../game/partyTypes';
 import type { RolledDie } from '../game/types';
 import { playSound } from '../lib/audio';
 import { asset, cleanText } from './CardView';
@@ -37,34 +37,34 @@ const modes: Record<PartyMode, { name: string; subtitle: string; rules: string[]
     rules: [
       '所有人同时选骰、重投并点击上方宝库选定路线；全员确认后统一揭晓结果。',
       '火力、坚守、奇巧宝库的破关条件与星核悬赏各不相同，独占无人争夺的宝库还有额外奖励。',
-      '终盘两轮最高悬赏宝库会触发加奖；轮间使用补给升级火力、防护或灵感。',
+      '第 2 轮起每两轮轮转动态天象；轮间使用补给三选一「星神奇物」铸造升阶骰或构筑流派。',
     ],
   },
   raid: {
     name: '裂界远征',
     subtitle: '4—8 人 · 协同破盾 · 首领讨伐',
     rules: [
-      '所有人组成远征队协作迎战首领；先看首领招式预告，再在牌桌上方点击分配攻击目标或切换坚守/援护。',
+      '所有人组成远征队协作迎战首领；先看首领招式预告与当前天象，再点击分配目标或切换坚守/援护。',
       '击破「护盾核心」可取消减伤，击破「蓄力装置」能直接打断首领「爆发」并降低危机；首领伤害随轮次递增。',
-      '使用「团队换骰池」可直接点池骰再点手里非命定骰交换，不打断队友节奏；坚守防线可大幅削弱「横扫」或拦截「汲取」。',
+      '使用「团队换骰池」可直接换手而不打断队友节奏；轮间全员三选一星神奇物构筑协同战力。',
     ],
   },
   duos: {
     name: '双人搭档乱斗',
     subtitle: '4 / 6 / 8 人 · 两人组队 · 共同争冠',
     rules: [
-      '两人一队共享队伍积分与「团队换骰池」，每轮攻守立场随竞技场轮换。',
+      '两人一队共享队伍积分与「团队换骰池」，每轮攻守立场随竞技场与星穹天象轮换。',
       '点击「援护」并点选队友头像卡可精准治疗与加盾；守方守住阈值以下攻击可凭防守优势取胜。',
-      '轮间各自花费补给强化角色，最终按小队总分决出冠军。',
+      '轮间各自三选一「星神奇物」构筑专属组合，最终按小队总分决出冠军。',
     ],
   },
   overlord: {
     name: '首领降临',
-    subtitle: '1 位首领 vs 讨伐队 · 招式博弈',
+    subtitle: '1 位首领 vs 讨伐队 · 盲抽觉醒 · 奇策博弈',
     rules: [
-      '一位玩家扮演首领秘密抉择本轮招式，其余玩家组成讨伐队共同规划破盾、打断与援护。',
-      '讨伐队可通过共享换骰池调整点数、安排队友坚守防线减伤，或在关键回合集火击破蓄力装置。',
-      '讨伐队击破首领获胜，首领让危机满额或撑过轮数上限即取胜。',
+      '一位玩家扮演首领（支持房间盲抽开局揭晓），实时掌控部件态势，秘密搭配本轮招式与「裂界奇策」。',
+      '讨伐队通过共享换骰池调点、安排坚守防线或援护回血，并在关键回合集火击破护盾或蓄力装置。',
+      '首领生命 ≤ 50% 进入二阶段解锁全三式招式，轮间还可觉醒专属「凶星」奇物；危机满额或撑过轮数上限即首领获胜。',
     ],
   },
 };
@@ -130,7 +130,15 @@ function loadCoachStep(): 0 | 1 | 2 | null {
   }
 }
 
-function StatusBadges({ statuses, upgrades }: { statuses?: Record<string, number>; upgrades?: PartyPlayer['upgrades'] }) {
+function groupCurios(curios?: string[]) {
+  const counts = new Map<string, number>();
+  for (const id of curios || []) counts.set(id, (counts.get(id) ?? 0) + 1);
+  return [...counts.entries()]
+    .map(([id, count]) => ({ id, count, def: PARTY_CURIO_BY_ID[id] }))
+    .filter(item => !!item.def);
+}
+
+function StatusBadges({ statuses, upgrades, curios }: { statuses?: Record<string, number>; upgrades?: PartyPlayer['upgrades']; curios?: string[] }) {
   const activeStatuses = Object.entries(statuses || {}).filter(([k, n]) => n > 0 && statusNames[k]);
   const activeUpgrades = upgrades
     ? ([
@@ -139,12 +147,22 @@ function StatusBadges({ statuses, upgrades }: { statuses?: Record<string, number
         upgrades.fortune > 0 ? { key: 'u-fortune', label: `灵感+${upgrades.fortune}` } : null,
       ].filter(Boolean) as { key: string; label: string }[])
     : [];
-  if (!activeStatuses.length && !activeUpgrades.length) return null;
+  const activeCurios = groupCurios(curios);
+  if (!activeStatuses.length && !activeUpgrades.length && !activeCurios.length) return null;
   return (
     <div className="party-status-row">
       {activeStatuses.map(([k, n]) => (
         <span key={k} className={`party-status-badge tone-${statusNames[k].tone}`}>
           {statusNames[k].label} <b>{n}</b>
+        </span>
+      ))}
+      {activeCurios.map(({ id, count, def }) => (
+        <span
+          key={`curio-${id}`}
+          className={`party-status-badge ${def.bossOnly ? 'tone-boss-curio' : 'tone-curio'}`}
+          title={`【${def.path}】${def.name}：${def.description}`}
+        >
+          ✦ {def.name}{count > 1 ? ` ×${count}` : ''}
         </span>
       ))}
       {activeUpgrades.map(u => (
@@ -172,7 +190,7 @@ export default function PartyBattle({
   const [rollingDiceIds, setRollingDiceIds] = useState<string[]>([]);
   const [rollKey, setRollKey] = useState(1);
   const [prismBurstKey, setPrismBurstKey] = useState(0);
-  const [upgradeBurst, setUpgradeBurst] = useState<PartyUpgrade | null>(null);
+  const [upgradeBurst, setUpgradeBurst] = useState<string | null>(null);
   const [coachStep, setCoachStep] = useState<0 | 1 | 2 | null>(loadCoachStep);
   const [bossGhostPct, setBossGhostPct] = useState(() => percent(authoritative.bossHp, authoritative.bossMaxHp));
   const [targetGhostPct, setTargetGhostPct] = useState<Record<string, number>>(() =>
@@ -204,6 +222,7 @@ export default function PartyBattle({
     rollsUsed: authoritativePlayer?.rollsUsed ?? 0,
     prismaticRolled: authoritativePlayer?.prismaticRolled ?? false,
     upgrades: authoritativePlayer ? { ...authoritativePlayer.upgrades } : { power: 0, ward: 0, fortune: 0 },
+    curioCount: authoritativePlayer?.curios?.length ?? 0,
   });
 
   useEffect(() => {
@@ -240,10 +259,18 @@ export default function PartyBattle({
         playSound('roll', soundVolume);
         setRollKey(k => k + 1);
       }
+      const nextCurios = authoritativePlayer.curios || [];
       const bought = (['power', 'ward', 'fortune'] as PartyUpgrade[]).find(
         u => authoritativePlayer.upgrades[u] > (prev.upgrades[u] ?? 0)
       );
-      if (bought) {
+      if (nextCurios.length > prev.curioCount) {
+        playSound('heal', soundVolume);
+        if (!reducedMotion) {
+          const picked = nextCurios.at(-1) || 'curio';
+          setUpgradeBurst(picked);
+          timers.push(window.setTimeout(() => setUpgradeBurst(null), 750));
+        }
+      } else if (bought) {
         playSound('heal', soundVolume);
         if (!reducedMotion) {
           setUpgradeBurst(bought);
@@ -257,6 +284,7 @@ export default function PartyBattle({
       rollsUsed: authoritativePlayer?.rollsUsed ?? 0,
       prismaticRolled: authoritativePlayer?.prismaticRolled ?? false,
       upgrades: authoritativePlayer ? { ...authoritativePlayer.upgrades } : { power: 0, ward: 0, fortune: 0 },
+      curioCount: authoritativePlayer?.curios?.length ?? 0,
     };
     return () => timers.forEach(t => window.clearTimeout(t));
   }, [authoritative.round, authoritative.phase, authoritative.winnerTeamIds, authoritative.results, authoritativePlayer, soundVolume, reducedMotion]);
@@ -347,6 +375,11 @@ export default function PartyBattle({
   const inspectedSource = inspectedCard && cardById[inspectedCard.id];
   const roleLocked = me.rollsUsed > 0 || me.prismaticRolled || me.exchangedThisRound;
   const myRole = preview.role;
+  const activeWeather = state.weatherId ? state.catalog.weather.find(w => w.id === state.weatherId) : undefined;
+  const activeScheme: BossScheme = state.bossScheme ?? 'crisis_siphon';
+  const heroGuards = state.players.filter(p => p.role !== 'boss' && p.plan.stance === 'guard').length;
+  const heroSupports = state.players.filter(p => p.role !== 'boss' && p.plan.stance === 'support').length;
+  const bossName = state.bossPlayerId ? (state.players.find(p => p.id === state.bossPlayerId)?.name || '玩家首领') : '裂界首领';
 
   const stanceOptions = state.mode === 'duos'
     ? {
@@ -368,7 +401,7 @@ export default function PartyBattle({
       }
     } else if (next.type === 'confirm' || next.type === 'ready') {
       playSound('confirm', soundVolume);
-    } else if (next.type === 'plan' || next.type === 'bossMove' || next.type === 'poolSwap' || next.type === 'exchange') {
+    } else if (next.type === 'plan' || next.type === 'bossMove' || next.type === 'bossScheme' || next.type === 'poolSwap' || next.type === 'exchange') {
       playSound('click', soundVolume);
     }
     onCommand(next);
@@ -446,11 +479,11 @@ export default function PartyBattle({
     ? {
         target: 'stage',
         step: '1 / 3',
-        title: state.mode === 'treasure' ? '选一座宝库路线' : me.role === 'boss' ? '钦定首领招式' : '安排目标与攻守站位',
+        title: state.mode === 'treasure' ? '选一座宝库路线' : me.role === 'boss' ? '钦定招式与裂界奇策' : '安排目标与攻守站位',
         text: state.mode === 'treasure'
-          ? '点击上方三座宝库卡之一；注意高悬赏目标、奇巧条件，以及本轮事件规则。'
+          ? '点击上方三座宝库卡之一；注意高悬赏目标、奇巧条件，以及本轮规则与动态天象。'
           : me.role === 'boss'
-            ? '先点击上方候选招式卡牌再选骰，讨伐队会根据你的预告布防或打断。'
+            ? '上方实时监控各部件血量与集火人数，点选秘密招式并在中栏切换「裂界奇策」针对讨伐队阵型！'
             : `上方点击核心/装置切换进攻目标，中栏可切「进攻 / 坚守 / 援护」；${supportPlayers.length ? '选「援护」后直接点同队玩家卡即可指派！' : ''}`,
       }
     : coachStep === 1
@@ -465,8 +498,8 @@ export default function PartyBattle({
       : {
           target: 'actions',
           step: '3 / 3',
-          title: '重投 · 确认使用 & 轮间补给',
-          text: `选好要刷新的骰子点右侧「重投」(剩余 ${me.rerolls})，确认选够 ${legal.requiredDice || '任意'} 颗骰后点绿色「确认」；每轮结算后会发 1 点补给买永久成长！`,
+          title: '重投 · 确认 & 星神奇物构筑',
+          text: `选好要刷新的骰子点右侧「重投」(剩余 ${me.rerolls})，确认选够 ${legal.requiredDice || '任意'} 颗骰后点绿色「确认」；轮间三选一「星神奇物」铸造升阶骰与专属流派！`,
         };
 
   const renderClashShowcase = () => {
@@ -476,6 +509,7 @@ export default function PartyBattle({
       const totalHeroDamage = heroResults.reduce((sum, r) => sum + Math.max(0, r.damage), 0);
       const interrupted = state.log.some(e => e.round === state.round && e.text.includes('爆发被全队打断'));
       const moveLabel = moveInfo[state.bossMove]?.name || '首领行动';
+      const schemeTag = state.mode === 'overlord' ? ` · ${BOSS_SCHEMES[activeScheme]?.name}` : '';
       const movePreset: VfxPreset = interrupted
         ? 'shield-cyan'
         : state.bossMove === 'eruption'
@@ -497,7 +531,7 @@ export default function PartyBattle({
           )}
           <VfxParticles preset={movePreset} count={interrupted ? 12 : 16} spread={85} x={84} y={48} reducedMotion={reducedMotion}/>
           <div className="party-clash-main">
-            <span className="party-clash-tag">{interrupted ? '⚡ 蓄力击破 · 爆发打断' : `首领招式揭晓 · ${moveLabel}`}</span>
+            <span className="party-clash-tag">{interrupted ? `⚡ 蓄力击破 · 爆发打断${schemeTag}` : `首领招式揭晓 · ${moveLabel}${schemeTag}`}</span>
             <strong>{interrupted ? `${moveLabel}被打断，队伍危机 -1` : `讨伐队本轮累计造成 ${totalHeroDamage} 点伤害`}</strong>
             <small>{state.bossHp <= 0 ? '首领已被击破！' : `首领剩余生命 ${state.bossHp} / ${state.bossMaxHp} · 危机 ${state.crisis} / ${state.maxCrisis}`}</small>
           </div>
@@ -548,7 +582,7 @@ export default function PartyBattle({
       : me.confirmed
         ? `已提交本轮计划 · 等待其余玩家确认 (${allReady}/${state.players.length})`
         : resultsPhase
-          ? (me.supplies > 0 ? `你有 ${me.supplies} 点补给可购买下方强化，买完点「准备下一轮」` : `已准备 ${allReady}/${state.players.length} · 点击准备进入下一轮`)
+          ? (me.supplies > 0 ? `你有 ${me.supplies} 点补给可三选一星神奇物，选完点「准备下一轮」` : `已准备 ${allReady}/${state.players.length} · 点击准备进入下一轮`)
           : finished
             ? '对局已结束'
             : legal.reason
@@ -578,6 +612,17 @@ export default function PartyBattle({
             <Sparkles size={11}/>
             <span>{state.roundRule.name}</span>
           </button>
+          {activeWeather && (
+            <button
+              type="button"
+              className={`party-weather-badge ${ruleOpen ? 'active' : ''}`}
+              onClick={() => setRuleOpen(v => !v)}
+              title={`当前天象：${activeWeather.name} — ${activeWeather.description}`}
+            >
+              <CloudSun size={11}/>
+              <span>{activeWeather.name}</span>
+            </button>
+          )}
           {(state.mode === 'raid' || state.mode === 'overlord')
             ? <span className="party-meta-stat">首领 <b>{state.bossHp}</b>/{state.bossMaxHp} · 危机 <b>{state.crisis}</b>/{state.maxCrisis}</span>
             : <span className="party-meta-stat">第 <b>{myRank}</b> 名 · <b>{me.score}</b> 分</span>}
@@ -594,6 +639,10 @@ export default function PartyBattle({
         <div className="weather-popover party-rule-popover" data-sweep-ignore="true">
           <strong>本轮规则：{state.roundRule.name}</strong>
           <p>{state.roundRule.description}</p>
+          <div className="party-popover-weather">
+            <strong><CloudSun size={13}/>{activeWeather ? `当前天象：${activeWeather.name}` : '动态天象：晴空备战'}</strong>
+            <p>{activeWeather ? activeWeather.description : '第 2 轮起每两轮自动轮转星穹天象，改变全场攻防与骰面环境。'}</p>
+          </div>
           {myPrismDef && <button type="button" className="text-button" onClick={() => { setRuleOpen(false); setDialog('prismatic'); }}>查看我的曜彩骰面</button>}
         </div>
       )}
@@ -697,8 +746,16 @@ export default function PartyBattle({
                   <div className="party-boss-identity">
                     <Crown size={15}/>
                     <div>
-                      <strong>{state.bossPlayerId ? (state.players.find(p => p.id === state.bossPlayerId)?.name || '玩家首领') : '裂界首领'}</strong>
-                      <small>{me.role === 'boss' ? '你扮演首领 · 选择本轮秘密招式' : `预告：${state.bossTelegraph}`}</small>
+                      <strong>
+                        {state.mode === 'overlord' && state.round === 1
+                          ? `⚡ 首领揭晓 · ${bossName}`
+                          : `${bossName}${state.bossPhase >= 2 && state.mode === 'overlord' ? ' · 二阶段全招式觉醒' : ''}`}
+                      </strong>
+                      <small>
+                        {me.role === 'boss'
+                          ? (state.round === 1 ? '你已觉醒为裂界首领 · 搭配秘密招式与奇策设局' : `已选「${moveInfo[state.bossMove].name} + ${BOSS_SCHEMES[activeScheme].name}」`)
+                          : `预告：${state.bossTelegraph}${state.mode === 'overlord' ? '（首领同步暗设奇策）' : ''}`}
+                      </small>
                     </div>
                   </div>
                   <div className="party-boss-bar">
@@ -712,26 +769,56 @@ export default function PartyBattle({
               )}
 
               {me.role === 'boss' ? (
-                <div className={`party-target-row boss-moves count-${Math.min(state.bossMoves.length, 4)}`}>
-                  {state.bossMoves.map(m => {
-                    const chosen = state.bossMove === m;
-                    return (
-                      <button
-                        key={m}
-                        disabled={disabled}
-                        className={`party-stage-card ${chosen ? 'active' : ''}`}
-                        onClick={() => command({ type: 'bossMove', playerId, move: m })}
-                      >
-                        <div className="party-stage-head">
-                          {moveInfo[m].icon}
-                          <strong>{moveInfo[m].name}</strong>
-                          <span className="party-stage-tag">{chosen ? '已选招式' : '点击选用'}</span>
+                <>
+                  <div className="party-boss-intel-row" aria-label="首领战场部件态势">
+                    {state.targets.map(t => {
+                      const targeters = state.players.filter(p => p.role !== 'boss' && p.plan.targetId === t.id && p.plan.stance === 'assault');
+                      const hpPct = percent(t.hp, t.maxHp);
+                      return (
+                        <div
+                          key={t.id}
+                          className={`party-boss-intel-chip ${t.broken ? 'broken' : ''} ${targeters.length > 0 ? 'targeted' : ''}`}
+                          title={targeters.length ? `正在瞄准 ${t.name}：${targeters.map(p => p.name).join('、')}` : `${t.name}：暂无讨伐队员集火`}
+                        >
+                          <div className="intel-chip-top">
+                            {targetIcon(t.kind)}
+                            <strong>{t.name}</strong>
+                            <span>{t.broken ? '已破' : `${t.hp}/${t.maxHp}`}</span>
+                            <em className={targeters.length > 0 ? 'hot' : ''}>{targeters.length}攻</em>
+                          </div>
+                          <div className="party-target-meter">
+                            <i className="ghost" style={{ width: `${Math.max(hpPct, targetGhostPct[t.id] ?? hpPct)}%` }}/>
+                            <i className="fill" style={{ width: `${hpPct}%` }}/>
+                          </div>
                         </div>
-                        <small>{moveInfo[m].hint}</small>
-                      </button>
-                    );
-                  })}
-                </div>
+                      );
+                    })}
+                    <div className="party-boss-posture-chip" title="讨伐队当前站位分布">
+                      <Eye size={12}/>
+                      <span>守<b>{heroGuards}</b> · 援<b>{heroSupports}</b></span>
+                    </div>
+                  </div>
+                  <div className={`party-target-row boss-moves count-${Math.min(state.bossMoves.length, 4)}`}>
+                    {state.bossMoves.map(m => {
+                      const chosen = state.bossMove === m;
+                      return (
+                        <button
+                          key={m}
+                          disabled={disabled}
+                          className={`party-stage-card ${chosen ? 'active' : ''}`}
+                          onClick={() => command({ type: 'bossMove', playerId, move: m })}
+                        >
+                          <div className="party-stage-head">
+                            {moveInfo[m].icon}
+                            <strong>{moveInfo[m].name}</strong>
+                            <span className="party-stage-tag">{chosen ? '已选招式' : '点击选用'}</span>
+                          </div>
+                          <small>{moveInfo[m].hint}</small>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </>
               ) : (
                 <div className={`party-target-row count-${Math.min(state.targets.length, 4)}`}>
                   {state.targets.map(t => {
@@ -778,10 +865,28 @@ export default function PartyBattle({
               )}
             </div>
 
-            {/* Central Phase Line + Stance Selector */}
+            {/* Central Phase Line + Stance / Boss Scheme Selector */}
             <div className="phase-line party-phase-line" data-sweep-ignore="true">
               <div className="party-phase-side left">
-                {me.role !== 'boss' && state.mode !== 'treasure' ? (
+                {me.role === 'boss' ? (
+                  <div className="party-stance-pills boss-schemes" role="group" aria-label="裂界奇策">
+                    {(['crisis_siphon', 'fortify_shield', 'overcharge'] as BossScheme[]).map(sc => {
+                      const info = BOSS_SCHEMES[sc];
+                      return (
+                        <button
+                          key={sc}
+                          type="button"
+                          className={activeScheme === sc ? 'active' : ''}
+                          disabled={disabled}
+                          title={info.description}
+                          onClick={() => command({ type: 'bossScheme', playerId, scheme: sc })}
+                        >
+                          <span>{info.name}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                ) : state.mode !== 'treasure' ? (
                   <div className="party-stance-pills" role="group" aria-label="本轮姿态">
                     {(['assault', 'guard', 'support'] as PartyStance[]).map(st => {
                       const info = stanceOptions[st];
@@ -804,19 +909,24 @@ export default function PartyBattle({
                 ) : <span className="line"/>}
               </div>
 
-              <div className="phase-announcement" key={`${state.round}-${me.plan.stance}-${me.plan.targetId}-${me.confirmed}`}>
+              <div className="phase-announcement" key={`${state.round}-${me.plan.stance}-${me.plan.targetId}-${state.bossMove}-${activeScheme}-${me.confirmed}`}>
                 <span>ROUND {String(state.round).padStart(2, '0')}</span>
                 <b>
                   {me.confirmed
                     ? '等待全员确认'
                     : me.role === 'boss'
-                      ? `首领 · ${moveInfo[state.bossMove].name}`
+                      ? `首领 · ${moveInfo[state.bossMove].name} · ${BOSS_SCHEMES[activeScheme].name}`
                       : `${stanceOptions[me.plan.stance].name} · ${selectedTarget?.name || '行动中'}`}
                 </b>
               </div>
 
               <div className="party-phase-side right">
                 <span className="line"/>
+                {me.role === 'boss' && (
+                  <span className="party-scheme-badge" title={BOSS_SCHEMES[activeScheme].description}>
+                    {BOSS_SCHEMES[activeScheme].short}
+                  </span>
+                )}
                 {me.role !== 'boss' && me.plan.stance === 'support' && supportPlayers.length > 0 && (
                   <span className="party-support-badge">
                     援护：{state.players.find(p => p.id === me.plan.supportPlayerId)?.name || '请点选同队头像'}
@@ -906,8 +1016,8 @@ export default function PartyBattle({
                   <div className="hud-levels">
                     <span><Swords size={12}/>{me.attackLevel || '∞'}</span>
                     <span><Shield size={12}/>{me.defenseLevel}</span>
-                    <span>{stanceOptions[me.plan.stance].name}</span>
-                    <StatusBadges statuses={me.statuses} upgrades={me.upgrades}/>
+                    <span>{me.role === 'boss' ? BOSS_SCHEMES[activeScheme].name : stanceOptions[me.plan.stance].name}</span>
+                    <StatusBadges statuses={me.statuses} upgrades={me.upgrades} curios={me.curios}/>
                   </div>
                 </div>
                 <div className="hud-power">
@@ -938,38 +1048,105 @@ export default function PartyBattle({
                     </div>
                   </div>
                   <div className="party-results-upgrades">
-                    <div className="party-upgrade-head">
-                      <h4><Sparkles size={15}/>轮间补给成长</h4>
-                      <span className={me.supplies > 0 && !me.upgradedThisRound ? 'supply-hot' : ''}>
-                        可用补给 <b>{me.supplies}</b>
-                      </span>
-                    </div>
-                    {me.supplies > 0 && !me.upgradedThisRound && !me.ready && (
-                      <p className="party-upgrade-tip">你本轮获得了 1 点补给！点击以下卡片永久强化角色：</p>
-                    )}
-                    <div className="party-upgrade-grid">
-                      {(['power', 'ward', 'fortune'] as PartyUpgrade[]).map(key => {
-                        const u = upgradeInfo[key];
-                        const level = me.upgrades[key];
-                        const canBuy = !busy && legal.canUpgrade && level < 3;
-                        return (
-                          <button
-                            key={key}
-                            className={`party-upgrade-card ${upgradeBurst === key ? 'is-upgraded' : ''}`}
-                            disabled={!canBuy}
-                            onClick={() => command({ type: 'upgrade', playerId, upgrade: key })}
-                          >
-                            <div className="party-upgrade-top">
-                              {u.icon}
-                              <strong>{u.name}</strong>
-                              <span>Lv.{level}/3</span>
+                    {(me.curioOffers?.length ?? 0) > 0 ? (
+                      <>
+                        <div className="party-upgrade-head">
+                          <h4><Sparkles size={15}/>星神奇物 · 三选一</h4>
+                          <span className={me.supplies > 0 && !me.upgradedThisRound ? 'supply-hot' : ''}>
+                            可用补给 <b>{me.supplies}</b>
+                          </span>
+                        </div>
+                        {me.supplies > 0 && !me.upgradedThisRound && !me.ready && (
+                          <p className="party-upgrade-tip">
+                            {me.role === 'boss'
+                              ? '抉择一件星神奇物或专属凶星词条，构筑本局首领流派：'
+                              : '获得 1 点补给！从三件星神奇物中择一永久构筑（含普通骰升阶）：'}
+                          </p>
+                        )}
+                        <div className="party-upgrade-grid">
+                          {me.curioOffers.map(curioId => {
+                            const def = PARTY_CURIO_BY_ID[curioId];
+                            if (!def) return null;
+                            const owned = (me.curios || []).filter(c => c === curioId).length;
+                            const canPick = !busy && legal.canUpgrade;
+                            return (
+                              <button
+                                key={curioId}
+                                className={`party-upgrade-card is-curio ${def.bossOnly ? 'is-boss-curio' : ''} ${upgradeBurst === curioId ? 'is-upgraded' : ''}`}
+                                disabled={!canPick}
+                                onClick={() => command({ type: 'chooseCurio', playerId, curioId })}
+                              >
+                                <div className="party-upgrade-top">
+                                  <em className={`curio-path-tag ${def.bossOnly ? 'boss' : ''}`}>{def.path}</em>
+                                  <strong>{def.name}</strong>
+                                  <span>{owned > 0 ? `叠层 ${owned + 1}/${def.maxStacks ?? 1}` : '点击选取'}</span>
+                                </div>
+                                <small>{def.description}</small>
+                                {upgradeBurst === curioId && <VfxParticles preset="heal-aurora" count={12} spread={70} x={50} y={40} reducedMotion={reducedMotion}/>}
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </>
+                    ) : (me.curios?.length ?? 0) > 0 && !(me.supplies > 0 && !me.upgradedThisRound) ? (
+                      <>
+                        <div className="party-upgrade-head">
+                          <h4><Sparkles size={15}/>已构筑星神奇物 ({me.curios.length})</h4>
+                          <span>本轮已选取 ✓</span>
+                        </div>
+                        <div className="party-upgrade-grid">
+                          {groupCurios(me.curios).map(({ id, count, def }) => (
+                            <div
+                              key={id}
+                              className={`party-upgrade-card is-curio is-owned ${def.bossOnly ? 'is-boss-curio' : ''} ${upgradeBurst === id ? 'is-upgraded' : ''}`}
+                            >
+                              <div className="party-upgrade-top">
+                                <em className={`curio-path-tag ${def.bossOnly ? 'boss' : ''}`}>{def.path}</em>
+                                <strong>{def.name}</strong>
+                                <span>{count > 1 ? `×${count}` : '生效中'}</span>
+                              </div>
+                              <small>{def.description}</small>
+                              {upgradeBurst === id && <VfxParticles preset="heal-aurora" count={12} spread={70} x={50} y={40} reducedMotion={reducedMotion}/>}
                             </div>
-                            <small>{u.hint}</small>
-                            {upgradeBurst === key && <VfxParticles preset="heal-aurora" count={12} spread={70} x={50} y={40} reducedMotion={reducedMotion}/>}
-                          </button>
-                        );
-                      })}
-                    </div>
+                          ))}
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <div className="party-upgrade-head">
+                          <h4><Sparkles size={15}/>轮间补给成长</h4>
+                          <span className={me.supplies > 0 && !me.upgradedThisRound ? 'supply-hot' : ''}>
+                            可用补给 <b>{me.supplies}</b>
+                          </span>
+                        </div>
+                        {me.supplies > 0 && !me.upgradedThisRound && !me.ready && (
+                          <p className="party-upgrade-tip">你本轮获得了 1 点补给！点击以下卡片永久强化角色：</p>
+                        )}
+                        <div className="party-upgrade-grid">
+                          {(['power', 'ward', 'fortune'] as PartyUpgrade[]).map(key => {
+                            const u = upgradeInfo[key];
+                            const level = me.upgrades[key];
+                            const canBuy = !busy && legal.canUpgrade && level < 3;
+                            return (
+                              <button
+                                key={key}
+                                className={`party-upgrade-card ${upgradeBurst === key ? 'is-upgraded' : ''}`}
+                                disabled={!canBuy}
+                                onClick={() => command({ type: 'upgrade', playerId, upgrade: key })}
+                              >
+                                <div className="party-upgrade-top">
+                                  {u.icon}
+                                  <strong>{u.name}</strong>
+                                  <span>Lv.{level}/3</span>
+                                </div>
+                                <small>{u.hint}</small>
+                                {upgradeBurst === key && <VfxParticles preset="heal-aurora" count={12} spread={70} x={50} y={40} reducedMotion={reducedMotion}/>}
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </>
+                    )}
                     <button
                       className="primary full party-ready-btn"
                       disabled={busy || !legal.canReady}
@@ -986,8 +1163,8 @@ export default function PartyBattle({
 
         <aside className="action-rail party-action-rail" data-sweep-ignore="true" data-party-coach="actions">
           <button className={`weather-button ${ruleOpen ? 'active' : ''}`} onClick={() => setRuleOpen(v => !v)}>
-            <Sparkles size={22}/>
-            <span>{state.roundRule.name}</span>
+            {activeWeather ? <CloudSun size={22}/> : <Sparkles size={22}/>}
+            <span>{activeWeather ? `${state.roundRule.name} · ${activeWeather.name}` : state.roundRule.name}</span>
             <ChevronDown size={12}/>
           </button>
           <div className="rail-spacer"/>
@@ -1073,6 +1250,12 @@ export default function PartyBattle({
                 {Object.entries(moveInfo).map(([k, v]) => <p key={k}><strong>{v.name}：</strong>{v.hint}</p>)}
               </>
             )}
+            {state.mode === 'overlord' && (
+              <>
+                <h3>首领裂界奇策</h3>
+                {Object.entries(BOSS_SCHEMES).map(([k, v]) => <p key={k}><strong>{v.name}：</strong>{v.description}</p>)}
+              </>
+            )}
             <div className="modal-actions">
               <button className="secondary" onClick={() => { setDialog(null); restartCoach(); }}>重看牌桌指引</button>
               <button className="primary" onClick={() => setDialog(null)}>返回牌桌</button>
@@ -1114,7 +1297,15 @@ export default function PartyBattle({
           <div className="prose">
             <p>{cleanText(inspectedSource?.description || inspectedCard.description || '')}</p>
             {inspectedSource && <CharacterDetails card={inspectedSource}/>}
-            <StatusBadges statuses={inspectedPlayer.statuses} upgrades={inspectedPlayer.upgrades}/>
+            <StatusBadges statuses={inspectedPlayer.statuses} upgrades={inspectedPlayer.upgrades} curios={inspectedPlayer.curios}/>
+            {(inspectedPlayer.curios?.length ?? 0) > 0 && (
+              <>
+                <h3>已获星神奇物</h3>
+                {groupCurios(inspectedPlayer.curios).map(({ id, count, def }) => (
+                  <p key={id}><strong>【{def.path}】{def.name}{count > 1 ? ` ×${count}` : ''}：</strong>{def.description}</p>
+                ))}
+              </>
+            )}
             {inspectedPlayer.id === me.id && myPrismDef && (
               <>
                 <h3>携带曜彩骰</h3>

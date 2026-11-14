@@ -5,11 +5,14 @@ export type PartyPhase = 'planning' | 'results' | 'finished';
 export type PartyStance = 'assault' | 'guard' | 'support';
 export type PartyUpgrade = 'power' | 'ward' | 'fortune';
 export type OverlordMove = 'sweep' | 'drain' | 'eruption';
-export interface PartyConfig { mode: PartyMode; players: PlayerConfig[]; catalog?: GameCatalog; maxRounds?: number; }
+export type BossScheme = 'crisis_siphon' | 'fortify_shield' | 'overcharge';
+export interface PartyCurioDef { id: string; name: string; path: string; description: string; bossOnly?: boolean; maxStacks?: number; }
+export interface PartyConfig { mode: PartyMode; players: PlayerConfig[]; catalog?: GameCatalog; maxRounds?: number; weather?: 'random' | 'off'; }
 export interface PartyPlan { targetId: string; stance: PartyStance; supportPlayerId?: string; }
 export interface PartyPlayer extends PlayerState {
   teamId: string; role: 'hero' | 'boss'; score: number; ready: boolean; plan: PartyPlan;
   contribution: number; supplies: number; upgrades: Record<PartyUpgrade, number>; upgradedThisRound: boolean; exchangedThisRound: boolean;
+  curios: string[]; curioOffers: string[];
 }
 export interface PartyTarget {
   id: string; name: string; description: string; kind: 'fire' | 'bastion' | 'puzzle' | 'core' | 'shield' | 'charge' | 'arena';
@@ -20,8 +23,9 @@ export interface PartyEvent { id: number; round: number; text: string; playerId?
 export interface PartyState {
   kind: 'party'; version: 1; mode: PartyMode; phase: PartyPhase; round: number; maxRounds: number;
   seed: number; nextId: number; players: PartyPlayer[]; catalog: GameCatalog; targets: PartyTarget[];
-  weatherId: string | null; roundRule: { name: string; description: string; kind: 'bounty' | 'precision' | 'respite' | 'surge' };
-  crisis: number; maxCrisis: number; bossPhase: number; bossMoves: OverlordMove[]; bossMove: OverlordMove;
+  weatherId: string | null; weatherSchedule?: 'random' | 'off';
+  roundRule: { name: string; description: string; kind: 'bounty' | 'precision' | 'respite' | 'surge' };
+  crisis: number; maxCrisis: number; bossPhase: number; bossMoves: OverlordMove[]; bossMove: OverlordMove; bossScheme: BossScheme;
   bossTelegraph: string; bossPlayerId: string | null; bossHp: number; bossMaxHp: number;
   log: PartyEvent[]; results: PartyRoundResult[]; battleEvents: GameEvent[];
   /** Persistent objective combatants retain poison and other character effects. */
@@ -39,9 +43,11 @@ export type PartyCommand = { playerId: string } & (
   | { type: 'exchange'; targetPlayerId: string; ownDieId: string; targetDieId: string }
   | { type: 'plan'; targetId: string; stance: PartyStance; supportPlayerId?: string }
   | { type: 'bossMove'; move: OverlordMove }
+  | { type: 'bossScheme'; scheme: BossScheme }
   | { type: 'confirm'; diceIds?: string[] }
   | { type: 'ready' }
   | { type: 'upgrade'; upgrade: PartyUpgrade }
+  | { type: 'chooseCurio'; curioId: string }
 );
 export interface PartyLegalActions {
   canAct: boolean; canSelect: boolean; canReroll: boolean; canPrismatic: boolean; canConfirm: boolean;

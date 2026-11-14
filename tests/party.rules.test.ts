@@ -360,4 +360,79 @@ describe('party modes share character combat with independent objectives', () =>
     expect(drainState.players[1].hp).toBeGreaterThanOrEqual(beforeWeakHp);
     expect(drainState.log.some(e => e.text.includes('挡下了首领汲取'))).toBe(true);
   });
+
+  it('supports overlord boss schemes, phase-2 3-move unlock, and hides secret bossMove from AI heroes', () => {
+    let s = make('overlord', 4, 'future-character', 303);
+    s.bossMoves = ['sweep', 'eruption'];
+    // Non-boss cannot set bossScheme; boss can switch schemes freely before confirming.
+    expect(applyPartyCommand(s, { type: 'bossScheme', playerId: 'p1', scheme: 'overcharge' }).error).toBeTruthy();
+    s = command(s, { type: 'bossScheme', playerId: 'p0', scheme: 'overcharge' });
+    expect(s.bossScheme).toBe('overcharge');
+
+    // AI hero decision depends only on public bossMoves, never peeking at secret s.bossMove.
+    const withSweepSecret = structuredClone(s);
+    withSweepSecret.bossMove = 'sweep';
+    const withEruptionSecret = structuredClone(s);
+    withEruptionSecret.bossMove = 'eruption';
+    expect(choosePartyAiCommand(withSweepSecret, 'p1')).toEqual(choosePartyAiCommand(withEruptionSecret, 'p1'));
+
+    // Fortify shield reduces shield damage and heals boss +6 when shield survives.
+    let fortify = command(make('overlord', 4, 'future-character', 304), { type: 'bossScheme', playerId: 'p0', scheme: 'fortify_shield' });
+    fortify.roundRule = { kind: 'bounty', name: '悬赏', description: 'bounty' };
+    fortify.bossHp = fortify.players[0].hp = fortify.bossMaxHp - 20;
+    fortify.targets.find(t => t.id === 'core')!.hp = fortify.bossHp;
+    fortify.targets.find(t => t.id === 'shield')!.hp = 50;
+    fortify = command(fortify, { type: 'plan', playerId: 'p1', targetId: 'shield', stance: 'assault' });
+    const preHp = fortify.bossHp;
+    for (const p of fortify.players) fortify = confirmFixed(fortify, p.id, Array(getPartyLegalActions(fortify, p.id).requiredDice).fill(2));
+    expect(fortify.log.some(e => e.text.includes('护盾增幅'))).toBe(true);
+    expect(fortify.bossHp).toBeGreaterThan(preHp - 10);
+
+    // Phase-2 overlord unlocks all 3 moves on next round start.
+    let p2 = make('overlord', 4, 'future-character', 305);
+    p2.bossHp = p2.players[0].hp = Math.floor(p2.bossMaxHp * 0.4);
+    p2.targets.find(t => t.id === 'core')!.hp = p2.bossHp;
+    p2 = finishRound(p2);
+    if (p2.phase === 'results') {
+      for (const p of p2.players) p2 = command(p2, { type: 'ready', playerId: p.id });
+      expect(p2.bossPhase).toBe(2);
+      expect(p2.bossMoves).toEqual(['sweep', 'drain', 'eruption']);
+    }
+  });
+
+  it('offers 3-pick curios, permanently forges normal dice across rounds, and rotates dynamic weather', () => {
+    let s = make('raid', 4, 'future-character', 404);
+    expect(s.weatherId).toBeNull();
+    s = finishRound(s);
+    expect(s.phase).toBe('results');
+    for (const p of s.players) {
+      expect(p.curioOffers).toHaveLength(3);
+      expect(new Set(p.curioOffers).size).toBe(3);
+      expect(p.curioOffers.every(id => !id.startsWith('boss_'))).toBe(true);
+    }
+    // Force forge_dice into p0's offer to verify permanent normal-die forging across rounds.
+    s.players[0].curioOffers[0] = 'forge_dice';
+    s = command(s, { type: 'chooseCurio', playerId: 'p0', curioId: 'forge_dice' });
+    expect(s.players[0].curios).toContain('forge_dice');
+    expect(s.players[0].curioOffers).toHaveLength(0);
+    expect(s.players[0].dice.filter(d => !d.prismatic && d.sides === 8).length).toBeGreaterThanOrEqual(2);
+
+    // Advance to Round 2 (even round): forged dice persist as D8 and dynamic weather rotates!
+    for (const p of s.players) s = command(s, { type: 'ready', playerId: p.id });
+    expect(s.round).toBe(2);
+    expect(s.players[0].dice.filter(d => !d.prismatic && d.sides === 8).length).toBeGreaterThanOrEqual(2);
+    expect(s.weatherId).toBeTruthy();
+
+    // Weather can also be explicitly disabled via weather: 'off'.
+    let noWeather = createPartyMatch({
+      mode: 'treasure',
+      catalog,
+      weather: 'off',
+      players: Array.from({ length: 4 }, (_, i) => ({ id: `p${i}`, name: `玩家${i}`, cardId: 'future-character', isAI: true })),
+    }, 405);
+    noWeather = finishRound(noWeather);
+    for (const p of noWeather.players) noWeather = command(noWeather, { type: 'ready', playerId: p.id });
+    expect(noWeather.round).toBe(2);
+    expect(noWeather.weatherId).toBeNull();
+  });
 });

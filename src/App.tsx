@@ -23,6 +23,7 @@ import OnlinePanel from './components/OnlinePanel';
 import PartyHub from './components/PartyHub';
 import type { Loadout } from './components/OnlinePanel';
 import { CharacterDetails, DiceDetails } from './components/LoadoutDetails';
+import { normalizeDraftLoadout } from './lib/partyLobby';
 import { createTutorialProgress, getTutorialStep, type TutorialProgress } from './lib/tutorial';
 
 type Page = 'home' | 'campaign' | 'collection' | 'shop' | 'online' | 'battle' | 'party';
@@ -216,7 +217,15 @@ export default function App() {
   async function startOnline() {
     try {
       const s = getSession(), room = s.getSnapshot().room; if (!room) return;
-      const players = [...room.players].sort((a, b) => a.seat - b.seat).map(p => { const l = p.loadout as Loadout | undefined; return { id: p.id, name: p.name, cardId: cards.some(c => c.id === l?.cardId) ? l!.cardId : initialLoadout.cardId, prismaticId: l?.prismaticId, gild: l?.gild || 0 }; });
+      const hostDraftSeed = (room.players.find(p => p.seat === 0)?.loadout as Loadout | undefined)?.draftSeed;
+      const players = [...room.players].sort((a, b) => a.seat - b.seat).map(p => {
+        const l = p.loadout as Loadout | undefined;
+        if (hostDraftSeed) {
+          const drafted = normalizeDraftLoadout(l, `${room.code}:${hostDraftSeed}`, p.id, l?.gild || 0);
+          return { id: p.id, name: p.name, cardId: drafted.cardId, prismaticId: drafted.prismaticId, gild: drafted.gild };
+        }
+        return { id: p.id, name: p.name, cardId: cards.some(c => c.id === l?.cardId) ? l!.cardId : initialLoadout.cardId, prismaticId: l?.prismaticId, gild: l?.gild || 0 };
+      });
       const coopStage = coopStages.find(c => c.id === coopChoice) || coopStages[0];
       const config: MatchConfig = { mode: room.mode === 'coop' ? 'coop' : 'classic', players, ...(room.mode === 'coop' ? { coopStageId: coopStage.id, bossPhases: coopStage.bossCardIds.map(cardId => ({ cardId })) } : { weather: 'random' as const, startingSide: 'random' as const }) };
       const seed = crypto.getRandomValues(new Uint32Array(1))[0];

@@ -16,7 +16,9 @@ export function isPartyState(value: unknown): value is PartyState {
       && p.dice.every(d => d && typeof d.id === 'string' && Number.isFinite(d.value) && Number.isFinite(d.sides))
       && p.selectedIds.every(id => typeof id === 'string') && typeof p.teamId === 'string' && ['hero', 'boss'].includes(p.role)
       && !!p.plan && ['assault', 'guard', 'support'].includes(p.plan.stance) && typeof p.plan.targetId === 'string'
-      && !!p.statuses && !!p.modifiers && !!p.upgrades && ['power', 'ward', 'fortune'].every(k => Number.isFinite(p.upgrades[k as keyof typeof p.upgrades])))
+      && !!p.statuses && !!p.modifiers && !!p.upgrades && ['power', 'ward', 'fortune'].every(k => Number.isFinite(p.upgrades[k as keyof typeof p.upgrades]))
+      && (p.curios === undefined || (Array.isArray(p.curios) && p.curios.every(id => typeof id === 'string')))
+      && (p.curioOffers === undefined || (Array.isArray(p.curioOffers) && p.curioOffers.every(id => typeof id === 'string'))))
     && !!s.catalog && Array.isArray(s.catalog.cards) && s.catalog.cards.every(c => c && typeof c.id === 'string')
     && Array.isArray(s.catalog.prismatics) && Array.isArray(s.catalog.weather) && Array.isArray(s.catalog.tactics)
     && !!s.enemies && typeof s.enemies === 'object'
@@ -26,6 +28,8 @@ export function isPartyState(value: unknown): value is PartyState {
     && Array.isArray(s.log) && s.log.every(e => e && typeof e.text === 'string')
     && Array.isArray(s.results) && s.results.every(r => r && typeof r.playerId === 'string')
     && Array.isArray(s.battleEvents) && Array.isArray(s.winnerTeamIds) && Array.isArray(s.bossMoves)
+    && (s.bossScheme === undefined || ['crisis_siphon', 'fortify_shield', 'overcharge'].includes(s.bossScheme))
+    && (s.weatherSchedule === undefined || ['random', 'off'].includes(s.weatherSchedule))
     && (s.swapPools === undefined || (typeof s.swapPools === 'object' && s.swapPools !== null && !Array.isArray(s.swapPools) && Object.values(s.swapPools).every(pool => Array.isArray(pool) && pool.every(d => d && typeof d.id === 'string' && Number.isFinite(d.value) && Number.isFinite(d.sides)))))
     && !!s.roundRule && typeof s.roundRule.name === 'string' && Number.isFinite(s.bossHp) && Number.isFinite(s.crisis);
 }
@@ -44,9 +48,10 @@ export function partyCommandScope(state: PartyState, command: PartyCommand, cont
   if (!p) throw new Error('操作角色不存在。');
   const target = command.type === 'exchange' ? state.players.find(q => q.id === command.targetPlayerId) : undefined;
   const pool = command.type === 'poolSwap' ? state.swapPools?.[p.teamId] : undefined;
+  const bossState = p.role === 'boss' ? [state.bossMove, state.bossScheme] : undefined;
   return JSON.stringify([context.matchId, state.round, state.phase, p.id, p.dice, p.selectedIds, p.rerolls,
     p.rollsUsed, p.prismaticUses, p.prismaticRolled, p.confirmed, p.ready, p.plan, p.supplies, p.upgrades, p.upgradedThisRound,
-    p.exchangedThisRound, target && [target.id, target.dice, target.confirmed, target.exchangedThisRound], pool]);
+    p.exchangedThisRound, p.curios, p.curioOffers, bossState, target && [target.id, target.dice, target.confirmed, target.exchangedThisRound], pool]);
 }
 
 /** Catalog is frozen once per match; ordinary updates only carry mutable party state. */
@@ -60,8 +65,15 @@ export const partyStateCodec: StateCodec<PartyState> = {
   },
   decode(previous, payload) {
     if (!payload || typeof payload !== 'object' || Array.isArray(payload)) throw new Error('多人局面更新无效。');
-    for (const key of Object.keys(payload)) if (key === 'catalog' || key === '__proto__' || (!Object.hasOwn(previous, key) && key !== 'reason' && key !== 'swapPools')) throw new Error('多人局面字段无效。');
-    const next = { ...previous, ...payload, swapPools: (payload as Partial<PartyState>).swapPools ?? previous.swapPools ?? {}, catalog: previous.catalog };
+    const allowedExtra = new Set(['reason', 'swapPools', 'bossScheme', 'weatherSchedule']);
+    for (const key of Object.keys(payload)) if (key === 'catalog' || key === '__proto__' || (!Object.hasOwn(previous, key) && !allowedExtra.has(key))) throw new Error('多人局面字段无效。');
+    const next = {
+      ...previous,
+      ...payload,
+      bossScheme: (payload as Partial<PartyState>).bossScheme ?? previous.bossScheme ?? 'crisis_siphon',
+      swapPools: (payload as Partial<PartyState>).swapPools ?? previous.swapPools ?? {},
+      catalog: previous.catalog,
+    };
     if (!isPartyState(next)) throw new Error('多人局面不完整。');
     return next;
   },

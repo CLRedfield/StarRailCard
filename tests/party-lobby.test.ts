@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { cards, prismaticDice } from '../src/data';
-import { createPartyRoster, normalizePartyLoadout } from '../src/lib/partyLobby';
+import { createPartyRoster, getDraftPool, normalizeDraftLoadout, normalizePartyLoadout } from '../src/lib/partyLobby';
 import { createPartyMatch } from '../src/game/party';
 import { isPartyState, partyStateCodec } from '../src/net/partySync';
 
@@ -40,5 +40,51 @@ describe('party preparation and persisted snapshots', () => {
     }
     expect(isPartyState(JSON.parse(JSON.stringify(state)))).toBe(true);
     expect(() => partyStateCodec.decode(state, { catalog: {} })).toThrow();
+  });
+
+  it('supports blind-reveal random_human and random_any boss selection in overlord', () => {
+    const humans = [
+      { id: 'alice', name: 'Alice', loadout: { cardId: cards[0].id } },
+      { id: 'bob', name: 'Bob', loadout: { cardId: cards[1].id } },
+    ];
+    const humanBosses = new Set(Array.from({ length: 6 }, (_, v) => createPartyRoster('overlord', humans, 5, 'random_human', v)[0].id));
+    expect(humanBosses).toEqual(new Set(['alice', 'bob']));
+
+    const anyBosses = Array.from({ length: 5 }, (_, v) => createPartyRoster('overlord', humans, 5, 'random_any', v)[0]);
+    expect(anyBosses.some(p => !p.isAI)).toBe(true);
+    expect(anyBosses.some(p => p.isAI)).toBe(true);
+  });
+
+  it('deals deterministic 3-card + 3-dice blind-box draft pools and enforces them in roster creation', () => {
+    const poolA = getDraftPool('ROOM1:42', 'alice');
+    const poolB = getDraftPool('ROOM1:42', 'bob');
+    expect(poolA.cardIds).toHaveLength(3);
+    expect(new Set(poolA.cardIds).size).toBe(3);
+    expect(poolA).toEqual(getDraftPool('ROOM1:42', 'alice'));
+    expect(poolA.cardIds).not.toEqual(poolB.cardIds);
+
+    const pickedCard = cards.find(c => c.id === poolA.cardIds[1])!;
+    const cardPool = getDraftPool('ROOM1:42', 'alice', pickedCard.id);
+    if (pickedCard.prismaticId) {
+      expect(cardPool.prismaticIds).toHaveLength(3);
+      expect(cardPool.prismaticIds[0]).toBe(pickedCard.prismaticId);
+      expect(new Set(cardPool.prismaticIds).size).toBe(3);
+    }
+
+    const illegalCard = cards.find(c => !poolA.cardIds.includes(c.id))!;
+    const coerced = normalizeDraftLoadout({ cardId: illegalCard.id, prismaticId: 'invalid-die', gild: 2 }, 'ROOM1:42', 'alice');
+    expect(poolA.cardIds).toContain(coerced.cardId);
+    expect(coerced.gild).toBe(2);
+
+    const draftedRoster = createPartyRoster(
+      'treasure',
+      [{ id: 'alice', name: 'Alice', loadout: { cardId: illegalCard.id } }],
+      4,
+      undefined,
+      9,
+      { draftSeed: 'ROOM1:42' },
+    );
+    expect(poolA.cardIds).toContain(draftedRoster[0].cardId);
+    expect(getDraftPool('ROOM1:42', 'party-bot-1').cardIds).toContain(draftedRoster[1].cardId);
   });
 });

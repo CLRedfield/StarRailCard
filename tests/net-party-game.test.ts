@@ -161,6 +161,33 @@ describe('real party game through multiplayer sessions', () => {
     expect(x.host.getSnapshot().game?.players[2].dice.some(d => d.id === p2Own.id)).toBe(true);
     assertSynchronized(x);
   });
+
+  it('synchronizes concurrent bossScheme, hero plans, and between-round chooseCurio without scope conflicts', async () => {
+    const x = await setup('overlord', 4, 4, 77531);
+    await Promise.all([
+      x.clients[0].sendCommand({ type: 'bossScheme', playerId: 'player_0', scheme: 'overcharge' }),
+      x.clients[1].sendCommand({ type: 'plan', playerId: 'player_1', targetId: 'shield', stance: 'assault' }),
+      x.clients[2].sendCommand({ type: 'plan', playerId: 'player_2', targetId: 'core', stance: 'guard' }),
+    ]);
+    await flush();
+    assertSynchronized(x);
+    expect(x.host.getSnapshot().game?.bossScheme).toBe('overcharge');
+
+    const latest = x.host.getSnapshot().game!;
+    await Promise.all(x.clients.map(c => c.sendCommand(confirmCommand(latest, c.getSnapshot().myId))));
+    await flush();
+    assertSynchronized(x);
+    const resultsState = x.host.getSnapshot().game!;
+    if (resultsState.phase === 'results') {
+      await Promise.all(x.clients.map((c, idx) => {
+        const offer = resultsState.players[idx].curioOffers[0];
+        return c.sendCommand({ type: 'chooseCurio', playerId: c.getSnapshot().myId, curioId: offer });
+      }));
+      await flush();
+      assertSynchronized(x);
+      expect(x.host.getSnapshot().game!.players.every(p => p.curios.length === 1)).toBe(true);
+    }
+  });
 });
 
 /** Opt-in: creates a temporary private four-person room, then removes retained packets. */

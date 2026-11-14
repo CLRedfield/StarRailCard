@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { ArrowRight, Bot, Check, Copy, Crown, Globe2, LoaderCircle, Play, RotateCcw, Users, Wifi, X } from 'lucide-react';
+import { ArrowRight, Bot, Check, Copy, Crown, Globe2, LoaderCircle, Play, RotateCcw, Shuffle, Users, Wifi, X } from 'lucide-react';
 import { cards, cardById, diceById, prismaticDice } from '../data';
 import { createPartyMatch, applyPartyCommand, choosePartyAiCommand } from '../game/party';
 import type { PartyCommand, PartyMode, PartyState } from '../game/partyTypes';
@@ -8,7 +8,7 @@ import type { OnlineSnapshot, SessionCheckpoint } from '../net';
 import { isPartyState, partyCommandScope, partyStateCodec, reducePartyCommand } from '../net/partySync';
 import { readSave, writeSave } from '../lib/storage';
 import type { Profile } from '../lib/storage';
-import { PARTY_MODES, createPartyRoster, normalizePartyLoadout, validPartyCount } from '../lib/partyLobby';
+import { PARTY_MODES, createPartyRoster, getDraftPool, normalizeDraftLoadout, normalizePartyLoadout, validPartyCount } from '../lib/partyLobby';
 import type { PartyLoadout, PartyLobbySettings } from '../lib/partyLobby';
 import CardView, { asset } from './CardView';
 import { CharacterDetails, DiceDetails } from './LoadoutDetails';
@@ -22,7 +22,7 @@ const partyOnlineKey = (() => {
     return `party-online:${id}`;
   } catch { return `party-online:${crypto.randomUUID()}`; }
 })();
-const initialSettings: PartyLobbySettings = { count: 4, maxRounds: 8, bossId: '' };
+const initialSettings: PartyLobbySettings = { count: 4, maxRounds: 8, bossId: 'random_human', draftMode: false, draftSeed: 1 };
 interface LocalParty { state: PartyState; playerId: string; }
 interface Props { profile: Profile; active: boolean; onActivate: () => void; toast: (message: string) => void; onBattleViewChange?: (inBattle: boolean) => void; }
 
@@ -82,7 +82,7 @@ export default function PartyHub({ profile, active, onActivate, toast, onBattleV
           const own = snapshot.room.players.find(p => p.id === snapshot.myId);
           if (own?.loadout) setLoadout(normalizePartyLoadout(own.loadout));
           const host = snapshot.room.players.find(p => p.seat === 0)?.loadout as { partySettings?: PartyLobbySettings } | undefined;
-          if (host?.partySettings && snapshot.isHost) setSettings({ ...host.partySettings, count: snapshot.room.capacity || host.partySettings.count });
+          if (host?.partySettings && snapshot.isHost) setSettings({ ...initialSettings, ...host.partySettings, count: snapshot.room.capacity || host.partySettings.count });
           else setSettings(current => ({ ...current, count: snapshot.room!.capacity || 4 }));
         }
         if (snapshot.game && (!previous.game || previous.matchId !== snapshot.matchId) && ['playing', 'paused'].includes(snapshot.status)) { setView('battle'); callbacks.current.onActivate(); }
@@ -92,7 +92,7 @@ export default function PartyHub({ profile, active, onActivate, toast, onBattleV
           const nextMe = snapshot.room.players.find(p => p.id === snapshot.myId);
           if (prevMe?.ready && nextMe && !nextMe.ready) callbacks.current.toast('房主调整了规则，请重新确认准备状态。');
         }
-        if (snapshot.status === 'closed' && previous.status !== 'closed') { setView('lobby'); setSettings(current => ({ ...current, bossId: current.bossId === 'ai' ? 'ai' : '' })); callbacks.current.toast(snapshot.error || '多人房间已关闭。'); }
+        if (snapshot.status === 'closed' && previous.status !== 'closed') { setView('lobby'); setSettings(current => ({ ...current, bossId: ['ai', 'random_human', 'random_any'].includes(current.bossId) ? current.bossId : 'random_human' })); callbacks.current.toast(snapshot.error || '多人房间已关闭。'); }
         if (previous.game && !snapshot.game) setView('lobby');
         previous = snapshot;
       });
@@ -124,16 +124,35 @@ export default function PartyHub({ profile, active, onActivate, toast, onBattleV
   const myId = isOnlineGame ? online!.myId : local?.playerId || 'party-player';
   const mySeat = room?.players.find(p => p.id === online?.myId);
   const hostLoadout = room?.players.find(p => p.seat === 0)?.loadout as (PartyLoadout & { partySettings?: PartyLobbySettings }) | undefined;
-  const announcedSettings = !online?.isHost && hostLoadout?.partySettings ? hostLoadout.partySettings : settings;
+  const announcedSettings: PartyLobbySettings = !online?.isHost && hostLoadout?.partySettings ? { ...initialSettings, ...hostLoadout.partySettings } : settings;
+  const effectiveSettings = room ? announcedSettings : settings;
+  const isDraft = !!effectiveSettings.draftMode;
+  const draftSeedKey = room ? `${room.code}:${effectiveSettings.draftSeed || 1}` : `local:${settings.draftSeed || 1}`;
+  const draftPlayerId = room ? (online?.myId || 'party-player') : 'party-player';
+  const draftPool = isDraft ? getDraftPool(draftSeedKey, draftPlayerId, loadout.cardId) : null;
   const chosenMode = PARTY_MODES.find(m => m.id === (room?.mode || mode)) || PARTY_MODES[0];
   const chosenCard = cardById[loadout.cardId] || cards[0];
   const chosenDice = diceById[loadout.prismaticId || ''];
 
   useEffect(() => {
+    if (!isDraft) return;
+    const normalized = normalizeDraftLoadout(loadout, draftSeedKey, draftPlayerId, profile.gild[loadout.cardId] || 0);
+    const nextGild = profile.gild[normalized.cardId] || 0;
+    if (normalized.cardId !== loadout.cardId || normalized.prismaticId !== loadout.prismaticId || loadout.gild !== nextGild) {
+      const next = { ...normalized, gild: nextGild };
+      setLoadout(next);
+      if (room?.phase === 'lobby' && mySeat && !mySeat.ready) {
+        void getSession().setReady(false, { ...next, ...(online?.isHost ? { partySettings: settings } : {}) }).catch(() => {});
+      }
+    }
+  }, [isDraft, draftSeedKey, draftPlayerId, loadout, profile.gild, room?.phase, mySeat, online?.isHost, settings, getSession]);
+
+  useEffect(() => {
     if (!room || !online?.isHost || room.phase !== 'lobby' || room.mode !== 'overlord' || !settings.bossId) return;
+    if (settings.bossId === 'random_human' || settings.bossId === 'random_any') return;
     const invalid = settings.bossId === 'ai' ? room.players.length >= settings.count : !room.players.some(p => p.id === settings.bossId);
     if (!invalid) return;
-    const next = { ...settings, bossId: '' }; setSettings(next);
+    const next = { ...settings, bossId: 'random_human' }; setSettings(next);
     void getSession().setReady(false, { ...loadout, partySettings: next }).catch(e => callbacks.current.toast(e.message));
   }, [room, online?.isHost, settings, loadout, getSession]);
 
@@ -191,7 +210,13 @@ export default function PartyHub({ profile, active, onActivate, toast, onBattleV
   }
   function startLocal() {
     try {
-      const players = createPartyRoster(mode, [{ id: 'party-player', name: profile.name, loadout }], settings.count, settings.bossId === 'ai' ? 'ai' : 'party-player', crypto.getRandomValues(new Uint32Array(1))[0]);
+      const localBoss = settings.bossId === 'ai'
+        ? 'ai'
+        : (settings.bossId === 'random_human' || settings.bossId === 'random_any')
+          ? 'random_any'
+          : 'party-player';
+      const draftKey = settings.draftMode ? `local:${settings.draftSeed || 1}` : undefined;
+      const players = createPartyRoster(mode, [{ id: 'party-player', name: profile.name, loadout }], settings.count, localBoss, crypto.getRandomValues(new Uint32Array(1))[0], { draftSeed: draftKey });
       const state = createPartyMatch({ mode, players, maxRounds: settings.maxRounds }, crypto.getRandomValues(new Uint32Array(1))[0]);
       saveLocal({ state, playerId: 'party-player' }); setView('battle');
     } catch (e) { toast(e instanceof Error ? e.message : '无法开始练习。'); }
@@ -201,7 +226,9 @@ export default function PartyHub({ profile, active, onActivate, toast, onBattleV
     if (!current) return;
     const mode = current.mode as PartyMode;
     const ordered = [...current.players].sort((a, b) => a.seat - b.seat);
-    const players = createPartyRoster(mode, ordered, settings.count, settings.bossId || ordered[0].id, crypto.getRandomValues(new Uint32Array(1))[0]);
+    const draftKey = settings.draftMode ? `${current.code}:${settings.draftSeed || 1}` : undefined;
+    const bossChoice = settings.bossId || ordered[0].id;
+    const players = createPartyRoster(mode, ordered, settings.count, bossChoice, crypto.getRandomValues(new Uint32Array(1))[0], { draftSeed: draftKey });
     await s.startMatch(createPartyMatch({ mode, players, maxRounds: settings.maxRounds }, crypto.getRandomValues(new Uint32Array(1))[0]));
     setView('battle');
   }
@@ -239,13 +266,29 @@ export default function PartyHub({ profile, active, onActivate, toast, onBattleV
         <div className="party-seat-list">{Array.from({ length: room.capacity || 8 }, (_, index) => {
           const orderedPlayers = room.players.slice().sort((a, b) => a.seat - b.seat);
           const player = orderedPlayers[index];
-          const chosen = normalizePartyLoadout(player?.id === online?.myId ? loadout : player?.loadout);
-          const effectiveBossId = room.mode === 'overlord' ? (announcedSettings.bossId || room.hostId) : '';
+          const rawLoadout = player?.id === online?.myId ? loadout : player?.loadout;
+          const chosen = player && announcedSettings.draftMode
+            ? normalizeDraftLoadout(rawLoadout, `${room.code}:${announcedSettings.draftSeed || 1}`, player.id)
+            : normalizePartyLoadout(rawLoadout);
+          const rawBoss = room.mode === 'overlord' ? (announcedSettings.bossId ?? '') : '';
+          const isBlindBoss = room.mode === 'overlord' && (rawBoss === 'random_human' || rawBoss === 'random_any');
+          const effectiveBossId = room.mode === 'overlord' && !isBlindBoss ? (rawBoss || room.hostId) : '';
           const isPlayerBoss = !!player && room.mode === 'overlord' && effectiveBossId === player.id;
           const isAiBossSeat = !player && room.mode === 'overlord' && effectiveBossId === 'ai' && index === orderedPlayers.length;
-          return <div className={`party-seat ${player ? '' : 'is-empty'} ${isAiBossSeat ? 'is-ai-boss' : ''}`} key={index}>{player ? <><img src={asset(cardById[chosen.cardId].image)} alt={cardById[chosen.cardId].name}/><div><strong>{player.name}{player.id === online?.myId ? ' · 你' : ''}</strong><span>{cardById[chosen.cardId].name}</span><small>{room.mode === 'duos' ? `第 ${Math.floor(index / 2) + 1} 队` : isPlayerBoss ? '本局首领' : player.seat === 0 ? '房主' : room.mode === 'overlord' ? '讨伐队员' : '开拓者'}</small></div><span className={player.ready ? 'party-seat-ready' : 'muted'}>{player.ready ? <><Check size={13}/>就绪</> : '准备中'}</span></> : <>{isAiBossSeat ? <Crown size={25}/> : <Bot size={25}/>}<div><strong>{isAiBossSeat ? 'AI 首领' : '等待好友'}</strong><small>{isAiBossSeat ? '开局由 AI 担任首领' : '开局时 AI 补位'}</small></div></>}</div>;
+          const roleNote = room.mode === 'duos'
+            ? `第 ${Math.floor(index / 2) + 1} 队`
+            : isBlindBoss
+              ? (player?.seat === 0 ? '房主 · 盲抽待揭晓' : '🎲 盲抽待揭晓')
+              : isPlayerBoss
+                ? '👑 本局首领'
+                : player?.seat === 0
+                  ? '房主'
+                  : room.mode === 'overlord'
+                    ? '讨伐队员'
+                    : '开拓者';
+          return <div className={`party-seat ${player ? '' : 'is-empty'} ${isAiBossSeat ? 'is-ai-boss' : ''}`} key={index}>{player ? <><img src={asset(cardById[chosen.cardId].image)} alt={cardById[chosen.cardId].name}/><div><strong>{player.name}{player.id === online?.myId ? ' · 你' : ''}</strong><span>{cardById[chosen.cardId].name}</span><small>{roleNote}</small></div><span className={player.ready ? 'party-seat-ready' : 'muted'}>{player.ready ? <><Check size={13}/>就绪</> : '准备中'}</span></> : <>{isAiBossSeat ? <Crown size={25}/> : <Bot size={25}/>}<div><strong>{isAiBossSeat ? 'AI 首领' : '等待好友'}</strong><small>{isAiBossSeat ? '开局由 AI 担任首领' : rawBoss === 'random_any' ? 'AI 补位（含首领盲抽）' : '开局时 AI 补位'}</small></div></>}</div>;
         })}</div>
-        <div className="party-room-config"><div className="party-setup">{renderLoadout(!!mySeat?.ready || room.phase !== 'lobby')}{online?.isHost ? renderSettings(room.phase !== 'lobby') : <p className="party-room-note">{announcedSettings.count} 个席位 · 最多 {announcedSettings.maxRounds} 轮<br/>房主确认规则后，准备就绪即可上桌。</p>}</div><aside className="party-character-preview"><CardView card={chosenCard} gild={loadout.gild}/><div><CharacterDetails card={chosenCard}/>{chosenDice && <DiceDetails die={chosenDice} card={chosenCard}/>}</div></aside></div>
+        <div className="party-room-config"><div className="party-setup">{renderLoadout(!!mySeat?.ready || room.phase !== 'lobby')}{online?.isHost ? renderSettings(room.phase !== 'lobby') : <p className="party-room-note">{announcedSettings.count} 个席位 · 最多 {announcedSettings.maxRounds} 轮{room.mode === 'overlord' ? ` · ${announcedSettings.bossId === 'random_human' ? '随机真人盲抽首领' : announcedSettings.bossId === 'random_any' ? '全场随机盲抽首领' : announcedSettings.bossId === 'ai' ? 'AI 担任首领' : '指定玩家首领'}` : ''}{announcedSettings.draftMode ? ' · 🎲 三选一盲盒轮抽' : ''}<br/>房主确认规则后，准备就绪即可上桌。</p>}</div><aside className="party-character-preview"><CardView card={chosenCard} gild={loadout.gild}/><div><CharacterDetails card={chosenCard}/>{chosenDice && <DiceDetails die={chosenDice} card={chosenCard}/>}</div></aside></div>
         <div className="party-room-actions"><p>{online?.error || (room.phase === 'lobby' ? `已入座 ${room.players.length} 人，其余由 AI 补位。所有真人准备后即可开始。` : game?.phase === 'finished' ? '上局已结束；房主可开启新一局备战，或重看上局战果。' : '对局进行中，可以返回牌桌。')}</p>{room.phase !== 'lobby' ? <>{online?.isHost && game?.phase === 'finished' && <button className="primary" disabled={connecting} onClick={() => action(() => getSession().returnToLobby())}>开启新一局备战<ArrowRight size={16}/></button>}<button className={online?.isHost && game?.phase === 'finished' ? 'secondary' : 'primary'} onClick={() => setView('battle')}>{game?.phase === 'finished' ? '重看上局战果' : '返回对局'}<ArrowRight size={16}/></button></> : <><button className="secondary" disabled={connecting || !mySeat} onClick={() => action(() => getSession().setReady(!mySeat?.ready, { ...loadout, ...(online?.isHost ? { partySettings: settings } : {}) }))}>{mySeat?.ready ? '取消准备' : '准备就绪'}<Check size={16}/></button>{online?.isHost && <button className="primary" disabled={connecting || room.players.some(p => !p.ready) || room.players.length > settings.count} onClick={() => action(startOnline)}>开始对局<ArrowRight size={16}/></button>}</>}</div>
       </>}
       {connecting && <p className="party-connect-status" role="status"><LoaderCircle className="spin" size={16}/>正在连接…</p>}
@@ -254,10 +297,112 @@ export default function PartyHub({ profile, active, onActivate, toast, onBattleV
   </div>;
 
   function renderLoadout(disabled: boolean) {
+    if (isDraft && draftPool) {
+      return <div className="party-draft-box">
+        <div className="party-draft-label"><span>🎲 盲盒角色（三选一）</span><small>每人独立发牌</small></div>
+        <div className="party-draft-cards">
+          {draftPool.cardIds.map(cid => {
+            const c = cardById[cid];
+            if (!c) return null;
+            const activeCard = loadout.cardId === cid;
+            return <button
+              key={cid}
+              type="button"
+              disabled={disabled}
+              className={`party-draft-card ${activeCard ? 'active' : ''}`}
+              onClick={() => {
+                const nextPool = getDraftPool(draftSeedKey, draftPlayerId, cid);
+                changeLoadout({ cardId: cid, prismaticId: nextPool.prismaticIds[0], gild: profile.gild[cid] || 0 });
+              }}
+            >
+              <img src={asset(c.image)} alt={c.name}/>
+              <div>
+                <strong>{c.name}</strong>
+                <small>HP {c.hp} · 攻{c.attack || '∞'} 防{c.defense}</small>
+              </div>
+            </button>;
+          })}
+        </div>
+        <div className="party-draft-label"><span>✦ 盲盒曜彩骰（三选一）</span><small>{draftPool.prismaticIds.length ? '专属骰 + 2 奇遇骰' : '该角色无曜彩骰'}</small></div>
+        {draftPool.prismaticIds.length > 0 && (
+          <div className="party-draft-dice">
+            {draftPool.prismaticIds.map((did, idx) => {
+              const d = diceById[did];
+              if (!d) return null;
+              const activeDie = (loadout.prismaticId || draftPool.prismaticIds[0]) === did;
+              return <button
+                key={did}
+                type="button"
+                disabled={disabled}
+                className={`party-draft-die ${activeDie ? 'active' : ''}`}
+                onClick={() => changeLoadout({ ...loadout, prismaticId: did })}
+              >
+                {d.image && <img src={asset(d.image)} alt=""/>}
+                <div>
+                  <strong>{d.name}</strong>
+                  <small>{idx === 0 ? '角色默认' : '盲盒奇遇'}</small>
+                </div>
+              </button>;
+            })}
+          </div>
+        )}
+        {!room && <details className="party-loadout-details"><summary>查看当前角色与骰子技能</summary><CharacterDetails card={chosenCard}/>{chosenDice && <DiceDetails die={chosenDice} card={chosenCard}/>}</details>}
+      </div>;
+    }
     return <><label>出战角色<select value={loadout.cardId} disabled={disabled} onChange={e => changeLoadout(normalizePartyLoadout({ cardId: e.target.value, gild: profile.gild[e.target.value] || 0 }))}>{cards.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}</select></label><label>曜彩骰<select value={loadout.prismaticId || ''} disabled={disabled || !chosenCard.prismaticId} onChange={e => changeLoadout({ ...loadout, prismaticId: e.target.value || undefined })}><option value={chosenCard.prismaticId || ''}>{chosenCard.prismaticId ? `${diceById[chosenCard.prismaticId]?.name || '角色默认'} · 默认` : '此角色无曜彩骰'}</option>{prismaticDice.filter(d => d.id !== chosenCard.prismaticId).map(d => <option key={d.id} value={d.id}>{d.name}</option>)}</select></label>{!room && <details className="party-loadout-details"><summary>查看角色与骰子技能</summary><CharacterDetails card={chosenCard}/>{chosenDice && <DiceDetails die={chosenDice} card={chosenCard}/>}</details>}</>;
   }
   function renderSettings(disabled: boolean) {
     const selectedMode = (room?.mode || mode) as PartyMode;
-    return <><div className="party-settings-row"><label>总人数<select disabled={disabled || !!room} value={room?.capacity || settings.count} onChange={e => changeSettings({ ...settings, count: Number(e.target.value) })}>{[4, 5, 6, 7, 8].filter(n => validPartyCount(selectedMode, n)).map(n => <option key={n} value={n}>{n} 人</option>)}</select></label><label>回合上限<select disabled={disabled} value={settings.maxRounds} onChange={e => changeSettings({ ...settings, maxRounds: Number(e.target.value) })}><option value={6}>6 轮 · 快局</option><option value={8}>8 轮 · 标准</option><option value={12}>12 轮 · 长局</option></select></label></div>{selectedMode === 'overlord' && <label><span><Crown size={14}/>首领人选</span><select disabled={disabled} value={settings.bossId} onChange={e => changeSettings({ ...settings, bossId: e.target.value })}><option value="">{room ? '房主担任首领' : '我来当首领'}</option>{room?.players.filter(p => p.seat !== 0).map(p => <option key={p.id} value={p.id}>{p.name}</option>)}{(!room || room.players.length < settings.count) && <option value="ai">AI 首领 · 我方讨伐</option>}</select></label>}</>;
+    const localBossValue = !room && settings.bossId === 'random_human' ? 'random_any' : settings.bossId;
+    return <>
+      <div className="party-settings-row"><label>总人数<select disabled={disabled || !!room} value={room?.capacity || settings.count} onChange={e => changeSettings({ ...settings, count: Number(e.target.value) })}>{[4, 5, 6, 7, 8].filter(n => validPartyCount(selectedMode, n)).map(n => <option key={n} value={n}>{n} 人</option>)}</select></label><label>回合上限<select disabled={disabled} value={settings.maxRounds} onChange={e => changeSettings({ ...settings, maxRounds: Number(e.target.value) })}><option value={6}>6 轮 · 快局</option><option value={8}>8 轮 · 标准</option><option value={12}>12 轮 · 长局</option></select></label></div>
+      {selectedMode === 'overlord' && (
+        <label>
+          <span><Crown size={14}/>首领钦定方式</span>
+          <select disabled={disabled} value={localBossValue} onChange={e => changeSettings({ ...settings, bossId: e.target.value })}>
+            {room ? (
+              <>
+                <option value="random_human">🎲 随机在场真人 · 开局盲抽</option>
+                <option value="random_any">🎲 全场随机席位 · 含 AI 盲抽</option>
+                <option value="">👑 房主担任首领</option>
+                {room.players.filter(p => p.seat !== 0).map(p => <option key={p.id} value={p.id}>👑 指定：{p.name}</option>)}
+                {room.players.length < settings.count && <option value="ai">🤖 AI 首领 · 全员合作讨伐</option>}
+              </>
+            ) : (
+              <>
+                <option value="random_any">🎲 随机身份 · 开局盲抽（我或 AI）</option>
+                <option value="">👑 我来当首领</option>
+                <option value="ai">🤖 AI 首领 · 我方讨伐</option>
+              </>
+            )}
+          </select>
+        </label>
+      )}
+      <div className="party-draft-toggle-row">
+        <label className="toggle-row party-draft-check">
+          <span><Shuffle size={14}/>三选一盲盒轮抽</span>
+          <input
+            type="checkbox"
+            disabled={disabled}
+            checked={!!settings.draftMode}
+            onChange={e => changeSettings({
+              ...settings,
+              draftMode: e.target.checked,
+              draftSeed: e.target.checked ? (settings.draftSeed || (crypto.getRandomValues(new Uint32Array(1))[0] % 999999) + 1) : settings.draftSeed,
+            })}
+          />
+        </label>
+        {settings.draftMode && (
+          <button
+            type="button"
+            className="secondary compact party-draft-reroll"
+            disabled={disabled}
+            onClick={() => changeSettings({ ...settings, draftSeed: (crypto.getRandomValues(new Uint32Array(1))[0] % 999999) + 1 })}
+          >
+            <RotateCcw size={13}/>换一批
+          </button>
+        )}
+      </div>
+    </>;
   }
 }

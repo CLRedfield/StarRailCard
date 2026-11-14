@@ -1,17 +1,41 @@
 import { defaultCatalog } from './catalog';
 import { applyCommand, chooseAiCommand, createCharacterEncounter, createMatch, getLegalActions, getPlayerPreview, prepareCharacterEncounter, resolveCharacterEncounter, settleCharacterRound } from './engine';
 import type { CardDefinition, GameState, PlayerConfig, PlayerState, RolledDie } from './types';
-import type { OverlordMove, PartyCommand, PartyCommandResult, PartyConfig, PartyLegalActions, PartyMode, PartyPlayer, PartyPreview, PartyState, PartyTarget } from './partyTypes';
+import type { BossScheme, OverlordMove, PartyCommand, PartyCommandResult, PartyConfig, PartyCurioDef, PartyLegalActions, PartyMode, PartyPlayer, PartyPreview, PartyState, PartyTarget } from './partyTypes';
 
 const SENTINEL = '__party_sentinel';
 const sentinel: CardDefinition = { id: SENTINEL, name: '裂界机关', hp: 1000, attack: 3, defense: 2, dice: [6, 6, 6, 6, 6] };
 export const PARTY_MODE_NAMES: Record<PartyMode, string> = { treasure: '银河夺宝', raid: '裂界远征', duos: '双人搭档乱斗', overlord: '首领降临' };
 /** Tune the modes here; no character table or character skill is forked. */
 export const PARTY_RULES = {
-  raid: { hpPerHero: 40, shieldPerHero: 2.5, chargePerHero: 2.5, wavePower: 6, crisisLimit: 12 },
-  overlord: { hpPerHero: 48, shieldPerHero: 2.5, chargePerHero: 2.5, wavePower: 5, crisisLimit: 12 },
+  raid: { hpPerHero: 46, shieldPerHero: 2.5, chargePerHero: 2.5, wavePower: 7, crisisLimit: 12 },
+  overlord: { hpPerHero: 42, shieldPerHero: 2.5, chargePerHero: 2.5, wavePower: 5, crisisLimit: 12 },
   treasure: { rounds: 8, rewards: [5, 7, 9] }, duos: { rounds: 6, winScore: 4, loseScore: 1 },
 } as const;
+export const BOSS_SCHEMES: Record<BossScheme, { name: string; short: string; description: string }> = {
+  crisis_siphon: { name: '暗影威压', short: '穿透+4 · 抓全攻危机+1', description: '首领本轮攻击穿透 4 点防御；若讨伐队无人坚守且无人援护，额外使危机 + 1。' },
+  fortify_shield: { name: '护盾增幅', short: '护盾减伤 · 守住回6血', description: '护盾核心每次受击减免 2 点伤害（至少受 1 点）；若本轮护盾核心未被击破，首领恢复 6 点生命。' },
+  overcharge: { name: '蓄能诱捕', short: '首领攻+4 · 装置减伤', description: '首领本轮攻击 + 4，且蓄力装置每次受击减免 2 点伤害（至少受 1 点）。' },
+};
+export const PARTY_WEATHER_NAMES = [
+  '青蛙雨', '鱼雨', '幻日', '云海', '毒雾', '毒云', '晴', '飓风', '日食', '烈日',
+  '大雪', '雷雨', '小雨', '中雪', '霜', '细雪', '沙尘', '晴雷', '暴雪', '彩虹',
+] as const;
+export const PARTY_CURIOS: PartyCurioDef[] = [
+  { id: 'forge_dice', name: '铸骰神锤', path: '智识', maxStacks: 2, description: '立即将 2 颗最低面数普通骰永久升阶（D4→D6→D8→D12），攻击常驻 + 1。' },
+  { id: 'ember_blade', name: '追星箭矢', path: '巡猎', maxStacks: 1, description: '攻击 + 3；选出包含对子时，额外获得 + 4 攻击与穿透 4 点防御。' },
+  { id: 'shield_prism', name: '琥珀壁垒', path: '存护', maxStacks: 1, description: '防御 + 4；处于防守/坚守姿态时自动获得【反击】与 30% 反伤。' },
+  { id: 'plague_vial', name: '蚀毒秘瓶', path: '虚无', maxStacks: 1, description: '战力 + 2；进攻使目标附加 2 层中毒，目标已中毒时战力额外 + 4。' },
+  { id: 'lucky_coin', name: '命运硬币', path: '欢愉', maxStacks: 2, description: '立即恢复 1 次曜彩骰可用次数，且每轮重投次数永久 + 2。' },
+  { id: 'blood_chalice', name: '燃血圣杯', path: '毁灭', maxStacks: 1, description: '攻击 + 3；生命 ≤ 65% 时额外获得 + 4 攻击与 50% 虹吸吸血。' },
+  { id: 'abundance_dew', name: '甘露琼浆', path: '丰饶', maxStacks: 2, description: '生命上限 + 6 并立即恢复 10 点生命；每轮开始恢复 4 生命，援护治疗 + 4。' },
+  { id: 'breaker_core', name: '碎星重锤', path: '开拓', maxStacks: 1, description: '攻防战力 + 3；对首领护盾/装置伤害 + 30%，夺宝与搭档获胜额外 + 1 分。' },
+  { id: 'rainbow_echo', name: '共鸣琴弦', path: '同谐', maxStacks: 1, description: '选出点数各不相同时战力 + 5；每轮换骰时恢复 5 点生命。' },
+  { id: 'boss_carapace', name: '棘刺王壳', path: '凶星', bossOnly: true, maxStacks: 1, description: '首领专属：生命上限与当前生命立即 + 20；每轮散播威压令全体讨伐队员承受 2 层荆棘。' },
+  { id: 'boss_miasma', name: '冥渊黑潮', path: '凶星', bossOnly: true, maxStacks: 1, description: '首领专属：攻击 + 4；招式命中讨伐队员附加 2 层中毒，回合末按中毒人数吸取生命。' },
+  { id: 'boss_overlord_dice', name: '终焉王权', path: '凶星', bossOnly: true, maxStacks: 1, description: '首领专属：立即将 3 颗普通骰永久升阶（最高 D12），曜彩骰 + 1 次，每轮重投 + 1。' },
+];
+export const PARTY_CURIO_BY_ID: Record<string, PartyCurioDef> = Object.fromEntries(PARTY_CURIOS.map(c => [c.id, c]));
 const moves: Record<OverlordMove, string> = { sweep: '横扫：对全队造成伤害，坚守可减伤', drain: '汲取：攻击最低生命者并恢复首领生命，援护可阻止治疗', eruption: '爆发：造成重创，摧毁蓄力装置可以中断' };
 const rules: PartyState['roundRule'][] = [
   { kind: 'bounty', name: '星核悬赏', description: '本轮目标奖励 + 2；合作模式本体受到的伤害 + 20%。' },
@@ -79,7 +103,104 @@ function context(s: PartyState, p: PartyPlayer, enemy?: PlayerState): GameState 
 }
 function sync(s: PartyState, g: GameState) { s.seed = g.seed; s.nextId = g.nextId; s.battleEvents.push(...g.log); if (s.battleEvents.length > 240) s.battleEvents = s.battleEvents.slice(-240); }
 function adopt(p: PartyPlayer, source: PlayerState) { Object.assign(p, source); }
-function addUpgrades(p: PartyPlayer) { p.modifiers.attack += p.upgrades.power * 2; p.modifiers.defense += p.upgrades.ward * 2; }
+function countCurio(p: { curios?: string[] }, id: string): number {
+  return (p.curios || []).filter(c => c === id).length;
+}
+function curioExtraRerolls(p: PartyPlayer): number {
+  return countCurio(p, 'lucky_coin') * 2 + countCurio(p, 'boss_overlord_dice');
+}
+function addUpgrades(p: PartyPlayer) {
+  p.modifiers.attack += p.upgrades.power * 2;
+  p.modifiers.defense += p.upgrades.ward * 2;
+}
+function applyStartRerollsAndUpgrades(s: PartyState, p: PartyPlayer) {
+  p.rerolls += p.upgrades.fortune + (s.roundRule.kind === 'surge' ? 1 : 0) + curioExtraRerolls(p);
+  addUpgrades(p);
+}
+function hasSelectedPair(actor: PlayerState): boolean {
+  const counts: Record<number, number> = {};
+  for (const d of actor.dice) {
+    if (!actor.selectedIds.includes(d.id)) continue;
+    counts[d.value] = (counts[d.value] ?? 0) + 1;
+    if (counts[d.value] >= 2) return true;
+  }
+  return false;
+}
+function applyCurioCombatModifiers(actor: PlayerState, owner: PartyPlayer, attackRole: boolean, enemyPoison = 0) {
+  const forge = countCurio(owner, 'forge_dice');
+  if (forge && attackRole) actor.modifiers.attack += forge;
+  if (countCurio(owner, 'ember_blade') && attackRole) {
+    actor.modifiers.attack += 3;
+    if (hasSelectedPair(actor)) {
+      actor.modifiers.attack += 4;
+      actor.modifiers.penetration = Math.max(actor.modifiers.penetration || 0, 4);
+    }
+  }
+  if (countCurio(owner, 'shield_prism')) {
+    actor.modifiers.defense += 4;
+    if (!attackRole) {
+      actor.modifiers.counter = true;
+      actor.modifiers.reflect = Math.max(actor.modifiers.reflect, 0.3);
+    }
+  }
+  if (countCurio(owner, 'plague_vial')) {
+    actor.modifiers[attackRole ? 'attack' : 'defense'] += 2 + (enemyPoison > 0 ? 4 : 0);
+  }
+  if (countCurio(owner, 'blood_chalice') && attackRole) {
+    actor.modifiers.attack += 3;
+    if (owner.hp <= owner.maxHp * 0.65) {
+      actor.modifiers.attack += 4;
+      actor.modifiers.siphon = Math.max(actor.modifiers.siphon, 0.5);
+    }
+  }
+  if (countCurio(owner, 'breaker_core')) {
+    actor.modifiers[attackRole ? 'attack' : 'defense'] += 3;
+  }
+  if (countCurio(owner, 'rainbow_echo') && uniqueSelection(actor)) {
+    actor.modifiers[attackRole ? 'attack' : 'defense'] += 5;
+  }
+  if (countCurio(owner, 'boss_miasma') && owner.role === 'boss') {
+    actor.modifiers.attack += 4;
+  }
+}
+function forgeNormalDice(s: PartyState, p: PartyPlayer, count: number): string[] {
+  const c = s.catalog.cards.find(x => x.id === p.cardId);
+  if (!c) return [];
+  const slots = c.dice
+    .map((base, idx) => ({ idx, current: Math.max(base, p.statuses[`die${idx}`] || 0) }))
+    .filter(slot => slot.current < 12)
+    .sort((a, b) => a.current - b.current || a.idx - b.idx);
+  const changes: string[] = [];
+  for (const slot of slots.slice(0, count)) {
+    const next = slot.current < 6 ? 6 : slot.current < 8 ? 8 : 12;
+    p.statuses[`die${slot.idx}`] = next;
+    const handDie = p.dice.find((d, i) => !d.prismatic && (d.poolIndex ?? i) === slot.idx);
+    if (handDie) handDie.sides = next;
+    changes.push(`D${slot.current}→D${next}`);
+  }
+  return changes;
+}
+function canTakeCurio(s: PartyState, p: PartyPlayer, def: PartyCurioDef): boolean {
+  if (def.bossOnly && p.role !== 'boss') return false;
+  if (!def.bossOnly && p.role === 'boss' && ['breaker_core', 'rainbow_echo', 'abundance_dew'].includes(def.id)) return false;
+  if (countCurio(p, def.id) >= (def.maxStacks ?? 1)) return false;
+  if (def.id === 'forge_dice' || def.id === 'boss_overlord_dice') {
+    const c = s.catalog.cards.find(x => x.id === p.cardId);
+    if (c && c.dice.every((base, idx) => Math.max(base, p.statuses[`die${idx}`] || 0) >= 12)) return false;
+  }
+  return true;
+}
+function rollCurioOffers(s: PartyState, p: PartyPlayer): string[] {
+  return PARTY_CURIOS
+    .filter(def => canTakeCurio(s, p, def))
+    .map(def => ({
+      id: def.id,
+      weight: (hash(`curio:${s.seed}:${s.round}:${p.id}:${def.id}`) % 10000) + (def.bossOnly ? 4500 : 0),
+    }))
+    .sort((a, b) => b.weight - a.weight)
+    .slice(0, 3)
+    .map(x => x.id);
+}
 function refreshPlan(s: PartyState, p: PartyPlayer) {
   p.plan = { targetId: s.mode === 'treasure' ? ['fire', 'bastion', 'puzzle'][s.players.indexOf(p) % 3] : s.mode === 'duos' ? s.targets.find(t => t.id.includes(p.teamId))!.id : 'core', stance: 'assault' };
   if (p.plan.targetId === 'bastion') p.plan.stance = 'guard';
@@ -99,9 +220,21 @@ function buildSwapPools(s: PartyState): Record<string, RolledDie[]> {
   }
   return pools;
 }
+function rotatePartyWeather(s: PartyState) {
+  if (s.weatherSchedule === 'off' || s.round < 2 || s.round % 2 !== 0) return;
+  const candidates = s.catalog.weather.filter(w => (PARTY_WEATHER_NAMES as readonly string[]).includes(w.name) && w.id !== s.weatherId);
+  if (!candidates.length) return;
+  const picked = candidates[hash(`weather:${s.seed}:${s.round}`) % candidates.length];
+  s.weatherId = picked.id;
+  if (picked.name === '云海') for (const p of s.players) if (p.prismaticId) p.prismaticUses++;
+  if (picked.name === '毒雾') for (const p of s.players) if (p.role !== 'boss') p.statuses.poison = (p.statuses.poison ?? 0) + 2;
+  if (picked.name === '毒云') for (const p of s.players) if (p.role !== 'boss') p.statuses.venom = 1;
+  log(s, `天象轮转 · 当前天气变为「${picked.name}」：${picked.description}`);
+}
 function beginRound(s: PartyState) {
-  s.phase = 'planning'; s.results = []; s.battleEvents = []; s.roundStarts = {};
+  s.phase = 'planning'; s.results = []; s.battleEvents = []; s.roundStarts = {}; s.bossScheme = 'crisis_siphon';
   s.roundRule = clone(rules[Math.floor(random(s) * rules.length)]);
+  rotatePartyWeather(s);
   if (s.mode === 'treasure') s.targets = [
     target('fire', '火力宝库', 'fire', 1000, 8 + s.round, 6, '攻击突破守卫。最高突破者拿大奖，独占额外 + 2。'),
     target('bastion', '坚守宝库', 'bastion', 1000, 11 + s.round, 6, '承受守卫攻击，格挡与反击决定贡献；护住自己也能夺宝。'),
@@ -122,27 +255,33 @@ function beginRound(s: PartyState) {
   if (s.mode === 'duos') s.targets = pairings(s).map((pair, i) => target(`arena-${pair.join('-')}`, pair.length === 1 ? '遗迹挑战' : `第 ${i + 1} 竞技场`, 'arena', 0, 14 + s.round, 4, pair.length === 1 ? '轮空队共同挑战机关，仍可赢得积分和补给。' : `${pair.join(' 对阵 ')}；攻守逐轮轮换，搭档可以换骰与援护。`));
   if (s.mode === 'raid' || s.mode === 'overlord') {
     const count = s.players.filter(p => p.role !== 'boss').length;
+    const prevPhase = s.bossPhase;
     const phase = Math.max(s.bossPhase, s.bossHp <= s.bossMaxHp * 0.5 ? 2 : 1);
     s.bossPhase = phase;
+    if (phase > prevPhase) log(s, `首领生命跌破半数，进入二阶段狂暴${s.mode === 'overlord' ? '（解锁全部三式首领招式）' : ''}！`);
     const tuning = PARTY_RULES[s.mode]; const shieldHp = Math.ceil(count * (tuning.shieldPerHero + phase - 1));
     s.targets = [target('core', '首领本体', 'core', s.bossHp, 5 + phase * 2, 0, '护盾存在时伤害减半；破盾后集中输出。'),
       target('shield', '护盾核心', 'shield', shieldHp, 2 + phase, 0, '先于本体结算，击破后全队本轮对本体造成完整伤害。'),
       target('charge', '蓄力装置', 'charge', Math.ceil(count * (tuning.chargePerHero + phase - 1)), 1 + phase, 0, '先于本体结算，摧毁即可打断本轮蓄力攻击。护盾也保护装置。')];
     for (const t of s.targets) opponent(s, s.players[0], t.id);
-    const first = Math.floor(random(s) * 3); s.bossMoves = [(['sweep', 'drain', 'eruption'] as OverlordMove[])[first], (['sweep', 'drain', 'eruption'] as OverlordMove[])[(first + 1) % 3]];
-    s.bossMove = s.bossMoves[Math.floor(random(s) * 2)];
+    const first = Math.floor(random(s) * 3);
+    const pairMoves: OverlordMove[] = [(['sweep', 'drain', 'eruption'] as OverlordMove[])[first], (['sweep', 'drain', 'eruption'] as OverlordMove[])[(first + 1) % 3]];
+    const pickedMove = pairMoves[Math.floor(random(s) * 2)];
+    s.bossMoves = s.mode === 'overlord' && phase >= 2 ? ['sweep', 'drain', 'eruption'] : pairMoves;
+    s.bossMove = pickedMove;
     s.bossTelegraph = s.bossMoves.map(m => moves[m]).join(' / ');
   }
   for (const p of s.players) {
     p.confirmed = p.ready = p.upgradedThisRound = p.exchangedThisRound = false;
+    p.curios = p.curios || []; p.curioOffers = [];
     refreshPlan(s, p);
-    if (s.roundRule.kind === 'respite') p.hp = Math.min(p.maxHp, p.hp + 6);
+    const dewHeal = countCurio(p, 'abundance_dew') * 4;
+    if (s.roundRule.kind === 'respite' || dewHeal > 0) p.hp = Math.min(p.maxHp, p.hp + (s.roundRule.kind === 'respite' ? 6 : 0) + dewHeal);
     s.roundStarts[p.id] = clone(p);
     const e = opponent(s, p); e.hp = e.maxHp;
     const g = prepareCharacterEncounter(context(s, p, e));
     adopt(p, g.players[0]); p.confirmed = false; p.ready = false;
-    p.rerolls += p.upgrades.fortune + (s.roundRule.kind === 'surge' ? 1 : 0);
-    addUpgrades(p); s.seed = g.seed; s.nextId = g.nextId;
+    applyStartRerollsAndUpgrades(s, p); s.seed = g.seed; s.nextId = g.nextId;
     s.enemies[`trial-${p.id}`] = g.players[1];
   }
   syncBossHealth(s, 'player');
@@ -159,14 +298,15 @@ export function createPartyMatch(config: PartyConfig, seed: number | string = Da
   const maxRounds = config.maxRounds ?? (config.mode === 'overlord' || config.mode === 'raid' ? 10 : config.mode === 'duos' ? PARTY_RULES.duos.rounds : PARTY_RULES.treasure.rounds);
   if (!Number.isInteger(maxRounds) || maxRounds < 2 || maxRounds > 20) throw new Error('轮数必须在 2～20 之间');
   const s: PartyState = { kind: 'party', version: 1, mode: config.mode, phase: 'planning', round: 1, maxRounds,
-    seed: hash(seed), nextId: 1, catalog, players: [], targets: [], weatherId: null, roundRule: rules[0], crisis: 0, maxCrisis: config.mode === 'overlord' ? PARTY_RULES.overlord.crisisLimit : PARTY_RULES.raid.crisisLimit,
-    bossPhase: 1, bossMoves: ['sweep', 'eruption'], bossMove: 'sweep', bossTelegraph: '', bossPlayerId: config.mode === 'overlord' ? config.players[0].id : null,
+    seed: hash(seed), nextId: 1, catalog, players: [], targets: [], weatherId: null, weatherSchedule: config.weather ?? 'random',
+    roundRule: rules[0], crisis: 0, maxCrisis: config.mode === 'overlord' ? PARTY_RULES.overlord.crisisLimit : PARTY_RULES.raid.crisisLimit,
+    bossPhase: 1, bossMoves: ['sweep', 'eruption'], bossMove: 'sweep', bossScheme: 'crisis_siphon', bossTelegraph: '', bossPlayerId: config.mode === 'overlord' ? config.players[0].id : null,
     bossHp: 0, bossMaxHp: 0, log: [], results: [], battleEvents: [], enemies: {}, roundStarts: {}, swapPools: {}, winnerTeamIds: [] };
   config.players.forEach((input, i) => { const boss = config.mode === 'overlord' && i === 0;
-    s.players.push({ ...makePlayer(input, s), teamId: config.mode === 'treasure' ? `p${i + 1}` : config.mode === 'duos' ? `小队${Math.floor(i / 2) + 1}` : boss ? '首领' : '远征队', role: boss ? 'boss' : 'hero', score: 0, contribution: 0, supplies: 0, upgrades: { power: 0, ward: 0, fortune: 0 }, upgradedThisRound: false, exchangedThisRound: false, ready: false, plan: { targetId: 'core', stance: 'assault' } }); });
+    s.players.push({ ...makePlayer(input, s), teamId: config.mode === 'treasure' ? `p${i + 1}` : config.mode === 'duos' ? `小队${Math.floor(i / 2) + 1}` : boss ? '首领' : '远征队', role: boss ? 'boss' : 'hero', score: 0, contribution: 0, supplies: 0, upgrades: { power: 0, ward: 0, fortune: 0 }, upgradedThisRound: false, exchangedThisRound: false, curios: [], curioOffers: [], ready: false, plan: { targetId: 'core', stance: 'assault' } }); });
   const heroes = s.players.filter(p => p.role !== 'boss');
   s.bossMaxHp = s.bossHp = heroes.length * (config.mode === 'overlord' ? PARTY_RULES.overlord.hpPerHero : PARTY_RULES.raid.hpPerHero);
-  if (config.mode === 'overlord') { const boss = s.players[0]; boss.maxHp = boss.hp = s.bossMaxHp; }
+  if (config.mode === 'overlord') { const boss = s.players[0]; boss.maxHp = boss.hp = s.bossMaxHp; log(s, `首领揭晓：${boss.name}觉醒为本局裂界首领！`, boss.id); }
   beginRound(s); return s;
 }
 
@@ -199,26 +339,37 @@ function uniqueSelection(p: PlayerState) { const values = p.dice.filter(d => p.s
 export function getPartyPreview(s: PartyState, playerId: string): PartyPreview {
   const p = s.players.find(p => p.id === playerId); if (!p) return { value: 0, diceRequired: 0, canConfirm: false, damageEstimate: 0, effects: [], role: 'attack', objectiveValue: 0, objectiveHint: '玩家不存在' };
   const g = context(s, p);
+  const attackRole = role(s, p) === 'attack';
   if (s.phase === 'planning') {
     const actor = g.players[0];
-    if (s.roundRule.kind === 'precision' && p.role !== 'boss' && uniqueSelection(p)) actor.modifiers[role(s, p) === 'attack' ? 'attack' : 'defense'] += 6;
+    if (s.roundRule.kind === 'precision' && p.role !== 'boss' && uniqueSelection(p)) actor.modifiers[attackRole ? 'attack' : 'defense'] += 6;
     if (s.mode === 'duos' && p.plan.stance === 'support') actor.modifiers.double *= 0.5;
-    if (s.mode === 'duos' && p.plan.stance === 'guard') { actor.modifiers.defense += 5; if (role(s, p) === 'attack') actor.modifiers.attack -= 4; }
+    if (s.mode === 'duos' && p.plan.stance === 'guard') { actor.modifiers.defense += 5; if (attackRole) actor.modifiers.attack -= 4; }
     if ((s.mode === 'raid' || s.mode === 'overlord') && p.role !== 'boss') {
       if (p.plan.stance === 'guard') actor.modifiers.defense += 4 + s.bossPhase * 2;
       else if (p.plan.stance === 'support') actor.modifiers.double *= 0.5;
     }
-    if (p.role === 'boss') { actor.modifiers.double *= 0.7; actor.modifiers.attack += s.bossPhase * 2 + (s.bossMove === 'eruption' ? 10 : s.bossMove === 'drain' ? 5 : 0); }
+    if (p.role === 'boss') {
+      actor.modifiers.double *= 0.7;
+      actor.modifiers.attack += s.bossPhase * 2 + (s.bossMove === 'eruption' ? 10 : s.bossMove === 'drain' ? 5 : 0);
+      if (s.mode === 'overlord') {
+        if (s.bossScheme === 'overcharge') actor.modifiers.attack += 4;
+        if (s.bossScheme === 'crisis_siphon') actor.modifiers.penetration = Math.max(actor.modifiers.penetration || 0, 4);
+      }
+    }
+    applyCurioCombatModifiers(actor, p, attackRole, g.players[1]?.statuses.poison ?? 0);
   }
   const preview = getPlayerPreview(g, p.id); const puzzle = p.plan.targetId === 'puzzle';
   return { ...preview, role: role(s, p), objectiveValue: puzzle ? patternScore(s, p) + Math.floor(preview.value / 4) : preview.value,
-    objectiveHint: p.plan.stance === 'support'
-      ? `援护队友：${s.mode === 'raid' || s.mode === 'overlord' ? '牺牲本轮攻击并减半双倍，提供治疗与护盾、危机 -1（全队至多 2），且可阻断首领汲取治疗。' : '提供治疗与护盾增益；本轮自身双倍加成减半。'}`
-      : p.plan.stance === 'guard' && (s.mode === 'raid' || s.mode === 'overlord')
-        ? `坚守防线：获得 +${4 + s.bossPhase * 2} 本轮防御，可削弱首领横扫或替队友挡下汲取；防御技能与反击照常触发。`
-        : p.plan.stance === 'guard' && s.mode === 'duos'
-          ? '坚守防线：防御 +5（攻方时攻击 -4），适合稳守反击。'
-          : puzzle ? s.targets.find(t => t.id === 'puzzle')?.description ?? '' : s.targets.find(t => t.id === p.plan.targetId)?.description ?? '' };
+    objectiveHint: p.role === 'boss' && s.mode === 'overlord'
+      ? `首领奇策「${BOSS_SCHEMES[s.bossScheme ?? 'crisis_siphon'].name}」：${BOSS_SCHEMES[s.bossScheme ?? 'crisis_siphon'].description}`
+      : p.plan.stance === 'support'
+        ? `援护队友：${s.mode === 'raid' || s.mode === 'overlord' ? '牺牲本轮攻击并减半双倍，提供治疗与护盾、危机 -1（全队至多 2），且可阻断首领汲取治疗。' : '提供治疗与护盾增益；本轮自身双倍加成减半。'}`
+        : p.plan.stance === 'guard' && (s.mode === 'raid' || s.mode === 'overlord')
+          ? `坚守防线：获得 +${4 + s.bossPhase * 2} 本轮防御，可削弱首领横扫或替队友挡下汲取；防御技能与反击照常触发。`
+          : p.plan.stance === 'guard' && s.mode === 'duos'
+            ? '坚守防线：防御 +5（攻方时攻击 -4），适合稳守反击。'
+            : puzzle ? s.targets.find(t => t.id === 'puzzle')?.description ?? '' : s.targets.find(t => t.id === p.plan.targetId)?.description ?? '' };
 }
 
 function validDice(p: PartyPlayer, ids: string[]) { return Array.isArray(ids) && ids.length === new Set(ids).size && ids.every(id => p.dice.some(d => d.id === id)); }
@@ -239,9 +390,11 @@ function resolveTrial(s: PartyState, p: PartyPlayer, t: PartyTarget, enemyId = `
   e.dice = [{ id: `guard-${s.nextId++}`, sides: 30, value: t.difficulty + (s.roundRule.kind === 'surge' ? 3 : 0), prismatic: false, ownerId: e.id }]; e.selectedIds = [e.dice[0].id];
   const g = context(s, p, e); const before = p.hp;
   if (s.roundRule.kind === 'precision' && uniqueSelection(p)) g.players[0].modifiers[attackRole ? 'attack' : 'defense'] += 6;
+  applyCurioCombatModifiers(g.players[0], p, attackRole, e.statuses.poison ?? 0);
   const deferredEnd = s.mode === 'raid' || s.mode === 'overlord';
   const resolved = resolveCharacterEncounter(g, deferredEnd ? { skipEnd: true, skipPreparationIds: e.statuses.partyPreparedRound === s.round ? [e.id] : [] } : {}); const result = resolved.players[0], foe = resolved.players[1];
   foe.statuses.partyPreparedRound = s.round;
+  if (attackRole && countCurio(p, 'plague_vial')) foe.statuses.poison = (foe.statuses.poison ?? 0) + 2;
   const skillDamage = resolved.log.filter(ev => ev.type === 'damage' && ev.targetId === e.id).reduce((sum, ev) => sum + (ev.amount ?? 0), 0);
   const value = resolved.lastResolution?.players.find(q => q.id === p.id)?.value ?? 0;
   adopt(p, result); s.enemies[enemyId] = foe; sync(s, resolved);
@@ -252,7 +405,7 @@ function applySupport(s: PartyState) {
   let relief = 0;
   for (const p of s.players.filter(p => p.plan.stance === 'support' && p.role !== 'boss')) {
     const q = s.players.find(q => q.id === p.plan.supportPlayerId && q.teamId === p.teamId && q.id !== p.id); if (!q) continue;
-    const amount = 4 + Math.floor(getPartyPreview(s, p.id).value / 3) + (s.roundRule.kind === 'respite' ? 4 : 0);
+    const amount = 4 + Math.floor(getPartyPreview(s, p.id).value / 3) + (s.roundRule.kind === 'respite' ? 4 : 0) + countCurio(p, 'abundance_dew') * 4;
     q.hp = Math.min(q.maxHp, q.hp + amount); q.modifiers.defense += Math.ceil(amount / 2); q.modifiers.attack += 3;
     if (relief < 2) { s.crisis = Math.max(0, s.crisis - 1); relief++; }
     log(s, `${p.name}援护${q.name}：恢复 ${amount} 生命、护盾 + ${Math.ceil(amount / 2)}、攻击 + 3。`, p.id);
@@ -264,7 +417,9 @@ function resolveTreasure(s: PartyState) {
     const results = contenders.map(p => { const r = resolveTrial(s, p, t); return { p, ...r, merit: t.kind === 'puzzle' ? patternScore(s, p) + Math.floor(r.damage / 4) : t.kind === 'bastion' ? Math.max(0, r.value - r.taken) + r.damage : r.damage }; });
     const best = Math.max(0, ...results.map(r => r.merit));
     for (const r of results) {
-      const win = r.merit === best && best > 0; const score = 1 + (r.merit > 0 ? 1 : 0) + (win ? t.reward + (s.roundRule.kind === 'bounty' ? 2 : 0) : 0) + (contenders.length === 1 && r.merit > 0 ? 2 : 0);
+      const win = r.merit === best && best > 0;
+      const curioBonus = win ? countCurio(r.p, 'breaker_core') : 0;
+      const score = 1 + (r.merit > 0 ? 1 : 0) + (win ? t.reward + (s.roundRule.kind === 'bounty' ? 2 : 0) + curioBonus : 0) + (contenders.length === 1 && r.merit > 0 ? 2 : 0);
       record(s, r.p, r.value, r.damage, score, `${r.p.name}进入${t.name}，贡献 ${r.merit}${win ? '，夺得星核' : ''}${contenders.length === 1 ? '，独占宝库' : ''}，积分 + ${score}。`);
       recover(s, r.p);
     }
@@ -273,31 +428,53 @@ function resolveTreasure(s: PartyState) {
 function resolveDuos(s: PartyState) {
   for (const pair of pairings(s)) {
     const group = s.players.filter(p => pair.includes(p.teamId));
-    if (pair.length === 1) { for (const p of group) { const r = resolveTrial(s, p, s.targets.find(t => t.id.includes(p.teamId))!); const score = r.damage >= 8 ? PARTY_RULES.duos.winScore + (s.roundRule.kind === 'bounty' ? 2 : 0) : 2; record(s, p, r.value, r.damage, score, `${p.name}挑战遗迹机关，造成 ${r.damage} 伤害，积分 + ${score}。`); recover(s, p); } continue; }
+    if (pair.length === 1) { for (const p of group) { const r = resolveTrial(s, p, s.targets.find(t => t.id.includes(p.teamId))!); const win = r.damage >= 8; const score = (win ? PARTY_RULES.duos.winScore + (s.roundRule.kind === 'bounty' ? 2 : 0) + countCurio(p, 'breaker_core') : 2); record(s, p, r.value, r.damage, score, `${p.name}挑战遗迹机关，造成 ${r.damage} 伤害，积分 + ${score}。`); recover(s, p); } continue; }
     const attackingTeam = pair[(s.round - 1) % 2];
     const players = group.map(p => ({ ...clone(p), side: (p.teamId === pair[0] ? 0 : 1) as 0 | 1 }));
-    for (const p of players) { const original = group.find(q => q.id === p.id)!; if (s.roundRule.kind === 'precision' && uniqueSelection(p)) p.modifiers[role(s, original) === 'attack' ? 'attack' : 'defense'] += 6; if (original.plan.stance === 'support') p.modifiers.double *= 0.5; else if (original.plan.stance === 'guard') { p.modifiers.defense += 5; if (role(s, original) === 'attack') p.modifiers.attack -= 4; } }
-    const g = resolveCharacterEncounter(createCharacterEncounter(players, { catalog: s.catalog, seed: s.seed, nextId: s.nextId, turn: s.round, attackingSide: attackingTeam === pair[0] ? 0 : 1 })); sync(s, g);
+    for (const p of players) {
+      const original = group.find(q => q.id === p.id)!;
+      const atk = role(s, original) === 'attack';
+      const foePoison = Math.max(0, ...group.filter(q => q.teamId !== original.teamId).map(q => q.statuses.poison ?? 0));
+      if (s.roundRule.kind === 'precision' && uniqueSelection(p)) p.modifiers[atk ? 'attack' : 'defense'] += 6;
+      if (original.plan.stance === 'support') p.modifiers.double *= 0.5;
+      else if (original.plan.stance === 'guard') { p.modifiers.defense += 5; if (atk) p.modifiers.attack -= 4; }
+      applyCurioCombatModifiers(p, original, atk, foePoison);
+    }
+    const g = resolveCharacterEncounter(createCharacterEncounter(players, { catalog: s.catalog, seed: s.seed, nextId: s.nextId, turn: s.round, attackingSide: attackingTeam === pair[0] ? 0 : 1, weatherId: s.weatherId })); sync(s, g);
+    for (const orig of group) {
+      if (role(s, orig) === 'attack' && countCurio(orig, 'plague_vial')) {
+        for (const foe of g.players.filter(q => group.find(x => x.id === q.id)?.teamId !== orig.teamId)) foe.statuses.poison = (foe.statuses.poison ?? 0) + 2;
+      }
+    }
     const damageByTeam = pair.map(team => g.log.filter(ev => ev.type === 'damage' && group.some(p => p.id === ev.targetId && p.teamId !== team)).reduce((sum, ev) => sum + (ev.amount ?? 0), 0));
     // Defenders win by cleanly holding their ground; counters are counted too.
     const attackIndex = pair.indexOf(attackingTeam), defenseIndex = 1 - attackIndex;
     const holdThreshold = 10 + Math.floor((s.round - 1) * 1.5);
     damageByTeam[defenseIndex] += Math.max(0, holdThreshold - damageByTeam[attackIndex]);
     const high = Math.max(...damageByTeam);
-    for (const p of group) { const i = pair.indexOf(p.teamId); const win = damageByTeam[i] === high; const score = (win ? PARTY_RULES.duos.winScore + (s.roundRule.kind === 'bounty' ? 2 : 0) : PARTY_RULES.duos.loseScore) + Math.min(2, Math.floor(damageByTeam[i] / 20)); adopt(p, g.players.find(q => q.id === p.id)!); const value = g.lastResolution?.players.find(q => q.id === p.id)?.value ?? 0; record(s, p, value, damageByTeam[i], score, `${p.name}所在${p.teamId}本轮战绩 ${damageByTeam[i]}，${win ? '夺得胜场' : '获得补偿积分'} + ${score}。`); recover(s, p); }
+    for (const p of group) { const i = pair.indexOf(p.teamId); const win = damageByTeam[i] === high; const score = (win ? PARTY_RULES.duos.winScore + (s.roundRule.kind === 'bounty' ? 2 : 0) + countCurio(p, 'breaker_core') : PARTY_RULES.duos.loseScore) + Math.min(2, Math.floor(damageByTeam[i] / 20)); adopt(p, g.players.find(q => q.id === p.id)!); const value = g.lastResolution?.players.find(q => q.id === p.id)?.value ?? 0; record(s, p, value, damageByTeam[i], score, `${p.name}所在${p.teamId}本轮战绩 ${damageByTeam[i]}，${win ? '夺得胜场' : '获得补偿积分'} + ${score}。`); recover(s, p); }
   }
 }
 function resolveRaid(s: PartyState) {
   const heroes = s.players.filter(p => p.role === 'hero'); const boss = s.players.find(p => p.role === 'boss');
   const resolvedValues: Record<string, number> = {};
   let supportCount = 0;
+  if (boss && countCurio(boss, 'boss_carapace')) {
+    for (const h of heroes) h.statuses.thorns = (h.statuses.thorns ?? 0) + 2;
+    log(s, `${boss.name}「棘刺王壳」散播威压，全体讨伐队员承受 2 层荆棘！`, boss.id);
+  }
   for (const id of ['shield', 'charge', 'core']) {
     const t = s.targets.find(t => t.id === id)!;
     for (const p of heroes.filter(p => p.plan.targetId === id)) {
       if (p.plan.stance !== 'assault') { if (p.plan.stance === 'support') supportCount++; continue; }
       const shielded = id !== 'shield' && !s.targets.find(t => t.id === 'shield')!.broken;
-      const multiplier = (shielded ? 0.5 : 1) * (id === 'core' && s.roundRule.kind === 'bounty' ? 1.2 : 1);
+      const breakerMult = id !== 'core' && countCurio(p, 'breaker_core') ? 1.3 : 1;
+      const multiplier = (shielded ? 0.5 : 1) * (id === 'core' && s.roundRule.kind === 'bounty' ? 1.2 : 1) * breakerMult;
       const r = resolveTrial(s, p, t, id, multiplier);
+      if (s.mode === 'overlord' && r.damage > 0) {
+        if (id === 'shield' && s.bossScheme === 'fortify_shield') r.damage = Math.max(1, r.damage - 2);
+        if (id === 'charge' && s.bossScheme === 'overcharge') r.damage = Math.max(1, r.damage - 2);
+      }
       resolvedValues[p.id] = r.value;
       // A destroyed device still grants a small spillover hit against the core.
       const overflow = Math.max(0, r.damage - t.hp); const applied = Math.min(t.hp, r.damage);
@@ -335,8 +512,19 @@ function resolveRaid(s: PartyState) {
     if (s.bossMove === 'drain' && guards.length > 0) log(s, `${drainTarget.name}坚守前排，替脆弱队友挡下了首领汲取！`);
     const victims = interrupted ? [] : s.bossMove === 'drain' ? [drainTarget] : heroes;
     const attacker = clone(boss ?? opponent(s, heroes[0], 'raid-boss')); attacker.side = 1; attacker.hp = s.bossHp; attacker.maxHp = s.bossMaxHp;
-    if (boss) { attacker.modifiers.double *= 0.7; attacker.modifiers.attack += s.bossPhase * 2 + (s.bossMove === 'eruption' ? 10 : s.bossMove === 'drain' ? 5 : 0) - sweepMitigation; }
-    else { attacker.dice = [{ id: `boss-wave-${s.nextId++}`, ownerId: attacker.id, sides: 30, value: power + (s.bossMove === 'eruption' ? 8 : s.bossMove === 'drain' ? 5 : 0), prismatic: false }]; attacker.selectedIds = [attacker.dice[0].id]; }
+    const maxHeroPoison = Math.max(0, ...heroes.map(h => h.statuses.poison ?? 0));
+    if (boss) {
+      attacker.modifiers.double *= 0.7;
+      attacker.modifiers.attack += s.bossPhase * 2 + (s.bossMove === 'eruption' ? 10 : s.bossMove === 'drain' ? 5 : 0) - sweepMitigation;
+      if (s.mode === 'overlord') {
+        if (s.bossScheme === 'overcharge') attacker.modifiers.attack += 4;
+        if (s.bossScheme === 'crisis_siphon') attacker.modifiers.penetration = Math.max(attacker.modifiers.penetration || 0, 4);
+      }
+      applyCurioCombatModifiers(attacker, boss, true, maxHeroPoison);
+    } else {
+      attacker.dice = [{ id: `boss-wave-${s.nextId++}`, ownerId: attacker.id, sides: 30, value: power + (s.bossMove === 'eruption' ? 8 : s.bossMove === 'drain' ? 5 : 0), prismatic: false }];
+      attacker.selectedIds = [attacker.dice[0].id];
+    }
     // A committed assault leaves no selected dice for the boss's return attack.
     // Guard/support retains the player's chosen defensive dice. The same combat
     // engine applies forcefield, counter, poison, hack, lifesteal and all skills.
@@ -347,16 +535,42 @@ function resolveRaid(s: PartyState) {
         if (p.plan.stance === 'guard') defender.modifiers.defense += 4 + s.bossPhase * 2;
         else if (p.plan.stance === 'support') defender.modifiers.double *= 0.5;
         if (s.roundRule.kind === 'precision' && uniqueSelection(defender)) defender.modifiers.defense += 6;
+        applyCurioCombatModifiers(defender, p, false, attacker.statuses.poison ?? 0);
       }
       return defender;
     });
-    const combat = resolveCharacterEncounter(createCharacterEncounter([attacker, ...defenders], { catalog: s.catalog, seed: s.seed, nextId: s.nextId, turn: s.round, attackingSide: 1 }),
+    const combat = resolveCharacterEncounter(createCharacterEncounter([attacker, ...defenders], { catalog: s.catalog, seed: s.seed, nextId: s.nextId, turn: s.round, attackingSide: 1, weatherId: s.weatherId }),
       { skipEnd: true, skipPreparationIds: [...heroes.filter(p => p.plan.stance === 'assault').map(p => p.id), ...(interrupted ? [attacker.id] : [])], skipAttackIds: interrupted ? [attacker.id] : [], attackTargetIds: victims.map(p => p.id) });
     for (const entry of combat.lastResolution?.players ?? []) if (!(entry.id in resolvedValues)) resolvedValues[entry.id] = entry.value;
     sync(s, combat); s.bossHp = Math.max(0, Math.min(s.bossMaxHp, combat.players[0].hp));
-    if (boss) { adopt(boss, combat.players[0]); record(s, boss, combat.lastResolution?.players[0]?.value ?? 0, combat.log.filter(e => e.playerId === boss.id && e.type === 'damage').reduce((sum, e) => sum + (e.amount ?? 0), 0), 0, `${boss.name}${interrupted ? '的爆发被打断' : `发动${moves[s.bossMove].split('：')[0]}，原角色技能参与首领进攻`}。`); }
+    const schemeTitle = s.mode === 'overlord' ? ` · 奇策「${BOSS_SCHEMES[s.bossScheme ?? 'crisis_siphon'].name}」` : '';
+    if (boss) { adopt(boss, combat.players[0]); record(s, boss, combat.lastResolution?.players[0]?.value ?? 0, combat.log.filter(e => e.playerId === boss.id && e.type === 'damage').reduce((sum, e) => sum + (e.amount ?? 0), 0), 0, `${boss.name}${interrupted ? `的爆发被打断${schemeTitle}` : `发动${moves[s.bossMove].split('：')[0]}${schemeTitle}，原角色技能参与首领进攻`}。`); }
     else s.enemies['raid-boss'] = combat.players[0];
-    for (const p of heroes) { const before = p.hp, originalDice = p.selectedIds; adopt(p, combat.players.find(q => q.id === p.id)!); p.selectedIds = originalDice; if (victims.some(q => q.id === p.id)) log(s, `${p.name}承受首领${moves[s.bossMove].split('：')[0]}，生命 ${before} → ${p.hp}。`, p.id); recover(s, p); }
+    const bossPoisonAdd = boss && !interrupted ? (countCurio(boss, 'boss_miasma') + countCurio(boss, 'plague_vial')) * 2 : 0;
+    for (const p of heroes) {
+      const before = p.hp, originalDice = p.selectedIds;
+      adopt(p, combat.players.find(q => q.id === p.id)!);
+      p.selectedIds = originalDice;
+      if (victims.some(q => q.id === p.id)) {
+        if (bossPoisonAdd > 0) p.statuses.poison = (p.statuses.poison ?? 0) + bossPoisonAdd;
+        log(s, `${p.name}承受首领${moves[s.bossMove].split('：')[0]}，生命 ${before} → ${p.hp}。`, p.id);
+      }
+      recover(s, p);
+    }
+    if (boss && !interrupted && countCurio(boss, 'boss_miasma')) {
+      const poisonedHeroes = heroes.filter(h => (h.statuses.poison ?? 0) > 0).length;
+      const miasmaHeal = Math.min(10, poisonedHeroes * 2);
+      if (miasmaHeal > 0) { s.bossHp = Math.min(s.bossMaxHp, s.bossHp + miasmaHeal); log(s, `${boss.name}「冥渊黑潮」汲取毒雾，恢复 ${miasmaHeal} 生命。`, boss.id); }
+    }
+    if (s.mode === 'overlord') {
+      if (s.bossScheme === 'fortify_shield' && !s.targets.find(t => t.id === 'shield')!.broken && s.bossHp > 0) {
+        const shieldHeal = Math.min(6, s.bossMaxHp - s.bossHp);
+        if (shieldHeal > 0) { s.bossHp += shieldHeal; log(s, `首领「护盾增幅」生效：护盾核心未破，恢复 ${shieldHeal} 生命！`); }
+      }
+      if (s.bossScheme === 'crisis_siphon' && guards.length === 0 && supportCount === 0) {
+        s.crisis++; log(s, '首领「暗影威压」抓破全攻阵型，无人防守/援护，危机额外 + 1！');
+      }
+    }
     if (s.bossMove === 'drain' && supportCount === 0) { const heal = heroes.length * 4; s.bossHp = Math.min(s.bossMaxHp, s.bossHp + heal); log(s, `无人援护阻断，首领汲取恢复 ${heal} 生命。`); }
     else if (s.bossMove === 'drain') log(s, '队友援护阻断了首领汲取治疗！');
     if (s.bossMove === 'eruption' && !interrupted) s.crisis += 2;
@@ -384,7 +598,15 @@ function resolveRound(s: PartyState) {
   if (s.round >= s.maxRounds) {
     if (s.mode === 'raid' || s.mode === 'overlord') finish(s, s.mode === 'overlord' ? ['首领'] : [], '轮数耗尽，首领守住了裂界。');
     else { const scores = new Map<string, number>(); for (const p of s.players) scores.set(p.teamId, (scores.get(p.teamId) ?? 0) + p.score); const best = Math.max(...scores.values()); const winners = [...scores].filter(([, n]) => n === best).map(([id]) => id); finish(s, winners, `${winners.map(id => s.mode === 'treasure' ? s.players.find(p => p.teamId === id)!.name : id).join('、')}以 ${best} 分${winners.length > 1 ? '并列' : ''}获胜！`); }
-  } else { s.phase = 'results'; for (const p of s.players) { p.ready = false; p.supplies++; p.hp = Math.min(p.maxHp, p.hp + 3); } syncBossHealth(s, 'player'); log(s, '获得 1 点补给：可选择成长，再准备下一轮。'); }
+  } else {
+    s.phase = 'results';
+    for (const p of s.players) {
+      p.ready = false; p.supplies++; p.hp = Math.min(p.maxHp, p.hp + 3);
+      p.curioOffers = rollCurioOffers(s, p);
+    }
+    syncBossHealth(s, 'player');
+    log(s, '获得 1 点补给：可三选一习得星神奇物，再准备下一轮。');
+  }
 }
 
 export function applyPartyCommand(state: PartyState, command: PartyCommand): PartyCommandResult {
@@ -394,7 +616,37 @@ export function applyPartyCommand(state: PartyState, command: PartyCommand): Par
   try {
     const legal = getPartyLegalActions(s, p.id);
     if (command.type === 'ready') { if (!legal.canReady) throw new Error('现在不能准备下一轮'); p.ready = true; if (s.players.every(p => p.ready)) { s.round++; beginRound(s); } return { state: s }; }
-    if (command.type === 'upgrade') { if (!legal.canUpgrade || !['power', 'ward', 'fortune'].includes(command.upgrade)) throw new Error('当前不能购买成长'); if (p.upgrades[command.upgrade] >= 3) throw new Error('此成长已达到 3 级'); p.upgrades[command.upgrade]++; p.supplies--; p.upgradedThisRound = true; log(s, `${p.name}获得${{ power: '火力', ward: '防护', fortune: '重投' }[command.upgrade]}成长。`, p.id); return { state: s }; }
+    if (command.type === 'chooseCurio') {
+      if (!legal.canUpgrade) throw new Error('当前不能选择奇物强化');
+      const offers = p.curioOffers || [];
+      if (!offers.includes(command.curioId)) throw new Error('该奇物不在本轮可选列表中');
+      const def = PARTY_CURIO_BY_ID[command.curioId];
+      if (!def || !canTakeCurio(s, p, def)) throw new Error('当前无法获取该奇物');
+      p.curios = [...(p.curios || []), def.id];
+      p.supplies--;
+      p.upgradedThisRound = true;
+      p.curioOffers = [];
+      let detail = '';
+      if (def.id === 'forge_dice') {
+        const forged = forgeNormalDice(s, p, 2);
+        if (forged.length) detail = `（${forged.join('、')}）`;
+      } else if (def.id === 'boss_overlord_dice') {
+        const forged = forgeNormalDice(s, p, 3);
+        if (p.prismaticId) p.prismaticUses += 1;
+        if (forged.length) detail = `（${forged.join('、')}）`;
+      } else if (def.id === 'lucky_coin') {
+        if (p.prismaticId) p.prismaticUses += 1;
+      } else if (def.id === 'abundance_dew') {
+        p.maxHp += 6; p.hp = Math.min(p.maxHp, p.hp + 10);
+        if (p.role === 'boss') { s.bossMaxHp += 6; s.bossHp = p.hp; syncBossHealth(s); }
+      } else if (def.id === 'boss_carapace') {
+        s.bossMaxHp += 20; s.bossHp = Math.min(s.bossMaxHp, s.bossHp + 20);
+        p.maxHp = s.bossMaxHp; p.hp = s.bossHp; syncBossHealth(s);
+      }
+      log(s, `${p.name}习得【${def.path}】奇物「${def.name}」${detail}。`, p.id);
+      return { state: s };
+    }
+    if (command.type === 'upgrade') { if (!legal.canUpgrade || !['power', 'ward', 'fortune'].includes(command.upgrade)) throw new Error('当前不能购买成长'); if (p.upgrades[command.upgrade] >= 3) throw new Error('此成长已达到 3 级'); p.upgrades[command.upgrade]++; p.supplies--; p.upgradedThisRound = true; p.curioOffers = []; log(s, `${p.name}获得${{ power: '火力', ward: '防护', fortune: '重投' }[command.upgrade]}成长。`, p.id); return { state: s }; }
     if (!legal.canAct || s.phase !== 'planning') throw new Error('已确认计划，请等待其他玩家');
     if (command.type === 'plan') {
       if (!legal.canPlan || !legal.targetIds.includes(command.targetId) || !['assault', 'guard', 'support'].includes(command.stance)) throw new Error('目标或行动无效');
@@ -414,11 +666,12 @@ export function applyPartyCommand(state: PartyState, command: PartyCommand): Par
         for (const key of ['nextStrength', 'nextToughness', 'danGuard', 'frostGuard']) initial.statuses[key] = Math.max(initial.statuses[key] ?? 0, p.statuses[key] ?? 0);
         const g = prepareCharacterEncounter(context(s, initial));
         adopt(p, g.players[0]); p.dice = dice; p.plan = plan; p.selectedIds = [];
-        p.rerolls += p.upgrades.fortune + (s.roundRule.kind === 'surge' ? 1 : 0); addUpgrades(p);
+        applyStartRerollsAndUpgrades(s, p);
       }
       return { state: s };
     }
     if (command.type === 'bossMove') { if (p.role !== 'boss' || !s.bossMoves.includes(command.move)) throw new Error('只能选择本轮预告的首领招式'); s.bossMove = command.move; return { state: s }; }
+    if (command.type === 'bossScheme') { if (p.role !== 'boss' || s.mode !== 'overlord' || !(['crisis_siphon', 'fortify_shield', 'overcharge'] as string[]).includes(command.scheme)) throw new Error('无效的首领奇策'); s.bossScheme = command.scheme; return { state: s }; }
     if (command.type === 'poolSwap') {
       if (!legal.canPoolSwap) throw new Error('当前无法从团队换骰池换骰');
       const pool = s.swapPools?.[p.teamId];
@@ -431,6 +684,7 @@ export function applyPartyCommand(state: PartyState, command: PartyCommand): Par
       p.dice[i] = incoming; pool[j] = own;
       p.selectedIds = p.selectedIds.map(id => id === own.id ? incoming.id : id);
       p.exchangedThisRound = true;
+      if (countCurio(p, 'rainbow_echo')) p.hp = Math.min(p.maxHp, p.hp + 5);
       log(s, `${p.name}从团队换骰池换得 ${incoming.value} 点（${incoming.sides}面）。`, p.id);
       return { state: s };
     }
@@ -443,7 +697,10 @@ export function applyPartyCommand(state: PartyState, command: PartyCommand): Par
       const ownSlot = own.poolIndex ?? i; incoming.poolIndex = ownSlot; own.poolIndex = j;
       incoming.ownerId = p.id; own.ownerId = q.id;
       p.selectedIds = p.selectedIds.map(id => id === own.id ? incoming.id : id); q.selectedIds = q.selectedIds.map(id => id === incoming.id ? own.id : id);
-      p.exchangedThisRound = q.exchangedThisRound = true; log(s, `${p.name}与${q.name}交换了一颗骰子。`, p.id); return { state: s };
+      p.exchangedThisRound = q.exchangedThisRound = true;
+      if (countCurio(p, 'rainbow_echo')) p.hp = Math.min(p.maxHp, p.hp + 5);
+      if (countCurio(q, 'rainbow_echo')) q.hp = Math.min(q.maxHp, q.hp + 5);
+      log(s, `${p.name}与${q.name}交换了一颗骰子。`, p.id); return { state: s };
     }
     if (command.type === 'confirm') {
       if (command.diceIds !== undefined) { if (!validDice(p, command.diceIds)) throw new Error('选择了无效骰子'); p.selectedIds = [...command.diceIds]; }
@@ -464,8 +721,27 @@ export function choosePartyAiCommand(s: PartyState, playerId: string): PartyComm
   const p = s.players.find(p => p.id === playerId); if (!p) return null;
   const legal = getPartyLegalActions(s, p.id); if (!legal.canAct) return null;
   if (s.phase === 'results') {
-    if (legal.canUpgrade) { const choices = (p.hp < p.maxHp * 0.6 ? ['ward', 'power', 'fortune'] : ['power', 'ward', 'fortune']) as ('power' | 'ward' | 'fortune')[]; const upgrade = choices.find(k => p.upgrades[k] < 3); if (upgrade) return { type: 'upgrade', playerId, upgrade }; }
+    if (legal.canUpgrade) {
+      if (p.curioOffers?.length) return { type: 'chooseCurio', playerId, curioId: p.curioOffers[0] };
+      const choices = (p.hp < p.maxHp * 0.6 ? ['ward', 'power', 'fortune'] : ['power', 'ward', 'fortune']) as ('power' | 'ward' | 'fortune')[];
+      const upgrade = choices.find(k => p.upgrades[k] < 3);
+      if (upgrade) return { type: 'upgrade', playerId, upgrade };
+    }
     return { type: 'ready', playerId };
+  }
+  if (!p.rollsUsed && !p.prismaticRolled && !p.selectedIds.length && p.role === 'boss' && s.mode === 'overlord') {
+    const desiredMove: OverlordMove = p.hp < p.maxHp * 0.55 && s.bossMoves.includes('drain')
+      ? 'drain'
+      : s.bossMoves.includes('eruption') && s.round % 2 === 1
+        ? 'eruption'
+        : s.bossMoves[hash(`bossMove:${s.seed}:${s.round}`) % s.bossMoves.length];
+    if (s.bossMove !== desiredMove) return { type: 'bossMove', playerId, move: desiredMove };
+    const desiredScheme: BossScheme = s.bossMove === 'eruption'
+      ? 'overcharge'
+      : p.hp < p.maxHp * 0.65
+        ? 'fortify_shield'
+        : 'crisis_siphon';
+    if ((s.bossScheme ?? 'crisis_siphon') !== desiredScheme) return { type: 'bossScheme', playerId, scheme: desiredScheme };
   }
   // A deterministic seat/round assignment makes AI cooperate without reading any
   // private intent or consuming authority RNG merely by requesting a suggestion.
@@ -477,7 +753,7 @@ export function choosePartyAiCommand(s: PartyState, playerId: string): PartyComm
       targetId = index % 4 === 0 ? 'shield' : index % 4 === 1 && s.bossMoves.includes('eruption') ? 'charge' : 'core'; stance = 'assault';
       const injured = s.players.filter(q => q.id !== p.id && q.teamId === p.teamId).sort((a, b) => a.hp / a.maxHp - b.hp / b.maxHp)[0];
       if (index % 4 === 3 && injured && (injured.hp < injured.maxHp * 0.6 || s.crisis >= 5)) { stance = 'support'; supportPlayerId = injured.id; }
-      else if (index % 4 === 2 && (s.bossMove === 'sweep' || s.bossMove === 'drain')) { stance = 'guard'; }
+      else if (index % 4 === 2 && (s.bossMoves.includes('sweep') || s.bossMoves.includes('drain'))) { stance = 'guard'; }
     }
     if (p.plan.targetId !== targetId || p.plan.stance !== stance || p.plan.supportPlayerId !== supportPlayerId) return { type: 'plan', playerId, targetId, stance, supportPlayerId };
   }
