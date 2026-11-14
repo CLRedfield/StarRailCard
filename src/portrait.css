@@ -6,7 +6,7 @@
   }
 
   body { min-width: 320px; }
-  .app:not(.in-battle) { padding-bottom: var(--mobile-nav-height); }
+  .app:not(.in-battle):not(.in-party-battle) { padding-bottom: var(--mobile-nav-height); }
   .app-header {
     height: 62px;
     min-height: 62px;
@@ -54,36 +54,75 @@
   .app-footer button { font-size: 10px; min-height: 28px; }
   .app-footer button span { margin: 0 6px; }
 
-  /* One portrait composition: title, a fan of real cards, then play. */
+  /* One portrait composition: natural vertical flow keeps cards, CTAs and bottom bar separated. */
   .home-page {
-    --mobile-art-top: 154px;
-    --mobile-art-height: clamp(234px, 31svh, 280px);
-    --mobile-actions-top: calc(var(--mobile-art-top) + var(--mobile-art-height) + 31px);
-    height: calc(var(--mobile-actions-top) + 207px);
-    min-height: calc(100svh - 63px - var(--mobile-nav-height));
+    position: relative;
+    height: auto;
+    min-height: calc(100svh - 62px - var(--mobile-nav-height));
     max-height: none;
-    padding: 0;
-    display: block;
+    padding: 14px var(--mobile-page-gutter) 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  .resume-banner {
+    position: static;
+    order: 0;
+    align-self: flex-start;
+    z-index: 4;
+    font-size: 9px;
+    padding: 6px 10px;
   }
   .hero-content { display: contents; }
   .hero-content .event-label {
-    position: absolute;
-    top: 18px;
-    left: 24px;
+    position: static;
+    order: 1;
+    align-self: flex-start;
     margin: 0;
-    padding: 5px 9px;
+    padding: 4px 9px;
     font-size: 9px;
     letter-spacing: 1px;
   }
   .hero-kicker { display: none; }
-  .hero-content h1 { position: absolute; top: 53px; left: 26px; margin: 0; z-index: 3; }
+  .hero-content h1 {
+    position: static;
+    order: 2;
+    margin: 0;
+    z-index: 3;
+  }
   .hero-content h1 > span { font-size: 38px; letter-spacing: -2px; }
   .hero-content h1 strong { font-size: 53px; letter-spacing: -3px; }
+  .hero-art {
+    position: relative;
+    order: 3;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    width: 100%;
+    height: 248px;
+    margin: 2px 0;
+  }
+  .hero-card { width: clamp(140px, 38vw, 162px); left: calc(50% - clamp(70px, 19vw, 81px)); top: 12px; }
+  .hero-card-0 { top: 14px; transform: translateX(-80px) rotate(-17deg) scale(.84); }
+  .hero-card-1 { transform: rotate(-3deg) translateY(-6px); }
+  .hero-card-2 { top: 15px; transform: translateX(80px) rotate(16deg) scale(.83); }
+  .hero-art .card-caption { padding: 26px 11px 10px; }
+  .hero-art .card-caption strong { font-size: 17px; }
+  .hero-art .card-stats { font-size: 10px; margin-top: 8px; }
+  .hero-sticker { top: 10px; right: 14px; padding: 9px 11px; font-size: 10px; }
+  .hero-sticker strong { font-size: 21px; }
+  .hero-star.star-1 { top: -8px; left: auto; right: 22%; font-size: 26px; }
+  .hero-star.star-2 { bottom: 16px; left: 13%; font-size: 19px; }
+  .floating-die { right: 10%; bottom: 4px; padding: 4px; border-radius: 8px; }
+  .floating-die svg { width: 25px; height: 25px; }
+  .hero-orbit { width: 540px; height: 540px; top: 20px; right: -160px; }
+  .background-type { bottom: 110px; font-size: 85px; right: -8px; }
   .hero-content .hero-description {
-    position: absolute;
-    top: calc(var(--mobile-art-top) + var(--mobile-art-height) + 1px);
-    left: 24px;
-    right: 24px;
+    position: static;
+    order: 4;
     margin: 0;
     line-height: 1.5;
     font-size: 11px;
@@ -91,46 +130,41 @@
     text-align: center;
   }
   .hero-description br { display: none; }
-  .hero-actions { position: absolute; top: var(--mobile-actions-top); left: 24px; right: 24px; gap: 10px; }
-  .hero-primary, .hero-secondary { min-height: 50px; min-width: 0; font-size: 13px; padding: 12px 10px; }
-  .hero-primary { flex: 1.22; }
-  .hero-secondary { flex: 1; }
+  .hero-actions {
+    position: static;
+    order: 5;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+    margin-top: 2px;
+  }
+  .hero-actions.has-three > .hero-primary { grid-column: 1 / -1; }
+  .hero-primary, .hero-secondary { min-height: 46px; min-width: 0; width: 100%; font-size: 13px; padding: 10px 8px; }
   .hero-primary svg, .hero-secondary svg { width: 17px; height: 17px; }
   .hero-subaction {
-    position: absolute;
-    top: calc(var(--mobile-actions-top) + 58px);
-    left: 24px;
-    right: 24px;
+    position: static;
+    order: 6;
     justify-content: center;
-    min-height: 35px;
-    padding: 8px 0;
+    min-height: 34px;
+    padding: 4px 0;
     font-size: 10px;
   }
-  .hero-art { top: var(--mobile-art-top); left: 0; right: 0; width: 100%; height: var(--mobile-art-height); }
-  .hero-card { width: clamp(146px, 40vw, 172px); left: calc(50% - clamp(73px, 20vw, 86px)); top: 3px; }
-  .hero-card-0 { top: 4px; transform: translateX(-83px) rotate(-17deg) scale(.84); }
-  .hero-card-1 { transform: rotate(-3deg) translateY(-8px); }
-  .hero-card-2 { top: 5px; transform: translateX(83px) rotate(16deg) scale(.83); }
-  .hero-art .card-caption { padding: 28px 11px 11px; }
-  .hero-art .card-caption strong { font-size: 18px; }
-  .hero-art .card-stats { font-size: 10px; margin-top: 8px; }
-  .hero-sticker { top: 13px; right: 16px; padding: 10px 12px; font-size: 10px; }
-  .hero-sticker strong { font-size: 22px; }
-  .hero-star.star-1 { top: -16px; left: auto; right: 22%; font-size: 26px; }
-  .hero-star.star-2 { bottom: 18px; left: 13%; font-size: 19px; }
-  .floating-die { right: 12%; bottom: 0; padding: 4px; border-radius: 8px; }
-  .floating-die svg { width: 25px; height: 25px; }
-  .hero-orbit { width: 540px; height: 540px; top: 20px; right: -160px; }
-  .background-type { bottom: 110px; font-size: 85px; right: -8px; }
-  .hero-bottom { left: 24px; right: 24px; bottom: 0; height: 104px; gap: 0; align-content: center; }
-  .hero-bottom .mode-link { min-height: 56px; padding: 8px 0; gap: 12px; justify-content: flex-start; }
+  .hero-bottom {
+    position: static;
+    order: 7;
+    margin-top: auto;
+    padding-top: 10px;
+    height: auto;
+    gap: 2px;
+    align-content: center;
+    border-top: 1px solid #c8bed92b;
+  }
+  .hero-bottom .mode-link { min-height: 52px; padding: 8px 0; gap: 12px; justify-content: flex-start; }
   .hero-bottom .mode-link strong { font-size: 12px; margin-top: 5px; }
   .hero-bottom .mode-link small { font-size: 7px; }
   .hero-bottom .mode-link > svg { margin-left: auto; }
   .hero-bottom .mode-icon { width: 37px; height: 37px; }
-  .hero-bottom .mini-guide { min-height: 36px; font-size: 10px; padding: 7px 0; }
-  .resume-banner { z-index: 4; top: 17px; left: auto; right: 18px; font-size: 9px; padding: 7px 9px; }
-  .home-page:has(.resume-banner) .event-label { max-width: 145px; font-size: 8px; letter-spacing: 0; }
+  .hero-bottom .mini-guide { min-height: 34px; font-size: 10px; padding: 6px 0; }
 
   /* Browsing uses natural vertical scroll instead of shrinking type to fit. */
   .collection-page, .campaign-page, .shop-page, .online-page { padding: 26px var(--mobile-page-gutter) 32px; }
@@ -180,6 +214,7 @@
   .challenge-copy { padding: 27px 22px; max-width: 100%; }
   .challenge-copy h2 { max-width: 78%; font-size: 28px; margin: 15px 0 20px; }
   .challenge-quote { max-width: 79%; font-size: 12px; line-height: 1.85; min-height: 0; }
+  .challenge-tutorial-note { max-width: 78%; }
   .challenge-art { width: 83%; height: 90%; right: -70px; }
   .opponent-preview { max-width: 78%; margin: 20px 0; padding-top: 17px; }
   .opponent-preview strong { font-size: 16px; }
@@ -304,13 +339,12 @@
   .app-header { padding-left: 13px; padding-right: 13px; }
   .brand strong { font-size: 15px; }
   .header-right .profile-rank { display: none; }
-  .home-page { --mobile-art-height: 234px; }
-  .hero-card { width: 146px; left: calc(50% - 73px); }
-  .hero-card-0 { transform: translateX(-76px) rotate(-17deg) scale(.84); }
-  .hero-card-2 { transform: translateX(76px) rotate(16deg) scale(.83); }
-  .hero-sticker { right: 14px; font-size: 9px; }
+  .hero-art { height: 222px; }
+  .hero-card { width: 134px; left: calc(50% - 67px); }
+  .hero-card-0 { transform: translateX(-74px) rotate(-17deg) scale(.84); }
+  .hero-card-2 { transform: translateX(74px) rotate(16deg) scale(.83); }
+  .hero-sticker { right: 12px; font-size: 9px; }
   .hero-sticker strong { font-size: 19px; }
-  .home-page:has(.resume-banner) .event-label { display: none; }
   .loadout-portrait { grid-template-columns: 88px minmax(0, 1fr); gap: 13px; }
   .loadout-portrait > .character-card { max-width: 88px; }
   .dice-inspector-heading > b { white-space: normal; text-align: right; max-width: 60px; line-height: 1.5; }

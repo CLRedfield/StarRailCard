@@ -46,7 +46,7 @@ html[data-theme="light"] .battle-tutorial-rest { color: #735d8b; }
 html[data-motion="reduced"] .battle-page:has(.battle-tutorial) * { animation-duration: 0.001ms !important; }
 .campaign-tutorial-label { color: var(--purple); font-weight: 700; margin-left: 6px; }
 .challenge-tutorial-note { margin: 0 0 16px; font-size: 12px; line-height: 1.7; color: var(--muted); }
-.challenge-tutorial-note strong { display: block; color: var(--text); }
+.challenge-tutorial-note strong { display: block; color: inherit; }
 @media (max-width: 700px) and (orientation: portrait) {
   html .battle-page:has(.battle-tutorial) .battle-topbar { flex-basis: 42px; height: 42px; }
   html .battle-page:has(.battle-tutorial) .arena-layout { position: relative; margin-block: 6px 7px; gap: 6px; }

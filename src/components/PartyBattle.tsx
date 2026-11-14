@@ -569,7 +569,15 @@ export default function PartyBattle({
         </button>
         <div className="party-topbar-meta">
           <strong>{mode.name}</strong>
-          <span className="party-rule-badge" title={state.roundRule.description}>{state.roundRule.name}</span>
+          <button
+            type="button"
+            className={`party-rule-badge ${ruleOpen ? 'active' : ''}`}
+            onClick={() => setRuleOpen(v => !v)}
+            title={state.roundRule.description}
+          >
+            <Sparkles size={11}/>
+            <span>{state.roundRule.name}</span>
+          </button>
           {(state.mode === 'raid' || state.mode === 'overlord')
             ? <span className="party-meta-stat">首领 <b>{state.bossHp}</b>/{state.bossMaxHp} · 危机 <b>{state.crisis}</b>/{state.maxCrisis}</span>
             : <span className="party-meta-stat">第 <b>{myRank}</b> 名 · <b>{me.score}</b> 分</span>}
@@ -581,6 +589,14 @@ export default function PartyBattle({
           <button className="icon-button" title="战局记录" onClick={() => setDialog('log')}><List size={18}/></button>
         </div>
       </div>
+
+      {ruleOpen && (
+        <div className="weather-popover party-rule-popover" data-sweep-ignore="true">
+          <strong>本轮规则：{state.roundRule.name}</strong>
+          <p>{state.roundRule.description}</p>
+          {myPrismDef && <button type="button" className="text-button" onClick={() => { setRuleOpen(false); setDialog('prismatic'); }}>查看我的曜彩骰面</button>}
+        </div>
+      )}
 
       {planning && coachContent && (
         <div className="party-coach-bar" data-sweep-ignore="true">
@@ -599,22 +615,77 @@ export default function PartyBattle({
       )}
 
       <div className="arena-layout party-arena-layout">
-        <aside className="round-rail" data-sweep-ignore="true">
-          <span className="rail-label">PARTY</span>
-          <div className="round-medallion">
-            <span>✦</span>
-            <small>轮次</small>
-            <b>{state.round}/{state.maxRounds}</b>
-          </div>
-          {(state.mode === 'raid' || state.mode === 'overlord') && (
-            <div className="party-crisis-gauge" title={`当前危机 ${state.crisis} / 上限 ${state.maxCrisis}`}>
-              <small>阶段 {state.bossPhase}</small>
-              <span>危机 {state.crisis}/{state.maxCrisis}</span>
-              <div className="party-crisis-track"><i style={{ width: `${percent(state.crisis, state.maxCrisis)}%` }}/></div>
+        <aside className="round-rail party-roster-rail" data-sweep-ignore="true">
+          <div className="party-rail-header">
+            <div className="party-round-chip">
+              <span>✦</span>
+              <small>轮次</small>
+              <b>{state.round}/{state.maxRounds}</b>
             </div>
-          )}
-          <div className="vertical-line"/>
-          <span className="rail-label">{mode.name}</span>
+            {(state.mode === 'raid' || state.mode === 'overlord') && (
+              <div className="party-crisis-gauge" title={`当前危机 ${state.crisis} / 上限 ${state.maxCrisis}`}>
+                <small>阶段 {state.bossPhase} · 危机 {state.crisis}/{state.maxCrisis}</small>
+                <div className="party-crisis-track"><i style={{ width: `${percent(state.crisis, state.maxCrisis)}%` }}/></div>
+              </div>
+            )}
+          </div>
+          <div className="party-seat-strip" data-seat-count={state.players.length}>
+            {state.players.map(p => {
+              const pCard = state.catalog.cards.find(c => c.id === p.cardId);
+              const isMe = p.id === me.id;
+              const sameTeamAlly = !isMe && p.teamId === me.teamId && p.role !== 'boss';
+              const canAssignSupport = canPlan && me.plan.stance === 'support' && sameTeamAlly;
+              const isSupported = me.plan.stance === 'support' && me.plan.supportPlayerId === p.id;
+              const hpPct = percent(p.hp, p.maxHp);
+              return (
+                <div
+                  key={p.id}
+                  className={`party-seat-tile ${isMe ? 'is-me' : ''} ${p.role === 'boss' ? 'is-boss' : ''} ${p.confirmed ? 'is-confirmed' : ''} ${isSupported ? 'is-supported' : ''} ${canAssignSupport ? 'is-support-pickable' : ''}`}
+                >
+                  <button
+                    type="button"
+                    className="party-seat-main"
+                    title={canAssignSupport ? `点击指定援护 ${p.name}` : `点击查看 ${p.name} 详情`}
+                    onClick={() => {
+                      if (canAssignSupport) {
+                        plan({ stance: 'support', supportPlayerId: p.id });
+                      } else {
+                        setInspectId(p.id);
+                      }
+                    }}
+                  >
+                    <img src={asset(pCard?.image)} alt={pCard?.name || p.name}/>
+                    <div className="party-seat-info">
+                      <div className="party-seat-name">
+                        <strong>{p.name}{isMe ? ' · 你' : ''}</strong>
+                        {p.confirmed && <Check size={12} className="seat-check"/>}
+                      </div>
+                      <div className="party-seat-bar">
+                        <i style={{ width: `${hpPct}%` }}/>
+                        <span>{p.hp}/{p.maxHp}</span>
+                      </div>
+                      <small className="party-seat-sub">
+                        {isSupported
+                          ? '★ 援护中'
+                          : p.role === 'boss'
+                            ? `首领 · 备战${p.confirmed ? '✓' : ''}`
+                            : `${teamName(state, p.teamId)} · ${p.score}分${state.mode !== 'treasure' && sameTeamAlly ? ` · ${stanceOptions[p.plan.stance].name}` : ''}`}
+                      </small>
+                    </div>
+                  </button>
+                  <button
+                    type="button"
+                    className="party-seat-inspect"
+                    aria-label={`查看 ${p.name} 卡牌信息`}
+                    title="查看角色技能与状态"
+                    onClick={() => setInspectId(p.id)}
+                  >
+                    <Info size={12}/>
+                  </button>
+                </div>
+              );
+            })}
+          </div>
         </aside>
 
         <div className="arena-frame">
@@ -641,7 +712,7 @@ export default function PartyBattle({
               )}
 
               {me.role === 'boss' ? (
-                <div className="party-target-row boss-moves">
+                <div className={`party-target-row boss-moves count-${Math.min(state.bossMoves.length, 4)}`}>
                   {state.bossMoves.map(m => {
                     const chosen = state.bossMove === m;
                     return (
@@ -654,7 +725,7 @@ export default function PartyBattle({
                         <div className="party-stage-head">
                           {moveInfo[m].icon}
                           <strong>{moveInfo[m].name}</strong>
-                          <span>{chosen ? '已选招式' : '点击选用'}</span>
+                          <span className="party-stage-tag">{chosen ? '已选招式' : '点击选用'}</span>
                         </div>
                         <small>{moveInfo[m].hint}</small>
                       </button>
@@ -696,7 +767,8 @@ export default function PartyBattle({
                         <small>{t.description}</small>
                         {state.mode !== 'treasure' && targeters.length > 0 && (
                           <div className="party-targeters">
-                            {targeters.map(p => <em key={p.id}>{p.name}</em>)}
+                            {targeters.slice(0, 3).map(p => <em key={p.id}>{p.name}</em>)}
+                            {targeters.length > 3 && <em>+{targeters.length - 3}人</em>}
                           </div>
                         )}
                       </button>
@@ -708,27 +780,29 @@ export default function PartyBattle({
 
             {/* Central Phase Line + Stance Selector */}
             <div className="phase-line party-phase-line" data-sweep-ignore="true">
-              {me.role !== 'boss' && state.mode !== 'treasure' ? (
-                <div className="party-stance-pills" role="group" aria-label="本轮姿态">
-                  {(['assault', 'guard', 'support'] as PartyStance[]).map(st => {
-                    const info = stanceOptions[st];
-                    const supportBlocked = st === 'support' && supportPlayers.length === 0;
-                    const flipLocked = roleLocked && stanceWouldFlipRole(st);
-                    return (
-                      <button
-                        key={st}
-                        className={me.plan.stance === st ? 'active' : ''}
-                        disabled={!canPlan || supportBlocked || flipLocked}
-                        title={flipLocked ? '已重投/换骰/曜彩，不可切攻守（仍可切换同姿态具体动作）' : info.hint}
-                        onClick={() => setStance(st)}
-                      >
-                        {info.icon}
-                        <span>{info.name}</span>
-                      </button>
-                    );
-                  })}
-                </div>
-              ) : <span className="line"/>}
+              <div className="party-phase-side left">
+                {me.role !== 'boss' && state.mode !== 'treasure' ? (
+                  <div className="party-stance-pills" role="group" aria-label="本轮姿态">
+                    {(['assault', 'guard', 'support'] as PartyStance[]).map(st => {
+                      const info = stanceOptions[st];
+                      const supportBlocked = st === 'support' && supportPlayers.length === 0;
+                      const flipLocked = roleLocked && stanceWouldFlipRole(st);
+                      return (
+                        <button
+                          key={st}
+                          className={me.plan.stance === st ? 'active' : ''}
+                          disabled={!canPlan || supportBlocked || flipLocked}
+                          title={flipLocked ? '已重投/换骰/曜彩，不可切攻守（仍可切换同姿态具体动作）' : info.hint}
+                          onClick={() => setStance(st)}
+                        >
+                          {info.icon}
+                          <span>{info.name}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                ) : <span className="line"/>}
+              </div>
 
               <div className="phase-announcement" key={`${state.round}-${me.plan.stance}-${me.plan.targetId}-${me.confirmed}`}>
                 <span>ROUND {String(state.round).padStart(2, '0')}</span>
@@ -741,75 +815,19 @@ export default function PartyBattle({
                 </b>
               </div>
 
-              <span className="line"/>
-              {me.role !== 'boss' && me.plan.stance === 'support' && supportPlayers.length > 0 && (
-                <span className="party-support-badge">
-                  援护：{state.players.find(p => p.id === me.plan.supportPlayerId)?.name || '请点选同队头像'}
-                </span>
-              )}
+              <div className="party-phase-side right">
+                <span className="line"/>
+                {me.role !== 'boss' && me.plan.stance === 'support' && supportPlayers.length > 0 && (
+                  <span className="party-support-badge">
+                    援护：{state.players.find(p => p.id === me.plan.supportPlayerId)?.name || '请点选同队头像'}
+                  </span>
+                )}
+              </div>
             </div>
 
-            {/* Mid Zone: Compact Seat Strip + Shared Swap Pool */}
-            <div className="party-mid-zone" data-sweep-ignore="true">
-              <div className="party-seat-strip">
-                {state.players.map(p => {
-                  const pCard = state.catalog.cards.find(c => c.id === p.cardId);
-                  const isMe = p.id === me.id;
-                  const sameTeamAlly = !isMe && p.teamId === me.teamId && p.role !== 'boss';
-                  const canAssignSupport = canPlan && me.plan.stance === 'support' && sameTeamAlly;
-                  const isSupported = me.plan.stance === 'support' && me.plan.supportPlayerId === p.id;
-                  const hpPct = percent(p.hp, p.maxHp);
-                  return (
-                    <div
-                      key={p.id}
-                      className={`party-seat-tile ${isMe ? 'is-me' : ''} ${p.role === 'boss' ? 'is-boss' : ''} ${p.confirmed ? 'is-confirmed' : ''} ${isSupported ? 'is-supported' : ''} ${canAssignSupport ? 'is-support-pickable' : ''}`}
-                    >
-                      <button
-                        type="button"
-                        className="party-seat-main"
-                        title={canAssignSupport ? `点击指定援护 ${p.name}` : `点击查看 ${p.name} 详情`}
-                        onClick={() => {
-                          if (canAssignSupport) {
-                            plan({ stance: 'support', supportPlayerId: p.id });
-                          } else {
-                            setInspectId(p.id);
-                          }
-                        }}
-                      >
-                        <img src={asset(pCard?.image)} alt={pCard?.name || p.name}/>
-                        <div className="party-seat-info">
-                          <div className="party-seat-name">
-                            <strong>{p.name}{isMe ? ' · 你' : ''}</strong>
-                            {p.confirmed && <Check size={12} className="seat-check"/>}
-                          </div>
-                          <div className="party-seat-bar">
-                            <i style={{ width: `${hpPct}%` }}/>
-                            <span>{p.hp}/{p.maxHp}</span>
-                          </div>
-                          <small className="party-seat-sub">
-                            {isSupported
-                              ? '★ 援护中'
-                              : p.role === 'boss'
-                                ? `首领 · 备战${p.confirmed ? '✓' : ''}`
-                                : `${teamName(state, p.teamId)} · ${p.score}分${state.mode !== 'treasure' && sameTeamAlly ? ` · ${stanceOptions[p.plan.stance].name}` : ''}`}
-                          </small>
-                        </div>
-                      </button>
-                      <button
-                        type="button"
-                        className="party-seat-inspect"
-                        aria-label={`查看 ${p.name} 卡牌信息`}
-                        title="查看角色技能与状态"
-                        onClick={() => setInspectId(p.id)}
-                      >
-                        <Info size={12}/>
-                      </button>
-                    </div>
-                  );
-                })}
-              </div>
-
-              {teamPool.length > 0 && (
+            {/* Shared Swap Pool */}
+            {teamPool.length > 0 && (
+              <div className="party-mid-zone" data-sweep-ignore="true">
                 <div className={`swap-zone party-swap-zone ${armedPoolDie ? 'is-armed' : ''}`} data-party-coach="pool">
                   <div className="swap-label">
                     <span><Shuffle size={12}/> 团队共享换骰池</span>
@@ -831,8 +849,8 @@ export default function PartyBattle({
                     lowQuality={lowQuality}
                   />
                 </div>
-              )}
-            </div>
+              </div>
+            )}
 
             {/* Bottom Friendly Hand & 3D Dice Tray */}
             <div className="friendly-zone party-friendly-zone" data-party-coach="dice">
@@ -972,13 +990,6 @@ export default function PartyBattle({
             <span>{state.roundRule.name}</span>
             <ChevronDown size={12}/>
           </button>
-          {ruleOpen && (
-            <div className="weather-popover party-rule-popover">
-              <strong>本轮规则：{state.roundRule.name}</strong>
-              <p>{state.roundRule.description}</p>
-              {myPrismDef && <button type="button" className="text-button" onClick={() => { setRuleOpen(false); setDialog('prismatic'); }}>查看我的曜彩骰面</button>}
-            </div>
-          )}
           <div className="rail-spacer"/>
           <button
             className="prismatic-action"
