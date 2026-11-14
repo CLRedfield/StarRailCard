@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { applyCommand, chooseAiCommand, createMatch, getLegalActions, type GameCommand, type GameState } from '../src/game';
 import { getChallenges } from '../src/components/Campaign';
-import { advanceTutorial, createTutorialProgress, getPrismaticLesson, getTutorialStep, restartTutorial, skipTutorial, updateTutorialProgress, type TutorialProgress } from '../src/lib/tutorial';
+import { advanceTutorial, createTutorialProgress, getCoopCoachStep, getPrismaticLesson, getTutorialDiagnostic, getTutorialStep, restartTutorial, skipTutorial, updateTutorialProgress, type TutorialProgress } from '../src/lib/tutorial';
 
 function firstChallenge(seed: number | string = 'first-lesson-20260929'): GameState {
   const challenge = getChallenges().find(c => c.id === 'classic-1')!;
@@ -136,5 +136,44 @@ describe('first challenge interactive tutorial', () => {
     expect(getPrismaticLesson(state, 'you')).toContain('累计受到25点伤害');
     state.players[0].prismaticUses = 0;
     expect(getPrismaticLesson(state, 'you')).toContain('无需购买');
+  });
+
+  it('reports real-time selection diagnostics including over-selection and missing forced dice', () => {
+    let state = firstChallenge();
+    const diagEmpty = getTutorialDiagnostic(state, 'you');
+    expect(diagEmpty.requiredDice).toBe(3);
+    expect(diagEmpty.remaining).toBe(3);
+    expect(diagEmpty.skillLabel).toContain('：');
+
+    state = select(state, 5);
+    const diagOver = getTutorialDiagnostic(state, 'you');
+    expect(diagOver.overSelected).toBe(2);
+    expect(diagOver.statusLabel).toContain('多选了 2 颗');
+
+    state = select(state, 3);
+    const unpicked = state.players[0].dice.find(d => !state.players[0].selectedIds.includes(d.id))!;
+    unpicked.forced = true;
+    expect(getTutorialDiagnostic(state, 'you').tip).toContain('命定');
+  });
+
+  it('provides phased co-op coach guidance and hides outside active co-op matches', () => {
+    expect(getCoopCoachStep(firstChallenge(), 'you')).toBeNull();
+    const coop = createMatch({
+      mode: 'coop',
+      players: [
+        { id: 'you', name: '开拓者', cardId: '264000' },
+        { id: 'ally', name: '队友', cardId: '264026', isAI: true },
+      ],
+      bossPhases: [{ cardId: '264014' }],
+    }, 123);
+    expect(getCoopCoachStep(coop, 'you')?.id).toBe('coop-tactics');
+    expect(getCoopCoachStep(coop, 'you')?.target).toBe('tactics');
+    coop.phase = 'roll';
+    expect(getCoopCoachStep(coop, 'you')?.id).toBe('coop-roll');
+    coop.phase = 'swap';
+    expect(getCoopCoachStep(coop, 'you')?.id).toBe('coop-swap');
+    expect(getCoopCoachStep(coop, 'you')?.target).toBe('swap');
+    coop.phase = 'finished';
+    expect(getCoopCoachStep(coop, 'you')).toBeNull();
   });
 });

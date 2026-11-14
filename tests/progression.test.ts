@@ -31,6 +31,15 @@ describe('released progression and shop', () => {
     expect(legacy).toEqual(before);
     expect(migrateProfile(migrated)).toBe(migrated);
   });
+  it('upgrades legacy un-awakened selectedDice IDs without re-granting starter coins', () => {
+    for (const [legacyId, trueId] of [['264519', '264419'], ['264523', '264424'], ['264524', '264423']] as const) {
+      const saved = { ...createStarterProfile(), selectedCard: '264026', selectedDice: legacyId };
+      const migrated = migrateProfile(saved);
+      expect(migrated.selectedDice).toBe(trueId);
+      expect(migrated.coins).toBe(saved.coins);
+      expect(migrateProfile(migrated)).toBe(migrated);
+    }
+  });
   it('keeps the one-time marker across exported JSON and validates imported markers', () => {
     const exported = JSON.parse(JSON.stringify(createStarterProfile()));
     expect(isProfile(exported)).toBe(true);

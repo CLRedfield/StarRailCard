@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { applyCommand, createMatch, defaultCatalog, getPlayerPreview } from '../src/game';
 import type { GameCommand, GameState } from '../src/game';
-import { cards, shopGoods } from '../src/data';
+import { cards, diceById, shopGoods } from '../src/data';
 import { buyGood, createStarterProfile } from '../src/lib/progression';
 
 const catalog = defaultCatalog();
@@ -223,3 +223,32 @@ function selectPreviewDefender(s: GameState, values: number[]) {
   p.selectedIds = p.dice.slice(0, values.length).map(d => d.id);
   return s;
 }
+
+describe('True default prismatic dice', () => {
+  it('assigns collectible 真• prismatic dice to all playable characters with a default die', () => {
+    const diceBacked = cards.filter(c => c.prismaticId && c.id !== 'custom-seele');
+    expect(diceBacked).toHaveLength(23);
+    for (const card of cards) {
+      if (card.prismaticId) expect(card.prismaticId.startsWith('2645')).toBe(false);
+    }
+    for (const card of diceBacked) {
+      const die = diceById[card.prismaticId!];
+      expect(die, `Missing die for ${card.name} (${card.id})`).toBeDefined();
+      expect(die.collectible).toBe(true);
+      expect(die.name.startsWith('「真•')).toBe(true);
+    }
+    expect(cards.find(c => c.id === '264026')?.prismaticId).toBe('264419');
+    expect(diceById['264419']?.name).toBe('「真•心跳」');
+    expect(cards.find(c => c.id === '264027')?.prismaticId).toBe('264424');
+    expect(diceById['264424']?.name).toBe('「真•蓄力」');
+    expect(cards.find(c => c.id === '264027')?.description).toContain('忽略对方7点防御值');
+    expect(cards.find(c => c.id === '264031')?.prismaticId).toBe('264407');
+    expect(cards.find(c => c.id === '264031')?.description).toContain('重投');
+    expect(cards.find(c => c.id === '264032')?.prismaticId).toBe('264423');
+    expect(diceById['264423']?.name).toBe('「真•毒液」');
+    expect(cards.find(c => c.id === 'custom-seele')?.prismaticId).toBe('264401');
+
+    const match = createMatch({ mode: 'classic', catalog, weather: 'off', players: [{ id: 'a', name: 'A', cardId: '264026' }, { id: 'b', name: 'B', cardId: 'balance-dummy' }] }, 1);
+    expect(match.players[0].prismaticId).toBe('264419');
+  });
+});

@@ -233,4 +233,20 @@ describe('four to eight player friend rooms', () => {
     await x.clients[0].createRoom({ mode: 'treasure', public: true });
     expect([...x.network.retained.keys()].filter(topic => topic.includes('/match/'))).toHaveLength(0);
   });
+
+  it('allows host to reset other players readiness when room settings change', async () => {
+    const x = setup(4);
+    await joinAll(x, 'raid', 4);
+    await readyAll(x);
+    expect(x.clients[0].getSnapshot().room?.players.every(p => p.ready)).toBe(true);
+    // Guest resetOthers must never clear host readiness.
+    await x.clients[1].setReady(false, { cardId: 'example' }, { resetOthers: true });
+    await flush();
+    expect(x.clients[0].getSnapshot().room?.players.find(p => p.seat === 0)?.ready).toBe(true);
+    // Host resetOthers resets every non-host guest back to unready.
+    await x.clients[0].setReady(false, { cardId: 'example', partySettings: { count: 4, maxRounds: 12, bossId: '' } }, { resetOthers: true });
+    await flush();
+    const room = x.clients[1].getSnapshot().room!;
+    expect(room.players.every(p => !p.ready)).toBe(true);
+  });
 });

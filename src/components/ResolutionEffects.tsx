@@ -4,6 +4,7 @@ import type { BattleResolution, GameEvent, GameState, ResolutionStrike } from '.
 import { cardById } from '../data';
 import { eventFeedbackLabel } from '../lib/useBattlePresentation';
 import CardView from './CardView';
+import VfxParticles, { type VfxPreset } from './VfxParticles';
 import './ResolutionEffects.css';
 
 type PresentationPhase = 'idle' | 'settle' | 'transform' | 'compare' | 'strike' | 'impact' | 'defeat';
@@ -19,6 +20,17 @@ interface Props {
 }
 interface Point { x: number; y: number }
 interface Anchors { players: Record<string, Point>; dice: Record<string, Point>; width: number; height: number }
+
+function crescentArc(x: number, y: number, len: number, angleDeg: number, bend: number): string {
+  const rad = (angleDeg * Math.PI) / 180;
+  const nx = -Math.sin(rad);
+  const ny = Math.cos(rad);
+  const x1 = x - Math.cos(rad) * len;
+  const y1 = y - Math.sin(rad) * len;
+  const x2 = x + Math.cos(rad) * len;
+  const y2 = y + Math.sin(rad) * len;
+  return `M ${x1.toFixed(1)} ${y1.toFixed(1)} Q ${(x + nx * bend).toFixed(1)} ${(y + ny * bend).toFixed(1)} ${x2.toFixed(1)} ${y2.toFixed(1)}`;
+}
 
 /** Coordinates come from the displayed board, including mobile and co-op layouts. */
 export default function ResolutionEffects({ state, phase, resolution, activeEffect, activeEvent, activeStrike, playerId, reducedMotion }: Props) {
@@ -56,6 +68,15 @@ export default function ResolutionEffects({ state, phase, resolution, activeEffe
   const statusTarget = status ? location(status.targetId || status.playerId) : undefined;
   const statusKind = status?.damageKind?.startsWith('poison') ? 'poison' : status?.damageKind === 'thorns' ? 'thorns' : status?.type === 'heal' || status?.type === 'revive' ? 'heal' : status?.type === 'boss-phase' ? 'phase-shift' : 'instant';
   const StatusIcon = statusKind === 'poison' ? Droplets : statusKind === 'heal' ? Heart : statusKind === 'thorns' ? Sparkles : Zap;
+  const statusPreset: VfxPreset = statusKind === 'poison'
+    ? 'poison-emerald'
+    : statusKind === 'thorns'
+      ? 'thorns-rose'
+      : statusKind === 'heal'
+        ? 'heal-aurora'
+        : statusKind === 'phase-shift'
+          ? 'heavy-crimson'
+          : 'instant-quantum';
   const name = (id: string) => { const p = state.players.find(p => p.id === id); return cardById[p?.cardId || '']?.name || p?.name || ''; };
   const panels = (friendly: boolean) => {
     const players = resolution!.players.filter(p => (p.side === ownSide) === friendly);
@@ -71,6 +92,22 @@ export default function ResolutionEffects({ state, phase, resolution, activeEffe
       })}</div>
     </div>;
   };
+
+  const hitBlocked = !!hit && hit.amount === 0;
+  const hitHeavy = !!hit && hit.amount >= 10;
+  const hitCounter = !!hit && (hit.kind === 'counter' || hit.kind === 'reflect');
+  const hitPreset: VfxPreset = hitBlocked
+    ? 'shield-cyan'
+    : hitCounter
+      ? 'counter-violet'
+      : hitHeavy
+        ? 'heavy-crimson'
+        : 'slash-gold';
+  const hitTargetPoint = hit ? location(hit.defenderId) : undefined;
+  const hitSourcePoint = hit ? location(hit.attackerId) : undefined;
+  const hitAngleOffset = hitTargetPoint && hitSourcePoint
+    ? Math.atan2(hitTargetPoint.y - hitSourcePoint.y, hitTargetPoint.x - hitSourcePoint.x)
+    : 0;
 
   return <div ref={mount} className={`resolution-effects ${reducedMotion ? 'reduced' : ''} phase-${phase}`} aria-live="polite">
     {showValues && <div className="resolution-comparison" key={`values-${resolution.turn}`}>
@@ -95,30 +132,69 @@ export default function ResolutionEffects({ state, phase, resolution, activeEffe
       <div className="skill-caption"><small>{name(skill.playerId || '')} · 技能发动</small><strong>{skill.effectKind === 'hack' ? '骇 入' : '跃 升'}</strong><span>{skill.effectKind === 'hack' ? '改写对手骰面' : '提升己方骰面'}</span></div>
     </div>}
     {hit && <div className="attack-card-layer" key={`cards-${activeEvent?.id}`} aria-hidden="true">
-      {[hit].filter(hit => hit.kind === 'attack').map(hit => {
-        const from = location(hit.attackerId), to = location(hit.defenderId), p = resolution?.players.find(p => p.id === hit.attackerId), card = cardById[p?.cardId || ''];
-        return card && <div className="striking-card" key={hit.attackerId} style={{ left: `${from.x}%`, top: `${from.y}%`, '--pose-y': p?.side === ownSide ? '-82%' : '-18%', '--travel-x': `${(to.x - from.x) * anchors.width / 100}px`, '--travel-y': `${(to.y - from.y) * anchors.height / 100}px`, '--card-delay': '0ms' } as CSSProperties}><CardView card={card} compact gild={state.players.find(p => p.id === hit.attackerId)?.gild || 0}/></div>;
+      {[hit].filter(h => h.kind === 'attack' || h.kind === 'counter' || h.kind === 'reflect').map(h => {
+        const from = location(h.attackerId), to = location(h.defenderId), p = state.players.find(pl => pl.id === h.attackerId), card = cardById[p?.cardId || ''];
+        const cls = `striking-card ${h.kind !== 'attack' ? 'is-counter' : ''} ${h.amount >= 10 ? 'is-heavy' : ''}`;
+        return card && <div className={cls} key={h.attackerId} style={{ left: `${from.x}%`, top: `${from.y}%`, '--pose-y': p?.side === ownSide ? '-82%' : '-18%', '--travel-x': `${(to.x - from.x) * anchors.width / 100}px`, '--travel-y': `${(to.y - from.y) * anchors.height / 100}px`, '--card-delay': '0ms' } as CSSProperties}><CardView card={card} compact gild={p?.gild || 0}/></div>;
       })}
-      {resolution?.players.filter(p => p.role === 'defense' && p.id === hit.defenderId).map(p => { const at = location(p.id); return <div key={p.id} className="defense-barrier" style={{ left: `${at.x}%`, top: `${at.y}%` }}><Shield/><i/></div>; })}
+      {resolution?.players.filter(p => p.role === 'defense' && p.id === hit.defenderId).map(p => { const at = location(p.id); return <div key={p.id} className={`defense-barrier ${hitBlocked ? 'blocked' : ''}`} style={{ left: `${at.x}%`, top: `${at.y}%` }}><Shield/><i/></div>; })}
     </div>}
-    {hit && <svg className={`attack-effects ${phase}`} viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true" key={`attack-${activeEvent?.id}`}>
-      <defs><linearGradient id="attack-trail"><stop stopColor="#87eaff" stopOpacity="0"/><stop offset=".55" stopColor="#edfbff"/><stop offset="1" stopColor="#fff3ab"/></linearGradient></defs>
-      {[hit].map(hit => {
-        const from = location(hit.attackerId), to = location(hit.defenderId), x = to.x * 10, y = to.y * 6;
-        return <g key={`${hit.attackerId}-${hit.defenderId}-${activeEvent?.id}`} className={`attack-stroke ${hit.amount === 0 ? 'blocked' : ''}`} style={{ '--hit-delay': '0ms' } as CSSProperties}>
-          <path className="attack-trail-glow" d={`M ${from.x * 10} ${from.y * 6} L ${x} ${y}`}/>
-          <path className="attack-trail-core" d={`M ${from.x * 10} ${from.y * 6} L ${x} ${y}`}/>
+    {hit && <svg className={`attack-effects ${phase} ${hitCounter ? 'is-counter' : ''} ${hitHeavy ? 'is-heavy' : ''}`} viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true" key={`attack-${activeEvent?.id}`}>
+      <defs>
+        <linearGradient id="attack-trail"><stop stopColor="#87eaff" stopOpacity="0"/><stop offset=".52" stopColor="#edfbff"/><stop offset="1" stopColor="#fff3ab"/></linearGradient>
+        <linearGradient id="attack-trail-heavy"><stop stopColor="#ff738f" stopOpacity="0"/><stop offset=".48" stopColor="#ffe085"/><stop offset="1" stopColor="#ffffff"/></linearGradient>
+        <linearGradient id="attack-trail-counter"><stop stopColor="#9c7dff" stopOpacity="0"/><stop offset=".52" stopColor="#d9c6ff"/><stop offset="1" stopColor="#94f3ff"/></linearGradient>
+      </defs>
+      {[hit].map(h => {
+        const from = location(h.attackerId), to = location(h.defenderId);
+        const fx = from.x * 10, fy = from.y * 6, x = to.x * 10, y = to.y * 6;
+        const dx = x - fx, dy = y - fy, dist = Math.hypot(dx, dy) || 1;
+        const sign = ((h.strikeIndex ?? 1) % 2 === 1 ? 1 : -1) * (h.kind === 'attack' ? 1 : -1);
+        const bend = Math.min(130, Math.max(46, dist * 0.24)) * sign;
+        const nx = -dy / dist, ny = dx / dist;
+        const cx = (fx + x) / 2 + nx * bend, cy = (fy + y) / 2 + ny * bend;
+        const arcPath = `M ${fx.toFixed(1)} ${fy.toFixed(1)} Q ${cx.toFixed(1)} ${cy.toFixed(1)} ${x.toFixed(1)} ${y.toFixed(1)}`;
+        const twinPath = `M ${fx.toFixed(1)} ${fy.toFixed(1)} Q ${(cx - nx * bend * 1.45).toFixed(1)} ${(cy - ny * bend * 1.45).toFixed(1)} ${x.toFixed(1)} ${y.toFixed(1)}`;
+        const rayCount = hitHeavy ? 16 : hitBlocked ? 10 : 12;
+        return <g key={`${h.attackerId}-${h.defenderId}-${activeEvent?.id}`} className={`attack-stroke ${hitBlocked ? 'blocked' : ''} ${hitHeavy ? 'heavy' : ''} ${hitCounter ? 'counter' : ''}`} style={{ '--hit-delay': '0ms' } as CSSProperties}>
+          <path className="attack-trail-glow" d={arcPath}/>
+          <path className="attack-trail-ribbon" d={twinPath}/>
+          <path className="attack-trail-core" d={arcPath}/>
           <g className="attack-contact" style={{ transformOrigin: `${x}px ${y}px` }}>
-            <ellipse cx={x} cy={y} rx="45" ry="31"/>
-            {hit.amount === 0 ? <path className="guard-symbol" d={`M ${x} ${y - 29} l 24 10 v 19 q -3 19 -24 29 q -21 -10 -24 -29 v -19 Z`}/> : <>
-              <path className="impact-slash" d={`M ${x - 50} ${y + 36} L ${x + 49} ${y - 39} M ${x - 34} ${y - 33} L ${x + 33} ${y + 30}`}/>
-              {Array.from({ length: 8 }, (_, i) => { const a = i * Math.PI / 4; return <line key={i} x1={x + Math.cos(a) * 34} y1={y + Math.sin(a) * 23} x2={x + Math.cos(a) * 75} y2={y + Math.sin(a) * 49}/>; })}
+            <ellipse cx={x} cy={y} rx={hitHeavy ? 62 : 48} ry={hitHeavy ? 41 : 33}/>
+            <circle className="impact-shockwave" cx={x} cy={y} r={hitHeavy ? 36 : 28}/>
+            {hitBlocked ? <>
+              <path className="guard-symbol" d={`M ${x} ${y - 31} l 26 11 v 20 q -3 20 -26 30 q -23 -10 -26 -30 v -20 Z`}/>
+              {Array.from({ length: 8 }, (_, i) => { const a = i * Math.PI / 4 + 0.2; return <line key={i} x1={x + Math.cos(a) * 32} y1={y + Math.sin(a) * 24} x2={x + Math.cos(a) * 68} y2={y + Math.sin(a) * 50}/>; })}
+            </> : <>
+              <path className="impact-slash-glow" d={crescentArc(x, y, hitHeavy ? 88 : 66, -34 * sign, 24 * sign)}/>
+              <path className="impact-slash" d={crescentArc(x, y, hitHeavy ? 86 : 64, -34 * sign, 22 * sign)}/>
+              <path className="impact-slash secondary-slash" d={crescentArc(x, y, hitHeavy ? 66 : 48, 38 * sign, -18 * sign)}/>
+              {hitHeavy && <path className="impact-slash heavy-slash" d={crescentArc(x, y, 76, 8 * sign, 28 * -sign)}/>}
+              {Array.from({ length: rayCount }, (_, i) => {
+                const a = (i * Math.PI * 2) / rayCount + (sign > 0 ? 0.15 : -0.15);
+                const inner = i % 2 === 0 ? 28 : 38;
+                const outer = hitHeavy ? (i % 2 === 0 ? 112 : 84) : (i % 2 === 0 ? 84 : 62);
+                return <line key={i} x1={x + Math.cos(a) * inner} y1={y + Math.sin(a) * (inner * 0.72)} x2={x + Math.cos(a) * outer} y2={y + Math.sin(a) * (outer * 0.72)}/>;
+              })}
             </>}
           </g>
         </g>;
       })}
     </svg>}
-    {activeEvent && (phase === 'strike' || phase === 'impact') && <div className={`resolution-hit-caption ${hit ? 'physical' : statusKind}`} key={`caption-${activeEvent.id}`}>
+    {hit && phase === 'impact' && hitTargetPoint && !reducedMotion && (
+      <VfxParticles
+        key={`hit-particles-${activeEvent?.id}`}
+        preset={hitPreset}
+        count={hitHeavy ? 20 : hitCounter ? 16 : hitBlocked ? 12 : 14}
+        spread={hitHeavy ? 112 : hitBlocked ? 72 : 88}
+        angleOffset={hitAngleOffset}
+        x={hitTargetPoint.x}
+        y={hitTargetPoint.y}
+        reducedMotion={reducedMotion}
+      />
+    )}
+    {activeEvent && (phase === 'strike' || phase === 'impact') && <div className={`resolution-hit-caption ${hit ? (hitCounter ? 'counter' : hitHeavy ? 'heavy physical' : 'physical') : statusKind}`} key={`caption-${activeEvent.id}`}>
       <strong>{eventFeedbackLabel(activeEvent)}</strong>
       {!!hit?.strikeCount && hit.strikeCount > 1 && <span>第 {hit.strikeIndex || 1} / {hit.strikeCount} 击{hit.comboSource ? ` · ${hit.comboSource}` : ''}</span>}
       {activeEvent.poisonBefore !== undefined && activeEvent.poisonAfter !== undefined && <span>中毒 {activeEvent.poisonBefore} → {activeEvent.poisonAfter} 层{activeEvent.damageKind === 'poison-trigger' ? ' · 不消耗层数' : ''}</span>}
@@ -126,9 +202,10 @@ export default function ResolutionEffects({ state, phase, resolution, activeEffe
       {phase === 'impact' && activeEvent.hpBefore !== undefined && activeEvent.hpAfter !== undefined && <small>生命 {activeEvent.hpBefore} → {activeEvent.hpAfter}</small>}
     </div>}
     {status && statusTarget && <div className={`status-contact ${statusKind}`} key={`status-${status.id}`} style={{ left: `${statusTarget.x}%`, top: `${statusTarget.y}%` }} aria-hidden="true">
-      <i className="status-ring"/><StatusIcon/>
+      <i className="status-ring"/><i className="status-ring outer"/><StatusIcon/>
+      {statusKind === 'instant' && <><i className="status-cross a"/><i className="status-cross b"/></>}
       {Array.from({ length: 6 }, (_, index) => <i className="status-mote" key={index} style={{ '--i': index } as CSSProperties}/>)}
+      <VfxParticles preset={statusPreset} count={statusKind === 'phase-shift' ? 18 : 12} spread={statusKind === 'phase-shift' ? 96 : 68} x={50} y={50} reducedMotion={reducedMotion}/>
     </div>}
   </div>;
 }
-

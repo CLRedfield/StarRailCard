@@ -1,0 +1,133 @@
+.vfx-particle-burst {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 6;
+  overflow: visible;
+}
+
+.vfx-shockwave {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #fff4b8;
+  box-shadow: 0 0 14px #fff0a888, inset 0 0 10px #ffffff66;
+  transform: translate(-50%, -50%) scale(0.35);
+  opacity: 0;
+  animation: vfx-shockwave-expand 0.44s cubic-bezier(0.16, 0.88, 0.32, 1) both;
+}
+
+.vfx-heavy-crimson .vfx-shockwave {
+  width: 44px;
+  height: 44px;
+  border-width: 3px;
+  border-color: #ffdf8c;
+  box-shadow: 0 0 22px #ff7b93aa, inset 0 0 14px #ffe79eaa;
+}
+
+.vfx-shield-cyan .vfx-shockwave {
+  border-radius: 12px;
+  border-color: #9bf2ff;
+  box-shadow: 0 0 16px #78e5ffaa;
+}
+
+.vfx-poison-emerald .vfx-shockwave {
+  border-color: #a9f48c;
+  box-shadow: 0 0 14px #7fd86499;
+}
+
+.vfx-counter-violet .vfx-shockwave {
+  border-color: #d6b6ff;
+  box-shadow: 0 0 16px #b785ffaa;
+}
+
+.vfx-heal-aurora .vfx-shockwave {
+  border-color: #96f3d0;
+  box-shadow: 0 0 16px #8bf0cc99;
+}
+
+.vfx-prism-rainbow .vfx-shockwave {
+  border-color: #ffe299;
+  box-shadow: 0 0 18px #b99dffbb;
+}
+
+.vfx-particle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--color, #fff6c9);
+  color: var(--color, #fff6c9);
+  box-shadow: 0 0 8px currentColor;
+  will-change: transform, opacity;
+  animation: vfx-particle-fly var(--dur, 520ms) cubic-bezier(0.12, 0.82, 0.25, 1) var(--delay, 0ms) both;
+}
+
+.vfx-particle.shape-orb {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.vfx-particle.shape-streak {
+  width: 18px;
+  height: 3px;
+  border-radius: 999px;
+}
+
+.vfx-particle.shape-shard {
+  width: 8px;
+  height: 8px;
+  clip-path: polygon(50% 0%, 100% 38%, 80% 100%, 20% 100%, 0% 38%);
+}
+
+.vfx-particle.shape-star {
+  width: 12px;
+  height: 12px;
+  clip-path: polygon(50% 0%, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0% 50%, 38% 38%);
+}
+
+@keyframes vfx-shockwave-expand {
+  0% {
+    opacity: 0.95;
+    transform: translate(-50%, -50%) scale(0.25);
+  }
+  55% {
+    opacity: 0.72;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2.85);
+  }
+}
+
+@keyframes vfx-particle-fly {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(var(--rot, 0deg)) scale(calc(var(--scale, 1) * 0.35));
+  }
+  16% {
+    opacity: 1;
+    transform: translate(calc(-50% + var(--tx) * 0.34), calc(-50% + var(--ty) * 0.34)) rotate(var(--rot, 0deg)) scale(calc(var(--scale, 1) * 1.15));
+  }
+  70% {
+    opacity: 0.92;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) rotate(calc(var(--rot, 0deg) + 55deg)) scale(0.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vfx-particle-burst {
+    display: none !important;
+  }
+}
+
+html[data-motion="reduced"] .vfx-particle-burst {
+  display: none !important;
+}

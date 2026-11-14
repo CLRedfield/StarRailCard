@@ -14,12 +14,29 @@
 .battle-page .friendly-zone .player-hud.dealing-hit{animation:table-card-strike-up .35s ease-in-out both}
 .battle-page .enemy-zone .player-hud.dealing-hit{animation:table-card-strike-down .35s ease-in-out both}
 .battle-page .player-hud.taking-hit{animation:table-card-impact .36s ease-out both}
+.battle-page .player-hud.taking-hit .hud-portrait::after{content:'';position:absolute;inset:0;background:radial-gradient(circle,#ffffffcc,#ff5e8277 62%,transparent);animation:portrait-hit-flash .34s ease-out both;pointer-events:none}
+.battle-page .hp-track>.hp-ghost{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,#fff3d1,#ff9eb5);opacity:.85;transition:width .42s cubic-bezier(.22,1,.36,1)}
+.battle-page .player-hud.opponent .hp-track>.hp-ghost{background:linear-gradient(90deg,#fff3d1,#ff9eb5)}
+.battle-page .hp-track>.hp-fill{position:relative;z-index:1;height:100%;transition:width .24s ease-out}
+.battle-page .arena-frame.shake-light{animation:arena-shake-light .26s cubic-bezier(.36,.07,.19,.97) both}
+.battle-page .arena-frame.shake-heavy{animation:arena-shake-heavy .32s cubic-bezier(.36,.07,.19,.97) both}
+.battle-page .power-display>strong{animation:power-pop .22s cubic-bezier(.2,1.35,.4,1) both}
+.battle-page .prismatic-action:not(:disabled) .round-action-icon.prism{box-shadow:0 3px 0 #26233d70,0 0 18px #c49fff99;animation:prism-glow 2.4s ease-in-out infinite}
+.battle-page .confirm-action:not(:disabled) .round-action-icon{box-shadow:0 3px 0 #26233d70,0 0 18px #9ef0be88;animation:confirm-ready-pulse 2s ease-in-out infinite}
 @keyframes table-card-strike-up{0%,100%{transform:translateY(0)}26%{transform:translateY(5px)}42%{transform:translateY(-13px)}65%{transform:translateY(2px)}}
 @keyframes table-card-strike-down{0%,100%{transform:translateY(0)}26%{transform:translateY(-5px)}42%{transform:translateY(13px)}65%{transform:translateY(-2px)}}
-@keyframes table-card-impact{0%,100%{transform:translateX(0);filter:brightness(1)}20%{transform:translateX(-4px);filter:brightness(1.4)}45%{transform:translateX(4px)}70%{transform:translateX(-2px)}}
+@keyframes table-card-impact{0%,100%{transform:translateX(0);filter:brightness(1)}20%{transform:translateX(-5px);filter:brightness(1.45)}45%{transform:translateX(5px)}70%{transform:translateX(-3px)}}
+@keyframes portrait-hit-flash{0%{opacity:1}100%{opacity:0}}
+@keyframes arena-shake-light{0%,100%{transform:translate3d(0,0,0)}20%{transform:translate3d(-4px,2px,0)}45%{transform:translate3d(4px,-2px,0)}70%{transform:translate3d(-2px,1px,0)}}
+@keyframes arena-shake-heavy{0%,100%{transform:translate3d(0,0,0)}18%{transform:translate3d(-8px,4px,0) rotate(-.35deg)}38%{transform:translate3d(8px,-4px,0) rotate(.35deg)}58%{transform:translate3d(-6px,-2px,0)}78%{transform:translate3d(5px,2px,0)}}
+@keyframes power-pop{0%{transform:scale(1.18)}100%{transform:scale(1)}}
+@keyframes prism-glow{0%,100%{box-shadow:0 3px 0 #26233d70,0 0 12px #c49fff77}50%{box-shadow:0 3px 0 #26233d70,0 0 24px #a5ecffcc}}
+@keyframes confirm-ready-pulse{0%,100%{box-shadow:0 3px 0 #26233d70,0 0 12px #9ef0be66}50%{box-shadow:0 3px 0 #26233d70,0 0 22px #a6ffd0aa}}
 @media(max-height:580px) and (orientation:landscape){.battle-page .enemy-zone>.player-dice-position{height:calc(100% - 47px);min-height:32px}.battle-page .friendly-half>.player-dice-position{min-height:35px}.battle-page.coop .enemy-zone>.player-dice-position{height:calc(100% - 42px);min-height:22px}.battle-page .action-count{min-width:18px;height:18px;font-size:10px;left:-7px;top:-5px}}
-@media(prefers-reduced-motion:reduce){.battle-page .player-dice-position{transition:none}.battle-page.resolving .player-hud{animation:none!important}}
+@media(prefers-reduced-motion:reduce){.battle-page .player-dice-position{transition:none}.battle-page.resolving .player-hud,.battle-page .arena-frame,.battle-page .power-display>strong,.battle-page .round-action-icon,.battle-page .player-hud.taking-hit .hud-portrait::after{animation:none!important}.battle-page .hp-track>.hp-ghost{transition:none}}
 html[data-motion=reduced] .battle-page .player-dice-position{transition:none}
+html[data-motion=reduced] .battle-page .arena-frame,html[data-motion=reduced] .battle-page .power-display>strong,html[data-motion=reduced] .battle-page .round-action-icon,html[data-motion=reduced] .battle-page .player-hud.taking-hit .hud-portrait::after{animation:none!important}
+html[data-motion=reduced] .battle-page .hp-track>.hp-ghost{transition:none}
 .battle-page .defeated-player .hud-portrait{visibility:hidden}
 .battle-page.presentation-defeat .player-dice-position{opacity:0}
 .battle-log .log-detail{display:block;margin-top:4px;line-height:1.5;font-variant-numeric:tabular-nums;opacity:.72}

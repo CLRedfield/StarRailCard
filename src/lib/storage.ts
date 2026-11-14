@@ -21,10 +21,45 @@ export interface Profile {
 
 export const WEB_STARTER_COINS = 6;
 
+const LEGACY_PRISMATIC_UPGRADES: Record<string, string> = {
+  '264502': '264402',
+  '264503': '264403',
+  '264504': '264404',
+  '264505': '264405',
+  '264506': '264406',
+  '264507': '264407',
+  '264508': '264408',
+  '264509': '264409',
+  '264510': '264410',
+  '264511': '264411',
+  '264512': '264412',
+  '264513': '264413',
+  '264516': '264416',
+  '264517': '264417',
+  '264518': '264418',
+  '264519': '264419',
+  '264520': '264420',
+  '264521': '264421',
+  '264522': '264422',
+  '264523': '264424',
+  '264524': '264423',
+};
+
+/** Upgrade legacy un-awakened (2645xx) prismatic IDs to their awakened (2644xx) versions. */
+export function upgradeLegacyPrismaticId(id?: string): string {
+  return id ? (LEGACY_PRISMATIC_UPGRADES[id] || id) : '';
+}
+
 /** Used for new profiles, older local saves and imports; never resets existing progress. */
 export function migrateProfile(profile: Profile): Profile {
-  if (profile.starterSupplyVersion === 1) return profile;
-  return { ...profile, coins: profile.coins + WEB_STARTER_COINS, starterSupplyVersion: 1 };
+  const nextDice = upgradeLegacyPrismaticId(profile.selectedDice);
+  const needsStarter = profile.starterSupplyVersion !== 1;
+  if (!needsStarter && nextDice === profile.selectedDice) return profile;
+  return {
+    ...profile,
+    ...(needsStarter ? { coins: profile.coins + WEB_STARTER_COINS, starterSupplyVersion: 1 as const } : {}),
+    selectedDice: nextDice,
+  };
 }
 
 const DB = 'starrailcard';

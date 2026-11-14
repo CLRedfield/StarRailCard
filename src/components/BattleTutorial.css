@@ -10,6 +10,11 @@
 .tutorial-heading strong { font-size: 13px; }
 .tutorial-heading > small { font-size: 9px; opacity: .6; }
 .tutorial-copy p { font-size: 11px; line-height: 1.55; margin: 3px 0 2px; }
+.tutorial-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 3px; }
+.tutorial-chip { display: inline-flex; align-items: center; gap: 4px; padding: 2px 7px; border-radius: 999px; font-size: 10px; font-weight: 700; background: #ffffff14; color: #e2dbfa; border: 1px solid #c3b5f044; }
+.tutorial-chip.is-warn { background: #e84e6f29; color: #ffb9c9; border-color: #f66a8899; }
+.tutorial-chip.is-ready { background: #4cd29d26; color: #b5f8dc; border-color: #65e3b088; }
+.tutorial-chip.skill { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; opacity: .9; }
 .tutorial-hint { display: block; font-size: 10px; line-height: 1.45; opacity: .75; }
 .tutorial-controls { display: flex; align-items: flex-end; justify-content: center; flex-direction: column; gap: 2px; flex-shrink: 0; }
 .tutorial-next { display: flex; align-items: center; gap: 5px; min-height: 38px; padding: 7px 11px; font-size: 11px; font-weight: 700; border-radius: 5px; background: #d4c5f7; color: #382b56; }
@@ -20,11 +25,25 @@
 html[data-theme="light"] .battle-tutorial { background: #ffffffc9; border-left-color: #8a71b4; color: #483653; box-shadow: 0 3px 12px #7255930a; }
 html[data-theme="light"] .tutorial-number { color: #8b67ab; }
 html[data-theme="light"] .tutorial-next { background: #71598f; color: #fff; }
+html[data-theme="light"] .tutorial-chip { background: #745ca01a; color: #473665; border-color: #745ca03d; }
+html[data-theme="light"] .tutorial-chip.is-warn { background: #d93f6022; color: #a71e3f; border-color: #d93f6066; }
+html[data-theme="light"] .tutorial-chip.is-ready { background: #1e8f6122; color: #166e4a; border-color: #1e8f6166; }
 html[data-theme="light"] .battle-tutorial-rest { color: #735d8b; }
-.battle-page:has(.battle-tutorial[data-target="dice"]) .friendly-half:not(.partner) > .player-dice-position { outline: 2px solid #9b83d0; outline-offset: -2px; border-radius: 10px; }
+@keyframes tutorial-spotlight-pulse {
+  0%, 100% { box-shadow: 0 0 0 2px #cbb6f888, 0 0 14px #b89bf244; }
+  50% { box-shadow: 0 0 0 4px #f7db7faa, 0 0 22px #f7db7f66; }
+}
+.battle-page:has(.battle-tutorial[data-target="dice"]) .friendly-half:not(.partner) > .player-dice-position { outline: 2px solid #f7db7f; outline-offset: -2px; border-radius: 10px; animation: tutorial-spotlight-pulse 1.8s ease-in-out infinite; }
 .battle-page:has(.battle-tutorial[data-target="reroll"]) .reroll-action,
-.battle-page:has(.battle-tutorial[data-target="confirm"]) .confirm-action { outline: 2px solid #a58bcb; outline-offset: 3px; border-radius: 10px; }
-.battle-page:has(.battle-tutorial[data-target="values"]) .power-display { color: #7153a2; }
+.battle-page:has(.battle-tutorial[data-target="confirm"]) .confirm-action { outline: 2px solid #f7db7f; outline-offset: 3px; border-radius: 10px; animation: tutorial-spotlight-pulse 1.8s ease-in-out infinite; }
+.battle-page:has(.battle-tutorial[data-target="values"]) .friendly-half:not(.partner) .power-display { color: #7153a2; outline: 2px dashed #9b83d0; outline-offset: 2px; border-radius: 8px; }
+.battle-page:has(.battle-tutorial[data-target="swap"]) .swap-zone { outline: 2px solid #f7db7f; outline-offset: -1px; border-radius: 8px; animation: tutorial-spotlight-pulse 1.8s ease-in-out infinite; }
+.battle-page:has(.battle-tutorial[data-target="tactics"]) .tactic-hand,
+.battle-page:has(.battle-tutorial[data-target="tactics"]) .tactic-wallet { outline: 2px solid #f7db7f; outline-offset: 3px; border-radius: 8px; animation: tutorial-spotlight-pulse 1.8s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .battle-page:has(.battle-tutorial) * { animation-duration: 0.001ms !important; }
+}
+html[data-motion="reduced"] .battle-page:has(.battle-tutorial) * { animation-duration: 0.001ms !important; }
 .campaign-tutorial-label { color: var(--purple); font-weight: 700; margin-left: 6px; }
 .challenge-tutorial-note { margin: 0 0 16px; font-size: 12px; line-height: 1.7; color: var(--muted); }
 .challenge-tutorial-note strong { display: block; color: var(--text); }

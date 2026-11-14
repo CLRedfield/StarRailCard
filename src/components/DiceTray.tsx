@@ -332,6 +332,7 @@ export default function DiceTray({ dice, selected = [], onSelect, disabled, comp
         onDrop={e => { e.preventDefault(); const id = e.dataTransfer.getData('application/starrail-die'); if (id && pool) onDropDie?.(id, die.id); }}>
         <span className="die-value" aria-hidden="true">{rolling ? '·' : die.value}</span>
         {fallback && <span className="die-fallback-solid" aria-hidden="true">{rolling ? '·' : die.value}</span>}
+        {die.forced && <span className="die-forced-badge" aria-hidden="true">命定</span>}
         {effect && <span className="die-effect" aria-hidden="true" title={effect}>{die.forced ? '◆' : '✦'}</span>}
         <span className="die-label">{effect || (die.prismatic ? '曜彩骰' : `${die.sides}面骰`)}</span>
       </button>;

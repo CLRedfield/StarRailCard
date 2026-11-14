@@ -26,6 +26,7 @@ export function isPartyState(value: unknown): value is PartyState {
     && Array.isArray(s.log) && s.log.every(e => e && typeof e.text === 'string')
     && Array.isArray(s.results) && s.results.every(r => r && typeof r.playerId === 'string')
     && Array.isArray(s.battleEvents) && Array.isArray(s.winnerTeamIds) && Array.isArray(s.bossMoves)
+    && (s.swapPools === undefined || (typeof s.swapPools === 'object' && s.swapPools !== null && !Array.isArray(s.swapPools) && Object.values(s.swapPools).every(pool => Array.isArray(pool) && pool.every(d => d && typeof d.id === 'string' && Number.isFinite(d.value) && Number.isFinite(d.sides)))))
     && !!s.roundRule && typeof s.roundRule.name === 'string' && Number.isFinite(s.bossHp) && Number.isFinite(s.crisis);
 }
 
@@ -42,9 +43,10 @@ export function partyCommandScope(state: PartyState, command: PartyCommand, cont
   const p = state.players.find(p => p.id === command?.playerId);
   if (!p) throw new Error('操作角色不存在。');
   const target = command.type === 'exchange' ? state.players.find(q => q.id === command.targetPlayerId) : undefined;
+  const pool = command.type === 'poolSwap' ? state.swapPools?.[p.teamId] : undefined;
   return JSON.stringify([context.matchId, state.round, state.phase, p.id, p.dice, p.selectedIds, p.rerolls,
     p.rollsUsed, p.prismaticUses, p.prismaticRolled, p.confirmed, p.ready, p.plan, p.supplies, p.upgrades, p.upgradedThisRound,
-    p.exchangedThisRound, target && [target.id, target.dice, target.confirmed, target.exchangedThisRound]]);
+    p.exchangedThisRound, target && [target.id, target.dice, target.confirmed, target.exchangedThisRound], pool]);
 }
 
 /** Catalog is frozen once per match; ordinary updates only carry mutable party state. */
@@ -58,8 +60,8 @@ export const partyStateCodec: StateCodec<PartyState> = {
   },
   decode(previous, payload) {
     if (!payload || typeof payload !== 'object' || Array.isArray(payload)) throw new Error('多人局面更新无效。');
-    for (const key of Object.keys(payload)) if (key === 'catalog' || key === '__proto__' || (!Object.hasOwn(previous, key) && key !== 'reason')) throw new Error('多人局面字段无效。');
-    const next = { ...previous, ...payload, catalog: previous.catalog };
+    for (const key of Object.keys(payload)) if (key === 'catalog' || key === '__proto__' || (!Object.hasOwn(previous, key) && key !== 'reason' && key !== 'swapPools')) throw new Error('多人局面字段无效。');
+    const next = { ...previous, ...payload, swapPools: (payload as Partial<PartyState>).swapPools ?? previous.swapPools ?? {}, catalog: previous.catalog };
     if (!isPartyState(next)) throw new Error('多人局面不完整。');
     return next;
   },

@@ -13,6 +13,7 @@ import BattleEffects from './BattleEffects';
 import ResolutionEffects from './ResolutionEffects';
 import DefeatEffects from './DefeatEffects';
 import BattleTutorial from './BattleTutorial';
+import VfxParticles from './VfxParticles';
 import type { TutorialProgress } from '../lib/tutorial';
 import './BattleLayout.css';
 import './PortraitBattle.css';
@@ -32,7 +33,57 @@ export default function Battle({ state: authoritativeState, playerId, send, onEx
   const [inspectTactic, setInspectTactic] = useState<number | null>(null);
   const [weatherOpen, setWeatherOpen] = useState(false);
   const [diceRolling, setDiceRolling] = useState(false);
+  const [shake, setShake] = useState<'light' | 'heavy' | null>(null);
+  const [prismBurstKey, setPrismBurstKey] = useState<number>(0);
+  const [ghostHp, setGhostHp] = useState<Record<string, number>>(() =>
+    Object.fromEntries(authoritativeState.players.map(pl => [pl.id, Math.max(0, Math.min(100, (pl.hp / Math.max(1, pl.maxHp)) * 100))]))
+  );
+  const prevPrismaticRef = useRef<{ turn: number; rolled: boolean }>({ turn: state.turn, rolled: player.prismaticRolled });
+  const lastShakeIdRef = useRef<number | undefined>(undefined);
   const table = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (profile.settings.reducedMotion) { setShake(null); return; }
+    if (presentationPhase === 'impact' && activeEvent?.type === 'damage' && (activeEvent.amount || 0) > 0 && lastShakeIdRef.current !== activeEvent.id) {
+      lastShakeIdRef.current = activeEvent.id;
+      setShake((activeEvent.amount || 0) >= 10 ? 'heavy' : 'light');
+      const timer = window.setTimeout(() => setShake(null), 280);
+      return () => window.clearTimeout(timer);
+    }
+  }, [presentationPhase, activeEvent?.id, activeEvent?.type, activeEvent?.amount, profile.settings.reducedMotion]);
+
+  useEffect(() => {
+    const prev = prevPrismaticRef.current;
+    const isSameTurn = prev.turn === state.turn;
+    const justTriggered = isSameTurn && !prev.rolled && player.prismaticRolled;
+    prevPrismaticRef.current = { turn: state.turn, rolled: player.prismaticRolled };
+    if (justTriggered && !profile.settings.reducedMotion) {
+      setPrismBurstKey(k => k + 1);
+      const timer = window.setTimeout(() => setPrismBurstKey(0), 750);
+      return () => window.clearTimeout(timer);
+    }
+  }, [state.turn, player.prismaticRolled, profile.settings.reducedMotion]);
+
+  useEffect(() => {
+    const timers: number[] = [];
+    setGhostHp(current => {
+      const next = { ...current };
+      let immediateChange = false;
+      for (const pl of state.players) {
+        const pct = Math.max(0, Math.min(100, (pl.hp / Math.max(1, pl.maxHp)) * 100));
+        const prev = current[pl.id];
+        if (prev === undefined || pct >= prev) {
+          if (prev !== pct) { next[pl.id] = pct; immediateChange = true; }
+        } else {
+          timers.push(window.setTimeout(() => {
+            setGhostHp(latest => ({ ...latest, [pl.id]: pct }));
+          }, profile.settings.reducedMotion ? 0 : 180));
+        }
+      }
+      return immediateChange ? next : current;
+    });
+    return () => timers.forEach(t => window.clearTimeout(t));
+  }, [state.players, profile.settings.reducedMotion]);
   const playerPreview = (id: string) => previews?.[id] || getPlayerPreview(state, id);
   const legal = getLegalActions(state, player.id), preview = playerPreview(player.id);
   const inspectedTactic = inspectTactic === null ? undefined : tactics.find(t => t.id === player.tactics[inspectTactic]);
@@ -56,9 +107,11 @@ export default function Battle({ state: authoritativeState, playerId, send, onEx
     const defeated = presentationPhase === 'defeat' && defeats.some(entry => entry.player.id === p.id) || state.phase === 'finished' && p.hp <= 0;
     const dealingHit = presentationPhase === 'strike' && activeStrike?.attackerId === p.id;
     const takingHit = presentationPhase === 'impact' && activeEvent?.type === 'damage' && activeEvent.targetId === p.id && (activeEvent.amount || 0) > 0;
+    const hpPct = Math.max(0, Math.min(100, (p.hp / Math.max(1, p.maxHp)) * 100));
+    const ghostPct = Math.max(hpPct, ghostHp[p.id] ?? hpPct);
     return <div key={`${p.id}:${takingHit ? activeEvent?.id : 'rest'}`} data-battle-player={p.id} className={`player-hud ${dealingHit ? 'dealing-hit' : ''} ${takingHit ? 'taking-hit' : ''} ${opponent ? 'opponent' : ''} ${defeated ? 'defeated-player' : ''} ${state.activePlayerId === p.id ? 'current' : ''}`}>
       <button data-battle-card={p.id} className="hud-portrait" onClick={() => setInspect(p)} title="查看角色技能"><img src={asset(card?.image)} alt={card?.name}/><span>{p.gild ? '✦'.repeat(p.gild) : '★'}</span></button>
-      <div className="hud-info"><div className="hud-name"><strong>{card?.name || p.name}</strong><small>{p.name} {p.isAI ? '· AI' : ''}</small>{p.confirmed && <Check size={15}/>}</div><div className="hp-track"><div style={{ width: `${Math.max(0, p.hp / p.maxHp * 100)}%` }}/><span><Heart size={12} fill="currentColor"/>{p.hp}<small> / {p.maxHp}</small></span></div><div className="hud-levels"><span><Swords size={12}/>{p.attackLevel || '∞'}</span><span><Shield size={12}/>{p.defenseLevel}</span>{Object.entries(p.statuses).filter(([k, n]) => n > 0 && statusNames[k]).map(([k, n]) => <span className="status-badge" key={k} title={k}>{statusNames[k]} {n}</span>)}</div></div><div className="hud-power">{p.side === state.attackingSide ? <Swords size={16}/> : <Shield size={16}/>}<b>{pp.value}</b></div>
+      <div className="hud-info"><div className="hud-name"><strong>{card?.name || p.name}</strong><small>{p.name} {p.isAI ? '· AI' : ''}</small>{p.confirmed && <Check size={15}/>}</div><div className="hp-track"><div className="hp-ghost" style={{ width: `${ghostPct}%` }}/><div className="hp-fill" style={{ width: `${hpPct}%` }}/><span><Heart size={12} fill="currentColor"/>{p.hp}<small> / {p.maxHp}</small></span></div><div className="hud-levels"><span><Swords size={12}/>{p.attackLevel || '∞'}</span><span><Shield size={12}/>{p.defenseLevel}</span>{Object.entries(p.statuses).filter(([k, n]) => n > 0 && statusNames[k]).map(([k, n]) => <span className="status-badge" key={k} title={k}>{statusNames[k]} {n}</span>)}</div></div><div className="hud-power">{p.side === state.attackingSide ? <Swords size={16}/> : <Shield size={16}/>}<b>{pp.value}</b></div>
     </div>;
   };
   const tray = (p: PlayerState, own = false, compact = false) => {
@@ -66,18 +119,18 @@ export default function Battle({ state: authoritativeState, playerId, send, onEx
     const actions = getLegalActions(state, p.id);
     const committed = p.rollLocked || p.confirmed || resolving && !!resolution;
     const visible = committed ? p.dice.filter(d => p.selectedIds.includes(d.id)) : actions.canSelect ? p.dice : [];
-    return <div className={`player-dice-position ${committed ? 'committed' : ''}`}><DiceTray dice={visible} selected={own && swapOwn ? [swapOwn] : p.selectedIds} onSelect={own ? select : undefined} selectionSurface={own ? table : undefined} onSelectionChange={own && legal.canSelect && !showLog && !showHelp && !confirmExit && !inspect && !inspectedTactic ? selectIds : undefined} draggableDice={own && legal.canSwap} disabled={!own || disabled || !(legal.canSelect || legal.canSwap)} compact={compact || committed} animateNewDice={!committed} pendingRoll={own && pendingRoll && (!roll || roll.id <= pendingRoll.afterEventId) ? pendingRoll : undefined} rollEventKey={roll?.id} rollingIds={roll?.dice?.map(d => d.id)} onRollingChange={own ? setDiceRolling : undefined} reducedMotion={profile.settings.reducedMotion} lowQuality={profile.settings.quality === 'low'}/></div>;
+    return <div className={`player-dice-position ${committed ? 'committed' : ''}`}><DiceTray dice={visible} selected={own && swapOwn ? [swapOwn] : p.selectedIds} onSelect={own ? select : undefined} selectionSurface={own ? table : undefined} onSelectionChange={own && legal.canSelect && !showLog && !showHelp && !confirmExit && !inspect && !inspectedTactic ? selectIds : undefined} draggableDice={own && legal.canSwap} disabled={!own || disabled || !(legal.canSelect || legal.canSwap)} compact={compact || committed} animateNewDice={!committed} pendingRoll={own && pendingRoll && (!roll || roll.id <= pendingRoll.afterEventId) ? pendingRoll : undefined} rollEventKey={roll?.id} rollingIds={roll?.dice?.map(d => d.id)} onRollingChange={own ? setDiceRolling : undefined} reducedMotion={profile.settings.reducedMotion} lowQuality={profile.settings.quality === 'low'}/>{own && prismBurstKey > 0 && <VfxParticles key={`prism-${prismBurstKey}`} preset="prism-rainbow" count={16} spread={88} x={50} y={48} reducedMotion={profile.settings.reducedMotion}/>}</div>;
   };
   return <section ref={table} className={`battle-page ${state.mode} ${attack ? 'attacking' : 'defending'} ${resolving ? 'resolving' : ''} ${resolving && resolution ? 'round-resolution' : ''} presentation-${presentationPhase} phase-${state.phase} ${player.tactics.length ? 'has-tactics' : ''}`}>
     <div className="battle-topbar"><button className="back-button" disabled={resolving} onClick={() => state.phase === 'finished' ? onExit() : setConfirmExit(true)}><ArrowLeft size={18}/>返回</button><span>{state.mode === 'coop' ? '又上骰了！战力党！ / 双人共斗' : '银河战力党 / 经典对决'}</span><div><button className="icon-button" title="对局规则" onClick={() => setShowHelp(true)}><HelpCircle size={19}/></button><button className="icon-button" title="对局记录" onClick={() => setShowLog(true)}><List size={19}/></button></div></div>
-    {tutorial && onTutorialChange && !isOnline && <BattleTutorial state={state} playerId={playerId} progress={tutorial} onProgressChange={onTutorialChange} resolving={resolving}/>}
+    {!isOnline && ((tutorial && onTutorialChange) || state.mode === 'coop') && <BattleTutorial state={state} playerId={playerId} progress={tutorial} onProgressChange={onTutorialChange} resolving={resolving}/>}
     <div className="arena-layout">
       <aside className="round-rail"><span className="rail-label">COSMICON</span><div className="round-medallion"><span>∞</span><small>回合</small><b>{state.turn}</b></div>{state.mode === 'coop' && <span className="boss-phase">阶段 {state.bossPhase + 1}/{Math.max(state.bossPhases.length, 1)}</span>}<div className="vertical-line"/><span className="rail-label">ROLL ON!</span></aside>
-      <div className="arena-frame"><div className="arena-inner">
+      <div className={`arena-frame ${shake ? `shake-${shake}` : ''}`}><div className="arena-inner">
         <div className="enemy-zone">{hud(enemy, true)}{tray(enemy, false, state.mode === 'coop')}</div>
         <div className="phase-line"><span className="line"/><div className="phase-announcement" key={`${state.turn}-${state.activePlayerId}-${state.phase}`}><span>ROUND {String(state.turn).padStart(2, '0')}</span><b>{resolving ? '伤害结算' : state.phase === 'swap' ? '交换骰子' : state.phase === 'tactics' ? '战术准备' : state.phase === 'finished' ? '对局结束' : state.activePlayerId === playerId ? (attack ? '我方进攻' : '我方防御') : '等待对方行动'}</b></div><span className="line"/></div>
         {state.mode === 'coop' && state.phase === 'swap' && <div className="swap-zone"><div className="swap-label"><span>共享交换区</span><small>{swapOwn ? '点击交换区中的骰子完成交换' : '先选中自己的骰子，或拖动骰子至此'}</small></div><DiceTray dice={state.swapPool} compact pool animateNewDice={false} selected={[]} disabled={!swapOwn || disabled || !legal.canSwap} onSelect={poolDieId => { if (swapOwn) { sendAction({ type: 'swap', playerId, ownDieId: swapOwn, poolDieId }); setSwapOwn(null); } }} onDropDie={(ownDieId, poolDieId) => sendAction({ type: 'swap', playerId, ownDieId, poolDieId })} reducedMotion={profile.settings.reducedMotion} lowQuality={profile.settings.quality === 'low'}/></div>}
-        <div className={`friendly-zone ${partner ? 'duo' : ''}`}><div className="friendly-half"><div className="power-display">{attack ? <Swords/> : <Shield/>}<strong>{preview.value}</strong><span>{preview.effects.slice(0, 3).join(' · ') || (attack ? '攻击值' : '防御值')}</span></div>{tray(player, true)}{hud(player)}</div>{partner && <div className="friendly-half partner"><div className="power-display">{attack ? <Swords/> : <Shield/>}<strong>{playerPreview(partner.id).value}</strong><span>队友 · {partner.confirmed ? '已确认' : partner.isAI ? '思考中' : '准备中'}</span></div>{tray(partner)}{hud(partner)}</div>}</div>
+        <div className={`friendly-zone ${partner ? 'duo' : ''}`}><div className="friendly-half"><div className="power-display">{attack ? <Swords/> : <Shield/>}<strong key={preview.value}>{preview.value}</strong><span>{preview.effects.slice(0, 3).join(' · ') || (attack ? '攻击值' : '防御值')}</span></div>{tray(player, true)}{hud(player)}</div>{partner && <div className="friendly-half partner"><div className="power-display">{attack ? <Swords/> : <Shield/>}<strong key={playerPreview(partner.id).value}>{playerPreview(partner.id).value}</strong><span>队友 · {partner.confirmed ? '已确认' : partner.isAI ? '思考中' : '准备中'}</span></div>{tray(partner)}{hud(partner)}</div>}</div>
         {state.mode === 'coop' && <div className="shared-lives"><Heart size={20} fill="currentColor"/><b>{state.sharedLives} / 3</b><span>共斗生命</span></div>}
         <ResolutionEffects state={state} playerId={playerId} phase={presentationPhase} resolution={resolution} activeEffect={activeEffect} activeEvent={activeEvent} activeStrike={activeStrike} reducedMotion={profile.settings.reducedMotion}/>
         <BattleEffects state={state} playerId={playerId} reducedMotion={profile.settings.reducedMotion} suppressCues={resolving}/>

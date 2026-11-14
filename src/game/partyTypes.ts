@@ -1,4 +1,4 @@
-import type { GameCatalog, GameEvent, PlayerConfig, PlayerState, PlayerPreview } from './types';
+import type { GameCatalog, GameEvent, PlayerConfig, PlayerState, PlayerPreview, RolledDie } from './types';
 
 export type PartyMode = 'treasure' | 'raid' | 'duos' | 'overlord';
 export type PartyPhase = 'planning' | 'results' | 'finished';
@@ -28,12 +28,14 @@ export interface PartyState {
   enemies: Record<string, PlayerState>;
   /** Before role-dependent round preparation; used to change plans losslessly. */
   roundStarts: Record<string, PlayerState>;
+  swapPools: Record<string, RolledDie[]>;
   winnerTeamIds: string[]; reason?: string;
 }
 export type PartyCommand = { playerId: string } & (
   | { type: 'select'; diceIds: string[] }
   | { type: 'reroll'; diceIds: string[] }
   | { type: 'prismatic' }
+  | { type: 'poolSwap'; ownDieId: string; poolDieId: string }
   | { type: 'exchange'; targetPlayerId: string; ownDieId: string; targetDieId: string }
   | { type: 'plan'; targetId: string; stance: PartyStance; supportPlayerId?: string }
   | { type: 'bossMove'; move: OverlordMove }
@@ -43,7 +45,7 @@ export type PartyCommand = { playerId: string } & (
 );
 export interface PartyLegalActions {
   canAct: boolean; canSelect: boolean; canReroll: boolean; canPrismatic: boolean; canConfirm: boolean;
-  canPlan: boolean; canReady: boolean; canUpgrade: boolean; canExchange: boolean; minDice: number; maxDice: number; requiredDice: number;
+  canPlan: boolean; canReady: boolean; canUpgrade: boolean; canExchange: boolean; canPoolSwap: boolean; minDice: number; maxDice: number; requiredDice: number;
   targetIds: string[]; supportPlayerIds: string[]; reason?: string;
 }
 export interface PartyPreview extends PlayerPreview { role: 'attack' | 'defense'; objectiveValue: number; objectiveHint: string; }

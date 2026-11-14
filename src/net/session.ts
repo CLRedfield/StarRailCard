@@ -245,14 +245,15 @@ export class OnlineSession<S, C> {
       else this.matching = false;
     }
   }
-  async setReady(ready: boolean, loadout?: unknown): Promise<void> {
+  async setReady(ready: boolean, loadout?: unknown, options?: { resetOthers?: boolean }): Promise<void> {
     if (this.value.room?.phase !== 'lobby' || this.value.seat === null) throw new Error('当前不能修改准备状态');
     // Bound user-controlled loadouts before sending them to the public broker.
     if (JSON.stringify(loadout ?? null).length > 8192) throw new Error('卡牌配置过大');
     // Rapid loadout edits and a following ready click must have distinct order,
     // even in the same millisecond, so a delayed edit cannot undo readiness.
     this.lastControlTime = Math.max(this.now(), this.lastControlTime + 1);
-    await this.sendControl('ready', { time: this.lastControlTime, ready, ...(loadout !== undefined ? { loadout } : {}) });
+    const resetOthers = this.value.isHost && options?.resetOthers === true;
+    await this.sendControl('ready', { time: this.lastControlTime, ready, ...(loadout !== undefined ? { loadout } : {}), ...(resetOthers ? { resetOthers: true } : {}) });
   }
   async startMatch(initialState: S): Promise<void> {
     const room = this.value.room;
@@ -397,7 +398,8 @@ export class OnlineSession<S, C> {
       if (typeof message.ready !== 'boolean' || !Number.isFinite(message.time) || Number(message.time) < (this.controlTimes[player.id] ?? 0)) return;
       if (JSON.stringify(message.loadout ?? null).length > 8192) return;
       this.controlTimes[player.id] = Number(message.time);
-      this.emit({ room: { ...room, players: room.players.map(p => p.id === player!.id ? { ...p, ready: message.ready as boolean, ...(message.loadout !== undefined ? { loadout: copy(message.loadout) } : {}) } : p), revision: room.revision + 1, updatedAt: this.now() } });
+      const resetOthers = player.seat === 0 && message.resetOthers === true;
+      this.emit({ room: { ...room, players: room.players.map(p => p.id === player!.id ? { ...p, ready: message.ready as boolean, ...(message.loadout !== undefined ? { loadout: copy(message.loadout) } : {}) } : resetOthers ? { ...p, ready: false } : p), revision: room.revision + 1, updatedAt: this.now() } });
       await this.save(); await this.broadcast(); return;
     }
     if (message.kind === 'leave') {

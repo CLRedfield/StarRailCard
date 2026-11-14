@@ -24,12 +24,12 @@ const partyOnlineKey = (() => {
 })();
 const initialSettings: PartyLobbySettings = { count: 4, maxRounds: 8, bossId: '' };
 interface LocalParty { state: PartyState; playerId: string; }
-interface Props { profile: Profile; active: boolean; onActivate: () => void; toast: (message: string) => void; }
+interface Props { profile: Profile; active: boolean; onActivate: () => void; toast: (message: string) => void; onBattleViewChange?: (inBattle: boolean) => void; }
 
-export default function PartyHub({ profile, active, onActivate, toast }: Props) {
+export default function PartyHub({ profile, active, onActivate, toast, onBattleViewChange }: Props) {
   const [mode, setMode] = useState<PartyMode>('treasure');
   const [settings, setSettings] = useState<PartyLobbySettings>(initialSettings);
-  const [loadout, setLoadout] = useState<PartyLoadout>(() => normalizePartyLoadout({ cardId: profile.selectedCard, prismaticId: profile.selectedDice, gild: 0 }));
+  const [loadout, setLoadout] = useState<PartyLoadout>(() => normalizePartyLoadout({ cardId: profile.selectedCard, prismaticId: profile.selectedDice, gild: profile.gild[profile.selectedCard] || 0 }));
   const [broker, setBroker] = useState(DEFAULT_BROKER), [roomCode, setRoomCode] = useState('');
   const [online, setOnline] = useState<OnlineSnapshot<PartyState> | null>(null);
   const [checkpoint, setCheckpoint] = useState<SessionCheckpoint<PartyState> | null>(null);
@@ -47,8 +47,14 @@ export default function PartyHub({ profile, active, onActivate, toast }: Props) 
     let mounted = true;
     void Promise.all([readSave<LocalParty>('party-match'), readSave<SessionCheckpoint<PartyState>>(partyOnlineKey)]).then(([saved, savedOnline]) => {
       if (!mounted) return;
-      if (saved && isPartyState(saved.state) && saved.state.players.some(p => p.id === saved.playerId)) { setLocal(saved); localRef.current = saved; }
-      if (savedOnline?.protocol === 2 && savedOnline.room?.phase !== 'closed' && (!savedOnline.game || isPartyState(savedOnline.game))) { setCheckpoint(savedOnline); setBroker(savedOnline.broker); }
+      if (saved && isPartyState(saved.state) && saved.state.players.some(p => p.id === saved.playerId)) {
+        const restored = { ...saved, state: { ...saved.state, swapPools: saved.state.swapPools ?? {} } };
+        setLocal(restored); localRef.current = restored;
+      }
+      if (savedOnline?.protocol === 2 && savedOnline.room?.phase !== 'closed' && (!savedOnline.game || isPartyState(savedOnline.game))) {
+        const normalized = savedOnline.game ? { ...savedOnline, game: { ...savedOnline.game, swapPools: savedOnline.game.swapPools ?? {} } } : savedOnline;
+        setCheckpoint(normalized); setBroker(savedOnline.broker);
+      }
       setLoaded(true);
     }).catch(() => { if (mounted) setLoaded(true); });
     return () => { mounted = false; };
@@ -81,6 +87,11 @@ export default function PartyHub({ profile, active, onActivate, toast }: Props) 
         }
         if (snapshot.game && (!previous.game || previous.matchId !== snapshot.matchId) && ['playing', 'paused'].includes(snapshot.status)) { setView('battle'); callbacks.current.onActivate(); }
         if (snapshot.status === 'lobby' && previous.status !== 'lobby') setView('lobby');
+        if (!snapshot.isHost && snapshot.room?.phase === 'lobby' && previous.room?.phase === 'lobby') {
+          const prevMe = previous.room.players.find(p => p.id === snapshot.myId);
+          const nextMe = snapshot.room.players.find(p => p.id === snapshot.myId);
+          if (prevMe?.ready && nextMe && !nextMe.ready) callbacks.current.toast('房主调整了规则，请重新确认准备状态。');
+        }
         if (snapshot.status === 'closed' && previous.status !== 'closed') { setView('lobby'); setSettings(current => ({ ...current, bossId: current.bossId === 'ai' ? 'ai' : '' })); callbacks.current.toast(snapshot.error || '多人房间已关闭。'); }
         if (previous.game && !snapshot.game) setView('lobby');
         previous = snapshot;
@@ -105,6 +116,11 @@ export default function PartyHub({ profile, active, onActivate, toast }: Props) 
   const room = online?.room && online.room.phase !== 'closed' ? online.room : null;
   const isOnlineGame = !!online?.game && ['playing', 'paused'].includes(online.status);
   const game = isOnlineGame ? online!.game! : local?.state;
+  const inPartyBattle = active && view === 'battle' && !!game;
+  useEffect(() => {
+    onBattleViewChange?.(inPartyBattle);
+    return () => onBattleViewChange?.(false);
+  }, [inPartyBattle, onBattleViewChange]);
   const myId = isOnlineGame ? online!.myId : local?.playerId || 'party-player';
   const mySeat = room?.players.find(p => p.id === online?.myId);
   const hostLoadout = room?.players.find(p => p.seat === 0)?.loadout as (PartyLoadout & { partySettings?: PartyLobbySettings }) | undefined;
@@ -171,7 +187,7 @@ export default function PartyHub({ profile, active, onActivate, toast }: Props) 
   }
   function changeSettings(next: PartyLobbySettings) {
     setSettings(next);
-    if (room && online?.isHost && room.phase === 'lobby') void action(() => getSession().setReady(false, { ...loadout, partySettings: next }));
+    if (room && online?.isHost && room.phase === 'lobby') void action(() => getSession().setReady(false, { ...loadout, partySettings: next }, { resetOthers: true }));
   }
   function startLocal() {
     try {
@@ -196,13 +212,13 @@ export default function PartyHub({ profile, active, onActivate, toast }: Props) 
   }
   function exitBattle() {
     setView('lobby');
-    if (isOnlineGame && online?.isHost && game?.phase === 'finished') void action(() => getSession().returnToLobby());
+    if (isOnlineGame && online?.isHost && game?.phase === 'finished' && (room?.players.length ?? 0) <= 1) void action(() => getSession().returnToLobby());
   }
 
   return <div hidden={!active} className="party-root">
     {view === 'battle' && game ? <>
       {isOnlineGame && online?.status === 'paused' && <div className="party-connection-banner" role="status"><Wifi size={18}/>{online.pauseReason || '连接中断，正在等待所有玩家恢复。'}</div>}
-      <PartyBattle key={isOnlineGame ? `${online?.matchId}:${online?.recoveryRevision}` : 'local-party'} state={game} playerId={myId} onCommand={send} onExit={exitBattle} busy={pending.includes(myId) || (isOnlineGame && online?.status === 'paused')}/>
+      <PartyBattle key={isOnlineGame ? `${online?.matchId}:${online?.recoveryRevision}` : 'local-party'} state={game} playerId={myId} onCommand={send} onExit={exitBattle} busy={pending.includes(myId) || (isOnlineGame && online?.status === 'paused')} soundVolume={profile.settings.effects} reducedMotion={profile.settings.reducedMotion} lowQuality={profile.settings.quality === 'low'}/>
     </> : <section className="party-hub page-enter">
       <div className="party-hub-heading"><div><p className="eyebrow">GALAXY PARTY · 4–8 PLAYERS</p><h1>一起上桌，各显身手。</h1><p>四种玩法，同一套角色。邀请朋友，或先和 AI 试试配合。</p></div><span className="party-hub-badge"><Users size={18}/>{room ? `${room.players.length} 人已入座` : '全角色开放'}</span></div>
       {!room ? <>
@@ -221,12 +237,16 @@ export default function PartyHub({ profile, active, onActivate, toast }: Props) 
       </> : <>
         <div className="party-room-heading"><div><small>{chosenMode.name} · 房间号</small><strong>{room.code}</strong></div><button className="secondary" onClick={copyInvite}><Copy size={16}/>复制邀请链接</button><button className="text-button" disabled={connecting} onClick={() => action(() => getSession().leave())}><X size={16}/>离开房间</button></div>
         <div className="party-seat-list">{Array.from({ length: room.capacity || 8 }, (_, index) => {
-          const player = room.players.slice().sort((a, b) => a.seat - b.seat)[index];
+          const orderedPlayers = room.players.slice().sort((a, b) => a.seat - b.seat);
+          const player = orderedPlayers[index];
           const chosen = normalizePartyLoadout(player?.id === online?.myId ? loadout : player?.loadout);
-          return <div className={`party-seat ${player ? '' : 'is-empty'}`} key={index}>{player ? <><img src={asset(cardById[chosen.cardId].image)} alt={cardById[chosen.cardId].name}/><div><strong>{player.name}{player.id === online?.myId ? ' · 你' : ''}</strong><span>{cardById[chosen.cardId].name}</span><small>{room.mode === 'duos' ? `第 ${Math.floor(index / 2) + 1} 队` : room.mode === 'overlord' && (announcedSettings.bossId || room.hostId) === player.id ? '本局首领' : player.seat === 0 ? '房主' : '开拓者'}</small></div><span className={player.ready ? 'party-seat-ready' : 'muted'}>{player.ready ? <><Check size={13}/>就绪</> : '准备中'}</span></> : <><Bot size={25}/><div><strong>等待好友</strong><small>开局时 AI 补位</small></div></>}</div>;
+          const effectiveBossId = room.mode === 'overlord' ? (announcedSettings.bossId || room.hostId) : '';
+          const isPlayerBoss = !!player && room.mode === 'overlord' && effectiveBossId === player.id;
+          const isAiBossSeat = !player && room.mode === 'overlord' && effectiveBossId === 'ai' && index === orderedPlayers.length;
+          return <div className={`party-seat ${player ? '' : 'is-empty'} ${isAiBossSeat ? 'is-ai-boss' : ''}`} key={index}>{player ? <><img src={asset(cardById[chosen.cardId].image)} alt={cardById[chosen.cardId].name}/><div><strong>{player.name}{player.id === online?.myId ? ' · 你' : ''}</strong><span>{cardById[chosen.cardId].name}</span><small>{room.mode === 'duos' ? `第 ${Math.floor(index / 2) + 1} 队` : isPlayerBoss ? '本局首领' : player.seat === 0 ? '房主' : room.mode === 'overlord' ? '讨伐队员' : '开拓者'}</small></div><span className={player.ready ? 'party-seat-ready' : 'muted'}>{player.ready ? <><Check size={13}/>就绪</> : '准备中'}</span></> : <>{isAiBossSeat ? <Crown size={25}/> : <Bot size={25}/>}<div><strong>{isAiBossSeat ? 'AI 首领' : '等待好友'}</strong><small>{isAiBossSeat ? '开局由 AI 担任首领' : '开局时 AI 补位'}</small></div></>}</div>;
         })}</div>
         <div className="party-room-config"><div className="party-setup">{renderLoadout(!!mySeat?.ready || room.phase !== 'lobby')}{online?.isHost ? renderSettings(room.phase !== 'lobby') : <p className="party-room-note">{announcedSettings.count} 个席位 · 最多 {announcedSettings.maxRounds} 轮<br/>房主确认规则后，准备就绪即可上桌。</p>}</div><aside className="party-character-preview"><CardView card={chosenCard} gild={loadout.gild}/><div><CharacterDetails card={chosenCard}/>{chosenDice && <DiceDetails die={chosenDice} card={chosenCard}/>}</div></aside></div>
-        <div className="party-room-actions"><p>{online?.error || (room.phase === 'lobby' ? `已入座 ${room.players.length} 人，其余由 AI 补位。所有真人准备后即可开始。` : '对局进行中，可以返回牌桌。')}</p>{room.phase !== 'lobby' ? <button className="primary" onClick={() => setView('battle')}>返回对局<ArrowRight size={16}/></button> : <><button className="secondary" disabled={connecting || !mySeat} onClick={() => action(() => getSession().setReady(!mySeat?.ready, { ...loadout, ...(online?.isHost ? { partySettings: settings } : {}) }))}>{mySeat?.ready ? '取消准备' : '准备就绪'}<Check size={16}/></button>{online?.isHost && <button className="primary" disabled={connecting || room.players.some(p => !p.ready) || room.players.length > settings.count} onClick={() => action(startOnline)}>开始对局<ArrowRight size={16}/></button>}</>}</div>
+        <div className="party-room-actions"><p>{online?.error || (room.phase === 'lobby' ? `已入座 ${room.players.length} 人，其余由 AI 补位。所有真人准备后即可开始。` : game?.phase === 'finished' ? '上局已结束；房主可开启新一局备战，或重看上局战果。' : '对局进行中，可以返回牌桌。')}</p>{room.phase !== 'lobby' ? <>{online?.isHost && game?.phase === 'finished' && <button className="primary" disabled={connecting} onClick={() => action(() => getSession().returnToLobby())}>开启新一局备战<ArrowRight size={16}/></button>}<button className={online?.isHost && game?.phase === 'finished' ? 'secondary' : 'primary'} onClick={() => setView('battle')}>{game?.phase === 'finished' ? '重看上局战果' : '返回对局'}<ArrowRight size={16}/></button></> : <><button className="secondary" disabled={connecting || !mySeat} onClick={() => action(() => getSession().setReady(!mySeat?.ready, { ...loadout, ...(online?.isHost ? { partySettings: settings } : {}) }))}>{mySeat?.ready ? '取消准备' : '准备就绪'}<Check size={16}/></button>{online?.isHost && <button className="primary" disabled={connecting || room.players.some(p => !p.ready) || room.players.length > settings.count} onClick={() => action(startOnline)}>开始对局<ArrowRight size={16}/></button>}</>}</div>
       </>}
       {connecting && <p className="party-connect-status" role="status"><LoaderCircle className="spin" size={16}/>正在连接…</p>}
       {!room && online?.error && <p className="inline-error" role="alert">{online.error}</p>}
@@ -234,7 +254,7 @@ export default function PartyHub({ profile, active, onActivate, toast }: Props) 
   </div>;
 
   function renderLoadout(disabled: boolean) {
-    return <><label>出战角色<select value={loadout.cardId} disabled={disabled} onChange={e => changeLoadout(normalizePartyLoadout({ cardId: e.target.value, gild: loadout.gild }))}>{cards.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}</select></label><label>曜彩骰<select value={loadout.prismaticId || ''} disabled={disabled || !chosenCard.prismaticId} onChange={e => changeLoadout({ ...loadout, prismaticId: e.target.value || undefined })}><option value={chosenCard.prismaticId || ''}>{chosenCard.prismaticId ? `${diceById[chosenCard.prismaticId]?.name || '角色默认'} · 默认` : '此角色无曜彩骰'}</option>{prismaticDice.filter(d => d.id !== chosenCard.prismaticId).map(d => <option key={d.id} value={d.id}>{d.name}</option>)}</select></label>{!room && <details className="party-loadout-details"><summary>查看角色与骰子技能</summary><CharacterDetails card={chosenCard}/>{chosenDice && <DiceDetails die={chosenDice} card={chosenCard}/>}</details>}</>;
+    return <><label>出战角色<select value={loadout.cardId} disabled={disabled} onChange={e => changeLoadout(normalizePartyLoadout({ cardId: e.target.value, gild: profile.gild[e.target.value] || 0 }))}>{cards.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}</select></label><label>曜彩骰<select value={loadout.prismaticId || ''} disabled={disabled || !chosenCard.prismaticId} onChange={e => changeLoadout({ ...loadout, prismaticId: e.target.value || undefined })}><option value={chosenCard.prismaticId || ''}>{chosenCard.prismaticId ? `${diceById[chosenCard.prismaticId]?.name || '角色默认'} · 默认` : '此角色无曜彩骰'}</option>{prismaticDice.filter(d => d.id !== chosenCard.prismaticId).map(d => <option key={d.id} value={d.id}>{d.name}</option>)}</select></label>{!room && <details className="party-loadout-details"><summary>查看角色与骰子技能</summary><CharacterDetails card={chosenCard}/>{chosenDice && <DiceDetails die={chosenDice} card={chosenCard}/>}</details>}</>;
   }
   function renderSettings(disabled: boolean) {
     const selectedMode = (room?.mode || mode) as PartyMode;

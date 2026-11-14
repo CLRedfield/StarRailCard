@@ -135,6 +135,32 @@ describe('real party game through multiplayer sessions', () => {
     expect(x.host.getSnapshot().game?.players[1].dice.some(d => d.id === target.id)).toBe(true);
     assertSynchronized(x);
   });
+
+  it('arbitrates racing poolSwap commands targeting the same shared pool die cleanly', async () => {
+    const x = await setup('raid', 4, 4, 99123);
+    const poolDie = x.initial.swapPools['远征队'][0];
+    const p1 = x.initial.players[1], p2 = x.initial.players[2];
+    const p1Own = p1.dice.find(d => !d.forced)!;
+    const p2Own = p2.dice.find(d => !d.forced)!;
+    const swap1: PartyCommand = { type: 'poolSwap', playerId: p1.id, ownDieId: p1Own.id, poolDieId: poolDie.id };
+    const swap2: PartyCommand = { type: 'poolSwap', playerId: p2.id, ownDieId: p2Own.id, poolDieId: poolDie.id };
+    let held: FakeDelivery | undefined;
+    x.network.drop = delivery => {
+      if (delivery.to === x.buses[0].id && delivery.topic.endsWith('/intent') && (delivery.message as { sender?: string; command?: PartyCommand }).sender === p2.id && (delivery.message as { command?: PartyCommand }).command?.type === 'poolSwap') {
+        held = delivery;
+        return true;
+      }
+      return false;
+    };
+    const pending2 = x.clients[2].sendCommand(swap2);
+    const rejected2 = expect(pending2).rejects.toThrow('骰池或操作阶段已更新');
+    await flush(); expect(held).toBeTruthy();
+    await x.clients[1].sendCommand(swap1); await flush();
+    x.network.drop = null; await x.network.replay(held!); await rejected2; await flush();
+    expect(x.host.getSnapshot().game?.players[1].dice.some(d => d.id === poolDie.id)).toBe(true);
+    expect(x.host.getSnapshot().game?.players[2].dice.some(d => d.id === p2Own.id)).toBe(true);
+    assertSynchronized(x);
+  });
 });
 
 /** Opt-in: creates a temporary private four-person room, then removes retained packets. */

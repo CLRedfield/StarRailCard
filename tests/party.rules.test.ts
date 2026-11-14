@@ -248,4 +248,116 @@ describe('party modes share character combat with independent objectives', () =>
     }
     console.info('Party roster simulation', outcomes);
   }, 30000);
+
+  it('aligns overlord boss precision preview with actual resolution value', () => {
+    const base = make('overlord');
+    base.roundRule.kind = 'respite';
+    base.bossMove = 'sweep';
+    const boss = base.players[0];
+    boss.dice[0].value = 1;
+    boss.dice[1].value = 2;
+    boss.dice[2].value = 3;
+    boss.selectedIds = boss.dice.slice(0, 3).map(d => d.id);
+    const plain = getPartyPreview(base, boss.id);
+
+    const precisionState = structuredClone(base);
+    precisionState.roundRule.kind = 'precision';
+    const bossPrecision = precisionState.players[0];
+    const precisionPreview = getPartyPreview(precisionState, bossPrecision.id);
+    expect(precisionPreview.value).toBe(plain.value);
+
+    for (const p of precisionState.players) {
+      const n = getPartyLegalActions(precisionState, p.id).requiredDice;
+      precisionState.players.find(q => q.id === p.id)!.dice.slice(0, n).forEach((d, idx) => { d.value = idx + 1; });
+      precisionState.players.find(q => q.id === p.id)!.selectedIds = [];
+    }
+    const settled = confirmFixed(precisionState, bossPrecision.id, [1, 2, 3]);
+    let post = settled;
+    for (const p of post.players.slice(1)) post = confirmFixed(post, p.id, Array(getPartyLegalActions(post, p.id).requiredDice).fill(1));
+    expect(post.results.find(r => r.playerId === bossPrecision.id)?.value).toBe(precisionPreview.value);
+  });
+
+  it('reports a clear reason when forced dice are omitted from selection', () => {
+    const s = make('raid');
+    const p = s.players[0];
+    p.dice[0].forced = true;
+    p.selectedIds = p.dice.slice(1, 4).map(d => d.id);
+    const legal = getPartyLegalActions(s, p.id);
+    expect(legal.canConfirm).toBe(false);
+    expect(legal.reason).toContain('命定');
+  });
+
+  it('allows poison-conditional prismatic dice in duos and overlord planning when real opponents are poisoned', () => {
+    const poisonDice = catalog.prismatics.find(d => /剧毒|毒液/i.test(d.name));
+    expect(poisonDice).toBeTruthy();
+
+    const duos = make('duos');
+    duos.players[0].prismaticId = poisonDice!.id;
+    duos.players[0].prismaticUses = 1;
+    duos.players[0].prismaticRolled = false;
+    expect(getPartyLegalActions(duos, duos.players[0].id).canPrismatic).toBe(false);
+    duos.players[2].statuses.poison = 2;
+    expect(getPartyLegalActions(duos, duos.players[0].id).canPrismatic).toBe(true);
+
+    const overlord = make('overlord');
+    overlord.players[0].prismaticId = poisonDice!.id;
+    overlord.players[0].prismaticUses = 1;
+    overlord.players[0].prismaticRolled = false;
+    expect(getPartyLegalActions(overlord, overlord.players[0].id).canPrismatic).toBe(false);
+    overlord.players[1].statuses.poison = 3;
+    expect(getPartyLegalActions(overlord, overlord.players[0].id).canPrismatic).toBe(true);
+  });
+
+  it('supports shared team swapPools without locking teammates and blocks forced swaps', () => {
+    const raid = make('raid', 4, 'future-character', 101);
+    const pool = raid.swapPools['远征队'];
+    expect(pool?.length).toBe(4);
+    const p0 = raid.players[0], p1 = raid.players[1];
+    p0.dice[0].forced = true;
+    const blocked = applyPartyCommand(raid, { type: 'poolSwap', playerId: p0.id, ownDieId: p0.dice[0].id, poolDieId: pool[0].id });
+    expect(blocked.error).toContain('命定');
+
+    const ownDie = p0.dice[1];
+    const poolDie = pool[0];
+    const afterSwap = command(raid, { type: 'poolSwap', playerId: p0.id, ownDieId: ownDie.id, poolDieId: poolDie.id });
+    expect(afterSwap.players[0].exchangedThisRound).toBe(true);
+    expect(afterSwap.players[0].dice.some(d => d.id === poolDie.id)).toBe(true);
+    expect(afterSwap.swapPools['远征队'].some(d => d.id === ownDie.id)).toBe(true);
+    // Teammates remain free to adjust their plan and swap from the shared pool themselves.
+    expect(afterSwap.players[1].exchangedThisRound).toBe(false);
+    expect(getPartyLegalActions(afterSwap, p1.id).canPoolSwap).toBe(true);
+    const switchedTeammate = command(afterSwap, { type: 'plan', playerId: p1.id, targetId: 'core', stance: 'guard' });
+    expect(switchedTeammate.players[1].plan.stance).toBe('guard');
+  });
+
+  it('matches raid guard preview defense, intercepts drain, and mitigates sweep', () => {
+    const base = make('raid', 4, 'future-character', 202);
+    base.bossMove = 'sweep';
+    base.roundRule = { kind: 'bounty', name: '悬赏', description: 'bounty' };
+    const assaulterPreview = getPartyPreview(base, 'p0');
+    const guarding = command(base, { type: 'plan', playerId: 'p0', targetId: 'core', stance: 'guard' });
+    const guardPreview = getPartyPreview(guarding, 'p0');
+    expect(guardPreview.role).toBe('defense');
+    expect(guardPreview.value - assaulterPreview.value).toBeGreaterThanOrEqual(4 + guarding.bossPhase * 2 - 2);
+
+    // 0 guards on sweep triggers extra +1 crisis vs >=1 guard mitigating wave damage & saving crisis.
+    let noGuard = structuredClone(base);
+    noGuard.players.forEach(p => { noGuard = command(noGuard, { type: 'plan', playerId: p.id, targetId: 'core', stance: 'assault' }); });
+    for (const p of noGuard.players) noGuard = confirmFixed(noGuard, p.id, Array(getPartyLegalActions(noGuard, p.id).requiredDice).fill(2));
+
+    let withGuard = command(structuredClone(base), { type: 'plan', playerId: 'p0', targetId: 'core', stance: 'guard' });
+    for (const p of withGuard.players.slice(1)) withGuard = command(withGuard, { type: 'plan', playerId: p.id, targetId: 'core', stance: 'assault' });
+    for (const p of withGuard.players) withGuard = confirmFixed(withGuard, p.id, Array(getPartyLegalActions(withGuard, p.id).requiredDice).fill(2));
+    expect(noGuard.crisis).toBeGreaterThan(withGuard.crisis);
+    expect(withGuard.results.find(r => r.playerId === 'p0')?.score).toBe(3);
+
+    // On drain, a full-HP guard intercepts for a low-HP ally.
+    let drainState = command(make('raid', 4, 'future-character', 202), { type: 'plan', playerId: 'p0', targetId: 'core', stance: 'guard' });
+    drainState.bossMove = 'drain';
+    drainState.players[1].hp = 10;
+    const beforeWeakHp = drainState.players[1].hp;
+    for (const p of drainState.players) drainState = confirmFixed(drainState, p.id, Array(getPartyLegalActions(drainState, p.id).requiredDice).fill(3));
+    expect(drainState.players[1].hp).toBeGreaterThanOrEqual(beforeWeakHp);
+    expect(drainState.log.some(e => e.text.includes('挡下了首领汲取'))).toBe(true);
+  });
 });

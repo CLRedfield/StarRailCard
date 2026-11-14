@@ -3,6 +3,7 @@ import type { GameEvent, GameState, PlayerState } from '../game/types';
 import { cardById } from '../data';
 import { eventFeedbackLabel } from '../lib/useBattlePresentation';
 import { asset, cleanText } from './CardView';
+import VfxParticles from './VfxParticles';
 import './BattleEffects.css';
 
 interface Props { state: GameState; playerId: string; reducedMotion?: boolean; suppressCues?: boolean }
@@ -91,10 +92,25 @@ export default function BattleEffects({ state, playerId, reducedMotion = false, 
   </div>;
   const stageCard = cue?.cardId ? cardById[cue.cardId] : undefined;
   return <div ref={layer} className={`battle-effects ${reducedMotion ? 'reduced' : ''}`} aria-hidden="true">
-    {floats.map(f => <div key={f.id} className={`battle-float ${f.kind} cause-${f.cause || 'generic'}`} style={{ left: `${f.x}%`, top: `${f.y}%`, '--float-offset': `${((f.lane % 3) - 1) * 30}px`, '--float-delay': `${f.delay}ms` } as CSSProperties}>
-      <span>{f.kind === 'heal' ? '+' : '−'}{f.amount}</span><small>{f.label}</small>
-    </div>)}
-    {cue && !intro && !suppressCues && <div key={cue.id} className={`battle-event-cue ${cue.kind === 'boss-phase' ? 'stage' : ''}`}>
+    {floats.map(f => {
+      const tier = f.amount >= 15 ? 'tier-massive' : f.amount >= 8 ? 'tier-heavy' : 'tier-normal';
+      const particlePreset = f.kind === 'heal'
+        ? 'heal-aurora'
+        : f.cause?.startsWith('poison')
+          ? 'poison-emerald'
+          : f.cause === 'thorns'
+            ? 'thorns-rose'
+            : f.amount >= 10
+              ? 'heavy-crimson'
+              : 'slash-gold';
+      return <div key={f.id} className={`battle-float ${f.kind} cause-${f.cause || 'generic'} ${tier}`} style={{ left: `${f.x}%`, top: `${f.y}%`, '--float-offset': `${((f.lane % 3) - 1) * 30}px`, '--float-delay': `${f.delay}ms` } as CSSProperties}>
+        {!reducedMotion && (f.amount >= 6 || f.kind === 'heal') && (
+          <VfxParticles preset={particlePreset} count={f.amount >= 15 ? 10 : 6} spread={f.amount >= 15 ? 58 : 42} x={50} y={40} reducedMotion={reducedMotion} />
+        )}
+        <span>{f.kind === 'heal' ? '+' : '−'}{f.amount}</span><small>{f.label}</small>
+      </div>;
+    })}
+    {cue && !intro && !suppressCues && <div key={cue.id} className={`battle-event-cue cue-${cue.kind} ${cue.kind === 'boss-phase' ? 'stage' : ''}`}>
       {stageCard?.image && <img className="battle-stage-art" src={asset(stageCard.image)} alt=""/>}
       <div><small>{cue.kind === 'boss-phase' ? 'BOSS PHASE SHIFT' : cue.kind === 'revive' ? '重返战场' : cue.kind === 'tactic' ? '战术生效' : cue.kind === 'weather' ? '天气变化' : '技能发动'}</small><strong>{cue.kind === 'boss-phase' ? `第 ${cue.phase || state.bossPhase + 1} 阶段` : cue.text}</strong>{cue.kind === 'boss-phase' && <span>{stageCard?.name || cue.text}</span>}</div>
     </div>}

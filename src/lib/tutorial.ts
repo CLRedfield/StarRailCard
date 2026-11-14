@@ -119,3 +119,92 @@ export function advanceTutorial(state: GameState, playerId: string, saved: Tutor
   if (step.id === 'complete') return { ...progress, status: 'completed' };
   return progress;
 }
+
+export interface TutorialDiagnostic {
+  selectedCount: number;
+  requiredDice: number;
+  overSelected: number;
+  remaining: number;
+  statusLabel: string;
+  tip: string;
+  skillLabel: string;
+}
+
+export function getTutorialDiagnostic(state: GameState, playerId: string): TutorialDiagnostic {
+  const player = state.players.find(p => p.id === playerId);
+  if (!player) return { selectedCount: 0, requiredDice: 0, overSelected: 0, remaining: 0, statusLabel: '等待中', tip: '', skillLabel: '' };
+  const legal = getLegalActions(state, playerId);
+  const selectedCount = player.selectedIds.length;
+  const requiredDice = legal.requiredDice;
+  const overSelected = requiredDice > 0 ? Math.max(0, selectedCount - requiredDice) : 0;
+  const remaining = requiredDice > 0 ? Math.max(0, requiredDice - selectedCount) : 0;
+  const missingForced = player.dice.some(d => d.forced && !player.selectedIds.includes(d.id));
+  const card = state.catalog.cards.find(c => c.id === player.cardId);
+  const rawSkill = card?.description?.replace(/<[^>]*>/g, '').trim() || '';
+  const shortSkill = rawSkill.length > 44 ? `${rawSkill.slice(0, 44)}…` : rawSkill;
+  const skillLabel = shortSkill ? `${card?.name || player.name}：${shortSkill}` : '';
+
+  const statusLabel = !requiredDice
+    ? (selectedCount > 0 ? `已选 ${selectedCount} 颗（不限颗数）` : '请至少选择 1 颗骰子')
+    : overSelected > 0
+      ? `多选了 ${overSelected} 颗 · 需取消至 ${requiredDice} 颗`
+      : remaining > 0
+        ? `还差 ${remaining} 颗 · 已选 ${selectedCount} / ${requiredDice}`
+        : `已选齐 ${requiredDice} 颗 · 可确认使用`;
+
+  const tip = missingForced
+    ? '包含「命定」角标的骰子，必须选中保留才能确认！'
+    : overSelected > 0
+      ? `已超出本回合可用骰数 (${selectedCount}/${requiredDice})，请点击蓝框骰子取消多余选择。`
+      : legal.canReroll && remaining > 0
+        ? '可先点选想重摇的骰子点右侧「重投」，再凑齐要求数量。'
+        : legal.canConfirm
+          ? '已达到要求颗数！点击绿色「确认使用」完成操作。'
+          : (legal.reason || '点击骰子或从空白桌面滑过批量选中。');
+
+  return { selectedCount, requiredDice, overSelected, remaining, statusLabel, tip, skillLabel };
+}
+
+export interface CoopCoachStep {
+  id: 'coop-roll' | 'coop-swap' | 'coop-tactics';
+  number: number;
+  title: string;
+  text: string;
+  hint: string;
+  target: 'dice' | 'swap' | 'tactics' | 'confirm';
+}
+
+export function getCoopCoachStep(state: GameState, playerId: string): CoopCoachStep | null {
+  if (state.mode !== 'coop' || state.phase === 'finished') return null;
+  const player = state.players.find(p => p.id === playerId);
+  if (!player) return null;
+  const legal = getLegalActions(state, playerId);
+  if (state.phase === 'tactics') {
+    return {
+      id: 'coop-tactics',
+      number: 3,
+      title: '战术商店 · 筹备战术卡',
+      text: '消耗战术点 ◈ 购买战术卡（手牌上限 3 张）。买好的卡牌会在接下来的「交换阶段」点击手牌立即生效！',
+      hint: `当前拥有 ◈ ${player.tacticPoints} · 挑好或暂无需要可直接点「准备完毕」。`,
+      target: 'tactics',
+    };
+  }
+  if (state.phase === 'swap') {
+    return {
+      id: 'coop-swap',
+      number: 2,
+      title: '共斗共享交换区 & 出牌',
+      text: '自己与队友未选中的骰子已汇入中央共享池！点自己的骰子再点池骰即可互换（也可拖动），此时点击下方展开的战术手牌可直接打出。',
+      hint: player.tactics.length ? `你当前持有 ${player.tactics.length} 张战术卡，点底栏卡面查看并使用。` : '换好需要的点数后，点击右侧绿钮「确认交换」触发联手结算。',
+      target: 'swap',
+    };
+  }
+  return {
+    id: 'coop-roll',
+    number: 1,
+    title: '双人共斗 · 选骰与留池配合',
+    text: '选定本轮出战骰子后，你未选中的骰子会自动进入「共享交换区」给队友备用！先选好出战骰，再点确认进入交换。',
+    hint: `需选 ${legal.requiredDice || '至少 1'} 颗 · 已选 ${player.selectedIds.length} 颗 · 共斗队伍共享 3 条生命。`,
+    target: legal.canConfirm ? 'confirm' : 'dice',
+  };
+}
